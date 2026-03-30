@@ -1,327 +1,68 @@
-/* --- ZÁKLADNÍ NASTAVENÍ (SLAĎENO S LOGEM) --- */
 :root {
-    --primary-red: #e30613; /* Přesná červená z loga */
-    --black-tech: #121212; /* Temně černá pro moderní tech pocit */
-    --grey-text: #555555;
+    --red: #e30613;
+    --dark: #080808;
+    --dark-grey: #151515;
     --white: #ffffff;
-    --grey-bg: #f8f9fa;
-    --glass: rgba(255, 255, 255, 0.95); /* Zesvětlená, průhledná lišta */
-    --transition: all 0.25s ease;
-    --box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+    --font-tech: 'Orbitron', sans-serif;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--dark); color: var(--white); font-family: 'Inter', sans-serif; line-height: 1.6; }
 
-body {
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    color: var(--black-tech);
-    line-height: 1.6;
-    background-color: var(--white);
-    scroll-behavior: smooth; /* Plynulé scrollování */
-}
+.container { max-width: 1300px; margin: 0 auto; padding: 0 40px; }
+.text-red { color: var(--red); }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 25px;
-}
+/* NAVBAR */
+.navbar { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(8, 8, 8, 0.95); padding: 15px 0; border-bottom: 2px solid var(--red); }
+.navbar-container { display: flex; justify-content: space-between; align-items: center; }
+.hero-logo { height: 60px; width: auto; }
 
-.text-red { color: var(--primary-red); font-weight: 600; }
+.main-nav a { color: white; text-decoration: none; margin-left: 30px; font-weight: 900; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+.nav-cta { color: var(--red) !important; border: 1px solid var(--red); padding: 10px 20px; transition: 0.3s; }
+.nav-cta:hover { background: var(--red); color: white !important; }
 
-/* --- STICKY NAVBAR (ZESVĚTLENÁ, PRŮHLEDNÁ) --- */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: var(--glass);
-    backdrop-filter: blur(12px); /* Efekt rozmazání za lištou */
-    z-index: 1000;
-    box-shadow: 0 1px 10px rgba(0,0,0,0.02);
-    height: 90px;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid rgba(230, 230, 230, 0.5);
-}
+/* HERO */
+.hero { height: 100vh; display: flex; align-items: center; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1519003722824-194d4455a60c?q=80&w=2000'); background-size: cover; background-position: center; }
+.top-label { color: var(--red); font-weight: 900; letter-spacing: 3px; font-size: 0.8rem; margin-bottom: 20px; }
+.hero h1 { font-family: var(--font-tech); font-size: 5rem; line-height: 1; margin-bottom: 30px; }
+.hero p { font-size: 1.3rem; max-width: 700px; opacity: 0.9; margin-bottom: 40px; }
+.hero-btns { display: flex; gap: 20px; }
+.cta-primary { background: var(--red); color: white; text-decoration: none; padding: 20px 40px; font-weight: 900; font-family: var(--font-tech); transition: 0.3s; }
+.cta-outline { border: 2px solid white; color: white; text-decoration: none; padding: 20px 40px; font-weight: 900; font-family: var(--font-tech); transition: 0.3s; }
+.cta-primary:hover, .cta-outline:hover { transform: scale(1.05); }
 
-.navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
+/* SLUŽBY */
+.section { padding: 100px 0; }
+.section-title { margin-bottom: 60px; }
+.red-line { width: 80px; height: 6px; background: var(--red); margin-top: 15px; }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.s-card { background: var(--dark-grey); padding: 40px; border-top: 1px solid rgba(255,255,255,0.1); }
+.s-card h3 { font-family: var(--font-tech); margin-bottom: 20px; color: var(--red); }
 
-.logo-container {
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
+/* ENERGY SECTION */
+.energy-section { background: var(--white); color: var(--dark); padding: 120px 0; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.bolt-icon { font-size: 4rem; color: var(--red); display: block; margin-bottom: 20px; }
+.energy-content h2 { font-family: var(--font-tech); font-size: 3rem; margin-bottom: 25px; line-height: 1; }
+.features-list { margin-top: 30px; font-weight: 700; }
+.f-item { margin-bottom: 10px; color: var(--red); }
 
-.main-logo {
-    height: 40px; /* Přizpůsobte dle potřeby */
-    width: auto;
-    display: block;
-}
+.energy-visual { background: var(--dark); border-radius: 30px; height: 400px; display: flex; align-items: center; justify-content: center; position: relative; }
+.power-box { text-align: center; border: 5px solid var(--red); padding: 40px; border-radius: 50%; width: 250px; height: 250px; display: flex; flex-direction: column; justify-content: center; }
+.power-val { font-family: var(--font-tech); font-size: 5rem; color: white; line-height: 1; }
+.power-unit { font-family: var(--font-tech); font-size: 2rem; color: var(--red); }
 
-.nav-links {
-    display: flex;
-    align-items: center;
-}
+/* MAP */
+#map { height: 500px; border-radius: 20px; margin: 40px 0; filter: grayscale(1) invert(0.9); }
+.map-actions { text-align: center; margin-top: -50px; position: relative; z-index: 10; }
+.gps-btn { background: var(--red); color: white; text-decoration: none; padding: 25px 50px; font-weight: 900; font-family: var(--font-tech); box-shadow: 0 10px 30px rgba(227, 6, 19, 0.4); }
 
-.nav-links a {
-    text-decoration: none;
-    color: var(--black-tech);
-    margin-left: 35px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    letter-spacing: 0.3px;
-    text-transform: uppercase; /* Tech styl */
-    transition: var(--transition);
-}
-
-.nav-links a:not(.btn-red):hover {
-    color: var(--primary-red);
-}
-
-.btn-red {
-    background: var(--primary-red);
-    color: var(--white) !important;
-    padding: 12px 24px;
-    border-radius: 4px;
-    font-size: 0.85rem !important;
-}
-
-.btn-red:hover {
-    background: #c60511;
-    transform: translateY(-1px);
-}
-
-/* Hamburger menu */
-.menu-toggle {
-    display: none;
-    cursor: pointer;
-}
-
-.bar {
-    display: block;
-    width: 25px;
-    height: 2px;
-    margin: 6px auto;
-    background-color: var(--black-tech);
-    transition: var(--transition);
-}
-
-/* --- HERO SEKCE (ČISTÁ, MINIMALISTICKÁ) --- */
-.hero {
-    height: 95vh;
-    background: radial-gradient(circle at center, #ffffff 0%, #f0f0f0 100%);
-    display: flex;
-    align-items: center;
-    text-align: center;
-    padding-top: 90px;
-}
-
-.hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.hero-content h1 {
-    font-size: 3.8rem;
-    font-weight: 800;
-    line-height: 1.1;
-    letter-spacing: -1.5px;
-    margin-bottom: 25px;
-    color: #111;
-}
-
-.hero-content p {
-    font-size: 1.25rem;
-    color: var(--grey-text);
-    max-width: 650px;
-    margin-bottom: 50px;
-}
-
-.hero-btns {
-    display: flex;
-    gap: 20px;
-}
-
-.cta-button, .cta-button-outline {
-    text-decoration: none;
-    padding: 16px 35px;
-    font-weight: bold;
-    border-radius: 4px;
-    transition: var(--transition);
-}
-
-.cta-button {
-    background: var(--primary-red);
-    color: var(--white);
-}
-
-.cta-button:hover { background: #c60511; }
-
-.cta-button-outline {
-    background: transparent;
-    color: var(--primary-red);
-    border: 2px solid var(--primary-red);
-}
-
-.cta-button-outline:hover { background: rgba(227, 6, 19, 0.05); }
-
-/* --- SECTIONS COMMON --- */
-h2 { font-size: 2.8rem; letter-spacing: -1px; margin-bottom: 15px; text-align: center; }
-.section-subtitle { text-align: center; color: var(--grey-text); font-size: 1.1rem; margin-bottom: 70px; }
-
-/* --- DOPRAVCI SEKCE --- */
-.carriers-section { padding: 120px 0; background-color: var(--grey-bg); }
-
-.grid-carriers {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px;
-}
-
-.card {
-    background: var(--white);
-    padding: 50px 40px;
-    border-radius: 8px;
-    box-shadow: var(--box-shadow);
-    transition: var(--transition);
-    border: 1px solid rgba(200, 200, 200, 0.1);
-}
-
-.card:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
-.card.highlight { border: 2px solid var(--primary-red); }
-
-.card-icon { font-size: 2.5rem; margin-bottom: 25px; }
-.red-icon { color: var(--primary-red); }
-
-.card h3 { margin-bottom: 15px; font-size: 1.4rem; }
-.card p { color: var(--grey-text); margin-bottom: 10px; }
-
-.status-badge {
-    display: inline-block;
-    font-size: 2.2rem;
-    font-weight: 800;
-    color: var(--white);
-    padding: 10px 30px;
-    border-radius: 4px;
-    margin: 15px 0;
-}
-.status-green { background: #22c55e; }
-
-.card-btn {
-    background: var(--primary-red);
-    color: white;
-    border: none;
-    padding: 14px 28px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    margin-top: 25px;
-    width: 100%;
-}
-
-.card-link { color: var(--primary-red); text-decoration: none; font-weight: 600; margin-top: 20px; display: inline-block; }
-
-/* --- MAPA A KONTAKT --- */
-.map-section { padding: 120px 0; }
-
-.map-container {
-    display: grid;
-    grid-template-columns: 1fr 1.8fr;
-    gap: 60px;
-    align-items: center;
-}
-
-.contact-details { margin-bottom: 30px; }
-.contact-item { font-size: 1.05rem; margin-bottom: 8px; color: var(--grey-text); }
-.contact-item a { text-decoration: none; color: inherit; }
-.contact-item a:hover { color: var(--primary-red); }
-.direct-contact { margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(200, 200, 200, 0.3); }
-
-#map {
-    height: 480px;
-    border-radius: 8px;
-    box-shadow: var(--box-shadow);
-}
-
-.btn-outline {
-    display: inline-block;
-    border: 2px solid var(--primary-red);
-    color: var(--primary-red);
-    text-decoration: none;
-    padding: 12px 25px;
-    border-radius: 4px;
-    font-weight: bold;
-    margin-top: 20px;
-    transition: var(--transition);
-}
-
-.btn-outline:hover { background: rgba(227, 6, 19, 0.05); }
-
-/* --- PATIČKA --- */
-.main-footer {
-    background-color: var(--black-tech);
-    color: rgba(255, 255, 255, 0.6);
-    padding: 30px 0;
-    text-align: center;
-    font-size: 0.85rem;
-}
-
-/* --- RESPONSIVITA (MOBILNÍ OPTIMALIZACE) --- */
-@media (max-width: 1024px) {
-    .hero-content h1 { font-size: 3.2rem; }
-}
-
-@media (max-width: 992px) {
-    .map-container { grid-template-columns: 1fr; text-align: center; }
-    #map { height: 350px; margin-top: 40px; }
-}
+footer { padding: 60px 0; text-align: center; opacity: 0.5; font-size: 0.8rem; }
 
 @media (max-width: 768px) {
-    .navbar { height: 80px; }
-    .main-logo { height: 30px; }
-    
-    .nav-links {
-        position: absolute;
-        right: 0px;
-        height: 92vh;
-        top: 80px;
-        background: var(--glass);
-        backdrop-filter: blur(15px);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        padding: 50px 0;
-        transform: translateX(100%);
-        transition: transform 0.4s ease-in-out;
-        box-shadow: -5px 0 15px rgba(0,0,0,0.03);
-    }
-
-    .nav-links a { margin: 25px 0; font-size: 1rem; }
-    .mobile-hide { display: none !important; }
-
-    .menu-toggle { display: block; }
-
-    .hero-content h1 { font-size: 2.4rem; letter-spacing: -1px; }
-    .hero-content p { font-size: 1.1rem; }
-    .hero-btns { flex-direction: column; width: 100%; gap: 15px; }
-    .cta-button, .cta-button-outline { width: 100%; }
-
-    h2 { font-size: 2.2rem; }
+    .hero h1 { font-size: 2.5rem; }
+    .grid-2 { grid-template-columns: 1fr; }
+    .hero-btns { flex-direction: column; }
+    .hero-logo { height: 45px; }
 }
-
-/* Třídy pro aktivní mobilní menu (ovládáno JS) */
-.nav-active { transform: translateX(0%); }
-
-.toggle .bar:nth-child(1) { transform: rotate(-45deg) translate(-5px, 6px); }
-.toggle .bar:nth-child(2) { opacity: 0; }
-.toggle .bar:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
