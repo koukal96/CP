@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>CONTROLPOINT s.r.o. | Logistika Věrovany</title>
+    <title>CONTROLPOINT s.r.o. | Kamionová doprava & Logistika</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -14,99 +14,161 @@
             <a href="#home" class="logo-link">
                 <img src="IMG_8852.png" alt="CONTROLPOINT" class="nav-logo">
             </a>
-            <button class="menu-btn" id="menuBtn">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
+            <button class="mobile-menu-btn" id="menuBtn">☰</button>
             <nav class="nav-menu" id="navMenu">
                 <a href="#o-nas">O nás</a>
                 <a href="#sluzby">Služby</a>
-                <a href="#ekologie">HVO100</a>
-                <a href="#elektro">200kW Hub</a>
+                <a href="#elektro" class="nav-green">200kW Hub</a>
                 <a href="#faq">FAQ</a>
-                <a href="#kontakt" class="nav-cta">KONTAKT</a>
+                <a href="#kontakt" class="nav-btn">Kontakt</a>
             </nav>
         </div>
     </header>
 
     <section id="home" class="hero">
-        <div class="hero-bg"></div>
+        <div class="hero-bg-pattern"></div>
         <div class="container hero-content">
-            <div class="badge">PROFI LOGISTIKA VĚROVANY</div>
-            <h1>VOZÍME ZBOŽÍ.<br><span class="text-red">NE BALÍKY.</span></h1>
-            <p>Průsečík těžké kamionové dopravy a moderní infrastruktury. Rychlost, spolehlivost a extrémní výkon pro vaše náklady.</p>
+            <div class="badge-red">PROFI LOGISTIKA VĚROVANY</div>
+            <h1>VY OBJEDNÁTE.<br><span class="text-red">MY DOVEZEME.</span></h1>
+            <p class="hero-sub">Průsečík spolehlivé kamionové dopravy a moderní infrastruktury. Rychlost, efektivita a maximální nasazení pro vaše zásilky.</p>
             <div class="hero-actions">
-                <a href="#kontakt" class="btn-primary">Poptat přepravu</a>
-                <a href="https://www.google.com/maps/dir/?api=1&destination=Věrovany+94" target="_blank" class="btn-gps">📍 SPUSTIT GPS</a>
+                <a href="#sluzby" class="btn-primary">Naše služby</a>
+                <a href="#elektro" class="btn-outline-green">E-Mobility Projekt</a>
             </div>
         </div>
     </section>
 
-    <section class="stats">
+    <section class="stats-section">
         <div class="container stats-grid">
             <div class="stat-card">
-                <div class="num" data-target="35">0</div>
-                <div class="label">Vozidel ve flotile</div>
+                <div class="stat-icon">🚚</div>
+                <div class="stat-number"><span class="counter" data-target="15">0</span></div>
+                <div class="stat-label">Vozidel ve flotile</div>
             </div>
             <div class="stat-card">
-                <div class="num" data-target="1520000">0</div>
-                <div class="label">Projetých kilometrů</div>
+                <div class="stat-icon">🛣️</div>
+                <div class="stat-number"><span class="counter" data-target="1500000">0</span></div>
+                <div class="stat-label">Projetých kilometrů</div>
             </div>
             <div class="stat-card">
-                <div class="num-green">-90%</div>
-                <div class="label">Emisí CO2 (HVO100)</div>
+                <div class="stat-icon">⚡</div>
+                <div class="stat-number"><span class="counter" data-target="200">0</span> kW</div>
+                <div class="stat-label">Výkon chystaného hubu</div>
             </div>
         </div>
     </section>
 
-    <section id="ekologie" class="section">
+    <section id="o-nas" class="section bg-light">
         <div class="container two-col">
-            <div class="text-side">
-                <h2 class="section-title">HVO100: <span class="text-red">ZELENÁ CESTA</span></h2>
-                <p>Jsme lídry v zavádění udržitelných paliv. Díky využívání <strong>HVO100</strong> (Hydrotreated Vegetable Oil) snižujeme emise CO2 o 90 % oproti běžné naftě.</p>
+            <div class="text-content">
+                <h2 class="section-title">LOGISTICKÝ UZEL <span class="text-red">NOVÉ GENERACE</span></h2>
+                <p>Jsme stabilní partner pro vaše logistické výzvy. Specializujeme se na kamionovou dopravu, skladování a moderní energetická řešení. Naše flotila a zázemí ve Věrovanech tvoří strategický bod pro spolehlivou přepravu.</p>
                 <ul class="check-list">
-                    <li>Okamžité snížení uhlíkové stopy</li>
-                    <li>Fosil-free logistická řešení</li>
-                    <li>Certifikovaná přeprava pro ESG reporting</li>
+                    <li>Celovozové i paletové zásilky</li>
+                    <li>Skladování v hlídaném areálu</li>
+                    <li>Digitální správa a sledování zásilek</li>
+                    <li>Odpovědný přístup k životnímu prostředí</li>
                 </ul>
             </div>
-            <div class="image-side tech-box">
-                <div class="tech-tag">ECO_STATUS: ACTIVE</div>
-                <div class="placeholder">SUSTAINABLE LOGISTICS</div>
+            <div class="image-content tech-box">
+                <div class="tech-overlay">SYSTEM ACTIVE</div>
+                <div class="placeholder-img">LOGISTICKÉ CENTRUM</div>
             </div>
         </div>
     </section>
 
-    <section id="elektro" class="section bg-dark">
-        <div class="container text-center">
-            <h2 class="text-white">ULTRA-FAST <span class="text-green">200kW</span> HUB</h2>
-            <div class="gauge-wrapper">
-                <div class="gauge-circle">
-                    <div class="gauge-inner">
-                        <span class="gauge-num">200</span>
-                        <span class="gauge-unit">kW</span>
+    <section id="sluzby" class="section">
+        <div class="container">
+            <h2 class="section-title text-center">HLAVNÍ <span class="text-red">SLUŽBY</span></h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="s-icon">📦</div>
+                    <h3>Kamionová přeprava</h3>
+                    <p>Bezpečná a včasná přeprava vašeho zboží. Obsloužíme celovozové náklady i paletové zásilky spolehlivě a na čas.</p>
+                </div>
+                <div class="service-card">
+                    <div class="s-icon">🏭</div>
+                    <h3>Skladování & Cross-dock</h3>
+                    <p>Moderní zázemí pro krátkodobé i dlouhodobé uskladnění s efektivní a rychlou překládkou (cross-docking).</p>
+                </div>
+                <div class="service-card">
+                    <div class="s-icon">💻</div>
+                    <h3>Smart Logistics</h3>
+                    <p>Kompletní dispečink, optimalizace tras v reálném čase a transparentní komunikace s klienty.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="elektro" class="section bg-dark-green">
+        <div class="container">
+            <div class="electro-card">
+                <div class="electro-info">
+                    <div class="badge-green">STATUS: VE VÝSTAVBĚ</div>
+                    <h2 class="electro-title">ULTRA-FAST <span class="text-green">200kW</span> HUB</h2>
+                    <p>Připravujeme infrastrukturu na budoucnost e-mobility. V našem areálu budujeme vysokovýkonnou nabíjecí stanici, která dodá čistou energii elektrickým tahačům i osobním vozidlům.</p>
+                    
+                    <div class="progress-box">
+                        <div class="progress-header">
+                            <span>Instalace energetické sítě</span>
+                            <span>65%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 65%;"></div>
+                        </div>
+                        <p class="progress-detail">Plánované spuštění: Q3 2026</p>
+                    </div>
+                </div>
+                <div class="electro-visual">
+                    <div class="clean-energy-circle">
+                        <span class="lightning-icon">⚡</span>
                     </div>
                 </div>
             </div>
-            <p class="text-gray">Budujeme nejvýkonnější uzel v regionu pro těžkou nákladní dopravu. Aktuálně: Instalace transformátorů (65%).</p>
         </div>
     </section>
 
-    <section id="faq" class="section">
+    <section class="partners-section">
+        <div class="container">
+            <h3 class="partners-title">NAŠI PARTNEŘI</h3>
+            <div class="marquee">
+                <div class="marquee-content">
+                    <span>SCANIA</span><span>SCHMITZ CARGOBULL</span><span>KRONE</span>
+                    <span>SCANIA</span><span>SCHMITZ CARGOBULL</span><span>KRONE</span>
+                    <span>SCANIA</span><span>SCHMITZ CARGOBULL</span><span>KRONE</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="section bg-white">
         <div class="container">
             <h2 class="section-title text-center">ČASTÉ <span class="text-red">DOTAZY</span></h2>
+            <p class="text-center faq-subtitle">Nenašli jste, co hledáte? Žádný dotaz není zbytečný. Nebojte se nás kontaktovat, rádi vše vysvětlíme.</p>
+            
             <div class="faq-container">
                 <div class="faq-item">
-                    <button class="faq-trigger">Jak rychle dokážete přistavit vozidlo? <span class="icon">+</span></button>
-                    <div class="faq-content">
-                        <p>Snažíme se reagovat obratem. Pro urgentní požadavky doporučujeme volat přímo na dispečink, kde vám sdělíme aktuální dostupnost.</p>
+                    <button class="faq-question">Jak rychle dokážete přistavit vozidlo? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Snažíme se reagovat obratem. Pro urgentní požadavky doporučujeme rovnou zavolat na náš dispečink, kde vám okamžitě sdělíme aktuální dostupnost naší flotily.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-trigger">Nebojte se nás kontaktovat s čímkoli <span class="icon">+</span></button>
-                    <div class="faq-content">
-                        <p>Žádný dotaz není zbytečný. Ať už jde o cenu, trasu nebo technické detaily HVO100, rádi vám vše vysvětlíme po telefonu i e-mailu.</p>
+                    <button class="faq-question">Zajišťujete vnitrostátní i mezinárodní přepravu? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Ano, naše vozidla běžně pokrývají jak vnitrostátní přepravu v rámci ČR, tak i mezinárodní trasy napříč celou Evropou.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Je možné u vás uskladnit zboží jen na pár dní? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Samozřejmě. Nabízíme velmi flexibilní skladování – od několika dnů (například pro rychlou překládku tzv. cross-docking) až po dlouhodobé skladování v našem areálu ve Věrovanech.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Nevím přesně, co můj náklad vyžaduje. Poradíte mi? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Rozhodně! Od toho tu jsme. Každá přeprava je specifická. Ozvěte se nám s tím, co potřebujete přesunout, a my pro vás vymyslíme to nejefektivnější a nejbezpečnější řešení.</p>
                     </div>
                 </div>
             </div>
@@ -114,22 +176,62 @@
     </section>
 
     <section id="kontakt" class="section bg-light">
-        <div class="container contact-wrapper">
-            <div class="contact-info">
-                <h2 class="section-title">KONTAKT</h2>
-                <div class="c-detail"><strong>ADRESA:</strong> Věrovany 94, 783 75</div>
-                <div class="c-detail"><strong>DISPEČINK:</strong> +420 601 371 211</div>
-                <div class="c-detail"><strong>EMAIL:</strong> info@control-point.eu</div>
-                <a href="https://www.google.com/maps/dir/?api=1&destination=Věrovany+94" target="_blank" class="btn-primary w-100">🧭 OTEVŘÍT NAVIGACI</a>
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2 class="section-title">KONTAKTNÍ <span class="text-red">CENTRUM</span></h2>
+                    <p>Jsme připraveni převzít váš náklad. Ozvěte se nám nebo rovnou nastavte navigaci do našeho hubu.</p>
+                    
+                    <div class="contact-details">
+                        <div class="c-item">
+                            <strong>📍 ADRESA</strong>
+                            <span>Věrovany 94, 783 75</span>
+                        </div>
+                        <div class="c-item">
+                            <strong>📞 DISPEČINK</strong>
+                            <span>+420 601 371 211</span>
+                        </div>
+                        <div class="c-item">
+                            <strong>✉️ EMAIL</strong>
+                            <span>info@control-point.eu</span>
+                        </div>
+                    </div>
+
+                    <a href="http://googleusercontent.com/maps.google.com/4" target="_blank" class="btn-primary btn-large">
+                        🧭 SPUSTIT NAVIGACI (GPS)
+                    </a>
+                </div>
+                
+                <div class="contact-form-box">
+                    <h3>RYCHLÝ DOTAZ</h3>
+                    <form id="contactForm">
+                        <input type="text" placeholder="Jméno / Firma" required>
+                        <input type="email" placeholder="E-mail" required>
+                        <textarea placeholder="Jak vám můžeme pomoci?" rows="4" required></textarea>
+                        <button type="submit" class="btn-primary w-100">Odeslat zprávu</button>
+                    </form>
+                </div>
             </div>
-            <form class="contact-form" id="contactForm">
-                <input type="text" placeholder="Jméno / Firma" required>
-                <input type="email" placeholder="E-mail" required>
-                <textarea placeholder="Co potřebujete přepravit?" rows="4" required></textarea>
-                <button type="submit" class="btn-primary">Odeslat poptávku</button>
-            </form>
         </div>
     </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="f-logo"><h2 style="color: white; font-size: 1.2rem; margin: 0;">CONTROL<span class="text-red">POINT</span></h2></div>
+            <div class="f-links">
+                <a href="#">Ochrana osobních údajů</a>
+                <a href="#">Všeobecné obchodní podmínky</a>
+            </div>
+            <div class="f-copy">© 2026 CONTROLPOINT s.r.o. Všechna práva vyhrazena.</div>
+        </div>
+    </footer>
+
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="container cookie-flex">
+            <p>Pro správnou funkci tohoto webu používáme cookies. 🍪</p>
+            <button class="btn-primary" id="acceptCookiesBtn">Rozumím a přijímám</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
