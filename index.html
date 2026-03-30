@@ -1,58 +1,121 @@
-<section class="live-tracker">
-    <div class="container grid-2">
-        <div class="terminal-window">
-            <div class="terminal-header">
-                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-                <span class="terminal-title">CP_SYSTEM_LOG.exe</span>
-            </div>
-            <div class="terminal-body" id="terminalLog">
-                <p>> Initializing logistics_hub_v94...</p>
-                <p>> Connection established with fleet_01</p>
-                <p>> 200kW_Charger: STANDBY</p>
-            </div>
-        </div>
-        <div class="visual-data">
-            <div class="data-box">
-                <h4 class="glitch-small">AKTIVNÍ_TRASY</h4>
-                <div class="big-num" id="activeRoutes">42</div>
-                <div class="pulse-line"></div>
-            </div>
-            <div class="data-box">
-                <h4 class="glitch-small">DNES_DORUČENO</h4>
-                <div class="big-num"><span class="counter" data-target="128">0</span> t</div>
-            </div>
-        </div>
-    </div>
-</section>
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTROLPOINT s.r.o. | Heavy Transport Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+</head>
+<body class="high-tech-body">
 
-<section id="kontakt" class="contact-tech">
-    <div class="container">
-        <div class="glass-form-container">
-            <div class="form-header">
-                <h2>NAVÁZAT_SPOJENÍ</h2>
-                <p>Napište nám, náš systém vás zařadí do fronty k odbavení.</p>
+    <div class="grid-background"></div>
+
+    <header class="navbar">
+        <div class="container nav-flex">
+            <div class="logo-wrapper">
+                <img src="logo.png" alt="CONTROLPOINT" class="nav-logo">
             </div>
-            <form id="contactForm" class="tech-form">
-                <div class="input-group">
-                    <input type="text" id="name" required placeholder=" ">
-                    <label>IDENTIFIKACE_JMÉNO</label>
-                    <div class="input-line"></div>
-                </div>
-                <div class="input-group">
-                    <input type="email" id="email" required placeholder=" ">
-                    <label>KOMUNIKAČNÍ_EMAIL</label>
-                    <div class="input-line"></div>
-                </div>
-                <div class="input-group">
-                    <textarea id="message" required placeholder=" "></textarea>
-                    <label>ZPRÁVA_DATAPACKET</label>
-                    <div class="input-line"></div>
-                </div>
-                <button type="submit" class="send-btn">
-                    <span class="btn-text">ODESLAT_ZPRÁVU</span>
-                    <span class="scan-bar"></span>
-                </button>
-            </form>
+            
+            <nav class="nav-links">
+                <a href="#stats">Data</a>
+                <a href="#energy">200kW_HUB</a>
+                <a href="#kontakt" class="nav-cta">GPS_LINK</a>
+            </nav>
         </div>
-    </div>
-</section>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="status-bar">
+                <span class="status-dot"></span> SYSTEM ONLINE | VĚROVANY 94
+            </div>
+            <h1 class="glitch-text" data-text="CONTROLPOINT">CONTROL<span class="red">POINT</span></h1>
+            <p class="tagline">VOZÍME ZBOŽÍ. NE BALÍKY.</p>
+            <p class="hero-desc">Průsečík těžké kamionové dopravy a digitální energetické sítě. Budoucnost logistiky v reálném čase.</p>
+        </div>
+    </section>
+
+    <section id="stats" class="stats-bar">
+        <div class="container stats-grid">
+            <div class="stat-item">
+                <div class="counter" data-target="1500000">0</div>
+                <span>KM_PROJETÝCH_FLOTILOU</span>
+            </div>
+            <div class="stat-item">
+                <div class="counter" data-target="24">0</div>
+                <span>H_MONITORING_AKTIVNÍ</span>
+            </div>
+            <div class="stat-item">
+                <div class="counter" data-target="200">0</div>
+                <span>KW_NABÍJECÍ_KAPACITA</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="partners" class="partners-section">
+        <div class="container">
+            <h3>TECHNOLOGIČTÍ PARTNEŘI</h3>
+            <div class="slider">
+                <div class="slide-track">
+                    <div class="slide"><span>SCANIA</span></div>
+                    <div class="slide"><span>SCHMITZ CARGOBULL</span></div>
+                    <div class="slide"><span>VOLVO</span></div>
+                    <div class="slide"><span>SIEMENS</span></div>
+                    <div class="slide"><span>SCANIA</span></div>
+                    <div class="slide"><span>SCHMITZ CARGOBULL</span></div>
+                    <div class="slide"><span>VOLVO</span></div>
+                    <div class="slide"><span>SIEMENS</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="energy" class="energy-hub">
+        <div class="container">
+            <div class="energy-card">
+                <div class="energy-visual">
+                    <div class="pulse-circle">
+                        <div class="inner-pulse">⚡</div>
+                    </div>
+                </div>
+                <div class="energy-content">
+                    <span class="tag">UPCOMING_PROJECT</span>
+                    <h2>ULTRA-FAST <span class="red">200kW</span> HUB</h2>
+                    <p>Budujeme nejvýkonnější nabíjecí uzel v regionu pro těžkou nákladní dopravu. Aktuálně probíhá instalace transformátorů a testování sítě.</p>
+                    <div class="loading-bar-container">
+                        <div class="loading-label">INITIALIZING GRID...</div>
+                        <div class="loading-bar"><div class="fill"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" class="map-section">
+        <div id="map"></div>
+        <div class="container map-content">
+            <div class="map-card">
+                <h3>LOCATION_DATA</h3>
+                <p>Věrovany 94, ČR</p>
+                <p>+420 601 371 211</p>
+                <p>info@control-point.eu</p>
+                <a href="https://www.google.com/maps?daddr=49.450889,17.311747" target="_blank" class="btn-red">SPUSTIT_NAV</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-flex">
+            <span>© 2026_CONTROLPOINT_HUB</span>
+            <span class="secure">SECURE_CONNECTION</span>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
