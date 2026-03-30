@@ -2,136 +2,201 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CONTROLPOINT | Operations Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>CONTROLPOINT s.r.o. | Heavy Transport & Logistics</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
 </head>
-<body class="high-tech">
+<body>
 
-    <div class="scanline"></div>
-    <div class="grid-bg"></div>
-
-    <header class="navbar" id="navbar">
+    <header id="navbar">
         <div class="nav-container">
-            <img src="IMG_8852.png" alt="CP" class="nav-logo">
-            <nav class="nav-menu">
-                <a href="#about">O_NÁS</a>
-                <a href="#sluzby">SLUŽBY</a>
-                <a href="#energy">200kW_HUB</a>
+            <a href="#home" class="logo-link">
+                <img src="IMG_8852.png" alt="CONTROLPOINT" class="nav-logo">
+            </a>
+            <button class="mobile-menu-btn" id="menuBtn">☰</button>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#o-nas">O nás</a>
+                <a href="#sluzby">Služby</a>
+                <a href="#elektro" class="nav-green">200kW Hub</a>
                 <a href="#faq">FAQ</a>
-                <a href="#kontakt">KONTAKT</a>
+                <a href="#kontakt" class="nav-btn">Kontakt</a>
             </nav>
         </div>
     </header>
 
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <div class="status-indicator"><span class="dot"></span> SYSTEM_LIVE</div>
-            <h1 class="glitch" data-text="CONTROLPOINT">CONTROL<span class="red">POINT</span></h1>
-            <p class="typing">VY OBJEDNÁTE, MY DOVEZEME. RYCHLOST_EFEKTIVITA_SÍLA.</p>
-        </div>
-    </section>
-
-    <section class="section" id="about">
-        <div class="container">
-            <h2 class="section-title">01_O_NÁS</h2>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p>Jsme logistický uzel nové generace se sídlem ve Věrovanech. Specializujeme se na těžkou nákladní dopravu a inovativní energetická řešení. Naše mise je propojit tradiční spolehlivost s moderní digitalizací.</p>
-                </div>
-                <div class="about-stats">
-                    <div class="mini-stat"><span>ZALOŽENO</span><strong>2020</strong></div>
-                    <div class="mini-stat"><span>FLOTILA</span><strong>30+ JEDNOTEK</strong></div>
-                </div>
+    <section id="home" class="hero">
+        <div class="hero-bg-pattern"></div>
+        <div class="container hero-content">
+            <div class="badge-red">PROFI LOGISTIKA VĚROVANY</div>
+            <h1>VOZÍME ZBOŽÍ.<br><span class="text-red">NE BALÍKY.</span></h1>
+            <p class="hero-sub">Průsečík těžké kamionové dopravy a moderní infrastruktury. Rychlost, spolehlivost a extrémní výkon pro vaše náklady.</p>
+            <div class="hero-actions">
+                <a href="#sluzby" class="btn-primary">Naše služby</a>
+                <a href="#elektro" class="btn-outline-green">E-Mobility Projekt</a>
             </div>
         </div>
     </section>
 
-    <section class="stats-bar">
-        <div class="stat-box">
-            <div class="counter" data-target="1520000">0</div>
-            <label>KM_LOGGED</label>
-        </div>
-        <div class="stat-box">
-            <div class="counter" data-target="200">0</div>
-            <label>HUB_KW_CAPACITY</label>
+    <section class="stats-section">
+        <div class="container stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">🚚</div>
+                <div class="stat-number"><span class="counter" data-target="35">0</span>+</div>
+                <div class="stat-label">Vozidel ve flotile</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🛣️</div>
+                <div class="stat-number"><span class="counter" data-target="1520000">0</span></div>
+                <div class="stat-label">Projetých kilometrů</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⚡</div>
+                <div class="stat-number"><span class="counter" data-target="200">0</span> kW</div>
+                <div class="stat-label">Výkon chystaného hubu</div>
+            </div>
         </div>
     </section>
 
-    <section class="section" id="sluzby">
+    <section id="o-nas" class="section bg-light">
+        <div class="container two-col">
+            <div class="text-content">
+                <h2 class="section-title">LOGISTICKÝ UZEL <span class="text-red">NOVÉ GENERACE</span></h2>
+                <p>Jsme stabilní partner pro vaše logistické výzvy. Nesoustředíme se na drobné zásilky, ale na skutečnou zátěž. Naše flotila a skladovací prostory ve Věrovanech tvoří strategický bod pro celoevropskou přepravu.</p>
+                <ul class="check-list">
+                    <li>Celovozové i paletové zásilky</li>
+                    <li>Skladování v hlídaném areálu</li>
+                    <li>Digitální správa a tracking zásilek</li>
+                    <li>Podpora udržitelných paliv (HVO100)</li>
+                </ul>
+            </div>
+            <div class="image-content tech-box">
+                <div class="tech-overlay">SYSTEM ACTIVE</div>
+                <div class="placeholder-img">FOTO FLOTILY / AREÁLU</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sluzby" class="section">
         <div class="container">
-            <h2 class="section-title">02_SLUŽBY</h2>
+            <h2 class="section-title text-center">CORE <span class="text-red">OPERATIONS</span></h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <h3>HEAVY_TRANSPORT</h3>
-                    <p>Přeprava zboží, nikoliv balíků. Nadrozměrné náklady a paletová logistika.</p>
+                    <div class="s-icon">📦</div>
+                    <h3>Heavy Transport</h3>
+                    <p>Nadrozměrné náklady a těžká logistika. Přepravíme to, co se do běžné dodávky nevejde.</p>
                 </div>
                 <div class="service-card">
-                    <h3>STORAGE_V94</h3>
-                    <p>Skladování v hlídaném areálu s nonstop přístupem a slot managementem.</p>
+                    <div class="s-icon">🏭</div>
+                    <h3>Skladování & Cross-dock</h3>
+                    <p>Moderní zázemí pro krátkodobé i dlouhodobé uskladnění s efektivní překládkou.</p>
+                </div>
+                <div class="service-card">
+                    <div class="s-icon">⛽</div>
+                    <h3>Smart Fleet Management</h3>
+                    <p>Kompletní telematika, optimalizace tras a implementace fosil-free paliv.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="energy-hub-section" id="energy">
-        <div class="energy-overlay">
-            <div class="construction-badge">UNDER_CONSTRUCTION</div>
-            <h2>200kW_ULTRA_FAST_HUB</h2>
-            <div class="terminal-loader">
-                <p id="termText">> Inicializuji energetickou síť...</p>
-                <div class="progress-bar"><div class="fill"></div></div>
-            </div>
-            <p class="hub-info">Budujeme nejvýkonnější nabíjecí stanici pro tahače v regionu. Otevření 2026.</p>
-        </div>
-    </section>
-
-    <section class="section" id="faq">
+    <section id="elektro" class="section bg-dark-green">
         <div class="container">
-            <h2 class="section-title">03_FAQ</h2>
-            <div class="faq-container">
-                <details>
-                    <summary>Jaké zboží přepravujete?</summary>
-                    <p>Specializujeme se na celovozové zásilky, těžké náklady a paletové zboží. Balíkovou přepravu neprovádíme.</p>
-                </details>
-                <details>
-                    <summary>Kdy bude spuštěn 200kW Hub?</summary>
-                    <p>Aktuálně probíhá fáze testování transformátorů. Plný provoz očekáváme v Q3 2026.</p>
-                </details>
-            </div>
-        </div>
-    </section>
-
-    <section class="partners">
-        <div class="slider">
-            <div class="slide-track">
-                <span>SCANIA</span><span>SCHMITZ</span><span>VOLVO</span><span>KRONE</span><span>SCANIA</span><span>SCHMITZ</span><span>VOLVO</span><span>KRONE</span>
-            </div>
-        </div>
-    </section>
-
-    <section class="section" id="kontakt">
-        <div class="container">
-            <h2 class="section-title">04_NAVÁZAT_SPOJENÍ</h2>
-            <div class="contact-grid">
-                <form class="tech-form">
-                    <input type="text" placeholder="IDENTIFIKACE_JMÉNO">
-                    <input type="email" placeholder="EMAIL_PROTOKOL">
-                    <textarea placeholder="ZPRÁVA_ZADÁNÍ"></textarea>
-                    <button type="submit" class="btn-send">ODESLAT_PAKET</button>
-                </form>
-                <div class="gps-box">
-                    <p>VĚROVANY 94, 783 75</p>
-                    <a href="#" class="gps-btn">SPUSTIT_NAVIGACI</a>
+            <div class="electro-card">
+                <div class="electro-info">
+                    <div class="badge-green">STATUS: VE VÝSTAVBĚ</div>
+                    <h2 class="electro-title">ULTRA-FAST <span class="text-green">200kW</span> HUB</h2>
+                    <p>Připravujeme naši infrastrukturu na budoucnost. V našem areálu aktuálně budujeme vysokovýkonnou nabíjecí stanici, která bez problému obslouží elektrické tahače i osobní vozidla.</p>
+                    
+                    <div class="progress-box">
+                        <div class="progress-header">
+                            <span>Instalace energetické sítě</span>
+                            <span>65%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 65%;"></div>
+                        </div>
+                        <p class="progress-detail">Plánované spuštění: Q3 2026</p>
+                    </div>
+                </div>
+                <div class="electro-visual">
+                    <div class="radar">
+                        <div class="radar-scan"></div>
+                        <div class="radar-center">200<br><span class="small">kW</span></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="cookie-bar" id="cookieBar">
-        <span>POUŽÍVÁME COOKIES PRO OPTIMALIZACI SYSTÉMU.</span>
-        <button onclick="closeCookies()">SOUHLASÍM</button>
+    <section class="partners-section">
+        <div class="container">
+            <h3 class="partners-title">TECHNOLOGIČTÍ PARTNEŘI</h3>
+            <div class="marquee">
+                <div class="marquee-content">
+                    <span>SCANIA</span><span>SCHMITZ CARGOBULL</span><span>VOLVO</span><span>KRONE</span><span>SIEMENS</span>
+                    <span>SCANIA</span><span>SCHMITZ CARGOBULL</span><span>VOLVO</span><span>KRONE</span><span>SIEMENS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" class="section bg-light">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2 class="section-title">KONTAKTNÍ <span class="text-red">CENTRUM</span></h2>
+                    <p>Jsme připraveni převzít váš náklad. Ozvěte se nám nebo rovnou nastavte navigaci do našeho hubu.</p>
+                    
+                    <div class="contact-details">
+                        <div class="c-item">
+                            <strong>📍 ADRESA</strong>
+                            <span>Věrovany 94, 783 75</span>
+                        </div>
+                        <div class="c-item">
+                            <strong>📞 DISPEČINK</strong>
+                            <span>+420 601 371 211</span>
+                        </div>
+                        <div class="c-item">
+                            <strong>✉️ EMAIL</strong>
+                            <span>info@control-point.eu</span>
+                        </div>
+                    </div>
+
+                    <a href="https://maps.google.com/?q=49.450889,17.311747" target="_blank" class="btn-primary btn-large">
+                        🧭 SPUSTIT NAVIGACI (GPS)
+                    </a>
+                </div>
+                
+                <div class="contact-form-box">
+                    <h3>RYCHLÝ DOTAZ</h3>
+                    <form id="contactForm">
+                        <input type="text" placeholder="Jméno / Firma" required>
+                        <input type="email" placeholder="E-mail" required>
+                        <textarea placeholder="Co potřebujete převézt nebo uskladnit?" rows="4" required></textarea>
+                        <button type="submit" class="btn-primary w-100">Odeslat zprávu</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="f-logo"><img src="logo.png" alt="CP" style="height: 30px;"></div>
+            <div class="f-links">
+                <a href="#">Ochrana osobních údajů</a>
+                <a href="#">Všeobecné obchodní podmínky</a>
+            </div>
+            <div class="f-copy">&copy; 2026 CONTROLPOINT s.r.o. Všechna práva vyhrazena.</div>
+        </div>
+    </footer>
+
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="container cookie-flex">
+            <p>Pro správnou funkci tohoto high-tech webu používáme cookies. 🍪</p>
+            <button class="btn-outline-red" onclick="acceptCookies()">Rozumím a přijímám</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
