@@ -3,125 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CONTROLPOINT | High-Tech Logistics</title>
+    <title>CONTROLPOINT | Logistics Hub</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
-<body class="tech-bg">
+<body>
 
-    <div class="grid-overlay"></div>
-
-    <nav class="navbar">
-        <div class="container nav-flex">
-            <div class="logo-wrapper">
-                <img src="IMG_8852.png" alt="CONTROLPOINT" class="nav-logo">
-                <div class="logo-scanner"></div>
-            </div>
-            <div class="nav-links">
-                <a href="#home" class="nav-item">System</a>
-                <a href="#sluzby" class="nav-item">Services</a>
-                <a href="#energy" class="nav-item">Energy</a>
-                <a href="#kontakt" class="nav-cta">GPS_LINK</a>
-            </div>
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo-link">
+                <img src="logo.png" alt="CONTROLPOINT" class="nav-logo">
+            </a>
+            <nav class="nav-menu">
+                <a href="#sluzby">Služby</a>
+                <a href="#energy">200kW Hub</a>
+                <a href="#kontakt">Kontakt</a>
+                <a href="https://www.google.com/maps?daddr=Věrovany+94" target="_blank" class="nav-btn">NAVIGOVAT</a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
     <section id="home" class="hero">
-        <div class="container hero-content">
-            <div class="status-bar">
-                <span class="status-dot"></span> SYSTEM ONLINE | HUB VĚROVANY 94
-            </div>
-            <h1 class="glitch-text" data-text="CONTROLPOINT">CONTROL<span class="text-red">POINT</span></h1>
-            <div class="hero-line"></div>
-            <p class="hero-desc">Průsečík klasické kamionové dopravy a digitální energetické sítě. Budoucnost logistiky v reálném čase.</p>
+        <div class="hero-content">
+            <h1>TRADIČNÍ DOPRAVA.<br><span class="text-red">MODERNÍ ENERGIE.</span></h1>
+            <p>Strategický logistický bod Věrovany 94. Zázemí pro dieselové flotily i ultra-rychlé 200kW nabíjení.</p>
             <div class="hero-btns">
-                <a href="#energy" class="btn-tech"><span>200kW_ACTIVATE</span></a>
-                <a href="#sluzby" class="btn-outline">OPERATIONS</a>
+                <a href="#sluzby" class="btn-red">Naše služby</a>
+                <a href="#energy" class="btn-white">Energy Hub</a>
             </div>
         </div>
     </section>
 
-    <section id="sluzby" class="section-tech">
+    <section id="sluzby" class="section">
         <div class="container">
-            <h2 class="tech-header">CORE_OPERATIONS</h2>
-            <div class="tech-grid">
-                <div class="tech-card">
-                    <div class="card-glow"></div>
-                    <div class="card-content">
-                        <div class="icon-wrap">🚛</div>
-                        <h3>SMART_LOGISTICS</h3>
-                        <p>Plně digitální správa slotů, cross-docking a precizní manipulace s nákladem.</p>
-                        <div class="card-footer">01_PROC_ACTIVE</div>
-                    </div>
+            <h2 class="section-title">LOGISTICKÉ OPERACE</h2>
+            <div class="grid">
+                <div class="card">
+                    <span class="icon">🚛</span>
+                    <h3>Smart Logistika</h3>
+                    <p>Překládka, cross-docking a správa slotů v moderním areálu.</p>
                 </div>
-                <div class="tech-card">
-                    <div class="card-glow"></div>
-                    <div class="card-content">
-                        <div class="icon-wrap">🛢️</div>
-                        <h3>HVO100_FUEL</h3>
-                        <p>Implementace fosil-free paliv pro okamžité snížení emisní stopy o 90 %.</p>
-                        <div class="card-footer">02_ECO_COMPLIANT</div>
-                    </div>
+                <div class="card">
+                    <span class="icon">🛢️</span>
+                    <h3>HVO100 Ready</h3>
+                    <p>Infrastruktura připravená pro udržitelná paliva nové generace.</p>
                 </div>
-                <div class="tech-card active">
-                    <div class="card-glow"></div>
-                    <div class="card-content">
-                        <div class="icon-wrap">⚡</div>
-                        <h3>E-MOBILITY</h3>
-                        <p>Zázemí pro novou generaci tahačů s vysokovýkonným dobíjením.</p>
-                        <div class="card-footer">03_NEXT_GEN</div>
-                    </div>
+                <div class="card">
+                    <span class="icon">🛡️</span>
+                    <h3>Bezpečnost</h3>
+                    <p>Oplocený areál pod neustálým dohledem 24/7.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="energy" class="energy-hub">
-        <div class="container">
-            <div class="energy-glass">
-                <div class="energy-info">
-                    <h2 class="energy-title">ENERGY_GRID <span class="text-red">200kW</span></h2>
-                    <p>Naše stanice není jen nabíječka. Je to uzel energetické sítě připravený na extrémní zátěž kamionové dopravy.</p>
-                    <div class="loading-bar"><div class="progress"></div></div>
-                    <div class="specs">
-                        <div class="spec"><span>VOLTAGE</span><strong>800V</strong></div>
-                        <div class="spec"><span>CURRENT</span><strong>250A</strong></div>
-                        <div class="spec"><span>STATUS</span><strong class="text-red">READY</strong></div>
-                    </div>
-                </div>
-                <div class="energy-visual">
-                    <div class="pulse-circle">
-                        <div class="inner-pulse"></div>
-                        <span class="power-num">200</span>
-                    </div>
-                </div>
+    <section id="energy" class="energy-section">
+        <div class="container energy-flex">
+            <div class="energy-text">
+                <span class="badge">GREEN ENERGY</span>
+                <h2>ULTRA-FAST <span class="text-red">200kW</span></h2>
+                <p>Budoucnost je v pohybu. Naše nabíjecí stanice s výkonem 200kW zajistí energii pro tahače i osobní vozy bleskově rychle.</p>
+            </div>
+            <div class="energy-visual">
+                <div class="circle">200<span>kW</span></div>
             </div>
         </div>
     </section>
 
-    <section id="kontakt" class="section-tech">
+    <section id="kontakt" class="section">
         <div class="container">
-            <div class="map-wrapper">
-                <div class="map-overlay">
-                    <h3>GPS_COORDINATES</h3>
-                    <p>49.450889 N, 17.311747 E</p>
-                    <div class="contact-details">
-                        <p>Věrovany 94, ČR</p>
-                        <p>+420 601 371 211</p>
-                    </div>
-                    <a href="https://www.google.com/maps?daddr=49.450889,17.311747" target="_blank" class="nav-btn">START_NAV</a>
-                </div>
-                <div id="map"></div>
+            <h2 class="section-title">KDE NÁS NAJDETE</h2>
+            <div id="map"></div>
+            <div class="contact-bar">
+                <p>Věrovany 94, 783 75  |  +420 601 371 211  |  info@control-point.eu</p>
             </div>
         </div>
     </section>
 
     <footer>
-        <div class="container footer-flex">
-            <span>© 2026_CP_HUB</span>
-            <span class="text-red">SECURE_CONNECTION</span>
-        </div>
+        <p>© 2026 CONTROL POINT s.r.o. | HUB VĚROVANY</p>
     </footer>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
