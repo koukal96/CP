@@ -244,4 +244,21 @@ footer { background: var(--dark); color: #888; padding: 40px 0; font-size: 0.9re
     box-shadow: 0 6px 20px rgba(52, 168, 83, 0.5);
     transform: translateY(-2px);
 }
+/* --- OPRAVA BLESKU V KRUHU --- */
+.gauge-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.gauge-bolt {
+    font-size: 6rem; /* Velikost blesku */
+    color: var(--green); /* Použije tvou definovanou zelenou */
+    filter: drop-shadow(0 0 15px var(--green)); /* Efekt záření */
+    display: block;
+    line-height: 1;
+}
+
 
