@@ -1,39 +1,58 @@
-<!DOCTYPE html>
-<html lang="cs">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CONTROLPOINT | Připravujeme</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
-</head>
-<body>
-
-    <div class="video-background">
-        <div class="overlay"></div>
+<section class="live-tracker">
+    <div class="container grid-2">
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                <span class="terminal-title">CP_SYSTEM_LOG.exe</span>
+            </div>
+            <div class="terminal-body" id="terminalLog">
+                <p>> Initializing logistics_hub_v94...</p>
+                <p>> Connection established with fleet_01</p>
+                <p>> 200kW_Charger: STANDBY</p>
+            </div>
+        </div>
+        <div class="visual-data">
+            <div class="data-box">
+                <h4 class="glitch-small">AKTIVNÍ_TRASY</h4>
+                <div class="big-num" id="activeRoutes">42</div>
+                <div class="pulse-line"></div>
+            </div>
+            <div class="data-box">
+                <h4 class="glitch-small">DNES_DORUČENO</h4>
+                <div class="big-num"><span class="counter" data-target="128">0</span> t</div>
+            </div>
+        </div>
     </div>
+</section>
 
-    <main class="content">
-        <img src="IMG_8852.png" alt="CONTROLPOINT" class="main-logo">
-        
-        <div class="status-badge">SYSTEM ONLINE | HUB VĚROVANY 94</div>
-        
-        <h1>PŘIPRAVUJEME<br><span class="text-red">NĚCO NOVÉHO</span></h1>
-        
-        <p class="description">
-            Průsečík klasické kamionové dopravy a digitální energetické sítě. 
-            Nová éra logistiky v reálném čase již brzy.
-        </p>
-
-        <div class="loading-bar-container">
-            <div class="loading-bar"></div>
+<section id="kontakt" class="contact-tech">
+    <div class="container">
+        <div class="glass-form-container">
+            <div class="form-header">
+                <h2>NAVÁZAT_SPOJENÍ</h2>
+                <p>Napište nám, náš systém vás zařadí do fronty k odbavení.</p>
+            </div>
+            <form id="contactForm" class="tech-form">
+                <div class="input-group">
+                    <input type="text" id="name" required placeholder=" ">
+                    <label>IDENTIFIKACE_JMÉNO</label>
+                    <div class="input-line"></div>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="email" required placeholder=" ">
+                    <label>KOMUNIKAČNÍ_EMAIL</label>
+                    <div class="input-line"></div>
+                </div>
+                <div class="input-group">
+                    <textarea id="message" required placeholder=" "></textarea>
+                    <label>ZPRÁVA_DATAPACKET</label>
+                    <div class="input-line"></div>
+                </div>
+                <button type="submit" class="send-btn">
+                    <span class="btn-text">ODESLAT_ZPRÁVU</span>
+                    <span class="scan-bar"></span>
+                </button>
+            </form>
         </div>
-
-        <div class="contact-info">
-            <p>Věrovany 94, 783 75</p>
-            <p>+420 601 371 211  •  info@control-point.eu</p>
-        </div>
-    </main>
-
-</body>
-</html>
+    </div>
+</section>
