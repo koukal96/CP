@@ -17,7 +17,7 @@ menuBtn.addEventListener('click', () => {
     menuBtn.innerText = navMenu.classList.contains('active') ? '✕' : '☰';
 });
 
-// Zavření menu po kliknutí na odkaz (na mobilu)
+// Zavření menu po kliknutí na odkaz na mobilu
 document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
@@ -25,7 +25,7 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
     });
 });
 
-// 3. INTERAKTIVNÍ POČÍTADLA (Spustí se až když k nim doscrolluješ)
+// 3. INTERAKTIVNÍ POČÍTADLA
 const counters = document.querySelectorAll('.counter');
 let hasAnimated = false;
 
@@ -33,12 +33,13 @@ const animateCounters = () => {
     counters.forEach(counter => {
         const target = +counter.getAttribute('data-target');
         const duration = 2000; // 2 sekundy animace
-        const increment = target / (duration / 16); // 60 FPS
+        const increment = target / (duration / 16); 
         let currentCount = 0;
 
         const updateCounter = () => {
             currentCount += increment;
             if (currentCount < target) {
+                // Formátování s mezerami: 1 500 000
                 counter.innerText = Math.ceil(currentCount).toLocaleString('cs-CZ');
                 requestAnimationFrame(updateCounter);
             } else {
@@ -49,7 +50,6 @@ const animateCounters = () => {
     });
 };
 
-// Intersection Observer zjistí, že je sekce vidět na obrazovce
 const statsSection = document.querySelector('.stats-section');
 const observer = new IntersectionObserver((entries) => {
     if (entries[0].isIntersecting && !hasAnimated) {
@@ -62,12 +62,12 @@ if (statsSection) {
     observer.observe(statsSection);
 }
 
-// 4. COOKIE LIŠTA
-function acceptCookies() {
+// 4. OPRAVENÁ COOKIE LIŠTA (100% funkční tlačítko)
+document.getElementById('acceptCookiesBtn').addEventListener('click', () => {
     document.getElementById('cookieBanner').style.display = 'none';
-}
+});
 
-// 5. ZABRÁNĚNÍ ODESLÁNÍ FORMULÁŘE (Zatím jen efekt)
+// 5. ODESLÁNÍ FORMULÁŘE (Efekt)
 document.getElementById('contactForm').addEventListener('submit', (e) => {
     e.preventDefault();
     const btn = e.target.querySelector('button');
