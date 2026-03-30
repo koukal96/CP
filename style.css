@@ -1,127 +1,127 @@
 :root {
     --red: #e30613;
-    --dark: #030303;
-    --card-bg: #0a0a0c;
-    --blue-glow: rgba(227, 6, 19, 0.2);
-    --font-tech: 'Orbitron', sans-serif;
-    --font-main: 'Rajdhani', sans-serif;
+    --dark: #111;
+    --white: #fff;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; color: var(--dark); line-height: 1.6; }
 html { scroll-behavior: smooth; }
-body { background: var(--dark); color: #fff; font-family: var(--font-main); overflow-x: hidden; }
 
-/* Animované pozadí */
-.grid-overlay {
-    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), 
-                      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-    background-size: 50px 50px; z-index: -1;
-}
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.text-red { color: var(--red); }
 
-.container { max-width: 1200px; margin: 0 auto; padding: 0 30px; }
-.text-red { color: var(--red); text-shadow: 0 0 15px var(--red); }
-
-/* NAVBAR */
+/* NAVBAR - FIXNÍ A PEVNÁ */
 .navbar {
-    position: fixed; top: 0; width: 100%; z-index: 1000;
-    background: rgba(0,0,0,0.8); border-bottom: 1px solid var(--red);
-    padding: 15px 0; backdrop-filter: blur(10px);
-}
-.nav-flex { display: flex; justify-content: space-between; align-items: center; }
-.logo-wrapper { position: relative; overflow: hidden; }
-.nav-logo { height: 50px; display: block; }
-.logo-scanner {
-    position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(227,6,19,0.4), transparent);
-    animation: scan 3s infinite linear;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px; /* Výchozí výška */
+    background: var(--white); /* Bílá, aby se logo ztratilo */
+    display: flex;
+    align-items: center;
+    z-index: 2000;
+    transition: all 0.4s ease; /* Plynulá změna při rolování */
+    border-bottom: 2px solid #eee;
 }
 
-.nav-links a {
-    color: #fff; text-decoration: none; margin-left: 25px;
-    font-family: var(--font-tech); font-size: 0.75rem; letter-spacing: 2px;
+/* Třída, kterou přidá JavaScript při odrolování dolů */
+.navbar.scrolled {
+    height: 70px;
+    background: rgba(255, 255, 255, 0.9); /* Zprůhlednění */
+    backdrop-filter: blur(10px);
+    border-bottom-color: var(--red);
 }
-.nav-cta { color: var(--red) !important; border: 1px solid var(--red); padding: 5px 15px; }
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-logo {
+    height: 50px;
+    transition: 0.4s;
+}
+
+.navbar.scrolled .nav-logo {
+    height: 35px; /* Zmenšení loga při scrollování */
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 700;
+    margin-left: 30px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover { color: var(--red); }
+
+.nav-btn {
+    background: var(--red);
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
 
 /* HERO */
-.hero { height: 100vh; display: flex; align-items: center; position: relative; }
-.status-bar { font-family: var(--font-tech); font-size: 0.7rem; color: var(--red); margin-bottom: 15px; display: flex; align-items: center; }
-.status-dot { width: 8px; height: 8px; background: var(--red); border-radius: 50%; margin-right: 10px; box-shadow: 0 0 10px var(--red); animation: blink 1s infinite; }
-.hero h1 { font-family: var(--font-tech); font-size: 6rem; line-height: 0.9; margin-bottom: 20px; }
-.hero-line { width: 100px; height: 4px; background: var(--red); margin-bottom: 30px; }
-.hero-desc { font-size: 1.4rem; max-width: 600px; font-weight: 300; opacity: 0.7; margin-bottom: 40px; }
-
-/* Tlačítka */
-.btn-tech {
-    background: var(--red); color: #fff; text-decoration: none;
-    padding: 20px 40px; font-family: var(--font-tech); position: relative;
-    display: inline-block; clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
-}
-.btn-outline {
-    border: 1px solid #fff; color: #fff; text-decoration: none;
-    padding: 19px 40px; font-family: var(--font-tech); margin-left: 20px;
-    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%); transition: 0.3s;
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2000') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding-top: 100px;
 }
 
-/* CARDS */
-.section-tech { padding: 120px 0; }
-.tech-header { font-family: var(--font-tech); text-align: center; margin-bottom: 60px; letter-spacing: 5px; }
-.tech-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-.tech-card {
-    background: var(--card-bg); padding: 40px; position: relative;
-    border: 1px solid rgba(255,255,255,0.1); overflow: hidden; transition: 0.4s;
-}
-.tech-card:hover { border-color: var(--red); transform: translateY(-10px); }
-.card-glow {
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-    background: radial-gradient(circle at center, var(--blue-glow), transparent 70%);
-    opacity: 0; transition: 0.4s;
-}
-.tech-card:hover .card-glow { opacity: 1; }
-.tech-card h3 { font-family: var(--font-tech); margin: 20px 0; font-size: 1.2rem; }
-.card-footer { font-size: 0.6rem; font-family: var(--font-tech); margin-top: 30px; opacity: 0.4; }
+.hero h1 { font-size: clamp(2rem, 8vw, 4rem); font-weight: 900; margin-bottom: 20px; }
+.hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 40px; opacity: 0.9; }
 
-/* ENERGY GLASS */
-.energy-glass {
-    background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1);
-    padding: 60px; border-radius: 2px; display: flex; align-items: center; gap: 80px;
-    backdrop-filter: blur(10px);
-}
-.energy-title { font-family: var(--font-tech); font-size: 2.5rem; margin-bottom: 20px; }
-.loading-bar { width: 100%; height: 4px; background: #222; margin: 30px 0; }
-.progress { width: 75%; height: 100%; background: var(--red); box-shadow: 0 0 15px var(--red); }
-.specs { display: flex; gap: 40px; }
-.spec span { display: block; font-size: 0.7rem; opacity: 0.5; }
-.spec strong { font-family: var(--font-tech); font-size: 1.5rem; }
+.btn-red { background: var(--red); color: white; padding: 15px 35px; text-decoration: none; font-weight: 700; border-radius: 4px; margin: 10px; display: inline-block; }
+.btn-white { border: 2px solid white; color: white; padding: 13px 35px; text-decoration: none; font-weight: 700; border-radius: 4px; margin: 10px; display: inline-block; }
 
-.pulse-circle {
-    width: 250px; height: 250px; border: 2px solid var(--red); border-radius: 50%;
-    display: flex; align-items: center; justify-content: center; position: relative;
-}
-.inner-pulse {
-    position: absolute; width: 100%; height: 100%; border: 1px solid var(--red);
-    border-radius: 50%; animation: pulse 2s infinite;
-}
-.power-num { font-family: var(--font-tech); font-size: 5rem; font-weight: 900; }
+/* SECTIONS */
+.section { padding: 100px 0; }
+.section-title { font-size: 2.5rem; font-weight: 900; text-align: center; margin-bottom: 50px; }
 
-/* MAP WRAPPER */
-.map-wrapper { height: 600px; position: relative; border: 1px solid var(--red); }
-#map { height: 100%; width: 100%; filter: grayscale(1) invert(0.9); }
-.map-overlay {
-    position: absolute; top: 40px; left: 40px; background: rgba(0,0,0,0.9);
-    padding: 40px; border-left: 4px solid var(--red); z-index: 500;
-}
-.nav-btn {
-    display: inline-block; background: var(--red); color: #fff; text-decoration: none;
-    padding: 15px 30px; font-family: var(--font-tech); margin-top: 20px;
-}
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.card { background: #f9f9f9; padding: 40px; border-radius: 10px; text-align: center; }
+.icon { font-size: 3rem; display: block; margin-bottom: 20px; }
 
-@keyframes scan { from { left: -100%; } to { left: 100%; } }
-@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
-@keyframes pulse { 0% { transform: scale(1); opacity: 0.8; } 100% { transform: scale(1.4); opacity: 0; } }
+/* ENERGY SECTION */
+.energy-section { background: var(--dark); color: white; padding: 100px 0; }
+.energy-flex { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 50px; }
+.badge { background: #22c55e; color: black; padding: 5px 15px; border-radius: 20px; font-weight: 900; font-size: 0.8rem; }
+.energy-text h2 { font-size: 3rem; margin-top: 20px; }
 
-@media (max-width: 900px) {
-    .hero h1 { font-size: 3rem; }
-    .energy-glass { flex-direction: column; padding: 30px; }
-    .nav-links { display: none; }
+.energy-visual .circle {
+    width: 250px; height: 250px; border: 8px solid var(--red); border-radius: 50%;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    font-size: 4rem; font-weight: 900;
+}
+.energy-visual .circle span { font-size: 1.5rem; color: var(--red); }
+
+/* MAP */
+#map { height: 500px; border-radius: 10px; margin-bottom: 30px; }
+.contact-bar { text-align: center; font-weight: 700; color: #666; }
+
+footer { padding: 50px 0; text-align: center; border-top: 1px solid #eee; font-weight: 700; opacity: 0.5; }
+
+/* MOBILNÍ ÚPRAVA - ŽÁDNÝ HAMBURGER, JEN ZMENŠENÍ */
+@media (max-width: 768px) {
+    .nav-menu a { margin-left: 10px; font-size: 0.6rem; }
+    .nav-btn { padding: 5px 10px; }
+    .navbar { height: 70px; }
+    .hero h1 { font-size: 2rem; }
 }
