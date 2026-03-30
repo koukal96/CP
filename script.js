@@ -1,10 +1,8 @@
 // 1. STICKY NAVBAR EFEKT
 window.addEventListener('scroll', () => {
     const header = document.getElementById('navbar');
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
+    if (header) {
+        window.scrollY > 50 ? header.classList.add('scrolled') : header.classList.remove('scrolled');
     }
 });
 
@@ -12,37 +10,48 @@ window.addEventListener('scroll', () => {
 const menuBtn = document.getElementById('menuBtn');
 const navMenu = document.getElementById('navMenu');
 
-menuBtn.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    menuBtn.innerText = navMenu.classList.contains('active') ? '✕' : '☰';
-});
-
-// Zavření menu po kliknutí na odkaz na mobilu
-document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        menuBtn.innerText = '☰';
+if (menuBtn && navMenu) {
+    menuBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        menuBtn.innerText = navMenu.classList.contains('active') ? '✕' : '☰';
     });
-});
 
-// 3. INTERAKTIVNÍ POČÍTADLA
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            menuBtn.innerText = '☰';
+        });
+    });
+}
+
+// 3. INTERAKTIVNÍ POČÍTADLA (Včetně HVO100 a CO2)
 const counters = document.querySelectorAll('.counter');
 let hasAnimated = false;
 
 const animateCounters = () => {
     counters.forEach(counter => {
         const target = +counter.getAttribute('data-target');
-        const duration = 2000; // 2 sekundy animace
-        const increment = target / (duration / 16); 
-        let currentCount = 0;
+        const duration = 2000; 
+        const frameRate = 1000 / 60;
+        const totalFrames = Math.round(duration / frameRate);
+        let frame = 0;
 
         const updateCounter = () => {
-            currentCount += increment;
-            if (currentCount < target) {
-                counter.innerText = Math.ceil(currentCount).toLocaleString('cs-CZ');
+            frame++;
+            const progress = frame / totalFrames;
+            const currentValue = Math.round(target * progress);
+
+            if (frame < totalFrames) {
+                // Pokud je to HVO nebo CO2 (cílová hodnota 100 nebo 90), přidáme %
+                if (target === 100 || target === 90) {
+                    counter.innerText = currentValue + " %";
+                } else {
+                    counter.innerText = currentValue.toLocaleString('cs-CZ');
+                }
                 requestAnimationFrame(updateCounter);
             } else {
-                counter.innerText = target.toLocaleString('cs-CZ');
+                // Finální stav
+                counter.innerText = target.toLocaleString('cs-CZ') + (target <= 100 ? " %" : "");
             }
         };
         updateCounter();
@@ -50,62 +59,62 @@ const animateCounters = () => {
 };
 
 const statsSection = document.querySelector('.stats-section');
-const observer = new IntersectionObserver((entries) => {
-    if (entries[0].isIntersecting && !hasAnimated) {
-        animateCounters();
-        hasAnimated = true;
-    }
-}, { threshold: 0.5 });
-
 if (statsSection) {
+    const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting && !hasAnimated) {
+            animateCounters();
+            hasAnimated = true;
+        }
+    }, { threshold: 0.3 });
     observer.observe(statsSection);
 }
 
 // 4. COOKIE LIŠTA
-document.getElementById('acceptCookiesBtn').addEventListener('click', () => {
-    document.getElementById('cookieBanner').style.display = 'none';
-});
+const acceptBtn = document.getElementById('acceptCookiesBtn');
+if (acceptBtn) {
+    acceptBtn.addEventListener('click', () => {
+        const banner = document.getElementById('cookieBanner');
+        if (banner) banner.style.display = 'none';
+    });
+}
 
-// 5. ODESLÁNÍ FORMULÁŘE (Efekt)
-document.getElementById('contactForm').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const btn = e.target.querySelector('button');
-    const originalText = btn.innerText;
-    btn.innerText = "Odesíláme...";
-    btn.style.background = "#00e676";
-    btn.style.color = "#111";
-    
-    setTimeout(() => {
-        btn.innerText = "Zpráva odeslána ✓";
-        e.target.reset();
+// 5. ODESLÁNÍ FORMULÁŘE
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const btn = e.target.querySelector('button');
+        const originalText = btn.innerText;
+        btn.innerText = "Odesíláme...";
+        btn.style.background = "#00e676";
+        
         setTimeout(() => {
-            btn.innerText = originalText;
-            btn.style.background = "";
-            btn.style.color = "";
-        }, 3000);
-    }, 1500);
-});
+            btn.innerText = "Zpráva odeslána ✓";
+            e.target.reset();
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.style.background = "";
+            }, 3000);
+        }, 1500);
+    });
+}
 
-// 6. FAQ AKORDEON (Nová logika pro rozbalování otázek)
-const faqQuestions = document.querySelectorAll('.faq-question');
-faqQuestions.forEach(question => {
+// 6. FAQ AKORDEON (Safari-friendly)
+document.querySelectorAll('.faq-question').forEach(question => {
     question.addEventListener('click', () => {
         const item = question.parentElement;
+        const answer = item.querySelector('.faq-answer');
         
-        // Zavřít všechny ostatní, když otevřeš novou (volitelné, ale dělá to čistší vzhled)
         document.querySelectorAll('.faq-item').forEach(otherItem => {
             if(otherItem !== item) {
                 otherItem.classList.remove('active');
-                otherItem.querySelector('.faq-answer').style.maxHeight = null;
+                const otherAnswer = otherItem.querySelector('.faq-answer');
+                if (otherAnswer) otherAnswer.style.maxHeight = null;
             }
         });
 
-        // Přepnout aktuální
         item.classList.toggle('active');
-        const answer = item.querySelector('.faq-answer');
-        
         if (item.classList.contains('active')) {
-            // Skutečná výška obsahu uvnitř
             answer.style.maxHeight = answer.scrollHeight + "px";
         } else {
             answer.style.maxHeight = null;
