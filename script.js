@@ -1,114 +1,54 @@
-// 1. STICKY NAVBAR EFEKT
-window.addEventListener('scroll', () => {
-    const header = document.getElementById('navbar');
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});
-
-// 2. MOBILNÍ MENU
+// Mobilní menu přepínání
 const menuBtn = document.getElementById('menuBtn');
 const navMenu = document.getElementById('navMenu');
 
 menuBtn.addEventListener('click', () => {
     navMenu.classList.toggle('active');
-    menuBtn.innerText = navMenu.classList.contains('active') ? '✕' : '☰';
+    // Animace ikonky
+    menuBtn.classList.toggle('open');
 });
 
-// Zavření menu po kliknutí na odkaz na mobilu
-document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        menuBtn.innerText = '☰';
-    });
+// Zavření menu po kliku
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => navMenu.classList.remove('active'));
 });
 
-// 3. INTERAKTIVNÍ POČÍTADLA
-const counters = document.querySelectorAll('.counter');
-let hasAnimated = false;
+// Počítadla statistik
+const counters = document.querySelectorAll('.num');
+const speed = 200;
 
-const animateCounters = () => {
+const startCounters = () => {
     counters.forEach(counter => {
-        const target = +counter.getAttribute('data-target');
-        const duration = 2000; // 2 sekundy animace
-        const increment = target / (duration / 16); 
-        let currentCount = 0;
+        const updateCount = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText.replace(/\s/g, '');
+            const inc = target / speed;
 
-        const updateCounter = () => {
-            currentCount += increment;
-            if (currentCount < target) {
-                counter.innerText = Math.ceil(currentCount).toLocaleString('cs-CZ');
-                requestAnimationFrame(updateCounter);
+            if (count < target) {
+                counter.innerText = Math.ceil(count + inc).toLocaleString('cs-CZ');
+                setTimeout(updateCount, 1);
             } else {
                 counter.innerText = target.toLocaleString('cs-CZ');
             }
         };
-        updateCounter();
+        updateCount();
     });
 };
 
-const statsSection = document.querySelector('.stats-section');
-const observer = new IntersectionObserver((entries) => {
-    if (entries[0].isIntersecting && !hasAnimated) {
-        animateCounters();
-        hasAnimated = true;
+// Detekce scrollu pro aktivaci počítadel
+let animated = false;
+window.addEventListener('scroll', () => {
+    const statsPos = document.querySelector('.stats-bar').getBoundingClientRect().top;
+    if (statsPos < window.innerHeight && !animated) {
+        startCounters();
+        animated = true;
     }
-}, { threshold: 0.5 });
-
-if (statsSection) {
-    observer.observe(statsSection);
-}
-
-// 4. COOKIE LIŠTA
-document.getElementById('acceptCookiesBtn').addEventListener('click', () => {
-    document.getElementById('cookieBanner').style.display = 'none';
 });
 
-// 5. ODESLÁNÍ FORMULÁŘE (Efekt)
-document.getElementById('contactForm').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const btn = e.target.querySelector('button');
-    const originalText = btn.innerText;
-    btn.innerText = "Odesíláme...";
-    btn.style.background = "#00e676";
-    btn.style.color = "#111";
-    
-    setTimeout(() => {
-        btn.innerText = "Zpráva odeslána ✓";
-        e.target.reset();
-        setTimeout(() => {
-            btn.innerText = originalText;
-            btn.style.background = "";
-            btn.style.color = "";
-        }, 3000);
-    }, 1500);
-});
-
-// 6. FAQ AKORDEON (Nová logika pro rozbalování otázek)
-const faqQuestions = document.querySelectorAll('.faq-question');
-faqQuestions.forEach(question => {
-    question.addEventListener('click', () => {
-        const item = question.parentElement;
-        
-        // Zavřít všechny ostatní, když otevřeš novou (volitelné, ale dělá to čistší vzhled)
-        document.querySelectorAll('.faq-item').forEach(otherItem => {
-            if(otherItem !== item) {
-                otherItem.classList.remove('active');
-                otherItem.querySelector('.faq-answer').style.maxHeight = null;
-            }
-        });
-
-        // Přepnout aktuální
-        item.classList.toggle('active');
-        const answer = item.querySelector('.faq-answer');
-        
-        if (item.classList.contains('active')) {
-            // Skutečná výška obsahu uvnitř
-            answer.style.maxHeight = answer.scrollHeight + "px";
-        } else {
-            answer.style.maxHeight = null;
-        }
-    });
+// Safari FAQ fix (volitelné, details/summary funguje nativně, ale tohle přidá hladkost)
+document.querySelectorAll('details').forEach((el) => {
+  el.querySelector('summary').addEventListener('click', (e) => {
+    // Pokud chcete mít otevřený jen jeden dotaz najednou:
+    // document.querySelectorAll('details').forEach(d => { if(d !== el) d.removeAttribute('open'); });
+  });
 });
