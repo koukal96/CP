@@ -39,7 +39,6 @@ const animateCounters = () => {
         const updateCounter = () => {
             currentCount += increment;
             if (currentCount < target) {
-                // Formátování s mezerami: 1 500 000
                 counter.innerText = Math.ceil(currentCount).toLocaleString('cs-CZ');
                 requestAnimationFrame(updateCounter);
             } else {
@@ -62,7 +61,7 @@ if (statsSection) {
     observer.observe(statsSection);
 }
 
-// 4. OPRAVENÁ COOKIE LIŠTA (100% funkční tlačítko)
+// 4. COOKIE LIŠTA
 document.getElementById('acceptCookiesBtn').addEventListener('click', () => {
     document.getElementById('cookieBanner').style.display = 'none';
 });
@@ -85,4 +84,31 @@ document.getElementById('contactForm').addEventListener('submit', (e) => {
             btn.style.color = "";
         }, 3000);
     }, 1500);
+});
+
+// 6. FAQ AKORDEON (Nová logika pro rozbalování otázek)
+const faqQuestions = document.querySelectorAll('.faq-question');
+faqQuestions.forEach(question => {
+    question.addEventListener('click', () => {
+        const item = question.parentElement;
+        
+        // Zavřít všechny ostatní, když otevřeš novou (volitelné, ale dělá to čistší vzhled)
+        document.querySelectorAll('.faq-item').forEach(otherItem => {
+            if(otherItem !== item) {
+                otherItem.classList.remove('active');
+                otherItem.querySelector('.faq-answer').style.maxHeight = null;
+            }
+        });
+
+        // Přepnout aktuální
+        item.classList.toggle('active');
+        const answer = item.querySelector('.faq-answer');
+        
+        if (item.classList.contains('active')) {
+            // Skutečná výška obsahu uvnitř
+            answer.style.maxHeight = answer.scrollHeight + "px";
+        } else {
+            answer.style.maxHeight = null;
+        }
+    });
 });
