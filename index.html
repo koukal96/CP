@@ -3,102 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CONTROLPOINT | Logistický Servis</title>
+    <title>CONTROLPOINT | Logistics & Energy Hub</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
 
     <header class="navbar">
         <div class="container navbar-container">
-            <div class="logo-container">
-                <img src="IMG_8852.png" alt="CONTROLPOINT Logo" class="main-logo">
+            <div class="logo-area">
+                <img src="IMG_8852.png" alt="CONTROLPOINT" class="hero-logo">
             </div>
-            
-            <nav class="nav-links" id="navLinks">
+            <nav class="main-nav">
                 <a href="#home">Domů</a>
-                <a href="#dopravci">Dopravci</a>
-                <a href="#kontakt">Kontakt</a>
-                <a href="#" class="btn-red mobile-hide">Vjezd / Slot</a>
+                <a href="#sluzby">Služby</a>
+                <a href="#energy">Energy Hub</a>
+                <a href="#kontakt" class="nav-cta">Navigovat GPS</a>
             </nav>
-            
-            <div class="menu-toggle" id="mobileMenu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
         </div>
     </header>
 
     <section id="home" class="hero">
-        <div class="container hero-content">
-            <h1>Logistický servis <span class="text-red">nové generace</span></h1>
-            <p>Rychlost, spolehlivost a profesionální zázemí. ControlPoint je váš klíč k efektivní logistice.</p>
+        <div class="hero-overlay"></div>
+        <div class="container hero-text">
+            <div class="top-label">STRATEGICKÝ LOGISTICKÝ BOD VĚROVANY</div>
+            <h1>TRADIČNÍ DOPRAVA.<br><span class="text-red">MODERNÍ ENERGIE.</span></h1>
+            <p>Jsme mostem mezi klasickou logistikou a novými trendy. Zajišťujeme zázemí pro dieselové flotily i infrastrukturu pro budoucí e-mobilitu.</p>
             <div class="hero-btns">
-                <a href="#kontakt" class="cta-button">Poptat služby</a>
-                <a href="#dopravci" class="cta-button-outline">Pro dopravce</a>
+                <a href="#energy" class="cta-primary">200kW Charging Station</a>
+                <a href="#sluzby" class="cta-outline">Logistické služby</a>
             </div>
         </div>
     </section>
 
-    <section id="dopravci" class="carriers-section">
+    <section id="sluzby" class="section">
         <div class="container">
-            <h2>Portál pro dopravce</h2>
-            <p class="section-subtitle">Plynulý vjezd, rychlé odbavení.</p>
-            
-            <div class="grid-carriers">
-                <div class="card">
-                    <div class="card-icon">🅿️</div>
-                    <h3>Parkování</h3>
-                    <p>Aktuálně volných míst:</p>
-                    <div class="status-badge status-green">14</div>
-                    <small>Real-time data</small>
+            <div class="section-title">
+                <h2>SLUŽBY V AREÁLU</h2>
+                <div class="red-line"></div>
+            </div>
+            <div class="services-grid">
+                <div class="s-card">
+                    <h3>PŘEKLÁDKA & LOGISTIKA</h3>
+                    <p>Efektivní manipulace s nákladem, cross-docking a bezpečné zázemí pro všechny typy tahačů.</p>
                 </div>
-                
-                <div class="card highlight">
-                    <div class="card-icon red-icon">⏳</div>
-                    <h3>Časový Slot</h3>
-                    <p>Rezervujte si čas pro vjezd a minimalizujte čekání.</p>
-                    <button class="card-btn">Vytvořit slot</button>
+                <div class="s-card">
+                    <h3>HVO100 READY</h3>
+                    <p>Podporujeme přechod na udržitelná paliva. Naše infrastruktura je připravena pro moderní nízkoemisní naftu HVO.</p>
                 </div>
-                
-                <div class="card">
-                    <div class="card-icon">🗺️</div>
-                    <h3>Příjezdová trasa</h3>
-                    <p>Optimalizovaná trasa pro těžkou techniku.</p>
-                    <a href="#" class="card-link">Zobrazit mapu</a>
+                <div class="s-card">
+                    <h3>DIGITÁLNÍ SPRÁVA</h3>
+                    <p>Rychlé odbavení a monitoring pohybu v areálu pro maximální úsporu času řidičů.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="energy" class="energy-section">
+        <div class="container grid-2">
+            <div class="energy-content">
+                <span class="bolt-icon">⚡</span>
+                <h2>200kW <span class="text-red">ULTRA-FAST</span> CHARGING</h2>
+                <p>V areálu Věrovany budujeme moderní energetický uzel. Naše 200kW nabíjecí stanice umožňuje bleskové dobití pro elektrické tahače i osobní flotily během přestávky nebo nakládky.</p>
+                <div class="features-list">
+                    <div class="f-item">✓ High-Power Charging (200kW+)</div>
+                    <div class="f-item">✓ Non-stop přístup 24/7</div>
+                    <div class="f-item">✓ Strategická poloha u hlavních tahů</div>
+                </div>
+            </div>
+            <div class="energy-visual">
+                <div class="power-box">
+                    <div class="power-val">200</div>
+                    <div class="power-unit">kW</div>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="kontakt" class="map-section">
-        <div class="container map-container">
-            <div class="map-info">
-                <h2>Kontakt</h2>
-                <div class="contact-details">
-                    <p class="contact-item"><strong>Control Point s.r.o.</strong></p>
-                    <p class="contact-item">Věrovany 94</p>
-                    <p class="contact-item">783 75 Věrovany</p>
-                    
-                    <div class="direct-contact">
-                        <p class="contact-item">📞 <a href="tel:+420601371211">+420 601 371 211</a></p>
-                        <p class="contact-item">📧 <a href="mailto:info@control-point.eu" class="text-red">info@control-point.eu</a></p>
-                    </div>
-                </div>
-                <a href="https://www.google.com/maps/search/?api=1&query=Věrovany+94,+783+75+Věrovany" target="_blank" class="btn-outline">Navigovat k nám</a>
+        <div class="container">
+            <div class="contact-header">
+                <h2>GPS LOKALIZACE VĚROVANY 94</h2>
+                <p>Otevřeno pro klasickou i elektrickou dopravu.</p>
             </div>
             <div id="map"></div>
+            <div class="map-actions">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=49.450889,17.311747" target="_blank" class="gps-btn">SPUSTIT NAVIGACI DO AREÁLU</a>
+            </div>
         </div>
     </section>
 
-    <footer class="main-footer">
-        <div class="container">
-            <p>© 2024 Control Point s.r.o. | IČO: 29133751 | Všechna práva vyhrazena.</p>
-        </div>
+    <footer>
+        <p>© 2026 CONTROL POINT s.r.o. | Věrovany 94 | Vaše cesta, naše energie.</p>
     </footer>
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
