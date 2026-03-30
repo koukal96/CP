@@ -3,119 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CONTROLPOINT s.r.o. | Heavy Transport Dashboard</title>
+    <title>CONTROLPOINT | DOPRAVNÍ SPOLEČNOST</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
-<body class="high-tech-body">
+<body>
+    <div class="grid-bg"></div>
 
-    <div class="grid-background"></div>
-
-    <header class="navbar">
-        <div class="container nav-flex">
-            <div class="logo-wrapper">
-                <img src="IMG_8852.png" alt="CONTROLPOINT" class="nav-logo">
-            </div>
-            
-            <nav class="nav-links">
-                <a href="#stats">Data</a>
-                <a href="#energy">200kW_HUB</a>
-                <a href="#kontakt" class="nav-cta">GPS_LINK</a>
-            </nav>
-        </div>
+    <header class="mobile-nav">
+        <img src="IMG_8852.png" alt="CONTROLPOINT" class="m-logo">
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <div class="status-bar">
-                <span class="status-dot"></span> SYSTEM ONLINE | VĚROVANY 94
-            </div>
-            <h1 class="glitch-text" data-text="CONTROLPOINT">CONTROL<span class="red">POINT</span></h1>
-            <p class="tagline"> VOZÍME VŠE CO JE POTŘEBA.</p>
-            <p class="hero-desc">Průsečík kamionové dopravy a digitální energetické sítě. Budoucnost logistiky v reálném čase.</p>
-        </div>
-    </section>
+    <main class="dashboard">
+        <section class="hero-mini">
+            <div class="status"><span class="blink"></span> SYSTEM_LIVE</div>
+            <h1>CONTROL<span class="red">POINT</span></h1>
+            <p class="sub">VY OBJEDNÁTE, MY DOVEZEME.</p>
+        </section>
 
-    <section id="stats" class="stats-bar">
-        <div class="container stats-grid">
-            <div class="stat-item">
-                <div class="counter" data-target="1500000">0</div>
-                <span>KM_PROJETÝCH_FLOTILOU</span>
+        <section class="tech-stats">
+            <div class="stat-box">
+                <div class="num counter" data-target="1520000">0</div>
+                <div class="lab">KM_LOGGED</div>
             </div>
-            <div class="stat-item">
-                <div class="counter" data-target="24">0</div>
-                <span>H_MONITORING_AKTIVNÍ</span>
+            <div class="stat-box">
+                <div class="num">200<span class="red">kW</span></div>
+                <div class="lab">HUB_CAPACITY</div>
             </div>
-            <div class="stat-item">
-                <div class="counter" data-target="200">0</div>
-                <span>KW_NABÍJECÍ_KAPACITA</span>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="partners" class="partners-section">
-        <div class="container">
-            <h3>TECHNOLOGIČTÍ PARTNEŘI</h3>
-            <div class="slider">
-                <div class="slide-track">
-                    <div class="slide"><span>SCANIA</span></div>
-                    <div class="slide"><span>SCHMITZ CARGOBULL</span></div>
-                    <div class="slide"><span>KRONE</span></div>
-                    <div class="slide"><span>PANAV</span></div>
-                    <div class="slide"><span>SCANIA</span></div>
-                    <div class="slide"><span>SCHMITZ CARGOBULL</span></div>
-                    <div class="slide"><span>KRONE</span></div>
-                    <div class="slide"><span>PANAV</span></div>
-                </div>
+        <section class="partners-flow">
+            <div class="flow-track">
+                <span>SCANIA</span>
+                <span>SCHMITZ CARGOBULL</span>
+                <span>VOLVO</span>
+                <span>KRONE</span>
+                <span>SCANIA</span>
+                <span>SCHMITZ CARGOBULL</span>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="energy" class="energy-hub">
-        <div class="container">
-            <div class="energy-card">
-                <div class="energy-visual">
-                    <div class="pulse-circle">
-                        <div class="inner-pulse">⚡</div>
-                    </div>
-                </div>
-                <div class="energy-content">
-                    <span class="tag">UPCOMING_PROJECT</span>
-                    <h2>ULTRA-FAST <span class="red">200kW</span> HUB</h2>
-                    <p>Budujeme nejvýkonnější nabíjecí uzel v regionu pro těžkou nákladní dopravu. Aktuálně probíhá instalace transformátorů a testování sítě.</p>
-                    <div class="loading-bar-container">
-                        <div class="loading-label">INITIALIZING GRID...</div>
-                        <div class="loading-bar"><div class="fill"></div></div>
-                    </div>
-                </div>
+        <section class="hub-preview">
+            <div class="hub-card">
+                <div class="loader">⚡</div>
+                <h3>200kW_HUB</h3>
+                <p>PŘIPRAVUJEME_VĚROVANY_94</p>
+                <div class="bar"><div class="fill"></div></div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="kontakt" class="map-section">
-        <div id="map"></div>
-        <div class="container map-content">
-            <div class="map-card">
-                <h3>LOCATION_DATA</h3>
-                <p>Věrovany 94, ČR</p>
-                <p>+420 601 371 211</p>
+        <section class="contact-terminal">
+            <a href="https://maps.google.com" class="btn-gps">SPUSTIT_NAVIGACI</a>
+            <div class="contact-footer">
                 <p>info@control-point.eu</p>
-                <a href="https://www.google.com/maps?daddr=49.450889,17.311747" target="_blank" class="btn-red">SPUSTIT_NAV</a>
+                <p>+420 601 371 211</p>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <footer>
-        <div class="container footer-flex">
-            <span>© 2026_CONTROLPOINT_HUB</span>
-            <span class="secure">SECURE_CONNECTION</span>
-        </div>
-    </footer>
-
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="script.js"></script>
 </body>
 </html>
-
