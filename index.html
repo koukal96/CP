@@ -3,89 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CONTROLPOINT | Logistics Hub</title>
+    <title>CONTROLPOINT | Připravujeme</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="navbar" id="navbar">
-        <div class="container nav-container">
-            <a href="#home" class="logo-link">
-                <img src="IMG_8852.png" alt="CONTROLPOINT" class="nav-logo">
-            </a>
-            <nav class="nav-menu">
-                <a href="#sluzby">Služby</a>
-                <a href="#energy">200kW Hub</a>
-                <a href="#kontakt">Kontakt</a>
-                <a href="https://www.google.com/maps?daddr=Věrovany+94" target="_blank" class="nav-btn">NAVIGOVAT</a>
-            </nav>
+    <div class="video-background">
+        <div class="overlay"></div>
+    </div>
+
+    <main class="content">
+        <img src="logo.png" alt="CONTROLPOINT" class="main-logo">
+        
+        <div class="status-badge">SYSTEM ONLINE | HUB VĚROVANY 94</div>
+        
+        <h1>PŘIPRAVUJEME<br><span class="text-red">NĚCO NOVÉHO</span></h1>
+        
+        <p class="description">
+            Průsečík klasické kamionové dopravy a digitální energetické sítě. 
+            Nová éra logistiky v reálném čase již brzy.
+        </p>
+
+        <div class="loading-bar-container">
+            <div class="loading-bar"></div>
         </div>
-    </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>TRADIČNÍ DOPRAVA.<br><span class="text-red">MODERNÍ ENERGIE.</span></h1>
-            <p>Strategický logistický bod Věrovany 94. Zázemí pro dieselové flotily i ultra-rychlé 200kW nabíjení.</p>
-            <div class="hero-btns">
-                <a href="#sluzby" class="btn-red">Naše služby</a>
-                <a href="#energy" class="btn-white">Energy Hub</a>
-            </div>
+        <div class="contact-info">
+            <p>Věrovany 94, 783 75</p>
+            <p>+420 601 371 211  •  info@control-point.eu</p>
         </div>
-    </section>
+    </main>
 
-    <section id="sluzby" class="section">
-        <div class="container">
-            <h2 class="section-title">LOGISTICKÉ OPERACE</h2>
-            <div class="grid">
-                <div class="card">
-                    <span class="icon">🚛</span>
-                    <h3>Smart Logistika</h3>
-                    <p>Překládka, cross-docking a správa slotů v moderním areálu.</p>
-                </div>
-                <div class="card">
-                    <span class="icon">🛢️</span>
-                    <h3>HVO100 Ready</h3>
-                    <p>Infrastruktura připravená pro udržitelná paliva nové generace.</p>
-                </div>
-                <div class="card">
-                    <span class="icon">🛡️</span>
-                    <h3>Bezpečnost</h3>
-                    <p>Oplocený areál pod neustálým dohledem 24/7.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="energy" class="energy-section">
-        <div class="container energy-flex">
-            <div class="energy-text">
-                <span class="badge">GREEN ENERGY</span>
-                <h2>ULTRA-FAST <span class="text-red">200kW</span></h2>
-                <p>Budoucnost je v pohybu. Naše nabíjecí stanice s výkonem 200kW zajistí energii pro tahače i osobní vozy bleskově rychle.</p>
-            </div>
-            <div class="energy-visual">
-                <div class="circle">200<span>kW</span></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="kontakt" class="section">
-        <div class="container">
-            <h2 class="section-title">KDE NÁS NAJDETE</h2>
-            <div id="map"></div>
-            <div class="contact-bar">
-                <p>Věrovany 94, 783 75  |  +420 601 371 211  |  info@control-point.eu</p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2026 CONTROL POINT s.r.o. | HUB VĚROVANY</p>
-    </footer>
-
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>
