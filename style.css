@@ -20,6 +20,7 @@ body { font-family: var(--font-main); color: var(--text); background: var(--whit
 .text-red { color: var(--red); }
 .text-green { color: var(--green); }
 .bg-light { background: var(--gray); }
+.bg-white { background: var(--white); }
 .text-center { text-align: center; }
 .w-100 { width: 100%; }
 
@@ -27,7 +28,7 @@ body { font-family: var(--font-main); color: var(--text); background: var(--whit
 h1, h2, h3 { font-family: var(--font-heading); text-transform: uppercase; color: var(--dark); }
 .section-title { font-size: 2.2rem; margin-bottom: 30px; border-left: 5px solid var(--red); padding-left: 15px; }
 
-/* TLAČÍTKA - NYNÍ ZAOBLENÁ */
+/* TLAČÍTKA - ZAOBLENÁ */
 .btn-primary { display: inline-block; background: var(--red); color: var(--white); padding: 12px 28px; text-decoration: none; font-weight: 700; border: none; cursor: pointer; transition: 0.3s; border-radius: 30px; }
 .btn-primary:hover { background: var(--red-dark); transform: translateY(-2px); box-shadow: 0 5px 15px rgba(227,6,19,0.3); }
 .btn-outline-green { display: inline-block; background: transparent; color: var(--green); border: 2px solid var(--green); padding: 10px 26px; text-decoration: none; font-weight: 700; border-radius: 30px; transition: 0.3s; }
@@ -128,6 +129,18 @@ header.scrolled .nav-logo { height: 35px; }
 .marquee-content span { font-family: var(--font-heading); font-size: 1.8rem; color: #ddd; margin: 0 50px; font-weight: 800; }
 @keyframes scrollMarquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
+/* FAQ AKORDEON */
+.faq-subtitle { margin-bottom: 40px; color: #666; font-size: 1.1rem; }
+.faq-container { max-width: 800px; margin: 0 auto; }
+.faq-item { margin-bottom: 15px; border: 1px solid #eee; border-radius: 15px; overflow: hidden; background: var(--white); box-shadow: 0 5px 15px rgba(0,0,0,0.02); transition: 0.3s; }
+.faq-question { width: 100%; text-align: left; padding: 20px 25px; background: none; border: none; font-size: 1.05rem; font-weight: 700; font-family: var(--font-main); color: var(--dark); cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: 0.3s; }
+.faq-question:hover { color: var(--red); background: #fafafa; }
+.faq-icon { font-size: 1.5rem; color: var(--red); transition: transform 0.3s ease; font-weight: 400; }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; background: var(--white); }
+.faq-answer p { padding: 0 25px 20px; color: #555; border-top: 1px solid transparent; }
+.faq-item.active .faq-icon { transform: rotate(45deg); color: var(--dark); }
+.faq-item.active { border-color: #ddd; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+
 /* KONTAKT */
 .contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
 .contact-details { margin: 30px 0; background: var(--white); padding: 30px; border-radius: 15px; border-left: 5px solid var(--red); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
@@ -153,7 +166,6 @@ footer { background: var(--dark); color: #888; padding: 40px 0; font-size: 0.9re
 @media (max-width: 900px) {
     .two-col, .contact-wrapper, .electro-card { grid-template-columns: 1fr; gap: 40px; }
     
-    /* Vycentrování loga na mobilu */
     .nav-container { justify-content: center; }
     .nav-logo { margin: 0 auto; }
     .mobile-menu-btn { position: absolute; right: 20px; }
