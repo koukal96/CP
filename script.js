@@ -24,7 +24,7 @@ if (menuBtn && navMenu) {
     });
 }
 
-// 3. INTERAKTIVNÍ POČÍTADLA (Včetně HVO100 a CO2)
+// 3. INTERAKTIVNÍ POČÍTADLA (OPRAVENO: Procenta jen u HVO a CO2)
 const counters = document.querySelectorAll('.counter');
 let hasAnimated = false;
 
@@ -42,7 +42,7 @@ const animateCounters = () => {
             const currentValue = Math.round(target * progress);
 
             if (frame < totalFrames) {
-                // Pokud je to HVO nebo CO2 (cílová hodnota 100 nebo 90), přidáme %
+                // OPRAVA: Procento přidáváme JEN pokud je cílová hodnota 100 nebo 90
                 if (target === 100 || target === 90) {
                     counter.innerText = currentValue + " %";
                 } else {
@@ -50,8 +50,12 @@ const animateCounters = () => {
                 }
                 requestAnimationFrame(updateCounter);
             } else {
-                // Finální stav
-                counter.innerText = target.toLocaleString('cs-CZ') + (target <= 100 ? " %" : "");
+                // FINÁLNÍ STAV po doběhnutí animace
+                if (target === 100 || target === 90) {
+                    counter.innerText = target.toLocaleString('cs-CZ') + " %";
+                } else {
+                    counter.innerText = target.toLocaleString('cs-CZ');
+                }
             }
         };
         updateCounter();
@@ -84,6 +88,8 @@ if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const btn = e.target.querySelector('button');
+        if (!btn) return;
+        
         const originalText = btn.innerText;
         btn.innerText = "Odesíláme...";
         btn.style.background = "#00e676";
@@ -109,7 +115,9 @@ document.querySelectorAll('.faq-question').forEach(question => {
             if(otherItem !== item) {
                 otherItem.classList.remove('active');
                 const otherAnswer = otherItem.querySelector('.faq-answer');
-                if (otherAnswer) otherAnswer.style.maxHeight = null;
+                if (otherAnswer) {
+                    otherAnswer.style.maxHeight = null;
+                }
             }
         });
 
