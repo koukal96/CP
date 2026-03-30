@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>CONTROLPOINT s.r.o. | Smart Logistika & HVO100</title>
+    <title>CONTROLPOINT s.r.o. | Logistika Věrovany</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
 </head>
@@ -12,18 +12,18 @@
     <header id="navbar">
         <div class="nav-container">
             <a href="#home" class="logo-link">
-                <img src="IMG_8852.png" alt="CONTROLPOINT" class="nav-logo">
+                <img src="logo.png" alt="CONTROLPOINT" class="nav-logo">
             </a>
-            <button class="menu-toggle" id="menuBtn">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="menu-btn" id="menuBtn">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </button>
-            <nav class="nav-links" id="navMenu">
+            <nav class="nav-menu" id="navMenu">
                 <a href="#o-nas">O nás</a>
                 <a href="#sluzby">Služby</a>
-                <a href="#hvo">Eko-Paliva</a>
-                <a href="#elektro">E-Mobility</a>
+                <a href="#ekologie">HVO100</a>
+                <a href="#elektro">200kW Hub</a>
                 <a href="#faq">FAQ</a>
                 <a href="#kontakt" class="nav-cta">KONTAKT</a>
             </nav>
@@ -31,117 +31,102 @@
     </header>
 
     <section id="home" class="hero">
-        <div class="hero-overlay"></div>
+        <div class="hero-bg"></div>
         <div class="container hero-content">
-            <div class="status-badge"><span class="dot"></span> SYSTEM LIVE | VĚROVANY HUB</div>
+            <div class="badge">PROFI LOGISTIKA VĚROVANY</div>
             <h1>VOZÍME ZBOŽÍ.<br><span class="text-red">NE BALÍKY.</span></h1>
-            <p>Průsečík těžké kamionové dopravy a digitální energetické sítě. Budoucnost logistiky v reálném čase.</p>
-            <div class="hero-btns">
-                <a href="#kontakt" class="btn-red">Poptat přepravu</a>
-                <a href="https://www.google.com/maps?q=Věrovany+94" target="_blank" class="btn-gps">📍 SPUSTIT GPS</a>
+            <p>Průsečík těžké kamionové dopravy a moderní infrastruktury. Rychlost, spolehlivost a extrémní výkon pro vaše náklady.</p>
+            <div class="hero-actions">
+                <a href="#kontakt" class="btn-primary">Poptat přepravu</a>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Věrovany+94" target="_blank" class="btn-gps">📍 SPUSTIT GPS</a>
             </div>
         </div>
     </section>
 
-    <section class="stats-bar">
-        <div class="container grid-4">
-            <div class="stat-item">
-                <span class="num" data-target="35">0</span><span class="plus">+</span>
-                <p>Vozidel ve flotile</p>
+    <section class="stats">
+        <div class="container stats-grid">
+            <div class="stat-card">
+                <div class="num" data-target="35">0</div>
+                <div class="label">Vozidel ve flotile</div>
             </div>
-            <div class="stat-item">
-                <span class="num" data-target="1520000">0</span>
-                <p>Projetých KM</p>
+            <div class="stat-card">
+                <div class="num" data-target="1520000">0</div>
+                <div class="label">Projetých kilometrů</div>
             </div>
-            <div class="stat-item">
-                <span class="text-green">-90%</span>
-                <p>Emisí CO2 s HVO100</p>
-            </div>
-            <div class="stat-item">
-                <span class="num" data-target="200">0</span><span class="unit">kW</span>
-                <p>Nabíjecí výkon</p>
+            <div class="stat-card">
+                <div class="num-green">-90%</div>
+                <div class="label">Emisí CO2 (HVO100)</div>
             </div>
         </div>
     </section>
 
-    <section id="hvo" class="section">
-        <div class="container grid-2">
-            <div class="img-placeholder tech-box">
-                <div class="eco-label">HVO100 COMPLIANT</div>
-            </div>
-            <div class="text-block">
-                <h2 class="section-title">ZELENÁ <span class="text-red">REVOLUCE</span></h2>
-                <p>Implementujeme fosil-free paliva pro okamžité snížení emisní stopy. S palivem <strong>HVO100</strong> snižujeme emise CO2 o 90 % bez nutnosti úpravy motorů.</p>
-                <ul class="feat-list">
-                    <li>Snížení emisí skleníkových plynů o 90 %</li>
-                    <li>Udržitelná logistika pro náročné klienty</li>
-                    <li>Plná certifikace a transparentní reporting</li>
+    <section id="ekologie" class="section">
+        <div class="container two-col">
+            <div class="text-side">
+                <h2 class="section-title">HVO100: <span class="text-red">ZELENÁ CESTA</span></h2>
+                <p>Jsme lídry v zavádění udržitelných paliv. Díky využívání <strong>HVO100</strong> (Hydrotreated Vegetable Oil) snižujeme emise CO2 o 90 % oproti běžné naftě.</p>
+                <ul class="check-list">
+                    <li>Okamžité snížení uhlíkové stopy</li>
+                    <li>Fosil-free logistická řešení</li>
+                    <li>Certifikovaná přeprava pro ESG reporting</li>
                 </ul>
+            </div>
+            <div class="image-side tech-box">
+                <div class="tech-tag">ECO_STATUS: ACTIVE</div>
+                <div class="placeholder">SUSTAINABLE LOGISTICS</div>
             </div>
         </div>
     </section>
 
     <section id="elektro" class="section bg-dark">
         <div class="container text-center">
-            <div class="badge-green">NEXT GEN INFRASTRUCTURE</div>
             <h2 class="text-white">ULTRA-FAST <span class="text-green">200kW</span> HUB</h2>
-            
-            <div class="hub-visual">
-                <div class="gauge-container">
-                    <svg class="gauge" viewBox="0 0 200 200">
-                        <circle class="gauge-bg" cx="100" cy="100" r="90"></circle>
-                        <circle class="gauge-fill" cx="100" cy="100" r="90"></circle>
-                    </svg>
-                    <div class="gauge-value">
-                        <span class="val">200</span>
-                        <span class="lab">kW</span>
-                    </div>
-                </div>
-                <div class="hub-info">
-                    <p>Budujeme nejvýkonnější uzel v regionu. Aktuálně probíhá instalace transformátorů.</p>
-                    <div class="progress-container">
-                        <div class="progress-label">Instalace sítě: 65%</div>
-                        <div class="progress-bar"><div class="fill" style="width: 65%"></div></div>
+            <div class="gauge-wrapper">
+                <div class="gauge-circle">
+                    <div class="gauge-inner">
+                        <span class="gauge-num">200</span>
+                        <span class="gauge-unit">kW</span>
                     </div>
                 </div>
             </div>
+            <p class="text-gray">Budujeme nejvýkonnější uzel v regionu pro těžkou nákladní dopravu. Aktuálně: Instalace transformátorů (65%).</p>
         </div>
     </section>
 
     <section id="faq" class="section">
         <div class="container">
             <h2 class="section-title text-center">ČASTÉ <span class="text-red">DOTAZY</span></h2>
-            <div class="faq-list">
-                <details class="faq-card">
-                    <summary>Jaké zboží přepravujete? <span class="plus">+</span></summary>
-                    <div class="content">Specializujeme se na těžkou kamionovou dopravu, nadrozměrné náklady a paletovou logistiku. Balíky neřešíme.</div>
-                </details>
-                <details class="faq-card">
-                    <summary>Co je to HVO100 a proč ho používáte? <span class="plus">+</span></summary>
-                    <div class="content">HVO100 je syntetická nafta vyrobená z odpadních tuků. Umožňuje nám snížit emise CO2 o 90 % a nabízet ekologickou přepravu.</div>
-                </details>
-                <details class="faq-card">
-                    <summary>Kde přesně vás najdu? <span class="plus">+</span></summary>
-                    <div class="content">Naše hlavní základna a logistický hub se nachází ve Věrovanech 94. Pro přesnou trasu použijte tlačítko navigace v menu nebo patičce.</div>
-                </details>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-trigger">Jak rychle dokážete přistavit vozidlo? <span class="icon">+</span></button>
+                    <div class="faq-content">
+                        <p>Snažíme se reagovat obratem. Pro urgentní požadavky doporučujeme volat přímo na dispečink, kde vám sdělíme aktuální dostupnost.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-trigger">Nebojte se nás kontaktovat s čímkoli <span class="icon">+</span></button>
+                    <div class="faq-content">
+                        <p>Žádný dotaz není zbytečný. Ať už jde o cenu, trasu nebo technické detaily HVO100, rádi vám vše vysvětlíme po telefonu i e-mailu.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="kontakt" class="section bg-light">
-        <div class="container contact-grid">
-            <div class="contact-card">
-                <h3>KONTAKT</h3>
-                <p>📍 Věrovany 94, 783 75</p>
-                <p>📞 +420 601 371 211</p>
-                <p>✉️ info@control-point.eu</p>
-                <a href="https://www.google.com/maps?q=Věrovany+94" target="_blank" class="btn-red w-100" style="text-align: center; margin-top: 20px;">SPUSTIT NAVIGACI (GPS)</a>
+        <div class="container contact-wrapper">
+            <div class="contact-info">
+                <h2 class="section-title">KONTAKT</h2>
+                <div class="c-detail"><strong>ADRESA:</strong> Věrovany 94, 783 75</div>
+                <div class="c-detail"><strong>DISPEČINK:</strong> +420 601 371 211</div>
+                <div class="c-detail"><strong>EMAIL:</strong> info@control-point.eu</div>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Věrovany+94" target="_blank" class="btn-primary w-100">🧭 OTEVŘÍT NAVIGACI</a>
             </div>
             <form class="contact-form" id="contactForm">
                 <input type="text" placeholder="Jméno / Firma" required>
                 <input type="email" placeholder="E-mail" required>
-                <textarea placeholder="Vaše poptávka..." rows="4"></textarea>
-                <button type="submit" class="btn-red">Odeslat zprávu</button>
+                <textarea placeholder="Co potřebujete přepravit?" rows="4" required></textarea>
+                <button type="submit" class="btn-primary">Odeslat poptávku</button>
             </form>
         </div>
     </section>
