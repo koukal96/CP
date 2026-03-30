@@ -18,6 +18,7 @@
             <nav class="nav-menu" id="navMenu">
                 <a href="#o-nas">O nás</a>
                 <a href="#sluzby">Služby</a>
+                <a href="#hvo100">HVO100</a>
                 <a href="#elektro" class="nav-green">200kW Hub</a>
                 <a href="#faq">FAQ</a>
                 <a href="#kontakt" class="nav-btn">Kontakt</a>
@@ -33,7 +34,7 @@
             <p class="hero-sub">Průsečík spolehlivé kamionové dopravy a moderní infrastruktury. Rychlost, efektivita a maximální nasazení pro vaše zásilky.</p>
             <div class="hero-actions">
                 <a href="#sluzby" class="btn-primary">Naše služby</a>
-                <a href="#elektro" class="btn-outline-green">E-Mobility Projekt</a>
+                <a href="#hvo100" class="btn-outline-green">Eko doprava HVO100</a>
             </div>
         </div>
     </section>
@@ -51,9 +52,14 @@
                 <div class="stat-label">Projetých kilometrů</div>
             </div>
             <div class="stat-card">
-                <div class="stat-icon">⚡</div>
-                <div class="stat-number"><span class="counter" data-target="200">0</span> kW</div>
-                <div class="stat-label">Výkon chystaného hubu</div>
+                <div class="stat-icon">🛢️</div>
+                <div class="stat-number stat-green"><span class="counter" data-target="100">0</span>%</div>
+                <div class="stat-label">JEZDÍME NA HVO100</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🍃</div>
+                <div class="stat-number stat-green"><span class="counter" data-target="90">0</span>%</div>
+                <div class="stat-label">SNIŽUJEME CO2</div>
             </div>
         </div>
     </section>
@@ -77,7 +83,25 @@
         </div>
     </section>
 
-    <section id="sluzby" class="section">
+    <section id="hvo100" class="section">
+        <div class="container two-col">
+            <div class="image-content tech-box" style="border-color: var(--green);">
+                <div class="tech-overlay" style="background: var(--green);">ECO MODE</div>
+                <div class="placeholder-img" style="color: var(--green);">HVO100 COMPLIANT</div>
+            </div>
+            <div class="text-content">
+                <h2 class="section-title">BUDOUCNOST JE <span class="text-green">HVO100</span></h2>
+                <p>Jako jedni z mála implementujeme syntetickou naftu z obnovitelných zdrojů. S palivem <strong>HVO100</strong> nabízíme našim klientům možnost okamžitého snížení emisní stopy jejich dodavatelského řetězce.</p>
+                <ul class="check-list">
+                    <li>Snížení emisí skleníkových plynů až o 90 %</li>
+                    <li>Plně kompatibilní s motory Euro 6</li>
+                    <li>Vhodné pro ESG reporting vašich firem</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="sluzby" class="section bg-light">
         <div class="container">
             <h2 class="section-title text-center">HLAVNÍ <span class="text-red">SLUŽBY</span></h2>
             <div class="services-grid">
@@ -121,7 +145,10 @@
                 </div>
                 <div class="electro-visual">
                     <div class="clean-energy-circle">
-                        <span class="lightning-icon">⚡</span>
+                        <div class="gauge-inner">
+                            <span class="gauge-num">200</span>
+                            <span class="gauge-unit">kW</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -148,9 +175,9 @@
             
             <div class="faq-container">
                 <div class="faq-item">
-                    <button class="faq-question">Jak rychle dokážete přistavit vozidlo? <span class="faq-icon">+</span></button>
+                    <button class="faq-question">Co přesně je palivo HVO100? <span class="faq-icon">+</span></button>
                     <div class="faq-answer">
-                        <p>Snažíme se reagovat obratem. Pro urgentní požadavky doporučujeme rovnou zavolat na náš dispečink, kde vám okamžitě sdělíme aktuální dostupnost naší flotily.</p>
+                        <p>HVO100 je obnovitelná nafta vyrobená ze zbytků olejů a tuků. Snižuje emise CO2 o 90 % a je plně zaměnitelná s běžnou naftou, aniž by poškozovala motory.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -162,13 +189,7 @@
                 <div class="faq-item">
                     <button class="faq-question">Je možné u vás uskladnit zboží jen na pár dní? <span class="faq-icon">+</span></button>
                     <div class="faq-answer">
-                        <p>Samozřejmě. Nabízíme velmi flexibilní skladování – od několika dnů (například pro rychlou překládku tzv. cross-docking) až po dlouhodobé skladování v našem areálu ve Věrovanech.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Nevím přesně, co můj náklad vyžaduje. Poradíte mi? <span class="faq-icon">+</span></button>
-                    <div class="faq-answer">
-                        <p>Rozhodně! Od toho tu jsme. Každá přeprava je specifická. Ozvěte se nám s tím, co potřebujete přesunout, a my pro vás vymyslíme to nejefektivnější a nejbezpečnější řešení.</p>
+                        <p>Samozřejmě. Nabízíme flexibilní skladování – od několika dnů pro rychlou překládku (cross-docking) až po dlouhodobé uskladnění.</p>
                     </div>
                 </div>
             </div>
@@ -197,7 +218,7 @@
                         </div>
                     </div>
 
-                    <a href="http://googleusercontent.com/maps.google.com/4" target="_blank" class="btn-primary btn-large">
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=Věrovany+94" target="_blank" class="btn-primary btn-large btn-gps-nav" style="text-decoration:none;">
                         🧭 SPUSTIT NAVIGACI (GPS)
                     </a>
                 </div>
