@@ -83,7 +83,7 @@
         .hero-actions { display: flex; gap: 15px; flex-wrap: wrap; }
 
         /* ==========================================================================
-           5. STATISTIKY (BUDÍK EURO 6)
+           5. STATISTIKY
            ========================================================================== */
         .stats-section { background: var(--dark); color: var(--white); padding: 60px 0; border-bottom: 4px solid var(--red); position: relative; z-index: 5; }
         .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; text-align: center; }
@@ -110,7 +110,7 @@
         @keyframes pulse-red { 0% { box-shadow: 0 0 0 0 rgba(227, 6, 19, 0.4); } 70% { box-shadow: 0 0 0 10px rgba(227, 6, 19, 0); } 100% { box-shadow: 0 0 0 0 rgba(227, 6, 19, 0); } }
 
         /* ==========================================================================
-           7. SLUŽBY (SCROLLOVACÍ CAROUSEL)
+           7. SLUŽBY
            ========================================================================== */
         .services-carousel-wrapper { position: relative; margin-top: 40px; }
         .services-carousel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 30px; padding: 10px 0 30px 0; scrollbar-width: thin; scrollbar-color: var(--red) #eee; -webkit-overflow-scrolling: touch; }
@@ -127,7 +127,7 @@
         .b-test { background: rgba(52, 168, 83, 0.1); color: #34a853; border: 1px solid #34a853; }
 
         /* ==========================================================================
-           8. ELEKTRO HUB (ŽIVĚJŠÍ DESIGN)
+           8. ELEKTRO HUB
            ========================================================================== */
         .bg-animated-green { background: linear-gradient(-45deg, #05140a, #0b2b16, #001f0a, #05140a); background-size: 400% 400%; animation: gradientBG 15s ease infinite; color: var(--white); position: relative; overflow: hidden; border-top: 4px solid var(--green); border-bottom: 4px solid var(--green); }
         @keyframes gradientBG { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
@@ -143,7 +143,7 @@
         @keyframes eco-spin-reverse { 100% { transform: rotate(-360deg); } }
 
         /* ==========================================================================
-           9. PARTNEŘI MARQUEE
+           9. PARTNEŘI
            ========================================================================== */
         .partners-section { background: var(--white); padding: 50px 0; border-bottom: 1px solid #eee; overflow: hidden; }
         .partners-title { text-align: center; font-size: 1rem; color: #999; margin-bottom: 30px; letter-spacing: 3px; }
@@ -156,7 +156,7 @@
         @keyframes scrollMarquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
         /* ==========================================================================
-           10. FAQ AKORDEON
+           10. FAQ
            ========================================================================== */
         .faq-subtitle { margin-bottom: 40px; color: #666; font-size: 1.1rem; }
         .faq-container { max-width: 900px; margin: 0 auto; }
@@ -169,7 +169,7 @@
         .faq-item.active .faq-icon { transform: rotate(45deg); color: var(--dark); }
 
         /* ==========================================================================
-           11. KONTAKTNÍ CENTRUM A FORMULÁŘ
+           11. KONTAKT A FORMULÁŘ
            ========================================================================== */
         .contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
         .contact-details { margin: 30px 0; background: var(--white); padding: 35px; border-radius: 15px; border-left: 5px solid var(--red); box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
@@ -514,677 +514,241 @@
         </div>
     </div>
 
-    <div id="gdprModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeModal('gdprModal')">×</span>
-            <div id="gdprContent">
-                
-                <div class="lang-text cs-text active-lang">
+                    <div class="lang-text cs-text active-lang">
                     <h2>ZÁSADY OCHRANY OSOBNÍCH ÚDAJŮ</h2>
                     <div class="legal-text">
-                        [span_0](start_span)<p>Tento dokument obsahuje informace pro subjekty údajů stran zpracování jejich osobních údajů v organizaci, a to v rámci požadavků, které jsou na organizaci, jakožto správce osobních údajů, kladeny ust. čl. 13 NAŘÍZENÍ EVROPSKÉHO PARLAMENTU A RADY (EU) 2016/679 ze dne 27. dubna 2016 o ochraně fyzických osob v souvislosti se zpracováním osobních údajů a o volném pohybu těchto údajů a o zrušení směrnice 95/46/ES (dále jen GDPR)[span_0](end_span).</p>
+                        <p>Tento dokument obsahuje informace pro subjekty údajů stran zpracování jejich osobních údajů v organizaci, a to v rámci požadavků, které jsou na organizaci, jakožto správce osobních údajů, kladeny ust. čl. 13 NAŘÍZENÍ EVROPSKÉHO PARLAMENTU A RADY (EU) 2016/679 ze dne 27. dubna 2016 o ochraně fyzických osob v souvislosti se zpracováním osobních údajů a o volném pohybu těchto údajů a o zrušení směrnice 95/46/ES (dále jen GDPR).</p>
+                        
                         <h3>Kdo zpracovává Vaše údaje?</h3>
-                        [span_1](start_span)<p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Praha 10<br>C 202561 vedená u Městského soudu v Praze<br>kontaktní e-mail: info@control-point.eu<br>dále jako „my“ nebo „správce“ nebo „organizace“[span_1](end_span)</p>
+                        <p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Praha 10<br>C 202561 vedená u Městského soudu v Praze<br>kontaktní e-mail: info@control-point.eu<br>dále jako „my“ nebo „správce“ nebo „organizace“</p>
+                        
                         <h3>Co je to osobní údaj?</h3>
-                        [span_2](start_span)<p>Osobním údajem je prakticky jakákoli informace, která dokáže žijící fyzickou osobu identifikovat přímo nebo jejím účelem je dosažení takové osoby[span_2](end_span). [span_3](start_span)Osobní údaje lze dělit na obecné (např. jméno a příjmení, věk, telefonní číslo, místo narození, osobní stav apod.) a citlivé (dnes jsou označovány jako zvláštní kategorie osobních údajů, přičemž se jedná pouze o tyto osobní údaje – biometrické údaje, členství v odborové organizaci/politické straně, etnický původ, filozofické vyznání, genetické údaje, informace o odsouzení a trestní delikty, náboženské vyznání, politické názory, rasový původ sexuální orientace/život, zdravotní stav)[span_3](end_span).</p>
-                        <h3>Co je zpracování osobních údajů?</h3>
-                        [span_4](start_span)<p>Zpracováním osobních údajů se rozumí systematická činnost, kterou správce provádí s osobními údaji za určitým účelem[span_4](end_span). [span_5](start_span)Činností dle předchozí věty je zejména: shromáždění, zaznamenání, uspořádání, strukturování, uložení, přizpůsobení nebo pozměnění, vyhledání, nahlédnutí, použití, zpřístupnění přenosem, šíření nebo jakékoliv jiné zpřístupnění, seřazení či zkombinování, omezení, výmaz nebo zničení[span_5](end_span).</p>
-                        <h3>Zdroje a kategorie osobních údajů:</h3>
-                        [span_6](start_span)<p>Správce zpracovává osobní údaje (přímo od vás) které jste mu poskytli, nebo osobní údaje, které získal na základě plnění Vaší objednávky[span_6](end_span). [span_7](start_span)Vaše identifikační a kontaktní údaje a údaje nezbytné k plnění smlouvy[span_7](end_span).</p>
+                        <p>Osobním údajem je prakticky jakákoli informace, která dokáže žijící fyzickou osobu identifikovat přímo nebo jejím účelem je dosažení takové osoby. Osobní údaje lze dělit na obecné (např. jméno a příjmení, věk, telefonní číslo, místo narození, osobní stav apod.) a citlivé (dnes jsou označovány jako zvláštní kategorie osobních údajů, přičemž se jedná pouze o tyto osobní údaje – biometrické údaje, členství v odborové organizaci/politické straně, etnický původ, filozofické vyznání, genetické údaje, informace o odsouzení a trestní delikty, náboženské vyznání, politické názory, rasový původ sexuální orientace/život, zdravotní stav).</p>
+                        
                         <h3>Zákonný důvod a účel zpracování</h3>
-                        <p>Zákonným důvodem zpracování je:<br>Váš souhlas se zpracováním osobních údajů za účelem poskytování přímého marketingu podle čl. 6 odst. [span_8](start_span)1 písm. a) GDPR[span_8](end_span).<br>Pro účel uzavření a plnění smlouvy (tj. v souladu s poskytováním našich služeb) zpracováváme Vaše osobní údaje dle ustanovení čl. 6 odst. [span_9](start_span)1 písm. b) GDPR[span_9](end_span). [span_10](start_span)Právním základem zpracování Vašich obecných osobních údajů je tedy smlouva[span_10](end_span).</p>
-                        [span_11](start_span)<p>Jakmile bude smlouva splněna, musíme Vaše osobní údaje archivovat po dobu, kterou předvídají příslušné právní předpisy[span_11](end_span). Zde je právním důvodem zpracování Vašich obecných osobních údajů splnění právní povinnosti, což stanoví čl. 6 odst. [span_12](start_span)1 písm. c) GDPR[span_12](end_span).</p>
-                        [span_13](start_span)<p>Účelem zpracování osobních údajů je:<br>Vyřízení Vaší objednávky a výkon práv a povinností vyplývajících ze smluvního vztahu mezi Vámi a Správcem[span_13](end_span). Při objednávce jsou vyžadovány osobní údaje nezbytné pro úspěšné vyřízení objednávky podle čl. [span_14](start_span)1 písm. b) Nařízení (s tím souvisí i následné uskutečnění platby, dodání služeb, vyřizování reklamace apod.)[span_14](end_span); [span_15](start_span)Vaše osobní údaje, které nám poskytnete, využíváme k tomu, abychom s Vámi mohli smlouvu uzavřít a je-li mezi námi smlouva již uzavřena, pak je využíváme, abychom ji mohli splnit[span_15](end_span).</p>
-                        [span_16](start_span)<p>Zpracování osobních údajů zákazníka probíhá bez souhlasu zákazníka, jelikož právním základem zpracování jeho osobních údajů pro účely plnění smlouvy je konkrétní smlouva mezi zákazníkem a provozovatelem[span_16](end_span). [span_17](start_span)Poskytnutí osobních údajů je nezbytný požadavek na uzavření a plnění smlouvy, bez poskytnutí osobních údajů není možné uzavřít smlouvu či ze strany správce plnit její podmínky[span_17](end_span).</p>
+                        <p>Zákonným důvodem zpracování je:<br>Váš souhlas se zpracováním osobních údajů za účelem poskytování přímého marketingu podle čl. 6 odst. 1 písm. a) GDPR.<br>Pro účel uzavření a plnění smlouvy (tj. v souladu s poskytováním našich služeb) zpracováváme Vaše osobní údaje dle ustanovení čl. 6 odst. 1 písm. b) GDPR. Právním základem zpracování Vašich obecných osobních údajů je tedy smlouva.</p>
+                        <p>Účelem zpracování osobních údajů je: Vyřízení Vaší objednávky a výkon práv a povinností vyplývajících ze smluvního vztahu mezi Vámi a Správcem. Poskytnutí osobních údajů je nezbytný požadavek na uzavření a plnění smlouvy.</p>
+                        
                         <h3>Jaké osobní údaje a v jakém rozsahu budeme zpracovávat?</h3>
-                        [span_18](start_span)<p>Abychom Vám mohli poskytovat naše služby, potřebujeme k tomu znát následující osobní údaje: Obecné osobní údaje: jméno a příjmení, adresu trvalého pobytu, adresu dodání služeb nebo tovar, Vaše telefonní číslo a e-mail[span_18](end_span).</p>
+                        <p>Abychom Vám mohli poskytovat naše služby, potřebujeme k tomu znát následující osobní údaje: Obecné osobní údaje: jméno a příjmení, adresu trvalého pobytu, adresu dodání služeb nebo tovar, Vaše telefonní číslo a e-mail.</p>
+                        
                         <h3>Jak dlouho budeme údaje uchovávat?</h3>
-                        [span_19](start_span)<p>Vaše osobní údaje budeme uchovávat po celou dobu, co budeme plnit naši vzájemnou smlouvu[span_19](end_span). [span_20](start_span)Po skončení smluvního vztahu budeme Vaše osobní údaje uchovávat tak dlouho, abychom splnili nezbytnou archivační povinnost podle právních předpisů, které archivaci předpokládají (těmito předpisy jsou např. zákon o účetnictví, zákon o dani z přidané hodnoty, zákon o archivnictví a evidenci)[span_20](end_span).</p>
+                        <p>Vaše osobní údaje budeme uchovávat po celou dobu, co budeme plnit naši vzájemnou smlouvu. Po skončení smluvního vztahu budeme Vaše osobní údaje uchovávat tak dlouho, abychom splnili nezbytnou archivační povinnost podle právních předpisů (např. zákon o účetnictví, zákon o dani z přidané hodnoty).</p>
+                        
                         <h3>Komu dále předáváme Vaše osobní údaje?</h3>
-                        [span_21](start_span)<p>Vaše osobní údaje mohou být předávány tomuto okruhu osob: poskytovatelé právních, daňových a účetních služeb, poskytovatelé technických řešení[span_21](end_span). [span_22](start_span)Vaše osobní údaje mohou být rovněž předávány orgánům veřejné správy a soudům, to však pouze za předpokladu, že tak stanoví zvláštní právní předpis, nebo k tomu dáte výslovný souhlas[span_22](end_span). [span_23](start_span)Našim zpracovatelům jsou Vaše osobní údaje předávány vždy na základě zpracovatelské smlouvy a v souladu s minimálním požadovaným standardem ochrany osobních údajů, které GDPR požaduje[span_23](end_span). [span_24](start_span)Správce neposkytuje, nezveřejňuje a nezpřístupňuje osobní údaje do třetích zemí[span_24](end_span).</p>
-                        <h3>Podmínky zabezpečení osobních údajů</h3>
-                        [span_25](start_span)<p>Správce prohlašuje, že přijal vhodná personální, technická a organizační opatření k zajištění ochrany osobních údajů[span_25](end_span). [span_26](start_span)Správce přijal technická opatření k zabezpečení datových úložišť a úložišť osobních údajů ve spisové podobě[span_26](end_span). [span_27](start_span)Správce prohlašuje, že k osobním údajům mají přístup výlučně jím pověřené osoby[span_27](end_span). [span_28](start_span)V rámci činností zpracování osobních údajů, které při naší činnosti provádíme, nedochází k automatickému rozhodování ani k profilování[span_28](end_span).</p>
+                        <p>Vaše osobní údaje mohou být předávány tomuto okruhu osob: poskytovatelé právních, daňových a účetních služeb, poskytovatelé technických řešení. Našim zpracovatelům jsou Vaše osobní údaje předávány vždy na základě zpracovatelské smlouvy v souladu s GDPR. Správce neposkytuje osobní údaje do třetích zemí.</p>
+                        
                         <h3>Jaká jsou Vaše práva v souvislosti se zpracováním Vašich osobních údajů?</h3>
-                        [span_29](start_span)<p>Za podmínek stanovených v GDPR máte[span_29](end_span):</p>
                         <ul>
-                            <li>Právo na přístup ke svým osobním údajům podle čl. [span_30](start_span)15 GDPR[span_30](end_span)</li>
-                            [span_31](start_span)<li>Právo na opravu osobních údajů dle čl.16 GDPR[span_31](end_span)</li>
-                            [span_32](start_span)<li>Právo na omezení zpracování[span_32](end_span)</li>
-                            [span_33](start_span)<li>Právo na výmaz dle čl.17 GDPR[span_33](end_span)</li>
-                            [span_34](start_span)<li>Právo namítat podle článku 21 GDPR[span_34](end_span)</li>
-                            [span_35](start_span)<li>Právo na přenesení osobních údajů podle článku 21 GDPR[span_35](end_span)</li>
-                            [span_36](start_span)<li>Právo odvolat souhlas (elektronicky, nebo na korespondenční adresu)[span_36](end_span)</li>
-                            [span_37](start_span)<li>Právo podat stížnost úřadu na ochranu osobních údajů v případě, že se domníváte, že došlo k porušení vašich práv na ochranu osobních údajů[span_37](end_span).</li>
+                            <li>Právo na přístup ke svým osobním údajům podle čl. 15 GDPR</li>
+                            <li>Právo na opravu osobních údajů dle čl. 16 GDPR</li>
+                            <li>Právo na omezení zpracování</li>
+                            <li>Právo na výmaz dle čl. 17 GDPR</li>
+                            <li>Právo namítat podle článku 21 GDPR</li>
+                            <li>Právo na přenesení osobních údajů podle článku 21 GDPR</li>
+                            <li>Právo odvolat souhlas a právo podat stížnost úřadu na ochranu osobních údajů.</li>
                         </ul>
-                        <h3>Jak můžete naplnit svá práva?</h3>
-                        [span_38](start_span)<p><strong>Právo na přístup:</strong> Na základě Vaší žádosti Vám musíme sdělit, zda zpracováváme, nebo nezpracováváme Vaše osobní údaje[span_38](end_span). [span_39](start_span)V případě, že je zpracováváme, pak máte právo na to, abychom Vám sdělili: za jakým účelem Vaše údaje zpracováváme, v jakém rozsahu jsou tyto údaje zpracovávány, jak dlouho budou uchovávány, komu budou zpřístupněny, zda můžete podat stížnost Úřadu pro ochranu osobních údajů[span_39](end_span). [span_40](start_span)Žádost můžete podat elektronicky na emailovou adresu info@control-point.eu nebo poštou na adresu: Dopravní 500/9, Uhříněves, 104 00 Praha 10[span_40](end_span).</p>
-                        [span_41](start_span)<p><strong>Právo na opravu:</strong> Pokud se domníváte, že zpracováváme Vaše nesprávné (nepřesné) osobní údaje, pak máte právo na jejich opravu[span_41](end_span). [span_42](start_span)Dejte nám to na vědomí a my bez zbytečného odkladu provedeme nápravu[span_42](end_span). [span_43](start_span)Žádost můžete podat elektronicky na emailovou adresu info@control-point.eu nebo poštou na adresu: Dopravní 500/9, Uhříněves, 104 00 Praha 10[span_43](end_span).</p>
-                        [span_44](start_span)<p><strong>Právo na vymazání:</strong> Za určitých okolností máte právo, abychom Vaše osobní údaje vymazali[span_44](end_span). O vymazání Vašich údajů nás můžete požádat kdykoli. [span_45](start_span)Vaše osobní údaje vymažeme, pokud: již vaše osobní údaje nepotřebujeme pro účel, pro který jste nám je poskytli, odvoláte svůj souhlas, namítáte vůči zpracování vašich osobních údajů, zpracováváme Vaše osobní údaje nezákonně, osobní údaje musí být vymazány, aby se tím splnila zákonná povinnost, jste-li dítě, příp. rodič dítěte, které souhlasilo se zpracováním osobních údajů přes internet[span_45](end_span).</p>
-                        [span_46](start_span)<p><strong>Právo na omezení zpracování:</strong> Můžete nás požádat, abychom omezili zpracování vašich osobních údajů[span_46](end_span). [span_47](start_span)Pokud žádosti vyhovíme, Vaše osobní údaje budeme pouze uchovávat a dále s nimi pracovat nebudeme[span_47](end_span). [span_48](start_span)K omezení zpracování Vašich údajů dojde, pokud: Vaše osobní údaje jsou nesprávné, a to dokud neověříme jejich správnost, zpracováváme osobní údaje nezákonně, avšak Vy nesouhlasíte s jejich vymazáním a na místo toho žádáte, abychom zpracování Vašich osobních údajů jen omezili, Vaše údaje již nepotřebujeme, ale potřebujete je Vy k prokázání, uplatňování nebo obhajování svých práv, namítáte vůči zpracování Vašich osobních údajů, a to dokud neověříme, zda naše oprávněné zájmy převažují nad vašimi důvody[span_48](end_span).</p>
-                        [span_49](start_span)<p><strong>Právo na přenosnost dat:</strong> Máte právo žádat, abychom Vám poskytli Vaše osobní údaje v elektronické formě (např. soubor XML nebo CSV), která Vám umožní snadno si přenést data do jiné společnosti[span_49](end_span). [span_50](start_span)Také nás můžete požádat, abychom Vaše osobní údaje přenesli vybrané společnosti přímo my[span_50](end_span). [span_51](start_span)Vaší žádosti vyhovíme v případě, že jste nám poskytli osobní údaje přímo Vy a dali jste nám k jejich zpracování souhlas[span_51](end_span).</p>
-                        [span_52](start_span)<p><strong>Právo namítat:</strong> Máte právo namítat, že zpracováváme Vaše osobní údaje[span_52](end_span). [span_53](start_span)Pokud Vaše osobní údaje zpracováváme v následujících případech: z důvodu našeho oprávněného zájmu, vytváření zákaznického profilu, můžete namítat jejich zpracování, máte-li k tomu osobní důvody[span_53](end_span).</p>
                         
                         <h3>Jak můžete tato práva vykonávat?</h3>
-                        [span_54](start_span)<p>S Vaší žádostí se můžete na nás obrátit některým z těchto způsobů: Emailem: info@control-point.eu nebo poštou na adresu: Dopravní 500/9, Uhříněves, 104 00 Praha 10[span_54](end_span).</p>
-                        [span_55](start_span)<p>V případě, že se domníváte, že došlo k porušení Vašich práv na ochranu osobních údajů máte právo podat stížnost dozorčímu orgánu kterým je Úřad na ochranu osobních údajů na adrese[span_55](end_span):<br>Úřad pro ochranu osobních údajů<br>Pplk. [span_56](start_span)Sochora 27170 00 Praha 7<br>IČO: 70837627<br>Telefon: ústředna: +420 234 665 111 (neposkytuje konzultace) informace: +420 234 665 800 (informační linka je k dispozici vždy v úterý a čtvrtek Od 13.00 do 15.30)<br>WWW: https://www.uoou.cz<br>E-mail: posta@uoou.cz<br>ID datové schránky: qkbaa2n<br>Tyto Zásady ochrany osobních údajů jsou platné a účinné od: 24.04.2019[span_56](end_span)[span_57](start_span)<br>aktualizace dne 29.03.2023[span_57](end_span)</p>
+                        <p>S Vaší žádostí se můžete na nás obrátit některým z těchto způsobů:<br>Emailem: info@control-point.eu<br>Poštou na adresu: Dopravní 500/9, Uhříněves, 104 00 Praha 10</p>
+                        <p>Dozorčí orgán: Úřad pro ochranu osobních údajů, Pplk. Sochora 27, 170 00 Praha 7 (https://www.uoou.cz)</p>
                     </div>
                 </div>
 
                 <div class="lang-text en-text">
                     <h2>PRIVACY POLICY</h2>
                     <div class="legal-text">
-                        [span_58](start_span)<p>This document contains information for data subjects regarding the processing of their personal data within the organization, in accordance with the requirements placed on the organization as a data controller under Article 13 of REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 27 April 2016 (GDPR)[span_58](end_span).</p>
+                        <p>This document contains information for data subjects regarding the processing of their personal data within the organization, in accordance with the requirements placed on the organization as a data controller under Article 13 of REGULATION (EU) 2016/679 (GDPR).</p>
                         <h3>Who processes your data?</h3>
-                        [span_59](start_span)<p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Prague 10<br>Registered at the Municipal Court in Prague (C 202561)<br>Contact e-mail: info@control-point.eu<br>Hereinafter referred to as "we", "controller" or "organization"[span_59](end_span)</p>
+                        <p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Prague 10<br>Registered at the Municipal Court in Prague (C 202561)<br>Contact e-mail: info@control-point.eu</p>
                         <h3>What is personal data?</h3>
-                        [span_60](start_span)<p>Personal data is any information that can identify a living natural person directly or indirectly[span_60](end_span). [span_61](start_span)Personal data can be general (e.g., name, age, phone number, address) and sensitive (special categories of personal data, including biometric data, trade union membership, ethnic origin, religious belief, health status, etc.)[span_61](end_span).</p>
-                        <h3>What is personal data processing?</h3>
-                        [span_62](start_span)<p>Processing means any systematic activity performed by the controller with personal data for a specific purpose[span_62](end_span)[span_63](start_span), such as collection, recording, organization, structuring, storage, adaptation, retrieval, use, disclosure, restriction, erasure, or destruction[span_63](end_span).</p>
-                        <h3>Sources and categories of personal data:</h3>
-                        [span_64](start_span)<p>The controller processes personal data (directly from you) that you have provided, or data obtained based on the fulfillment of your order[span_64](end_span). [span_65](start_span)This includes identification and contact details necessary for the performance of the contract[span_65](end_span).</p>
+                        <p>Personal data is any information that can identify a living natural person directly or indirectly (e.g., name, age, phone number, address) and sensitive data.</p>
                         <h3>Legal reason and purpose of processing</h3>
-                        [span_66](start_span)<p>The legal reason for processing is:<br>Your consent for direct marketing purposes according to Article 6(1)(a) GDPR[span_66](end_span)[span_67](start_span).<br>For concluding and fulfilling a contract (providing our services), we process data under Article 6(1)(b) GDPR[span_67](end_span)[span_68](start_span).<br>Once the contract is fulfilled, we must archive data to comply with legal obligations under Article 6(1)(c) GDPR[span_68](end_span).</p>
-                        [span_69](start_span)<p>The purpose of processing is:<br>Processing your order and exercising rights and obligations arising from our contractual relationship[span_69](end_span). [span_70](start_span)Processing occurs without explicit consent when the legal basis is the performance of a contract[span_70](end_span). [span_71](start_span)Providing personal data is a necessary requirement to conclude and fulfill the contract[span_71](end_span).</p>
+                        <p>The legal reason for processing is: Your consent for direct marketing purposes (Article 6(1)(a) GDPR) and for concluding and fulfilling a contract (Article 6(1)(b) GDPR). The purpose of processing is processing your order and exercising rights and obligations arising from our contractual relationship.</p>
                         <h3>What personal data will we process?</h3>
-                        [span_72](start_span)<p>To provide our services, we need: Name and surname, address, delivery address, phone number, and email[span_72](end_span).</p>
+                        <p>To provide our services, we need: Name and surname, address, delivery address, phone number, and email.</p>
                         <h3>How long will we keep the data?</h3>
-                        [span_73](start_span)<p>We keep personal data for the duration of the contract fulfillment[span_73](end_span). [span_74](start_span)After that, we keep it as long as necessary to meet archiving obligations under relevant legislation (e.g., Accounting Act, VAT Act)[span_74](end_span).</p>
+                        <p>We keep personal data for the duration of the contract fulfillment. After that, we keep it as long as necessary to meet archiving obligations under relevant legislation.</p>
                         <h3>To whom do we transfer your personal data?</h3>
-                        [span_75](start_span)<p>Data may be transferred to legal, tax, and accounting service providers, and technical solution providers[span_75](end_span). [span_76](start_span)It may also be transferred to public authorities if required by law[span_76](end_span). [span_77](start_span)All transfers to processors are based on processing agreements complying with GDPR[span_77](end_span). [span_78](start_span)We do not transfer data to third countries[span_78](end_span).</p>
-                        <h3>Security conditions</h3>
-                        [span_79](start_span)<p>The controller has implemented appropriate technical and organizational measures to ensure data protection[span_79](end_span). [span_80](start_span)Only authorized persons have access[span_80](end_span). [span_81](start_span)No automated decision-making or profiling occurs[span_81](end_span).</p>
+                        <p>Data may be transferred to legal, tax, and accounting service providers, and technical solution providers. We do not transfer data to third countries.</p>
                         <h3>What are your rights?</h3>
                         <ul>
-                            [span_82](start_span)<li>Right of access (Article 15 GDPR)[span_82](end_span)</li>
-                            [span_83](start_span)<li>Right to rectification (Article 16 GDPR)[span_83](end_span)</li>
-                            [span_84](start_span)<li>Right to restriction of processing[span_84](end_span)</li>
-                            [span_85](start_span)<li>Right to erasure (Article 17 GDPR)[span_85](end_span)</li>
-                            [span_86](start_span)<li>Right to object (Article 21 GDPR)[span_86](end_span)</li>
-                            [span_87](start_span)<li>Right to data portability (Article 21 GDPR)[span_87](end_span)</li>
-                            [span_88](start_span)<li>Right to withdraw consent[span_88](end_span)</li>
-                            [span_89](start_span)<li>Right to file a complaint with the Data Protection Authority[span_89](end_span).</li>
+                            <li>Right of access (Article 15 GDPR)</li>
+                            <li>Right to rectification (Article 16 GDPR)</li>
+                            <li>Right to restriction of processing</li>
+                            <li>Right to erasure (Article 17 GDPR)</li>
+                            <li>Right to object (Article 21 GDPR)</li>
+                            <li>Right to data portability (Article 21 GDPR)</li>
+                            <li>Right to withdraw consent and file a complaint.</li>
                         </ul>
                         <h3>How can you exercise these rights?</h3>
-                        [span_90](start_span)<p>Contact us via email: info@control-point.eu or by mail: Dopravní 500/9, Uhříněves, 104 00 Prague 10[span_90](end_span).</p>
-                        <p>Supervisory authority:<br>Office for Personal Data Protection<br>Pplk. [span_91](start_span)Sochora 27170 00 Prague 7<br>Phone: +420 234 665 111<br>Web: https://www.uoou.cz[span_91](end_span)</p>
+                        <p>Contact us via email: info@control-point.eu or by mail: Dopravní 500/9, Uhříněves, 104 00 Prague 10.</p>
                     </div>
                 </div>
 
                 <div class="lang-text de-text">
                     <h2>DATENSCHUTZRICHTLINIE</h2>
                     <div class="legal-text">
-                        <p>Dieses Dokument enthält Informationen für betroffene Personen über die Verarbeitung ihrer personenbezogenen Daten in der Organisation im Rahmen der Anforderungen, die an die Organisation als Verantwortlichen gemäß Art. [span_92](start_span)13 der VERORDNUNG (EU) 2016/679 (DSGVO) gestellt werden[span_92](end_span).</p>
+                        <p>Dieses Dokument enthält Informationen für betroffene Personen über die Verarbeitung ihrer personenbezogenen Daten in der Organisation gemäß Art. 13 der VERORDNUNG (EU) 2016/679 (DSGVO).</p>
                         <h3>Wer verarbeitet Ihre Daten?</h3>
-                        [span_93](start_span)<p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Prag 10<br>Eingetragen beim Stadtgericht Prag (C 202561)<br>Kontakt-E-Mail: info@control-point.eu<br>Im Folgenden „wir“, „Verantwortlicher“ oder „Organisation“[span_93](end_span)</p>
+                        <p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Prag 10<br>Kontakt-E-Mail: info@control-point.eu</p>
                         <h3>Was sind personenbezogene Daten?</h3>
-                        [span_94](start_span)<p>Personenbezogene Daten sind alle Informationen, die eine natürliche Person direkt oder indirekt identifizieren können[span_94](end_span). [span_95](start_span)Dazu gehören allgemeine Daten (Name, Alter, Telefonnummer, Adresse) und sensible Daten (Gesundheitsdaten, Religion, ethnische Herkunft usw.)[span_95](end_span).</p>
-                        <h3>Was ist die Verarbeitung personenbezogener Daten?</h3>
-                        [span_96](start_span)<p>Verarbeitung ist jede systematische Tätigkeit, die der Verantwortliche mit Daten für einen bestimmten Zweck durchführt[span_96](end_span) (Erhebung, Speicherung, Anpassung, Übermittlung, Löschung usw.) [span_97](start_span).</p>
-                        <h3>Quellen und Kategorien:</h3>
-                        <p>Der Verantwortliche verarbeitet Daten, die Sie bereitgestellt haben, oder Daten, die aufgrund der Vertragserfüllung erlangt wurden (Identifikations- und Kontaktdaten)[span_97](end_span).</p>
+                        <p>Personenbezogene Daten sind alle Informationen, die eine natürliche Person direkt oder indirekt identifizieren können (z. B. Name, Telefonnummer, Adresse).</p>
                         <h3>Rechtsgrundlage und Zweck der Verarbeitung</h3>
-                        <p>Die Rechtsgrundlage für die Verarbeitung ist:<br>Ihre Einwilligung für Direktmarketing gemäß Art. 6 Abs. [span_98](start_span)1 lit. a DSGVO[span_98](end_span).<br>Zum Zwecke des Abschlusses und der Erfüllung eines Vertrages verarbeiten wir Daten gemäß Art. 6 Abs. [span_99](start_span)1 lit. b DSGVO[span_99](end_span)[span_100](start_span).<br>Nach Vertragserfüllung archivieren wir Daten zur Erfüllung gesetzlicher Pflichten (Art. 6 Abs. 1 lit. c DSGVO)[span_100](end_span).</p>
-                        [span_101](start_span)<p>Zweck der Verarbeitung ist die Bearbeitung Ihrer Bestellung und die Erfüllung des Vertrages[span_101](end_span). [span_102](start_span)Die Bereitstellung von Daten ist eine vertragliche Notwendigkeit[span_102](end_span).</p>
+                        <p>Die Rechtsgrundlage für die Verarbeitung ist: Ihre Einwilligung für Direktmarketing (Art. 6 Abs. 1 lit. a DSGVO) und die Erfüllung eines Vertrages (Art. 6 Abs. 1 lit. b DSGVO). Zweck ist die Bearbeitung Ihrer Bestellung und die Erfüllung des Vertrages.</p>
                         <h3>Welche Daten verarbeiten wir?</h3>
-                        [span_103](start_span)<p>Wir benötigen: Name, Wohnadresse, Lieferadresse, Telefonnummer und E-Mail[span_103](end_span).</p>
+                        <p>Wir benötigen: Name, Wohnadresse, Lieferadresse, Telefonnummer und E-Mail.</p>
                         <h3>Wie lange speichern wir die Daten?</h3>
-                        [span_104](start_span)<p>Wir speichern Daten für die Dauer der Vertragserfüllung und anschließend so lange, wie es die gesetzlichen Archivierungspflichten (z. B. Buchhaltungsgesetz, Mehrwertsteuergesetz) vorschreiben[span_104](end_span).</p>
+                        <p>Wir speichern Daten für die Dauer der Vertragserfüllung und anschließend so lange, wie es die gesetzlichen Archivierungspflichten vorschreiben.</p>
                         <h3>An wen übermitteln wir Ihre Daten?</h3>
-                        [span_105](start_span)<p>Ihre Daten können an Anbieter von Rechts-, Steuer- und Buchhaltungsdienstleistungen sowie technischen Lösungen übermittelt werden[span_105](end_span). [span_106](start_span)Eine Übermittlung an Behörden erfolgt nur bei gesetzlicher Pflicht[span_106](end_span). [span_107](start_span)Es findet keine Übermittlung in Drittländer statt[span_107](end_span).</p>
-                        <h3>Sicherheitsbedingungen</h3>
-                        [span_108](start_span)<p>Der Verantwortliche hat geeignete technische und organisatorische Maßnahmen getroffen[span_108](end_span). [span_109](start_span)Es findet keine automatisierte Entscheidungsfindung oder Profiling statt[span_109](end_span).</p>
+                        <p>Ihre Daten können an Anbieter von Rechts-, Steuer- und Buchhaltungsdienstleistungen sowie technischen Lösungen übermittelt werden. Es findet keine Übermittlung in Drittländer statt.</p>
                         <h3>Was sind Ihre Rechte?</h3>
                         <ul>
-                            [span_110](start_span)<li>Recht auf Auskunft (Art. 15 DSGVO)[span_110](end_span)</li>
-                            [span_111](start_span)<li>Recht auf Berichtigung (Art. 16 DSGVO)[span_111](end_span)</li>
-                            [span_112](start_span)<li>Recht auf Einschränkung der Verarbeitung[span_112](end_span)</li>
-                            [span_113](start_span)<li>Recht auf Löschung (Art. 17 DSGVO)[span_113](end_span)</li>
-                            [span_114](start_span)<li>Widerspruchsrecht (Art. 21 DSGVO)[span_114](end_span)</li>
-                            [span_115](start_span)<li>Recht auf Datenübertragbarkeit (Art. 21 DSGVO)[span_115](end_span)</li>
-                            [span_116](start_span)<li>Recht auf Widerruf der Einwilligung[span_116](end_span)</li>
-                            [span_117](start_span)<li>Recht auf Beschwerde bei der Datenschutzbehörde[span_117](end_span).</li>
+                            <li>Recht auf Auskunft (Art. 15 DSGVO)</li>
+                            <li>Recht auf Berichtigung (Art. 16 DSGVO)</li>
+                            <li>Recht auf Einschränkung der Verarbeitung</li>
+                            <li>Recht auf Löschung (Art. 17 DSGVO)</li>
+                            <li>Widerspruchsrecht (Art. 21 DSGVO)</li>
+                            <li>Recht auf Datenübertragbarkeit (Art. 21 DSGVO)</li>
+                            <li>Recht auf Widerruf der Einwilligung und Beschwerderecht.</li>
                         </ul>
                         <h3>Wie können Sie diese Rechte ausüben?</h3>
-                        [span_118](start_span)<p>Kontaktieren Sie uns per E-Mail: info@control-point.eu oder per Post: Dopravní 500/9, Uhříněves, 104 00 Prag 10[span_118](end_span).</p>
-                        <p>Aufsichtsbehörde:<br>Amt für den Schutz personenbezogener Daten<br>Pplk. [span_119](start_span)Sochora 27170 00 Prag 7<br>Telefon: +420 234 665 111<br>Web: https://www.uoou.cz[span_119](end_span)</p>
+                        <p>Kontaktieren Sie uns per E-Mail: info@control-point.eu oder per Post: Dopravní 500/9, Uhříněves, 104 00 Prag 10.</p>
                     </div>
                 </div>
+
                 <div class="lang-text it-text">
-    <h2>INFORMATIVA SULLA PRIVACY</h2>
-    <div class="legal-text">
-        <p>Questo documento contiene informazioni per gli interessati in merito al trattamento dei loro dati personali all'interno dell'organizzazione, in conformità con i requisiti posti a carico dell'organizzazione in qualità di titolare del trattamento dei dati ai sensi dell'Articolo 13 del REGOLAMENTO (UE) 2016/679 (GDPR).</p>
-        <h3>Chi tratta i tuoi dati?</h3>
-        <p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Praga 10<br>Iscritta al Tribunale Municipale di Praga (C 202561)<br>E-mail di contatto: info@control-point.eu</p>
-        <h3>Cos'è un dato personale?</h3>
-        <p>Un dato personale è qualsiasi informazione che può identificare direttamente o indirettamente una persona fisica vivente. I dati personali si dividono in generali (es. nome, età, telefono, indirizzo) e sensibili (categorie particolari di dati, tra cui stato di salute, ecc.).</p>
-        <h3>Qual è il motivo e lo scopo del trattamento?</h3>
-        <p>Il motivo legale per il trattamento è:<br>Il tuo consenso per scopi di marketing diretto ai sensi dell'Art. 6(1)(a) GDPR.<br>Per la conclusione e l'esecuzione di un contratto (fornitura dei nostri servizi), trattiamo i dati ai sensi dell'Art. 6(1)(b) GDPR.<br>Una volta adempiuto il contratto, dobbiamo archiviare i dati per obbligo legale ai sensi dell'Art. 6(1)(c) GDPR.</p>
-        <p>Lo scopo del trattamento è: L'elaborazione del tuo ordine e l'esercizio dei diritti e degli obblighi derivanti dal nostro rapporto contrattuale. La fornitura dei dati personali è un requisito necessario per concludere e adempiere al contratto.</p>
-        <h3>Quali dati elaboriamo e per quanto tempo?</h3>
-        <p>Per fornire i nostri servizi, necessitiamo di: Nome e cognome, indirizzo, indirizzo di consegna, numero di telefono ed e-mail. Conserviamo i dati per la durata dell'adempimento del contratto e successivamente per il tempo necessario a soddisfare gli obblighi di archiviazione previsti dalla legge.</p>
-        <h3>A chi trasferiamo i tuoi dati?</h3>
-        <p>I dati possono essere trasferiti a fornitori di servizi legali, fiscali, contabili e soluzioni tecniche. Non trasferiamo dati a paesi terzi.</p>
-        <h3>Quali sono i tuoi diritti e come esercitarli?</h3>
-        <ul>
-            <li>Diritto di accesso (Art. 15 GDPR)</li>
-            <li>Diritto di rettifica (Art. 16 GDPR)</li>
-            <li>Diritto alla limitazione del trattamento</li>
-            <li>Diritto alla cancellazione (Art. 17 GDPR)</li>
-            <li>Diritto di opposizione (Art. 21 GDPR)</li>
-            <li>Diritto alla portabilità dei dati (Art. 21 GDPR)</li>
-            <li>Diritto di revocare il consenso e proporre reclamo all'Autorità di controllo.</li>
-        </ul>
-        <p>Puoi contattarci via email: info@control-point.eu o per posta a: Dopravní 500/9, Uhříněves, 104 00 Praga 10.</p>
-    </div>
-</div>
-
-<div class="lang-text pl-text">
-    <h2>POLITYKA PRYWATNOŚCI</h2>
-    <div class="legal-text">
-        <p>Ten dokument zawiera informacje dla osób, których dane dotyczą, na temat przetwarzania ich danych osobowych w organizacji, zgodnie z wymogami ROZPORZĄDZENIA (UE) 2016/679 (RODO).</p>
-        <h3>Kto przetwarza Twoje dane?</h3>
-        <p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Praga 10<br>Zarejestrowana w Sądzie Miejskim w Pradze (C 202561)<br>E-mail: info@control-point.eu</p>
-        <h3>Czym są dane osobowe?</h3>
-        <p>Dane osobowe to wszelkie informacje, które mogą bezpośrednio lub pośrednio zidentyfikować osobę fizyczną (np. imię i nazwisko, wiek, numer telefonu, adres).</p>
-        <h3>Jaka jest podstawa prawna i cel przetwarzania?</h3>
-        <p>Podstawą prawną przetwarzania jest:<br>Twoja zgoda na marketing bezpośredni (art. 6 ust. 1 lit. a RODO).<br>Zawarcie i wykonanie umowy (art. 6 ust. 1 lit. b RODO).<br>Wypełnienie obowiązku prawnego dotyczącego archiwizacji (art. 6 ust. 1 lit. c RODO).</p>
-        <p>Celem przetwarzania jest realizacja Twojego zamówienia oraz wykonywanie praw i obowiązków wynikających z umowy. Podanie danych jest niezbędne do zawarcia i wykonania umowy.</p>
-        <h3>Jakie dane przetwarzamy i jak długo?</h3>
-        <p>Potrzebujemy: imienia i nazwiska, adresu, adresu dostawy, numeru telefonu i e-maila. Dane przechowujemy przez okres realizacji umowy, a następnie przez czas wymagany przepisami prawa (np. ustawa o rachunkowości).</p>
-        <h3>Komu przekazujemy Twoje dane?</h3>
-        <p>Dane mogą być przekazywane dostawcom usług prawnych, podatkowych, księgowych oraz IT. Nie przekazujemy danych do państw trzecich.</p>
-        <h3>Jakie masz prawa i jak je egzekwować?</h3>
-        <ul>
-            <li>Prawo dostępu (art. 15 RODO)</li>
-            <li>Prawo do sprostowania (art. 16 RODO)</li>
-            <li>Prawo do usunięcia danych (art. 17 RODO)</li>
-            <li>Prawo do ograniczenia przetwarzania</li>
-            <li>Prawo do sprzeciwu (art. 21 RODO)</li>
-            <li>Prawo do przenoszenia danych</li>
-            <li>Prawo do cofnięcia zgody i wniesienia skargi do organu nadzorczego.</li>
-        </ul>
-        <p>Skontaktuj się z nami mailowo: info@control-point.eu lub pocztą: Dopravní 500/9, Uhříněves, 104 00 Praga 10.</p>
-    </div>
-</div>
-
-<div class="lang-text fr-text">
-    <h2>POLITIQUE DE CONFIDENTIALITÉ</h2>
-    <div class="legal-text">
-        <p>Ce document contient des informations pour les personnes concernées concernant le traitement de leurs données personnelles, conformément aux exigences de l'Article 13 du RÈGLEMENT (UE) 2016/679 (RGPD).</p>
-        <h3>Qui traite vos données ?</h3>
-        <p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Prague 10<br>E-mail de contact : info@control-point.eu</p>
-        <h3>Qu'est-ce qu'une donnée personnelle ?</h3>
-        <p>Toute information pouvant identifier directement ou indirectement une personne physique vivante (nom, adresse, téléphone, e-mail).</p>
-        <h3>Base légale et finalité du traitement</h3>
-        <p>Vos données sont traitées pour :<br>Le marketing direct basé sur votre consentement (Art. 6(1)(a) RGPD).<br>La conclusion et l'exécution d'un contrat (Art. 6(1)(b) RGPD).<br>Le respect d'obligations légales d'archivage (Art. 6(1)(c) RGPD).</p>
-        <p>La finalité est le traitement de votre commande. La fourniture de données est une exigence nécessaire pour conclure le contrat.</p>
-        <h3>Durée de conservation et destinataires</h3>
-        <p>Nous conservons vos données (nom, adresse, e-mail, téléphone) pendant la durée du contrat, puis selon les obligations légales. Elles peuvent être transmises à nos prestataires comptables, fiscaux ou informatiques. Aucune donnée n'est transférée hors de l'UE.</p>
-        <h3>Quels sont vos droits ?</h3>
-        <ul>
-            <li>Droit d'accès, de rectification et d'effacement (Art. 15, 16, 17 RGPD)</li>
-            <li>Droit à la limitation du traitement et à la portabilité</li>
-            <li>Droit d'opposition (Art. 21 RGPD)</li>
-            <li>Droit de retirer votre consentement et d'introduire une réclamation.</li>
-        </ul>
-        <p>Contactez-nous à : info@control-point.eu.</p>
-    </div>
-</div>
-
-<div class="lang-text nl-text">
-    <h2>PRIVACYBELEID</h2>
-    <div class="legal-text">
-        <p>Dit document bevat informatie voor betrokkenen over de verwerking van hun persoonsgegevens binnen de organisatie, in overeenstemming met VERORDENING (EU) 2016/679 (AVG).</p>
-        <h3>Wie verwerkt uw gegevens?</h3>
-        <p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Praag 10<br>Contact e-mail: info@control-point.eu</p>
-        <h3>Wettelijke basis en doel</h3>
-        <p>Uw gegevens worden verwerkt voor: Direct marketing met uw toestemming (Art. 6(1)(a) AVG), de uitvoering van een contract (Art. 6(1)(b) AVG) en het voldoen aan wettelijke bewaarplichten (Art. 6(1)(c) AVG).</p>
-        <h3>Gegevens en bewaartermijn</h3>
-        <p>Wij verwerken: naam, adres, telefoonnummer en e-mail. Wij bewaren deze voor de duur van het contract en zolang wettelijk verplicht is.</p>
-        <h3>Uw rechten</h3>
-        <ul>
-            <li>Recht op inzage, rectificatie en verwijdering (Art. 15, 16, 17 AVG)</li>
-            <li>Recht op beperking en dataportabiliteit</li>
-            <li>Recht van bezwaar (Art. 21 AVG)</li>
-            <li>Recht om toestemming in te trekken of een klacht in te dienen.</li>
-        </ul>
-        <p>Neem contact met ons op via: info@control-point.eu.</p>
-    </div>
-</div>
-
-<div class="lang-text hu-text">
-    <h2>ADATVÉDELMI SZABÁLYZAT</h2>
-    <div class="legal-text">
-        <p>Ez a dokumentum a személyes adatok kezeléséről szóló információkat tartalmazza a 2016/679 (EU) RENDELET (GDPR) követelményeinek megfelelően.</p>
-        <h3>Ki kezeli az Ön adatait?</h3>
-        <p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Prága 10<br>Kapcsolattartó e-mail: info@control-point.eu</p>
-        <h3>Jogalap és cél</h3>
-        <p>Adatait a következők miatt kezeljük: Közvetlen üzletszerzés az Ön hozzájárulásával (GDPR 6. cikk (1) a)), szerződés teljesítése (GDPR 6. cikk (1) b)), és jogi kötelezettségek teljesítése (GDPR 6. cikk (1) c)).</p>
-        <h3>Milyen adatokat kezelünk és meddig?</h3>
-        <p>Szükségünk van: névre, címre, telefonszámra és e-mail címre. Ezeket a szerződés időtartama alatt, majd a törvény által előírt ideig tároljuk.</p>
-        <h3>Az Ön jogai</h3>
-        <ul>
-            <li>Hozzáféréshez, helyesbítéshez és törléshez való jog (GDPR 15., 16., 17. cikk)</li>
-            <li>Adathordozhatósághoz és a kezelés korlátozásához való jog</li>
-            <li>Tiltakozáshoz való jog (GDPR 21. cikk)</li>
-        </ul>
-        <p>Lépjen velünk kapcsolatba: info@control-point.eu.</p>
-    </div>
-</div>
-
-<div class="lang-text ro-text">
-    <h2>POLITICA DE CONFIDENȚIALITATE</h2>
-    <div class="legal-text">
-        <p>Acest document conține informații privind prelucrarea datelor cu caracter personal, în conformitate cu REGULAMENTUL (UE) 2016/679 (GDPR).</p>
-        <h3>Cine vă prelucrează datele?</h3>
-        <p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Praga 10<br>E-mail: info@control-point.eu</p>
-        <h3>Baza legală și scopul</h3>
-        <p>Prelucrăm date pentru: Marketing direct (Art. 6(1)(a) GDPR), executarea unui contract (Art. 6(1)(b) GDPR) și îndeplinirea obligațiilor legale de arhivare (Art. 6(1)(c) GDPR).</p>
-        <h3>Date prelucrate și durata păstrării</h3>
-        <p>Prelucrăm: nume, adresă, telefon și e-mail. Le păstrăm pe durata contractului și ulterior conform legii.</p>
-        <h3>Drepturile dumneavoastră</h3>
-        <ul>
-            <li>Dreptul de acces, rectificare și ștergere (Art. 15, 16, 17 GDPR)</li>
-            <li>Dreptul la restricționarea prelucrării și portabilitate</li>
-            <li>Dreptul la opoziție (Art. 21 GDPR)</li>
-        </ul>
-        <p>Ne puteți contacta la: info@control-point.eu.</p>
-    </div>
-</div>
-            <div class="lang-text it-text">
                     <h2>INFORMATIVA SULLA PRIVACY</h2>
                     <div class="legal-text">
-                        [span_120](start_span)<p>Questo documento contiene informazioni per gli interessati in merito al trattamento dei loro dati personali all'interno dell'organizzazione, in conformità con i requisiti posti a carico dell'organizzazione in qualità di titolare del trattamento dei dati ai sensi dell'Articolo 13 del REGOLAMENTO (UE) 2016/679 (GDPR)[span_120](end_span).</p>
+                        <p>Questo documento contiene informazioni per gli interessati in merito al trattamento dei loro dati personali, in conformità con i requisiti posti a carico dell'organizzazione ai sensi dell'Articolo 13 del REGOLAMENTO (UE) 2016/679 (GDPR).</p>
                         <h3>Chi tratta i tuoi dati?</h3>
-                        [span_121](start_span)<p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Praga 10<br>E-mail di contatto: info@control-point.eu[span_121](end_span)</p>
+                        <p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Praga 10<br>E-mail di contatto: info@control-point.eu</p>
+                        <h3>Qual è il motivo e lo scopo del trattamento?</h3>
+                        <p>Il motivo legale per il trattamento è: Il tuo consenso per scopi di marketing diretto (Art. 6(1)(a) GDPR) e per la conclusione e l'esecuzione di un contratto (Art. 6(1)(b) GDPR). Lo scopo è l'elaborazione del tuo ordine e l'esercizio dei diritti contrattuali.</p>
+                        <h3>Quali dati elaboriamo e per quanto tempo?</h3>
+                        <p>Necessitiamo di: Nome e cognome, indirizzo, numero di telefono ed e-mail. Conserviamo i dati per la durata dell'adempimento del contratto e successivamente per il tempo previsto dagli obblighi di archiviazione.</p>
                         <h3>Quali sono i tuoi diritti?</h3>
                         <ul>
-                            [span_122](start_span)<li>Diritto di accesso (Articolo 15 GDPR)[span_122](end_span)</li>
-                            [span_123](start_span)<li>Diritto di rettifica (Articolo 16 GDPR)[span_123](end_span)</li>
-                            [span_124](start_span)<li>Diritto alla cancellazione (Articolo 17 GDPR)[span_124](end_span)</li>
+                            <li>Diritto di accesso (Art. 15 GDPR)</li>
+                            <li>Diritto di rettifica (Art. 16 GDPR)</li>
+                            <li>Diritto alla cancellazione (Art. 17 GDPR)</li>
+                            <li>Diritto alla portabilità e diritto di opposizione (Art. 21 GDPR)</li>
                         </ul>
-                        [span_125](start_span)<p>Puoi contattarci via email: info@control-point.eu[span_125](end_span).</p>
+                        <p>Puoi contattarci via email: info@control-point.eu.</p>
                     </div>
                 </div>
 
                 <div class="lang-text pl-text">
                     <h2>POLITYKA PRYWATNOŚCI</h2>
                     <div class="legal-text">
-                        <p>Ten dokument zawiera informacje dla osób, których dane dotyczą, na temat przetwarzania ich danych osobowych w organizacji, zgodnie z wymogami nałożonymi na organizację jako administratora danych na mocy art. [span_126](start_span)13 ROZPORZĄDZENIA (UE) 2016/679 (RODO)[span_126](end_span).</p>
+                        <p>Ten dokument zawiera informacje dla osób, których dane dotyczą, na temat przetwarzania ich danych osobowych w organizacji, zgodnie z wymogami ROZPORZĄDZENIA (UE) 2016/679 (RODO).</p>
                         <h3>Kto przetwarza Twoje dane?</h3>
-                        [span_127](start_span)<p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Praga 10<br>E-mail kontaktowy: info@control-point.eu[span_127](end_span)</p>
+                        <p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Praga 10<br>E-mail kontaktowy: info@control-point.eu</p>
+                        <h3>Jaka jest podstawa prawna i cel przetwarzania?</h3>
+                        <p>Podstawą prawną przetwarzania jest: Twoja zgoda na marketing bezpośredni (art. 6 ust. 1 lit. a RODO) oraz wykonanie umowy (art. 6 ust. 1 lit. b RODO). Celem jest realizacja zamówienia i obsługa logistyczna.</p>
+                        <h3>Jakie dane przetwarzamy i jak długo?</h3>
+                        <p>Potrzebujemy: imienia i nazwiska, adresu, numeru telefonu i e-maila. Dane przechowujemy przez okres realizacji umowy, a następnie przez czas wymagany przepisami prawa.</p>
                         <h3>Jakie masz prawa?</h3>
                         <ul>
-                            [span_128](start_span)<li>Prawo dostępu (art. 15 RODO)[span_128](end_span)</li>
-                            [span_129](start_span)<li>Prawo do sprostowania (art. 16 RODO)[span_129](end_span)</li>
-                            [span_130](start_span)<li>Prawo do usunięcia (art. 17 RODO)[span_130](end_span)</li>
+                            <li>Prawo dostępu (art. 15 RODO)</li>
+                            <li>Prawo do sprostowania (art. 16 RODO)</li>
+                            <li>Prawo do usunięcia (art. 17 RODO)</li>
+                            <li>Prawo do sprzeciwu (art. 21 RODO)</li>
                         </ul>
-                        [span_131](start_span)<p>Możesz skontaktować się z nami mailowo: info@control-point.eu[span_131](end_span).</p>
+                        <p>Skontaktuj się z nami mailowo: info@control-point.eu.</p>
                     </div>
                 </div>
 
                 <div class="lang-text fr-text">
                     <h2>POLITIQUE DE CONFIDENTIALITÉ</h2>
                     <div class="legal-text">
-                        [span_132](start_span)<p>Ce document contient des informations pour les personnes concernées concernant le traitement de leurs données personnelles au sein de l'organisation, conformément aux exigences imposées à l'organisation en tant que responsable du traitement en vertu de l'article 13 du RÈGLEMENT (UE) 2016/679 (RGPD)[span_132](end_span).</p>
+                        <p>Ce document contient des informations pour les personnes concernées concernant le traitement de leurs données personnelles, conformément aux exigences de l'Article 13 du RÈGLEMENT (UE) 2016/679 (RGPD).</p>
                         <h3>Qui traite vos données ?</h3>
-                        [span_133](start_span)<p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Prague 10<br>E-mail de contact : info@control-point.eu[span_133](end_span)</p>
+                        <p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Prague 10<br>E-mail de contact : info@control-point.eu</p>
+                        <h3>Base légale et finalité du traitement</h3>
+                        <p>Vos données sont traitées pour : Le marketing direct basé sur votre consentement (Art. 6(1)(a) RGPD) et l'exécution d'un contrat (Art. 6(1)(b) RGPD). La finalité est le traitement de votre commande.</p>
+                        <h3>Données traitées et durée de conservation</h3>
+                        <p>Nous avons besoin de : nom, adresse, numéro de téléphone et e-mail. Nous les conservons pendant la durée du contrat, puis selon les obligations légales d'archivage.</p>
                         <h3>Quels sont vos droits ?</h3>
                         <ul>
-                            [span_134](start_span)<li>Droit d'accès (Article 15 RGPD)[span_134](end_span)</li>
-                            [span_135](start_span)<li>Droit de rectification (Article 16 RGPD)[span_135](end_span)</li>
-                            [span_136](start_span)<li>Droit à l'effacement (Article 17 RGPD)[span_136](end_span)</li>
+                            <li>Droit d'accès (Art. 15 RGPD)</li>
+                            <li>Droit de rectification (Art. 16 RGPD)</li>
+                            <li>Droit à l'effacement (Art. 17 RGPD)</li>
+                            <li>Droit d'opposition (Art. 21 RGPD)</li>
                         </ul>
-                        [span_137](start_span)<p>Vous pouvez nous contacter par email : info@control-point.eu[span_137](end_span).</p>
+                        <p>Vous pouvez nous contacter par email : info@control-point.eu.</p>
                     </div>
                 </div>
 
                 <div class="lang-text nl-text">
                     <h2>PRIVACYBELEID</h2>
                     <div class="legal-text">
-                        [span_138](start_span)<p>Dit document bevat informatie voor betrokkenen met betrekking tot de verwerking van hun persoonsgegevens binnen de organisatie, in overeenstemming met de vereisten die aan de organisatie worden gesteld als verwerkingsverantwoordelijke onder artikel 13 van VERORDENING (EU) 2016/679 (AVG)[span_138](end_span).</p>
+                        <p>Dit document bevat informatie voor betrokkenen met betrekking tot de verwerking van hun persoonsgegevens, in overeenstemming met artikel 13 van VERORDENING (EU) 2016/679 (AVG).</p>
                         <h3>Wie verwerkt uw gegevens?</h3>
-                        [span_139](start_span)<p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Praag 10<br>Contact e-mail: info@control-point.eu[span_139](end_span)</p>
-                        <h3>Wat zijn uw rechten?</h3>
+                        <p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Praag 10<br>Contact e-mail: info@control-point.eu</p>
+                        <h3>Wettelijke basis en doel</h3>
+                        <p>Uw gegevens worden verwerkt voor: Direct marketing met uw toestemming (Art. 6(1)(a) AVG) en de uitvoering van een contract (Art. 6(1)(b) AVG). Het doel is de verwerking van uw bestelling.</p>
+                        <h3>Welke gegevens verwerken we?</h3>
+                        <p>Wij hebben nodig: naam, adres, telefoonnummer en e-mail. Wij bewaren deze voor de duur van het contract en volgens wettelijke bewaarplichten.</p>
+                        <h3>Uw rechten</h3>
                         <ul>
-                            [span_140](start_span)<li>Recht op inzage (Artikel 15 AVG)[span_140](end_span)</li>
-                            [span_141](start_span)<li>Recht op rectificatie (Artikel 16 AVG)[span_141](end_span)</li>
-                            [span_142](start_span)<li>Recht op gegevenswissing (Artikel 17 AVG)[span_142](end_span)</li>
+                            <li>Recht op inzage (Art. 15 AVG)</li>
+                            <li>Recht op rectificatie (Art. 16 AVG)</li>
+                            <li>Recht op gegevenswissing (Art. 17 AVG)</li>
+                            <li>Recht van bezwaar (Art. 21 AVG)</li>
                         </ul>
-                        [span_143](start_span)<p>U kunt contact met ons opnemen via e-mail: info@control-point.eu[span_143](end_span).</p>
+                        <p>Neem contact met ons op via: info@control-point.eu.</p>
                     </div>
                 </div>
 
                 <div class="lang-text hu-text">
-                    <h2>ADATVÉDELMI IRÁNYELVEK</h2>
+                    <h2>ADATVÉDELMI SZABÁLYZAT</h2>
                     <div class="legal-text">
-                        [span_144](start_span)<p>Ez a dokumentum tájékoztatást tartalmaz az érintettek számára a személyes adataik szervezeten belüli kezeléséről, a 2016/679 (EU) RENDELET (GDPR) 13. cikke alapján a szervezettel mint adatkezelővel szemben támasztott követelményeknek megfelelően[span_144](end_span).</p>
+                        <p>Ez a dokumentum a személyes adatok kezeléséről szóló információkat tartalmazza a 2016/679 (EU) RENDELET (GDPR) 13. cikke alapján.</p>
                         <h3>Ki kezeli az Ön adatait?</h3>
-                        [span_145](start_span)<p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Prága 10<br>Kapcsolattartó e-mail: info@control-point.eu[span_145](end_span)</p>
-                        <h3>Milyen jogai vannak?</h3>
+                        <p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Prága 10<br>Kapcsolattartó e-mail: info@control-point.eu</p>
+                        <h3>Jogalap és cél</h3>
+                        <p>Adatait a következők miatt kezeljük: Közvetlen üzletszerzés az Ön hozzájárulásával (GDPR 6. cikk (1) a)), és szerződés teljesítése (GDPR 6. cikk (1) b)). A cél a megrendelés feldolgozása.</p>
+                        <h3>Milyen adatokat kezelünk?</h3>
+                        <p>Szükségünk van: névre, címre, telefonszámra és e-mail címre. Ezeket a szerződés időtartama alatt, majd a törvény által előírt ideig tároljuk.</p>
+                        <h3>Az Ön jogai</h3>
                         <ul>
-                            [span_146](start_span)<li>Hozzáférési jog (GDPR 15. cikk)[span_146](end_span)</li>
-                            [span_147](start_span)<li>Helyesbítéshez való jog (GDPR 16. cikk)[span_147](end_span)</li>
-                            [span_148](start_span)<li>Törléshez való jog (GDPR 17. cikk)[span_148](end_span)</li>
+                            <li>Hozzáféréshez való jog (GDPR 15. cikk)</li>
+                            <li>Helyesbítéshez való jog (GDPR 16. cikk)</li>
+                            <li>Törléshez való jog (GDPR 17. cikk)</li>
+                            <li>Tiltakozáshoz való jog (GDPR 21. cikk)</li>
                         </ul>
-                        [span_149](start_span)<p>Felveheti velünk a kapcsolatot e-mailben: info@control-point.eu[span_149](end_span).</p>
+                        <p>Lépjen velünk kapcsolatba: info@control-point.eu.</p>
                     </div>
                 </div>
 
                 <div class="lang-text ro-text">
                     <h2>POLITICA DE CONFIDENȚIALITATE</h2>
                     <div class="legal-text">
-                        [span_150](start_span)<p>Acest document conține informații pentru persoanele vizate cu privire la prelucrarea datelor lor cu caracter personal în cadrul organizației, în conformitate cu cerințele impuse organizației în calitate de operator de date în temeiul articolului 13 din REGULAMENTUL (UE) 2016/679 (GDPR)[span_150](end_span).</p>
+                        <p>Acest document conține informații pentru persoanele vizate cu privire la prelucrarea datelor lor cu caracter personal, în conformitate cu REGULAMENTUL (UE) 2016/679 (GDPR).</p>
                         <h3>Cine vă prelucrează datele?</h3>
-                        [span_151](start_span)<p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Praga 10<br>E-mail de contact: info@control-point.eu[span_151](end_span)</p>
-                        <h3>Care sunt drepturile dumneavoastră?</h3>
+                        <p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Praga 10<br>E-mail de contact: info@control-point.eu</p>
+                        <h3>Baza legală și scopul</h3>
+                        <p>Prelucrăm date pentru: Marketing direct cu consimțământul dvs. (Art. 6(1)(a) GDPR) și executarea unui contract (Art. 6(1)(b) GDPR). Scopul este procesarea comenzii dvs.</p>
+                        <h3>Ce date prelucrăm?</h3>
+                        <p>Avem nevoie de: nume, adresă, număr de telefon și e-mail. Le păstrăm pe durata contractului și ulterior conform obligațiilor legale.</p>
+                        <h3>Drepturile dumneavoastră</h3>
                         <ul>
-                            [span_152](start_span)<li>Dreptul de acces (Articolul 15 GDPR)[span_152](end_span)</li>
-                            [span_153](start_span)<li>Dreptul la rectificare (Articolul 16 GDPR)[span_153](end_span)</li>
-                            [span_154](start_span)<li>Dreptul la ștergere (Articolul 17 GDPR)[span_154](end_span)</li>
+                            <li>Dreptul de acces (Art. 15 GDPR)</li>
+                            <li>Dreptul la rectificare (Art. 16 GDPR)</li>
+                            <li>Dreptul la ștergere (Art. 17 GDPR)</li>
+                            <li>Dreptul la opoziție (Art. 21 GDPR)</li>
                         </ul>
-                        [span_155](start_span)<p>Ne puteți contacta prin e-mail: info@control-point.eu[span_155](end_span).</p>
+                        <p>Ne puteți contacta la: info@control-point.eu.</p>
                     </div>
                 </div>
 
-            </div>
-        </div>
-    </div>
 
     <div id="cookiesModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('cookiesModal')">×</span>
             <div id="cookiesContent">
-                
-                <div class="lang-text cs-text active-lang">
-                    <h2>ZÁSADY POUŽÍVÁNÍ SOUBORŮ COOKIES</h2>
-                    <div class="legal-text">
-                        <h3>Co jsou to soubory cookies?</h3>
-                        [span_156](start_span)<p>Soubory cookies jsou krátké textové soubory, které internetová stránka odešle do Vašeho prohlížeče[span_156](end_span). [span_157](start_span)Umožňuje internetové stránce zaznamenat informace o Vaší návštěvě, například zvolený jazyk a podobně[span_157](end_span). [span_158](start_span)Následující návštěva stránek tak pro Vás může být snazší a příjemnější[span_158](end_span). [span_159](start_span)Soubory cookies jsou důležité, neboť bez nich by procházení sítě Internet bylo mnohem složitější[span_159](end_span). [span_160](start_span)Soubory cookies umožňují lepší využití naší internetové stránky a přizpůsobení jejího obsahu Vašim potřebám[span_160](end_span). Soubory cookies používá téměř každá internetová stránka na světě. [span_161](start_span)Soubory cookies jsou užitečné, protože zvyšují uživatelskou přívětivost opakovaně navštívené internetové stránky[span_161](end_span).</p>
-                        [span_162](start_span)<p>Na základě těchto souborů vás webová stránka může rozpoznat[span_162](end_span):</p>
-                        <ul>
-                            <li>pomocí tzv. „relačního cookies“ - během vaší návštěvy webu. Tyto tzv. dočasné cookies se po zavření prohlížeče automaticky odstraní. Prohlížeč můžete nastavit tak, aby vás informoval o používání cookies. [span_163](start_span)Důležité: pokud zcela vyloučíte používání cookies, pravděpodobně nebudete moci používat určité funkcionality naší stránky[span_163](end_span).</li>
-                            <li>pomocí tzv. „trvalé cookies“ - pro opakované návštěvy webu. [span_164](start_span)Tyto trvalé cookies mohou být kontrolovány při každé návštěvě Internetové stránky[span_164](end_span).</li>
-                        </ul>
-                        [span_165](start_span)<p>Informace, které shromažďujeme prostřednictvím Internetové stránky, zahrnují: typ prohlížeče, internetovou adresu, ze které se připojil, operační systém, IP adresa[span_165](end_span). [span_166](start_span)Pro zobrazování relevantnějších reklam jsou některé cookies stanoveny reklamním systémem třetích stran, jako je Google Analytics[span_166](end_span). [span_167](start_span)Toto lze vypnout v účtu Google[span_167](end_span).</p>
-                        
-                        <h3>Tzv. naše cookies a cookies třetích stran</h3>
-                        <p>Tzv. [span_168](start_span)„naše cookies“ jsou takové soubory cookies, které byly umístěny na tuto webovou stránku naší společností[span_168](end_span). Tzv. [span_169](start_span)„cookies třetích stran“ jsou umístěny do vašeho zařízení jinou společností (např. Google Analytics)[span_169](end_span). [span_170](start_span)Třetí strany nemají přístup k datům v našich souborech cookies a také my nemůžeme získat přístup ke cookies třetích stran[span_170](end_span).</p>
-                        
-                        <h3>Jaké soubory cookies používáme a za jakým účelem?</h3>
-                        [span_171](start_span)<p>Na webové adrese www.control-point.cz používáme soubory cookies sloužící k měření návštěvnosti a zajištění fungování webu[span_171](end_span):</p>
-                        <ul>
-                            <li><strong>cookies nezbytné pro fungování a výkonnostní cookies</strong> – umožňují, aby web správně fungoval a nesbírají o Vás zpravidla žádné osobní údaje, případně jsou tyto údaje anonymizovány. Používáme je na základě našeho oprávněného zájmu. [span_172](start_span)Můžete je odmítnout v nastavení prohlížeče, ale některé funkce webu pak nemusí být plně funkční[span_172](end_span).</li>
-                            [span_173](start_span)<li><strong>cílené, reklamní a funkční cookies (třetích stran)</strong> – slouží k personalizaci obsahu a zobrazování reklamy[span_173](end_span). [span_174](start_span)K získávání osobních údajů dochází pouze pokud jste udělili předchozí souhlas nastavením prohlížeče[span_174](end_span).</li>
-                        </ul>
-                        
-                        <h3>NASTAVENÍ COOKIES: Jak zabránit používání cookies?</h3>
-                        [span_175](start_span)<p>Při první návštěvě našich webových stránek se do vašeho zařízení ukládají pouze nezbytné soubory cookies[span_175](end_span). [span_176](start_span)Abyste vypnuli příslušné soubory cookies (používané na základě souhlasu), můžete kdykoli odvolat svůj souhlas[span_176](end_span). [span_177](start_span)S odvoláním souhlasu s volitelnými cookies je spojeno i odvolání souhlasu k použití osobních údajů, které shromažďujeme pomocí těchto cookies[span_177](end_span).</p>
-                        
-                        <h3>NAKLÁDÁNÍ S INFORMACEMI</h3>
-                        [span_178](start_span)<p>Pro případ smluvního nebo zákonného důvodu pro nezbytné cookies můžeme údaje používat k plnění povinností[span_178](end_span). [span_179](start_span)Pro případ oprávněného zájmu je používáme k provozování webu[span_179](end_span). [span_180](start_span)Pokud jste poskytli souhlas s marketingovými/výkonnostními cookies, můžeme údaje použít k analýze, identifikaci a zlepšování služeb, k hodnocení využití webu a k zobrazování relevantních reklam[span_180](end_span).</p>
-                        
-                        <h3>KONTROLA A MAZÁNÍ COOKIES</h3>
-                        [span_181](start_span)[span_182](start_span)<p>K vypnutí nebo odhlášení slouží ikony na našem webu nebo vymazání přes prohlížeč[span_181](end_span)[span_182](end_span). [span_183](start_span)Jakákoli změna nastavení se vztahuje pouze na tento konkrétní prohlížeč[span_183](end_span). [span_184](start_span)Pokud v zařízení používáte více prohlížečů, musíte změnit nastavení zvlášť[span_184](end_span). [span_185](start_span)Pokud zakážete nezbytné cookies, nebude fungovat jedna nebo více základních funkcí webu[span_185](end_span).</p>
-                        [span_186](start_span)<p>Pro odhlášení ze sledování Google Analytics na všech webech navštivte: http://tools.google.com/dlpage/gaoptout[span_186](end_span).</p>
-                        
-                        <h3>SLEDOVÁNÍ E-MAILŮ</h3>
-                        [span_187](start_span)<p>Některé naše e-maily mohou obsahovat pixelový štítek (webový maják), který nám umožňuje zjistit, kdy jste e-mail otevřeli a které odkazy jste navštívili[span_187](end_span). [span_188](start_span)Pro odhlášení z našeho mailing listu můžete použít naši kontaktní adresu[span_188](end_span).</p>
-                        
-                        <h3>ZMĚNY A KONTAKT</h3>
-                        [span_189](start_span)<p>Kdykoli může dojít ke změně těchto zásad (zveřejněním na webu)[span_189](end_span). [span_190](start_span)Máte-li jakékoli dotazy, kontaktujte nás za pomoci kontaktních údajů uvedených v podmínkách používání[span_190](end_span).</p>
-                    </div>
                 </div>
-
-                <div class="lang-text en-text">
-                    <h2>COOKIES POLICY</h2>
-                    <div class="legal-text">
-                        <h3>What are cookies?</h3>
-                        [span_191](start_span)<p>Cookies are short text files that a website sends to your browser[span_191](end_span). [span_192](start_span)They allow the website to record information about your visit, making your next visit easier and more pleasant[span_192](end_span). [span_193](start_span)Cookies are essential for modern web browsing and help adapt the content to your needs[span_193](end_span).</p>
-                        [span_194](start_span)<p>Based on these files, the website can recognize you using[span_194](end_span):</p>
-                        <ul>
-                            <li>"Session cookies" - temporary cookies deleted automatically after closing the browser. [span_195](start_span)Important: if you completely disable cookies, you may not be able to use certain functionalities of our Website[span_195](end_span).</li>
-                            <li>"Persistent cookies" - for repeated website visits. [span_196](start_span)These can be checked every time you visit the Website[span_196](end_span).</li>
-                        </ul>
-                        [span_197](start_span)<p>Information we collect includes: browser type, IP address, and operating system[span_197](end_span). [span_198](start_span)Some cookies are set by third-party advertising systems like Google Analytics[span_198](end_span).</p>
-                        
-                        <h3>Our cookies and third-party cookies</h3>
-                        [span_199](start_span)<p>"Our cookies" are placed by our company[span_199](end_span). [span_200](start_span)"Third-party cookies" are placed by other companies (e.g., Google Analytics)[span_200](end_span). [span_201](start_span)Third parties have no access to our cookies, and we cannot access theirs[span_201](end_span).</p>
-                        
-                        <h3>What cookies do we use and for what purpose?</h3>
-                        <ul>
-                            <li><strong>Strictly necessary and performance cookies</strong> – these allow the website to function properly and generally do not collect personal data. Used based on legitimate interest. [span_202](start_span)If you disable them in your browser, some functions may not work[span_202](end_span).</li>
-                            [span_203](start_span)<li><strong>Targeting, advertising, and functional cookies (third-party)</strong> – used to personalize content and display relevant ads[span_203](end_span). [span_204](start_span)These are only used if you have given prior consent through your browser settings[span_204](end_span).</li>
-                        </ul>
-                        
-                        <h3>COOKIE SETTINGS: How to prevent the use of cookies?</h3>
-                        [span_205](start_span)<p>Upon your first visit, only strictly necessary cookies are stored[span_205](end_span). [span_206](start_span)You can withdraw your consent for optional cookies at any time[span_206](end_span). [span_207](start_span)Withdrawing consent also applies to the personal data collected via these cookies[span_207](end_span).</p>
-                        
-                        <h3>HANDLING OF INFORMATION</h3>
-                        [span_208](start_span)<p>For strictly necessary cookies, we use data to fulfill legal or contractual obligations and based on legitimate interest to operate the website[span_208](end_span). [span_209](start_span)If you consented to performance or marketing cookies, we use data for analysis, service improvement, tracking, and relevant advertising[span_209](end_span).</p>
-                        
-                        <h3>CONTROL AND DELETION OF COOKIES</h3>
-                        [span_210](start_span)[span_211](start_span)<p>You can manage cookies via your browser settings[span_210](end_span)[span_211](end_span). [span_212](start_span)Settings apply only to the specific browser used[span_212](end_span). [span_213](start_span)Disabling necessary cookies will impact website functionality[span_213](end_span). [span_214](start_span)To opt-out of Google Analytics across all websites, visit: http://tools.google.com/dlpage/gaoptout[span_214](end_span).</p>
-                        
-                        <h3>EMAIL TRACKING</h3>
-                        [span_215](start_span)<p>Some of our emails may contain a pixel tag (web beacon) to track open rates and link clicks[span_215](end_span). [span_216](start_span)You can opt-out of our mailing list using our contact details[span_216](end_span).</p>
-                        
-                        <h3>CHANGES AND CONTACT</h3>
-                        [span_217](start_span)<p>These policies may be updated at any time[span_217](end_span). [span_218](start_span)If you have any questions, please contact us using the details provided on our website[span_218](end_span).</p>
-                    </div>
-                </div>
-
-                <div class="lang-text de-text">
-                    <h2>COOKIES-RICHTLINIE</h2>
-                    <div class="legal-text">
-                        <h3>Was sind Cookies?</h3>
-                        [span_219](start_span)<p>Cookies sind kurze Textdateien, die eine Website an Ihren Browser sendet[span_219](end_span). [span_220](start_span)Sie ermöglichen es der Website, Informationen über Ihren Besuch aufzuzeichnen, wodurch Ihr nächster Besuch einfacher wird[span_220](end_span). [span_221](start_span)Cookies sind wichtig, da das Surfen im Internet ohne sie viel schwieriger wäre[span_221](end_span).</p>
-                        [span_222](start_span)<p>Auf Grundlage dieser Dateien kann die Website Sie erkennen durch[span_222](end_span):</p>
-                        <ul>
-                            <li>„Sitzungscookies“ - temporäre Cookies, die nach dem Schließen des Browsers gelöscht werden. [span_223](start_span)Wichtig: Wenn Sie Cookies vollständig deaktivieren, können Sie möglicherweise bestimmte Funktionen unserer Website nicht nutzen[span_223](end_span).</li>
-                            <li>„Permanente Cookies“ - für wiederholte Besuche. [span_224](start_span)Diese können bei jedem Besuch überprüft werden[span_224](end_span).</li>
-                        </ul>
-                        [span_225](start_span)<p>Die von uns erfassten Informationen umfassen: Browsertyp, IP-Adresse und Betriebssystem[span_225](end_span). [span_226](start_span)Einige Cookies werden von Drittanbietern wie Google Analytics gesetzt[span_226](end_span).</p>
-                        
-                        <h3>Unsere Cookies und Drittanbieter-Cookies</h3>
-                        [span_227](start_span)<p>„Unsere Cookies“ werden von unserem Unternehmen gesetzt[span_227](end_span). [span_228](start_span)„Drittanbieter-Cookies“ werden von anderen Unternehmen (z. B. Google Analytics) gesetzt[span_228](end_span). [span_229](start_span)Dritte haben keinen Zugriff auf unsere Cookies und umgekehrt[span_229](end_span).</p>
-                        
-                        <h3>Welche Cookies verwenden wir und zu welchem Zweck?</h3>
-                        <ul>
-                            [span_230](start_span)<li><strong>Notwendige und Performance-Cookies</strong> – ermöglichen das korrekte Funktionieren der Website und erfassen in der Regel keine personenbezogenen Daten[span_230](end_span). [span_231](start_span)Sie werden aufgrund unseres berechtigten Interesses verwendet[span_231](end_span).</li>
-                            [span_232](start_span)<li><strong>Zielgruppen-, Werbe- und funktionale Cookies (Drittanbieter)</strong> – dienen der Personalisierung von Inhalten und der Anzeige relevanter Werbung[span_232](end_span). [span_233](start_span)Werden nur mit Ihrer vorherigen Zustimmung verwendet[span_233](end_span).</li>
-                        </ul>
-                        
-                        <h3>COOKIE-EINSTELLUNGEN: Wie verhindere ich die Nutzung?</h3>
-                        [span_234](start_span)<p>Bei Ihrem ersten Besuch werden nur unbedingt erforderliche Cookies gespeichert[span_234](end_span). [span_235](start_span)Sie können Ihre Einwilligung für optionale Cookies jederzeit widerrufen[span_235](end_span). [span_236](start_span)Der Widerruf gilt auch für die über diese Cookies erfassten personenbezogenen Daten[span_236](end_span).</p>
-                        
-                        <h3>UMGANG MIT INFORMATIONEN</h3>
-                        [span_237](start_span)<p>Bei notwendigen Cookies verwenden wir Daten zur Erfüllung vertraglicher oder gesetzlicher Pflichten sowie aufgrund eines berechtigten Interesses[span_237](end_span). [span_238](start_span)Mit Ihrer Zustimmung zu Marketing-/Performance-Cookies verwenden wir Daten zur Analyse, Serviceverbesserung und zur Anzeige relevanter Anzeigen[span_238](end_span).</p>
-                        
-                        <h3>KONTROLLE UND LÖSCHUNG VON COOKIES</h3>
-                        [span_239](start_span)[span_240](start_span)<p>Sie können Cookies über Ihre Browsereinstellungen verwalten[span_239](end_span)[span_240](end_span). [span_241](start_span)Die Einstellungen gelten nur für den jeweils verwendeten Browser[span_241](end_span). [span_242](start_span)Das Deaktivieren notwendiger Cookies beeinträchtigt die Website-Funktionalität[span_242](end_span). [span_243](start_span)Um Google Analytics auf allen Websites zu deaktivieren, besuchen Sie: http://tools.google.com/dlpage/gaoptout[span_243](end_span).</p>
-                        
-                        <h3>E-MAIL-TRACKING</h3>
-                        [span_244](start_span)<p>Einige unserer E-Mails können ein Pixel-Tag enthalten, um Öffnungsraten und Klicks zu erfassen[span_244](end_span). [span_245](start_span)Sie können sich über unsere Kontaktdaten von unserer Mailingliste abmelden[span_245](end_span).</p>
-                        
-                        <h3>ÄNDERUNGEN UND KONTAKT</h3>
-                        [span_246](start_span)<p>Diese Richtlinien können jederzeit aktualisiert werden[span_246](end_span). [span_247](start_span)Bei Fragen kontaktieren Sie uns bitte über die angegebenen Kontaktdaten[span_247](end_span).</p>
-                    </div>
-                </div>
-                <div class="lang-text it-text">
-    <h2>POLITICA SUI COOKIE</h2>
-    <div class="legal-text">
-        <h3>Cosa sono i cookie?</h3>
-        <p>I cookie sono brevi file di testo che un sito web invia al tuo browser. Consentono al sito di registrare informazioni sulla tua visita, come la lingua scelta. I cookie sono essenziali per la navigazione moderna e aiutano ad adattare i contenuti alle tue esigenze.</p>
-        <h3>Quali cookie utilizziamo e a quale scopo?</h3>
-        <ul>
-            <li><strong>Cookie strettamente necessari e di prestazione</strong> – consentono al sito di funzionare correttamente e generalmente non raccolgono dati personali. Utilizzati in base al nostro legittimo interesse. Se disabilitati nel browser, alcune funzioni potrebbero non operare.</li>
-            <li><strong>Cookie di targeting, pubblicitari e funzionali (di terze parti)</strong> – utilizzati per personalizzare i contenuti e mostrare annunci pertinenti (es. Google Analytics). Vengono utilizzati solo previo tuo consenso.</li>
-        </ul>
-        <h3>Controllo e cancellazione dei cookie</h3>
-        <p>Al momento della tua prima visita, vengono salvati solo i cookie strettamente necessari. Puoi revocare il tuo consenso per i cookie opzionali in qualsiasi momento. Puoi gestire o eliminare i cookie tramite le impostazioni del tuo browser web (Chrome, Firefox, Safari, ecc.). La disabilitazione dei cookie necessari comprometterà le funzionalità di base del sito.</p>
-        <h3>Tracciamento e-mail e Contatti</h3>
-        <p>Alcune delle nostre e-mail possono contenere un pixel tag per tracciare i tassi di apertura. Puoi disiscriverti dalla nostra mailing list in qualsiasi momento. Per domande, contattaci tramite i dettagli forniti sul nostro sito web.</p>
-    </div>
-</div>
-
-<div class="lang-text pl-text">
-    <h2>POLITYKA PLIKÓW COOKIE</h2>
-    <div class="legal-text">
-        <h3>Czym są pliki cookie?</h3>
-        <p>Pliki cookie to krótkie pliki tekstowe, które witryna wysyła do przeglądarki. Pozwalają witrynie rejestrować informacje o Twojej wizycie, co ułatwia kolejne przeglądanie. Pliki cookie są niezbędne do nowoczesnego przeglądania stron internetowych.</p>
-        <h3>Jakich plików cookie używamy i w jakim celu?</h3>
-        <ul>
-            <li><strong>Ściśle niezbędne i wydajnościowe pliki cookie</strong> – umożliwiają prawidłowe działanie witryny i na ogół nie zbierają danych osobowych. Używane na podstawie uzasadnionego interesu.</li>
-            <li><strong>Pliki cookie służące do targetowania i reklamowe (stron trzecich)</strong> – używane do personalizacji treści i wyświetlania trafnych reklam (np. Google Analytics). Wykorzystywane tylko za Twoją zgodą.</li>
-        </ul>
-        <h3>Kontrola i usuwanie plików cookie</h3>
-        <p>Podczas pierwszej wizyty zapisywane są tylko niezbędne pliki. Możesz w każdej chwili wycofać zgodę na pliki opcjonalne. Zarządzanie plikami cookie i ich usuwanie jest możliwe w ustawieniach przeglądarki (Chrome, Firefox itp.). Wyłączenie niezbędnych plików zaburzy działanie strony.</p>
-        <h3>Śledzenie e-maili i Kontakt</h3>
-        <p>Niektóre nasze e-maile mogą zawierać znacznik pikselowy do śledzenia wskaźników otwarć. W razie pytań prosimy o kontakt poprzez dane podane na naszej stronie internetowej.</p>
-    </div>
-</div>
-
-<div class="lang-text fr-text">
-    <h2>POLITIQUE EN MATIÈRE DE COOKIES</h2>
-    <div class="legal-text">
-        <h3>Qu'est-ce que les cookies ?</h3>
-        <p>Les cookies sont de courts fichiers texte qu'un site web envoie à votre navigateur. Ils permettent au site d'enregistrer des informations sur votre visite. Ils sont essentiels pour la navigation web moderne.</p>
-        <h3>Quels cookies utilisons-nous et pourquoi ?</h3>
-        <ul>
-            <li><strong>Cookies strictement nécessaires et de performance</strong> – permettent au site de fonctionner correctement et ne collectent pas de données personnelles.</li>
-            <li><strong>Cookies de ciblage et publicitaires (tiers)</strong> – utilisés pour personnaliser le contenu et afficher des publicités pertinentes (ex. Google Analytics). Utilisés uniquement avec votre consentement.</li>
-        </ul>
-        <h3>Contrôle et suppression</h3>
-        <p>Lors de votre première visite, seuls les cookies nécessaires sont stockés. Vous pouvez gérer ou supprimer les cookies via les paramètres de votre navigateur (Chrome, Firefox, etc.). La désactivation des cookies nécessaires affectera le fonctionnement du site. Pour toute question, contactez-nous via les coordonnées sur notre site.</p>
-    </div>
-</div>
-
-<div class="lang-text nl-text">
-    <h2>COOKIEBELEID</h2>
-    <div class="legal-text">
-        <h3>Wat zijn cookies?</h3>
-        <p>Cookies zijn korte tekstbestanden die een website naar uw browser stuurt. Ze stellen de website in staat om informatie over uw bezoek vast te leggen.</p>
-        <h3>Welke cookies gebruiken we en waarom?</h3>
-        <ul>
-            <li><strong>Strikt noodzakelijke en prestatiecookies</strong> – zorgen ervoor dat de website goed functioneert en verzamelen geen persoonlijke gegevens.</li>
-            <li><strong>Targeting- en advertentiecookies (van derden)</strong> – gebruikt om inhoud te personaliseren en relevante advertenties weer te geven (bijv. Google Analytics). Alleen met uw toestemming.</li>
-        </ul>
-        <h3>Controle en verwijdering</h3>
-        <p>Bij uw eerste bezoek worden alleen noodzakelijke cookies opgeslagen. U kunt cookies beheren in uw browserinstellingen. Het uitschakelen van noodzakelijke cookies verstoort de werking van de website. Neem voor vragen contact met ons op.</p>
-    </div>
-</div>
-
-<div class="lang-text hu-text">
-    <h2>SÜTIK (COOKIES) SZABÁLYZATA</h2>
-    <div class="legal-text">
-        <h3>Mik azok a sütik?</h3>
-        <p>A sütik rövid szöveges fájlok, amelyeket a weboldal küld a böngészőjébe. Lehetővé teszik a weboldal számára, hogy információkat rögzítsen a látogatásáról.</p>
-        <h3>Milyen sütiket használunk és miért?</h3>
-        <ul>
-            <li><strong>Feltétlenül szükséges és teljesítmény sütik</strong> – lehetővé teszik a weboldal megfelelő működését.</li>
-            <li><strong>Célzott és hirdetési sütik (harmadik féltől)</strong> – tartalom személyre szabására és releváns hirdetések megjelenítésére szolgálnak (pl. Google Analytics). Csak az Ön hozzájárulásával.</li>
-        </ul>
-        <h3>Kezelés és törlés</h3>
-        <p>A sütiket a böngésző beállításaiban kezelheti és törölheti. A szükséges sütik letiltása akadályozza a weboldal működését. Kérdés esetén lépjen kapcsolatba velünk.</p>
-    </div>
-</div>
-
-<div class="lang-text ro-text">
-    <h2>POLITICA PRIVIND MODULELE COOKIE</h2>
-    <div class="legal-text">
-        <h3>Ce sunt modulele cookie?</h3>
-        <p>Modulele cookie sunt fișiere text scurte pe care un site web le trimite browserului dumneavoastră. Acestea permit site-ului să înregistreze informații despre vizita dumneavoastră.</p>
-        <h3>Ce module cookie folosim și de ce?</h3>
-        <ul>
-            <li><strong>Module cookie strict necesare și de performanță</strong> – permit site-ului să funcționeze corect.</li>
-            <li><strong>Module cookie de direcționare și publicitate (terțe)</strong> – utilizate pentru a personaliza conținutul și reclamele (ex. Google Analytics). Utilizate doar cu consimțământul dvs.</li>
-        </ul>
-        <h3>Control și ștergere</h3>
-        <p>Puteți gestiona și șterge modulele cookie din setările browserului dumneavoastră. Dezactivarea modulelor cookie necesare va afecta funcționarea site-ului. Pentru întrebări, contactați-ne.</p>
-    </div>
-</div>
-
-
-                <div class="lang-text it-text">
-                    <h2>POLITICA SUI COOKIE</h2>
-                    <div class="legal-text">
-                        <h3>Cosa sono i cookie?</h3>
-                        [span_248](start_span)<p>I cookie sono brevi file di testo che un sito web invia al tuo browser[span_248](end_span). [span_249](start_span)Consentono al sito di registrare informazioni sulla tua visita, rendendo la tua prossima visita più semplice e piacevole[span_249](end_span).</p>
-                        <h3>Quali cookie utilizziamo e a quale scopo?</h3>
-                        <ul>
-                            [span_250](start_span)<li><strong>Cookie strettamente necessari e di prestazione</strong> – consentono il corretto funzionamento del sito e generalmente non raccolgono dati personali[span_250](end_span).</li>
-                            [span_251](start_span)<li><strong>Cookie di targeting, pubblicitari e funzionali (di terze parti)</strong> – utilizzati per personalizzare i contenuti e mostrare annunci pertinenti[span_251](end_span).</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="lang-text pl-text">
-                    <h2>POLITYKA COOKIES</h2>
-                    <div class="legal-text">
-                        <h3>Czym są pliki cookie?</h3>
-                        [span_252](start_span)<p>Pliki cookie to krótkie pliki tekstowe, które witryna wysyła do przeglądarki[span_252](end_span). [span_253](start_span)Pozwalają witrynie rejestrować informacje o Twojej wizycie, ułatwiając kolejną[span_253](end_span).</p>
-                        <h3>Jakich plików cookie używamy i w jakim celu?</h3>
-                        <ul>
-                            [span_254](start_span)<li><strong>Ściśle niezbędne i wydajnościowe pliki cookie</strong> – umożliwiają prawidłowe działanie witryny i na ogół nie zbierają danych osobowych[span_254](end_span).</li>
-                            [span_255](start_span)<li><strong>Pliki cookie służące do targetowania, reklamowe i funkcjonalne (stron trzecich)</strong> – używane do personalizacji treści i wyświetlania trafnych reklam[span_255](end_span).</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="lang-text fr-text">
-                    <h2>POLITIQUE EN MATIÈRE DE COOKIES</h2>
-                    <div class="legal-text">
-                        <h3>Qu'est-ce que les cookies ?</h3>
-                        [span_256](start_span)<p>Les cookies sont de courts fichiers texte qu'un site web envoie à votre navigateur[span_256](end_span). [span_257](start_span)Ils permettent au site d'enregistrer des informations sur votre visite, facilitant ainsi votre prochaine visite[span_257](end_span).</p>
-                        <h3>Quels cookies utilisons-nous et dans quel but ?</h3>
-                        <ul>
-                            [span_258](start_span)<li><strong>Cookies strictement nécessaires et de performance</strong> – permettent au site de fonctionner correctement et ne collectent généralement pas de données personnelles[span_258](end_span).</li>
-                            [span_259](start_span)<li><strong>Cookies de ciblage, publicitaires et fonctionnels (tiers)</strong> – utilisés pour personnaliser le contenu et afficher des publicités pertinentes[span_259](end_span).</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="lang-text nl-text">
-                    <h2>COOKIEBELEID</h2>
-                    <div class="legal-text">
-                        <h3>Wat zijn cookies?</h3>
-                        [span_260](start_span)<p>Cookies zijn korte tekstbestanden die een website naar uw browser stuurt[span_260](end_span). [span_261](start_span)Ze stellen de website in staat om informatie over uw bezoek vast te leggen, waardoor uw volgende bezoek makkelijker en aangenamer wordt[span_261](end_span).</p>
-                        <h3>Welke cookies gebruiken we en met welk doel?</h3>
-                        <ul>
-                            [span_262](start_span)<li><strong>Strikt noodzakelijke en prestatiecookies</strong> – zorgen ervoor dat de website goed functioneert en verzamelen over het algemeen geen persoonlijke gegevens[span_262](end_span).</li>
-                            [span_263](start_span)<li><strong>Targeting-, advertentie- en functionele cookies (van derden)</strong> – worden gebruikt om inhoud te personaliseren en relevante advertenties weer te geven[span_263](end_span).</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="lang-text hu-text">
-                    <h2>SÜTIK (COOKIES) SZABÁLYZATA</h2>
-                    <div class="legal-text">
-                        <h3>Mik azok a sütik?</h3>
-                        [span_264](start_span)<p>A sütik rövid szöveges fájlok, amelyeket a weboldal küld a böngészőjébe[span_264](end_span). [span_265](start_span)Lehetővé teszik a weboldal számára, hogy információkat rögzítsen a látogatásáról, megkönnyítve és kellemesebbé téve a következő látogatást[span_265](end_span).</p>
-                        <h3>Milyen sütiket használunk és milyen célból?</h3>
-                        <ul>
-                            [span_266](start_span)<li><strong>Feltétlenül szükséges és teljesítmény sütik</strong> – lehetővé teszik a weboldal megfelelő működését, és általában nem gyűjtenek személyes adatokat[span_266](end_span).</li>
-                            [span_267](start_span)<li><strong>Célzott, hirdetési és funkcionális sütik (harmadik féltől származó)</strong> – tartalom személyre szabására és releváns hirdetések megjelenítésére szolgálnak[span_267](end_span).</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="lang-text ro-text">
-                    <h2>POLITICA PRIVIND MODULELE COOKIE</h2>
-                    <div class="legal-text">
-                        <h3>Ce sunt modulele cookie?</h3>
-                        [span_268](start_span)<p>Modulele cookie sunt fișiere text scurte pe care un site web le trimite browserului dumneavoastră[span_268](end_span). [span_269](start_span)Acestea permit site-ului să înregistreze informații despre vizita dumneavoastră, făcând următoarea vizită mai ușoară și mai plăcută[span_269](end_span).</p>
-                        <h3>Ce module cookie folosim și în ce scop?</h3>
-                        <ul>
-                            [span_270](start_span)<li><strong>Module cookie strict necesare și de performanță</strong> – permit site-ului să funcționeze corect și, în general, nu colectează date cu caracter personal[span_270](end_span).</li>
-                            [span_271](start_span)<li><strong>Module cookie de direcționare, publicitate și funcționale (de la terți)</strong> – utilizate pentru a personaliza conținutul și pentru a afișa reclame relevante[span_271](end_span).</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
         </div>
     </div>
 
