@@ -58,29 +58,26 @@
         .nav-logo { max-height: 65px; transition: 0.3s; width: auto; }
         header.scrolled .nav-logo { max-height: 50px; }
 
-        .nav-menu { display: flex; gap: 25px; align-items: center; }
-        .nav-menu a { text-decoration: none; color: var(--dark); font-weight: 700; font-size: 0.9rem; text-transform: uppercase; transition: 0.2s; cursor: pointer; }
+        .nav-menu { display: flex; gap: 20px; align-items: center; }
+        .nav-menu a { text-decoration: none; color: var(--dark); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; transition: 0.2s; cursor: pointer; }
         .nav-menu a:hover { color: var(--red); }
         .nav-green { color: var(--green-dark) !important; }
         .nav-btn { background: var(--red); color: var(--white) !important; padding: 10px 20px; border-radius: 30px; }
         .nav-btn:hover { background: var(--red-dark) !important; }
         
-        .lang-switcher { display: flex; gap: 10px; margin-left: 10px; border-left: 2px solid #eee; padding-left: 15px; }
-        .lang-btn { background: none; border: none; font-weight: 700; cursor: pointer; color: #999; transition: 0.3s; font-family: var(--font-main); }
+        .lang-switcher { display: flex; gap: 8px; margin-left: 10px; border-left: 2px solid #eee; padding-left: 15px; flex-wrap: wrap; max-width: 150px;}
+        .lang-btn { background: none; border: none; font-weight: 700; cursor: pointer; color: #999; transition: 0.3s; font-family: var(--font-main); font-size: 0.8rem; padding: 2px;}
         .lang-btn.active { color: var(--red); }
         .mobile-menu-btn { display: none; font-size: 1.8rem; background: none; border: none; cursor: pointer; color: var(--dark); }
 
         /* ==========================================================================
-           4. HERO SEKCE (VIDEO BEZ DLAŽDIC)
+           4. HERO SEKCE
            ========================================================================== */
         .hero { position: relative; padding: 220px 0 140px; background: var(--dark); overflow: hidden; min-height: 85vh; display: flex; align-items: center; }
         .video-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
-        
         .video-overlay-dark { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1; }
-        
         .hero-content { position: relative; z-index: 2; max-width: 800px; padding: 0 20px; }
         .badge-red { display: inline-block; background: var(--red); color: var(--white); padding: 8px 20px; font-weight: 800; font-size: 0.85rem; border-radius: 30px; margin-bottom: 25px; letter-spacing: 1px; box-shadow: 0 4px 15px rgba(227, 6, 19, 0.4); }
-        
         .hero h1 { font-size: clamp(2.8rem, 6vw, 5rem); line-height: 1.05; margin-bottom: 25px; letter-spacing: -1px; color: var(--white); text-shadow: 0 5px 20px rgba(0,0,0,0.6); }
         .hero-sub { font-size: 1.25rem; color: #f0f0f0; margin-bottom: 40px; font-weight: 500; text-shadow: 0 2px 10px rgba(0,0,0,0.6); max-width: 650px; }
         .hero-actions { display: flex; gap: 15px; flex-wrap: wrap; }
@@ -94,7 +91,6 @@
         .stat-number { font-family: var(--font-heading); font-size: 3.5rem; color: var(--white); line-height: 1; margin-bottom: 5px; }
         .stat-number.stat-green { color: var(--green) !important; text-shadow: 0 0 15px rgba(0, 230, 118, 0.3); }
         .stat-label { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; color: #aaa; font-weight: 700; margin-top: 10px; }
-
         .modern-fleet-wrapper { width: 130px; height: 130px; border-radius: 50%; border: 3px solid rgba(0, 230, 118, 0.3); display: flex; align-items: center; justify-content: center; margin: 0 auto 5px; animation: breathe-green 3s ease-in-out infinite; box-shadow: 0 0 20px rgba(0, 230, 118, 0.1); }
         .euro6-text { font-family: var(--font-heading); font-size: 1.8rem; color: var(--green); font-weight: 900; line-height: 1.1; }
         .euro6-text span { font-size: 0.75rem; color: #aaa; text-transform: uppercase; letter-spacing: 1px; font-family: var(--font-main); }
@@ -108,7 +104,6 @@
         .check-list { list-style: none; margin-top: 20px; }
         .check-list li { position: relative; padding-left: 30px; margin-bottom: 15px; font-weight: 500; font-size: 1.05rem;}
         .check-list li::before { content: '✓'; position: absolute; left: 0; color: var(--red); font-weight: 900; font-size: 1.2rem; }
-
         .tech-box { background: var(--white); border: 2px solid #eee; height: 400px; position: relative; border-radius: 15px; overflow: hidden; display: flex; align-items: center; justify-content: center; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
         .tech-overlay { position: absolute; top: 15px; left: 15px; background: var(--red); color: white; padding: 5px 10px; font-size: 0.7rem; font-weight: bold; border-radius: 20px; animation: pulse-red 2s infinite; }
         .placeholder-img { color: #ccc; font-weight: bold; letter-spacing: 2px; }
@@ -122,7 +117,6 @@
         .services-carousel::-webkit-scrollbar { height: 8px; }
         .services-carousel::-webkit-scrollbar-track { background: #eee; border-radius: 10px; }
         .services-carousel::-webkit-scrollbar-thumb { background: var(--red); border-radius: 10px; }
-        
         .service-card { min-width: 320px; max-width: 320px; flex: 0 0 auto; scroll-snap-align: start; background: var(--white); padding: 40px; border-radius: 15px; border: 1px solid #eee; border-top: 4px solid var(--red); transition: 0.3s; box-shadow: 0 10px 30px rgba(0,0,0,0.03); display: flex; flex-direction: column; }
         .service-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
         .s-icon { font-size: 3rem; margin-bottom: 20px; }
@@ -133,16 +127,14 @@
         .b-test { background: rgba(52, 168, 83, 0.1); color: #34a853; border: 1px solid #34a853; }
 
         /* ==========================================================================
-           8. ELEKTRO HUB
+           8. ELEKTRO HUB (ŽIVĚJŠÍ DESIGN)
            ========================================================================== */
         .bg-animated-green { background: linear-gradient(-45deg, #05140a, #0b2b16, #001f0a, #05140a); background-size: 400% 400%; animation: gradientBG 15s ease infinite; color: var(--white); position: relative; overflow: hidden; border-top: 4px solid var(--green); border-bottom: 4px solid var(--green); }
         @keyframes gradientBG { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
-        
         .glow-orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.4; z-index: 0; pointer-events: none; }
         .orb-1 { top: -10%; left: -10%; width: 400px; height: 400px; background: var(--green); animation: floatOrb 8s ease-in-out infinite alternate; }
         .orb-2 { bottom: -10%; right: 10%; width: 300px; height: 300px; background: #00ff88; animation: floatOrb 12s ease-in-out infinite alternate-reverse; }
         @keyframes floatOrb { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(50px, 50px) scale(1.2); } }
-
         .electro-card { display: grid; grid-template-columns: 1.5fr 1fr; gap: 50px; align-items: center; position: relative; z-index: 2; }
         .clean-energy-circle { width: 240px; height: 240px; border-radius: 50%; background: radial-gradient(circle, rgba(0, 230, 118, 0.15) 0%, transparent 70%); border: 2px dashed rgba(0, 230, 118, 0.5); display: flex; align-items: center; justify-content: center; box-shadow: 0 0 50px rgba(0, 230, 118, 0.2); animation: eco-spin 10s linear infinite; margin: 0 auto; position: relative; }
         .gauge-inner { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; animation: eco-spin-reverse 10s linear infinite; }
@@ -151,7 +143,7 @@
         @keyframes eco-spin-reverse { 100% { transform: rotate(-360deg); } }
 
         /* ==========================================================================
-           9. PARTNEŘI
+           9. PARTNEŘI MARQUEE
            ========================================================================== */
         .partners-section { background: var(--white); padding: 50px 0; border-bottom: 1px solid #eee; overflow: hidden; }
         .partners-title { text-align: center; font-size: 1rem; color: #999; margin-bottom: 30px; letter-spacing: 3px; }
@@ -164,7 +156,7 @@
         @keyframes scrollMarquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
         /* ==========================================================================
-           10. FAQ
+           10. FAQ AKORDEON
            ========================================================================== */
         .faq-subtitle { margin-bottom: 40px; color: #666; font-size: 1.1rem; }
         .faq-container { max-width: 900px; margin: 0 auto; }
@@ -177,7 +169,7 @@
         .faq-item.active .faq-icon { transform: rotate(45deg); color: var(--dark); }
 
         /* ==========================================================================
-           11. KONTAKT A FORMULÁŘ
+           11. KONTAKTNÍ CENTRUM A FORMULÁŘ
            ========================================================================== */
         .contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
         .contact-details { margin: 30px 0; background: var(--white); padding: 35px; border-radius: 15px; border-left: 5px solid var(--red); box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
@@ -185,17 +177,15 @@
         .c-item:last-child { margin-bottom: 0; }
         .c-item strong { color: var(--red); margin-bottom: 5px; font-size: 0.9rem; letter-spacing: 1px; }
         .c-item span { font-size: 1.3rem; font-weight: 700; color: var(--dark); }
-        
         .btn-gps-nav { background: #34a853; color: white !important; box-shadow: 0 4px 15px rgba(52, 168, 83, 0.3); font-size: 1.1rem; padding: 15px 30px;}
         .btn-gps-nav:hover { background: #2d9249; box-shadow: 0 6px 20px rgba(52, 168, 83, 0.5); transform: translateY(-2px); }
-
         .contact-form-box { background: var(--dark); padding: 40px; border-radius: 15px; color: var(--white); box-shadow: 0 20px 40px rgba(227, 6, 19, 0.15); }
         .contact-form-box h3 { color: var(--white); margin-bottom: 25px; text-transform: uppercase; font-size: 1.5rem;}
         .contact-form-box input, .contact-form-box textarea { width: 100%; padding: 18px; margin-bottom: 20px; border: none; border-radius: 8px; background: rgba(255,255,255,0.1); color: var(--white); font-family: var(--font-main); font-size: 1rem;}
         .contact-form-box input:focus, .contact-form-box textarea:focus { outline: 2px solid var(--red); background: rgba(255,255,255,0.2); }
 
         /* ==========================================================================
-           12. PATIČKA A COOKIES
+           12. PATIČKA A COOKIE LIŠTA
            ========================================================================== */
         footer { background: var(--dark); color: #888; padding: 50px 0 40px 0; font-size: 0.95rem; }
         .footer-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 30px; }
@@ -203,18 +193,16 @@
         .footer-logo:hover { opacity: 1; }
         .f-links button { background: none; border: none; font-family: var(--font-main); color: #888; text-decoration: underline; cursor: pointer; margin-left: 20px; transition: 0.2s; font-size: 0.95rem; }
         .f-links button:hover { color: var(--white); }
-
         .cookie-banner { position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(17, 17, 17, 0.98); box-shadow: 0 -5px 20px rgba(0,0,0,0.3); color: var(--white); padding: 20px 0; z-index: 99999; border-top: 3px solid var(--red); }
         .cookie-flex { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
 
         /* ==========================================================================
-           13. MODÁLNÍ OKNA PRO PRÁVNÍ TEXTY
+           13. MODÁLNÍ OKNA PRÁVNÍ DOKUMENTY (PLNÉ TEXTY)
            ========================================================================== */
         .modal { display: none; position: fixed; z-index: 100000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.85); backdrop-filter: blur(8px); }
         .modal-content { background-color: var(--white); margin: 5% auto; padding: 50px; border-radius: 15px; width: 90%; max-width: 950px; position: relative; color: var(--text); box-shadow: 0 25px 50px rgba(0,0,0,0.5);}
         .close-modal { color: #aaa; position: absolute; right: 30px; top: 20px; font-size: 35px; font-weight: bold; cursor: pointer; transition: 0.2s;}
         .close-modal:hover { color: var(--red); }
-        
         .legal-text { max-height: 65vh; overflow-y: auto; padding-right: 25px; font-size: 0.95rem; margin-top: 25px; text-align: justify; line-height: 1.7;}
         .legal-text::-webkit-scrollbar { width: 8px; }
         .legal-text::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
@@ -228,7 +216,7 @@
         .active-lang { display: block; }
 
         /* ==========================================================================
-           14. MOBILNÍ RESPONSIVITA
+           14. RESPONSIVNÍ DESIGN (MOBIL)
            ========================================================================== */
         @media (max-width: 900px) {
             .two-col, .contact-wrapper, .electro-card { grid-template-columns: 1fr; gap: 40px; }
@@ -242,7 +230,7 @@
             .hero-actions { justify-content: center; }
             .stat-number { font-size: 3rem; }
             .cookie-flex { flex-direction: column; text-align: center; }
-            .lang-switcher { border-left: none; padding: 20px; justify-content: center; width: 100%; }
+            .lang-switcher { border-left: none; padding: 20px; justify-content: center; width: 100%; max-width: 100%;}
             .modal-content { padding: 30px 20px; margin: 10% auto;}
         }
     </style>
@@ -267,6 +255,12 @@
                     <button class="lang-btn active" onclick="setLang('cs')">CS</button>
                     <button class="lang-btn" onclick="setLang('en')">EN</button>
                     <button class="lang-btn" onclick="setLang('de')">DE</button>
+                    <button class="lang-btn" onclick="setLang('it')">IT</button>
+                    <button class="lang-btn" onclick="setLang('pl')">PL</button>
+                    <button class="lang-btn" onclick="setLang('fr')">FR</button>
+                    <button class="lang-btn" onclick="setLang('nl')">NL</button>
+                    <button class="lang-btn" onclick="setLang('hu')">HU</button>
+                    <button class="lang-btn" onclick="setLang('ro')">RO</button>
                 </div>
             </nav>
         </div>
@@ -285,7 +279,7 @@
             <div class="hero-actions">
                 <a href="#sluzby" class="btn-primary" data-i18n="hero_btn1">Naše služby</a>
                 <a href="#hvo100" class="btn-outline-green" data-i18n="hero_btn2" style="border-color: white; color: white;">EKO HVO100</a>
-                <a href="##elektro" class="btn-outline-green" data-i18n="hero_btn2" style="border-color: white; color: white;">Elektrická přeprava ⚡</a>
+                <a href="#elektro" class="btn-outline-green" data-i18n="hero_btn3" style="border-color: white; color: white;">Elektrická přeprava ⚡</a>
             </div>
         </div>
     </section>
@@ -528,166 +522,227 @@
                 <div class="lang-text cs-text active-lang">
                     <h2>ZÁSADY OCHRANY OSOBNÍCH ÚDAJŮ</h2>
                     <div class="legal-text">
-                        <p>Tento dokument obsahuje informace pro subjekty údajů stran zpracování jejich osobních údajů v organizaci, a to v rámci požadavků, které jsou na organizaci, jakožto správce osobních údajů, kladeny ust. čl. 13 NAŘÍZENÍ EVROPSKÉHO PARLAMENTU A RADY (EU) 2016/679 ze dne 27. dubna 2016 o ochraně fyzických osob v souvislosti se zpracováním osobních údajů a o volném pohybu těchto údajů a o zrušení směrnice 95/46/ES (dále jen GDPR).</p>
-                        
+                        [span_0](start_span)<p>Tento dokument obsahuje informace pro subjekty údajů stran zpracování jejich osobních údajů v organizaci, a to v rámci požadavků, které jsou na organizaci, jakožto správce osobních údajů, kladeny ust. čl. 13 NAŘÍZENÍ EVROPSKÉHO PARLAMENTU A RADY (EU) 2016/679 ze dne 27. dubna 2016 o ochraně fyzických osob v souvislosti se zpracováním osobních údajů a o volném pohybu těchto údajů a o zrušení směrnice 95/46/ES (dále jen GDPR)[span_0](end_span).</p>
                         <h3>Kdo zpracovává Vaše údaje?</h3>
-                        <p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Praha 10<br>C 202561 vedená u Městského soudu v Praze<br>kontaktní e-mail: info@control-point.eu<br>dále jako „my“ nebo „správce“ nebo „organizace“</p>
-                        
+                        [span_1](start_span)<p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Praha 10<br>C 202561 vedená u Městského soudu v Praze<br>kontaktní e-mail: info@control-point.eu<br>dále jako „my“ nebo „správce“ nebo „organizace“[span_1](end_span)</p>
                         <h3>Co je to osobní údaj?</h3>
-                        <p>Osobním údajem je prakticky jakákoli informace, která dokáže žijící fyzickou osobu identifikovat přímo nebo jejím účelem je dosažení takové osoby. Osobní údaje lze dělit na obecné (např. jméno a příjmení, věk, telefonní číslo, místo narození, osobní stav apod.) a citlivé (dnes jsou označovány jako zvláštní kategorie osobních údajů, přičemž se jedná pouze o tyto osobní údaje – biometrické údaje, členství v odborové organizaci/politické straně, etnický původ, filozofické vyznání, genetické údaje, informace o odsouzení a trestní delikty, náboženské vyznání, politické názory, rasový původ sexuální orientace/život, zdravotní stav).</p>
-                        
+                        [span_2](start_span)<p>Osobním údajem je prakticky jakákoli informace, která dokáže žijící fyzickou osobu identifikovat přímo nebo jejím účelem je dosažení takové osoby[span_2](end_span). [span_3](start_span)Osobní údaje lze dělit na obecné (např. jméno a příjmení, věk, telefonní číslo, místo narození, osobní stav apod.) a citlivé (dnes jsou označovány jako zvláštní kategorie osobních údajů, přičemž se jedná pouze o tyto osobní údaje – biometrické údaje, členství v odborové organizaci/politické straně, etnický původ, filozofické vyznání, genetické údaje, informace o odsouzení a trestní delikty, náboženské vyznání, politické názory, rasový původ sexuální orientace/život, zdravotní stav)[span_3](end_span).</p>
                         <h3>Co je zpracování osobních údajů?</h3>
-                        <p>Zpracováním osobních údajů se rozumí systematická činnost, kterou správce provádí s osobními údaji za určitým účelem. Činností dle předchozí věty je zejména: shromáždění, zaznamenání, uspořádání, strukturování, uložení, přizpůsobení nebo pozměnění, vyhledání, nahlédnutí, použití, zpřístupnění přenosem, šíření nebo jakékoliv jiné zpřístupnění, seřazení či zkombinování, omezení, výmaz nebo zničení.</p>
-                        
+                        [span_4](start_span)<p>Zpracováním osobních údajů se rozumí systematická činnost, kterou správce provádí s osobními údaji za určitým účelem[span_4](end_span). [span_5](start_span)Činností dle předchozí věty je zejména: shromáždění, zaznamenání, uspořádání, strukturování, uložení, přizpůsobení nebo pozměnění, vyhledání, nahlédnutí, použití, zpřístupnění přenosem, šíření nebo jakékoliv jiné zpřístupnění, seřazení či zkombinování, omezení, výmaz nebo zničení[span_5](end_span).</p>
                         <h3>Zdroje a kategorie osobních údajů:</h3>
-                        <p>Správce zpracovává osobní údaje (přímo od vás) které jste mu poskytli, nebo osobní údaje, které získal na základě plnění Vaší objednávky. Vaše identifikační a kontaktní údaje a údaje nezbytné k plnění smlouvy.</p>
-                        
+                        [span_6](start_span)<p>Správce zpracovává osobní údaje (přímo od vás) které jste mu poskytli, nebo osobní údaje, které získal na základě plnění Vaší objednávky[span_6](end_span). [span_7](start_span)Vaše identifikační a kontaktní údaje a údaje nezbytné k plnění smlouvy[span_7](end_span).</p>
                         <h3>Zákonný důvod a účel zpracování</h3>
-                        <p>Zákonným důvodem zpracování je:<br>Váš souhlas se zpracováním osobních údajů za účelem poskytování přímého marketingu podle čl. 6 odst. 1 písm. a) GDPR.<br>Pro účel uzavření a plnění smlouvy (tj. v souladu s poskytováním našich služeb) zpracováváme Vaše osobní údaje dle ustanovení čl. 6 odst. 1 písm. b) GDPR. Právním základem zpracování Vašich obecných osobních údajů je tedy smlouva.</p>
-                        <p>Jakmile bude smlouva splněna, musíme Vaše osobní údaje archivovat po dobu, kterou předvídají příslušné právní předpisy. Zde je právním důvodem zpracování Vašich obecných osobních údajů splnění právní povinnosti, což stanoví čl. 6 odst. 1 písm. c) GDPR.</p>
-                        <p>Účelem zpracování osobních údajů je:<br>Vyřízení Vaší objednávky a výkon práv a povinností vyplývajících ze smluvního vztahu mezi Vámi a Správcem. Při objednávce jsou vyžadovány osobní údaje nezbytné pro úspěšné vyřízení objednávky podle čl. 1 písm. b) Nařízení (s tím souvisí i následné uskutečnění platby, dodání služeb, vyřizování reklamace apod.); Vaše osobní údaje, které nám poskytnete, využíváme k tomu, abychom s Vámi mohli smlouvu uzavřít a je-li mezi námi smlouva již uzavřena, pak je využíváme, abychom ji mohli splnit.</p>
-                        <p>Zpracování osobních údajů zákazníka probíhá bez souhlasu zákazníka, jelikož právním základem zpracování jeho osobních údajů pro účely plnění smlouvy je konkrétní smlouva mezi zákazníkem a provozovatelem. Poskytnutí osobních údajů je nezbytný požadavek na uzavření a plnění smlouvy, bez poskytnutí osobních údajů není možné uzavřít smlouvu či ze strany správce plnit její podmínky.</p>
-                        
+                        <p>Zákonným důvodem zpracování je:<br>Váš souhlas se zpracováním osobních údajů za účelem poskytování přímého marketingu podle čl. 6 odst. [span_8](start_span)1 písm. a) GDPR[span_8](end_span).<br>Pro účel uzavření a plnění smlouvy (tj. v souladu s poskytováním našich služeb) zpracováváme Vaše osobní údaje dle ustanovení čl. 6 odst. [span_9](start_span)1 písm. b) GDPR[span_9](end_span). [span_10](start_span)Právním základem zpracování Vašich obecných osobních údajů je tedy smlouva[span_10](end_span).</p>
+                        [span_11](start_span)<p>Jakmile bude smlouva splněna, musíme Vaše osobní údaje archivovat po dobu, kterou předvídají příslušné právní předpisy[span_11](end_span). Zde je právním důvodem zpracování Vašich obecných osobních údajů splnění právní povinnosti, což stanoví čl. 6 odst. [span_12](start_span)1 písm. c) GDPR[span_12](end_span).</p>
+                        [span_13](start_span)<p>Účelem zpracování osobních údajů je:<br>Vyřízení Vaší objednávky a výkon práv a povinností vyplývajících ze smluvního vztahu mezi Vámi a Správcem[span_13](end_span). Při objednávce jsou vyžadovány osobní údaje nezbytné pro úspěšné vyřízení objednávky podle čl. [span_14](start_span)1 písm. b) Nařízení (s tím souvisí i následné uskutečnění platby, dodání služeb, vyřizování reklamace apod.)[span_14](end_span); [span_15](start_span)Vaše osobní údaje, které nám poskytnete, využíváme k tomu, abychom s Vámi mohli smlouvu uzavřít a je-li mezi námi smlouva již uzavřena, pak je využíváme, abychom ji mohli splnit[span_15](end_span).</p>
+                        [span_16](start_span)<p>Zpracování osobních údajů zákazníka probíhá bez souhlasu zákazníka, jelikož právním základem zpracování jeho osobních údajů pro účely plnění smlouvy je konkrétní smlouva mezi zákazníkem a provozovatelem[span_16](end_span). [span_17](start_span)Poskytnutí osobních údajů je nezbytný požadavek na uzavření a plnění smlouvy, bez poskytnutí osobních údajů není možné uzavřít smlouvu či ze strany správce plnit její podmínky[span_17](end_span).</p>
                         <h3>Jaké osobní údaje a v jakém rozsahu budeme zpracovávat?</h3>
-                        <p>Abychom Vám mohli poskytovat naše služby, potřebujeme k tomu znát následující osobní údaje: Obecné osobní údaje: jméno a příjmení, adresu trvalého pobytu, adresu dodání služeb nebo tovar, Vaše telefonní číslo a e-mail.</p>
-                        
+                        [span_18](start_span)<p>Abychom Vám mohli poskytovat naše služby, potřebujeme k tomu znát následující osobní údaje: Obecné osobní údaje: jméno a příjmení, adresu trvalého pobytu, adresu dodání služeb nebo tovar, Vaše telefonní číslo a e-mail[span_18](end_span).</p>
                         <h3>Jak dlouho budeme údaje uchovávat?</h3>
-                        <p>Vaše osobní údaje budeme uchovávat po celou dobu, co budeme plnit naši vzájemnou smlouvu. Po skončení smluvního vztahu budeme Vaše osobní údaje uchovávat tak dlouho, abychom splnili nezbytnou archivační povinnost podle právních předpisů, které archivaci předpokládají (těmito předpisy jsou např. zákon o účetnictví, zákon o dani z přidané hodnoty, zákon o archivnictví a evidenci).</p>
-                        
+                        [span_19](start_span)<p>Vaše osobní údaje budeme uchovávat po celou dobu, co budeme plnit naši vzájemnou smlouvu[span_19](end_span). [span_20](start_span)Po skončení smluvního vztahu budeme Vaše osobní údaje uchovávat tak dlouho, abychom splnili nezbytnou archivační povinnost podle právních předpisů, které archivaci předpokládají (těmito předpisy jsou např. zákon o účetnictví, zákon o dani z přidané hodnoty, zákon o archivnictví a evidenci)[span_20](end_span).</p>
                         <h3>Komu dále předáváme Vaše osobní údaje?</h3>
-                        <p>Vaše osobní údaje mohou být předávány tomuto okruhu osob: poskytovatelé právních, daňových a účetních služeb, poskytovatelé technických řešení. Vaše osobní údaje mohou být rovněž předávány orgánům veřejné správy a soudům, to však pouze za předpokladu, že tak stanoví zvláštní právní předpis, nebo k tomu dáte výslovný souhlas. Našim zpracovatelům jsou Vaše osobní údaje předávány vždy na základě zpracovatelské smlouvy a v souladu s minimálním požadovaným standardem ochrany osobních údajů, které GDPR požaduje. Správce neposkytuje, nezveřejňuje a nezpřístupňuje osobní údaje do třetích zemí.</p>
-                        
+                        [span_21](start_span)<p>Vaše osobní údaje mohou být předávány tomuto okruhu osob: poskytovatelé právních, daňových a účetních služeb, poskytovatelé technických řešení[span_21](end_span). [span_22](start_span)Vaše osobní údaje mohou být rovněž předávány orgánům veřejné správy a soudům, to však pouze za předpokladu, že tak stanoví zvláštní právní předpis, nebo k tomu dáte výslovný souhlas[span_22](end_span). [span_23](start_span)Našim zpracovatelům jsou Vaše osobní údaje předávány vždy na základě zpracovatelské smlouvy a v souladu s minimálním požadovaným standardem ochrany osobních údajů, které GDPR požaduje[span_23](end_span). [span_24](start_span)Správce neposkytuje, nezveřejňuje a nezpřístupňuje osobní údaje do třetích zemí[span_24](end_span).</p>
                         <h3>Podmínky zabezpečení osobních údajů</h3>
-                        <p>Správce prohlašuje, že přijal vhodná personální, technická a organizační opatření k zajištění ochrany osobních údajů. Správce přijal technická opatření k zabezpečení datových úložišť a úložišť osobních údajů ve spisové podobě. Správce prohlašuje, že k osobním údajům mají přístup výlučně jím pověřené osoby. V rámci činností zpracování osobních údajů, které při naší činnosti provádíme, nedochází k automatickému rozhodování ani k profilování.</p>
-                        
+                        [span_25](start_span)<p>Správce prohlašuje, že přijal vhodná personální, technická a organizační opatření k zajištění ochrany osobních údajů[span_25](end_span). [span_26](start_span)Správce přijal technická opatření k zabezpečení datových úložišť a úložišť osobních údajů ve spisové podobě[span_26](end_span). [span_27](start_span)Správce prohlašuje, že k osobním údajům mají přístup výlučně jím pověřené osoby[span_27](end_span). [span_28](start_span)V rámci činností zpracování osobních údajů, které při naší činnosti provádíme, nedochází k automatickému rozhodování ani k profilování[span_28](end_span).</p>
                         <h3>Jaká jsou Vaše práva v souvislosti se zpracováním Vašich osobních údajů?</h3>
-                        <p>Za podmínek stanovených v GDPR máte:</p>
+                        [span_29](start_span)<p>Za podmínek stanovených v GDPR máte[span_29](end_span):</p>
                         <ul>
-                            <li>Právo na přístup ke svým osobním údajům podle čl. 15 GDPR</li>
-                            <li>Právo na opravu osobních údajů dle čl.16 GDPR</li>
-                            <li>Právo na omezení zpracování</li>
-                            <li>Právo na výmaz dle čl.17 GDPR</li>
-                            <li>Právo namítat podle článku 21 GDPR</li>
-                            <li>Právo na přenesení osobních údajů podle článku 21 GDPR</li>
-                            <li>Právo odvolat souhlas (elektronicky, nebo na korespondenční adresu)</li>
-                            <li>Právo podat stížnost úřadu na ochranu osobních údajů v případě, že se domníváte, že došlo k porušení vašich práv na ochranu osobních údajů.</li>
+                            <li>Právo na přístup ke svým osobním údajům podle čl. [span_30](start_span)15 GDPR[span_30](end_span)</li>
+                            [span_31](start_span)<li>Právo na opravu osobních údajů dle čl.16 GDPR[span_31](end_span)</li>
+                            [span_32](start_span)<li>Právo na omezení zpracování[span_32](end_span)</li>
+                            [span_33](start_span)<li>Právo na výmaz dle čl.17 GDPR[span_33](end_span)</li>
+                            [span_34](start_span)<li>Právo namítat podle článku 21 GDPR[span_34](end_span)</li>
+                            [span_35](start_span)<li>Právo na přenesení osobních údajů podle článku 21 GDPR[span_35](end_span)</li>
+                            [span_36](start_span)<li>Právo odvolat souhlas (elektronicky, nebo na korespondenční adresu)[span_36](end_span)</li>
+                            [span_37](start_span)<li>Právo podat stížnost úřadu na ochranu osobních údajů v případě, že se domníváte, že došlo k porušení vašich práv na ochranu osobních údajů[span_37](end_span).</li>
                         </ul>
-                        
                         <h3>Jak můžete naplnit svá práva?</h3>
-                        <p><strong>Právo na přístup:</strong> Na základě Vaší žádosti Vám musíme sdělit, zda zpracováváme, nebo nezpracováváme Vaše osobní údaje. V případě, že je zpracováváme, pak máte právo na to, abychom Vám sdělili: za jakým účelem Vaše údaje zpracováváme, v jakém rozsahu jsou tyto údaje zpracovávány, jak dlouho budou uchovávány, komu budou zpřístupněny, zda můžete podat stížnost Úřadu pro ochranu osobních údajů. Žádost můžete podat elektronicky na emailovou adresu info@control-point.eu nebo poštou.</p>
-                        <p><strong>Právo na opravu:</strong> Pokud se domníváte, že zpracováváme Vaše nesprávné (nepřesné) osobní údaje, pak máte právo na jejich opravu. Dejte nám to na vědomí a my bez zbytečného odkladu provedeme nápravu.</p>
-                        <p><strong>Právo na vymazání:</strong> Za určitých okolností máte právo, abychom Vaše osobní údaje vymazali. Vaše osobní údaje vymažeme, pokud: je již nepotřebujeme pro účel, odvoláte souhlas, namítáte vůči zpracování, zpracováváme údaje nezákonně, nebo pokud to vyžaduje zákonná povinnost.</p>
-                        <p><strong>Právo na omezení zpracování:</strong> Můžete nás požádat, abychom omezili zpracování vašich osobních údajů. Pokud žádosti vyhovíme, Vaše osobní údaje budeme pouze uchovávat.</p>
-                        <p><strong>Právo na přenosnost dat:</strong> Máte právo žádat, abychom Vám poskytli Vaše osobní údaje v elektronické formě (např. XML nebo CSV), nebo abychom je přenesli jiné společnosti.</p>
-                        <p><strong>Právo namítat:</strong> Máte právo namítat, že zpracováváme Vaše osobní údaje, zejména pokud je zpracováváme z důvodu oprávněného zájmu nebo pro vytváření profilu.</p>
+                        [span_38](start_span)<p><strong>Právo na přístup:</strong> Na základě Vaší žádosti Vám musíme sdělit, zda zpracováváme, nebo nezpracováváme Vaše osobní údaje[span_38](end_span). [span_39](start_span)V případě, že je zpracováváme, pak máte právo na to, abychom Vám sdělili: za jakým účelem Vaše údaje zpracováváme, v jakém rozsahu jsou tyto údaje zpracovávány, jak dlouho budou uchovávány, komu budou zpřístupněny, zda můžete podat stížnost Úřadu pro ochranu osobních údajů[span_39](end_span). [span_40](start_span)Žádost můžete podat elektronicky na emailovou adresu info@control-point.eu nebo poštou na adresu: Dopravní 500/9, Uhříněves, 104 00 Praha 10[span_40](end_span).</p>
+                        [span_41](start_span)<p><strong>Právo na opravu:</strong> Pokud se domníváte, že zpracováváme Vaše nesprávné (nepřesné) osobní údaje, pak máte právo na jejich opravu[span_41](end_span). [span_42](start_span)Dejte nám to na vědomí a my bez zbytečného odkladu provedeme nápravu[span_42](end_span). [span_43](start_span)Žádost můžete podat elektronicky na emailovou adresu info@control-point.eu nebo poštou na adresu: Dopravní 500/9, Uhříněves, 104 00 Praha 10[span_43](end_span).</p>
+                        [span_44](start_span)<p><strong>Právo na vymazání:</strong> Za určitých okolností máte právo, abychom Vaše osobní údaje vymazali[span_44](end_span). O vymazání Vašich údajů nás můžete požádat kdykoli. [span_45](start_span)Vaše osobní údaje vymažeme, pokud: již vaše osobní údaje nepotřebujeme pro účel, pro který jste nám je poskytli, odvoláte svůj souhlas, namítáte vůči zpracování vašich osobních údajů, zpracováváme Vaše osobní údaje nezákonně, osobní údaje musí být vymazány, aby se tím splnila zákonná povinnost, jste-li dítě, příp. rodič dítěte, které souhlasilo se zpracováním osobních údajů přes internet[span_45](end_span).</p>
+                        [span_46](start_span)<p><strong>Právo na omezení zpracování:</strong> Můžete nás požádat, abychom omezili zpracování vašich osobních údajů[span_46](end_span). [span_47](start_span)Pokud žádosti vyhovíme, Vaše osobní údaje budeme pouze uchovávat a dále s nimi pracovat nebudeme[span_47](end_span). [span_48](start_span)K omezení zpracování Vašich údajů dojde, pokud: Vaše osobní údaje jsou nesprávné, a to dokud neověříme jejich správnost, zpracováváme osobní údaje nezákonně, avšak Vy nesouhlasíte s jejich vymazáním a na místo toho žádáte, abychom zpracování Vašich osobních údajů jen omezili, Vaše údaje již nepotřebujeme, ale potřebujete je Vy k prokázání, uplatňování nebo obhajování svých práv, namítáte vůči zpracování Vašich osobních údajů, a to dokud neověříme, zda naše oprávněné zájmy převažují nad vašimi důvody[span_48](end_span).</p>
+                        [span_49](start_span)<p><strong>Právo na přenosnost dat:</strong> Máte právo žádat, abychom Vám poskytli Vaše osobní údaje v elektronické formě (např. soubor XML nebo CSV), která Vám umožní snadno si přenést data do jiné společnosti[span_49](end_span). [span_50](start_span)Také nás můžete požádat, abychom Vaše osobní údaje přenesli vybrané společnosti přímo my[span_50](end_span). [span_51](start_span)Vaší žádosti vyhovíme v případě, že jste nám poskytli osobní údaje přímo Vy a dali jste nám k jejich zpracování souhlas[span_51](end_span).</p>
+                        [span_52](start_span)<p><strong>Právo namítat:</strong> Máte právo namítat, že zpracováváme Vaše osobní údaje[span_52](end_span). [span_53](start_span)Pokud Vaše osobní údaje zpracováváme v následujících případech: z důvodu našeho oprávněného zájmu, vytváření zákaznického profilu, můžete namítat jejich zpracování, máte-li k tomu osobní důvody[span_53](end_span).</p>
                         
                         <h3>Jak můžete tato práva vykonávat?</h3>
-                        <p>Emailem: info@control-point.eu nebo poštou na adresu: Dopravní 500/9, Uhříněves, 104 00 Praha 10.</p>
-                        <p>Dozorčí orgán:<br>Úřad pro ochranu osobních údajů<br>Pplk. Sochora 27170 00 Praha 7<br>Telefon: +420 234 665 111<br>WWW: https://www.uoou.cz</p>
+                        [span_54](start_span)<p>S Vaší žádostí se můžete na nás obrátit některým z těchto způsobů: Emailem: info@control-point.eu nebo poštou na adresu: Dopravní 500/9, Uhříněves, 104 00 Praha 10[span_54](end_span).</p>
+                        [span_55](start_span)<p>V případě, že se domníváte, že došlo k porušení Vašich práv na ochranu osobních údajů máte právo podat stížnost dozorčímu orgánu kterým je Úřad na ochranu osobních údajů na adrese[span_55](end_span):<br>Úřad pro ochranu osobních údajů<br>Pplk. [span_56](start_span)Sochora 27170 00 Praha 7<br>IČO: 70837627<br>Telefon: ústředna: +420 234 665 111 (neposkytuje konzultace) informace: +420 234 665 800 (informační linka je k dispozici vždy v úterý a čtvrtek Od 13.00 do 15.30)<br>WWW: https://www.uoou.cz<br>E-mail: posta@uoou.cz<br>ID datové schránky: qkbaa2n<br>Tyto Zásady ochrany osobních údajů jsou platné a účinné od: 24.04.2019[span_56](end_span)[span_57](start_span)<br>aktualizace dne 29.03.2023[span_57](end_span)</p>
                     </div>
                 </div>
 
                 <div class="lang-text en-text">
                     <h2>PRIVACY POLICY</h2>
                     <div class="legal-text">
-                        <p>This document contains information for data subjects regarding the processing of their personal data within the organization, in accordance with the requirements placed on the organization as a data controller under Article 13 of REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 27 April 2016 (GDPR).</p>
-                        
+                        [span_58](start_span)<p>This document contains information for data subjects regarding the processing of their personal data within the organization, in accordance with the requirements placed on the organization as a data controller under Article 13 of REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 27 April 2016 (GDPR)[span_58](end_span).</p>
                         <h3>Who processes your data?</h3>
-                        <p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Prague 10<br>Registered at the Municipal Court in Prague (C 202561)<br>Contact e-mail: info@control-point.eu<br>Hereinafter referred to as "we", "controller" or "organization"</p>
-                        
+                        [span_59](start_span)<p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Prague 10<br>Registered at the Municipal Court in Prague (C 202561)<br>Contact e-mail: info@control-point.eu<br>Hereinafter referred to as "we", "controller" or "organization"[span_59](end_span)</p>
                         <h3>What is personal data?</h3>
-                        <p>Personal data is any information that can identify a living natural person directly or indirectly. Personal data can be general (e.g., name, age, phone number, address) and sensitive (special categories of personal data, including biometric data, trade union membership, ethnic origin, religious belief, health status, etc.).</p>
-                        
+                        [span_60](start_span)<p>Personal data is any information that can identify a living natural person directly or indirectly[span_60](end_span). [span_61](start_span)Personal data can be general (e.g., name, age, phone number, address) and sensitive (special categories of personal data, including biometric data, trade union membership, ethnic origin, religious belief, health status, etc.)[span_61](end_span).</p>
                         <h3>What is personal data processing?</h3>
-                        <p>Processing means any systematic activity performed by the controller with personal data for a specific purpose, such as collection, recording, organization, structuring, storage, adaptation, retrieval, use, disclosure, restriction, erasure, or destruction.</p>
-                        
+                        [span_62](start_span)<p>Processing means any systematic activity performed by the controller with personal data for a specific purpose[span_62](end_span)[span_63](start_span), such as collection, recording, organization, structuring, storage, adaptation, retrieval, use, disclosure, restriction, erasure, or destruction[span_63](end_span).</p>
                         <h3>Sources and categories of personal data:</h3>
-                        <p>The controller processes personal data (directly from you) that you have provided, or data obtained based on the fulfillment of your order. This includes identification and contact details necessary for the performance of the contract.</p>
-                        
+                        [span_64](start_span)<p>The controller processes personal data (directly from you) that you have provided, or data obtained based on the fulfillment of your order[span_64](end_span). [span_65](start_span)This includes identification and contact details necessary for the performance of the contract[span_65](end_span).</p>
                         <h3>Legal reason and purpose of processing</h3>
-                        <p>The legal reason for processing is:<br>Your consent for direct marketing purposes according to Article 6(1)(a) GDPR.<br>For concluding and fulfilling a contract (providing our services), we process data under Article 6(1)(b) GDPR.<br>Once the contract is fulfilled, we must archive data to comply with legal obligations under Article 6(1)(c) GDPR.</p>
-                        
-                        <p>The purpose of processing is:<br>Processing your order and exercising rights and obligations arising from our contractual relationship. Processing occurs without explicit consent when the legal basis is the performance of a contract. Providing personal data is a necessary requirement to conclude and fulfill the contract.</p>
-                        
+                        [span_66](start_span)<p>The legal reason for processing is:<br>Your consent for direct marketing purposes according to Article 6(1)(a) GDPR[span_66](end_span)[span_67](start_span).<br>For concluding and fulfilling a contract (providing our services), we process data under Article 6(1)(b) GDPR[span_67](end_span)[span_68](start_span).<br>Once the contract is fulfilled, we must archive data to comply with legal obligations under Article 6(1)(c) GDPR[span_68](end_span).</p>
+                        [span_69](start_span)<p>The purpose of processing is:<br>Processing your order and exercising rights and obligations arising from our contractual relationship[span_69](end_span). [span_70](start_span)Processing occurs without explicit consent when the legal basis is the performance of a contract[span_70](end_span). [span_71](start_span)Providing personal data is a necessary requirement to conclude and fulfill the contract[span_71](end_span).</p>
                         <h3>What personal data will we process?</h3>
-                        <p>To provide our services, we need: Name and surname, address, delivery address, phone number, and email.</p>
-                        
+                        [span_72](start_span)<p>To provide our services, we need: Name and surname, address, delivery address, phone number, and email[span_72](end_span).</p>
                         <h3>How long will we keep the data?</h3>
-                        <p>We keep personal data for the duration of the contract fulfillment. After that, we keep it as long as necessary to meet archiving obligations under relevant legislation (e.g., Accounting Act, VAT Act).</p>
-                        
+                        [span_73](start_span)<p>We keep personal data for the duration of the contract fulfillment[span_73](end_span). [span_74](start_span)After that, we keep it as long as necessary to meet archiving obligations under relevant legislation (e.g., Accounting Act, VAT Act)[span_74](end_span).</p>
                         <h3>To whom do we transfer your personal data?</h3>
-                        <p>Data may be transferred to legal, tax, and accounting service providers, and technical solution providers. It may also be transferred to public authorities if required by law. All transfers to processors are based on processing agreements complying with GDPR. We do not transfer data to third countries.</p>
-                        
+                        [span_75](start_span)<p>Data may be transferred to legal, tax, and accounting service providers, and technical solution providers[span_75](end_span). [span_76](start_span)It may also be transferred to public authorities if required by law[span_76](end_span). [span_77](start_span)All transfers to processors are based on processing agreements complying with GDPR[span_77](end_span). [span_78](start_span)We do not transfer data to third countries[span_78](end_span).</p>
                         <h3>Security conditions</h3>
-                        <p>The controller has implemented appropriate technical and organizational measures to ensure data protection. Only authorized persons have access. No automated decision-making or profiling occurs.</p>
-                        
+                        [span_79](start_span)<p>The controller has implemented appropriate technical and organizational measures to ensure data protection[span_79](end_span). [span_80](start_span)Only authorized persons have access[span_80](end_span). [span_81](start_span)No automated decision-making or profiling occurs[span_81](end_span).</p>
                         <h3>What are your rights?</h3>
                         <ul>
-                            <li>Right of access (Article 15 GDPR)</li>
-                            <li>Right to rectification (Article 16 GDPR)</li>
-                            <li>Right to restriction of processing</li>
-                            <li>Right to erasure (Article 17 GDPR)</li>
-                            <li>Right to object (Article 21 GDPR)</li>
-                            <li>Right to data portability (Article 21 GDPR)</li>
-                            <li>Right to withdraw consent</li>
-                            <li>Right to file a complaint with the Data Protection Authority.</li>
+                            [span_82](start_span)<li>Right of access (Article 15 GDPR)[span_82](end_span)</li>
+                            [span_83](start_span)<li>Right to rectification (Article 16 GDPR)[span_83](end_span)</li>
+                            [span_84](start_span)<li>Right to restriction of processing[span_84](end_span)</li>
+                            [span_85](start_span)<li>Right to erasure (Article 17 GDPR)[span_85](end_span)</li>
+                            [span_86](start_span)<li>Right to object (Article 21 GDPR)[span_86](end_span)</li>
+                            [span_87](start_span)<li>Right to data portability (Article 21 GDPR)[span_87](end_span)</li>
+                            [span_88](start_span)<li>Right to withdraw consent[span_88](end_span)</li>
+                            [span_89](start_span)<li>Right to file a complaint with the Data Protection Authority[span_89](end_span).</li>
                         </ul>
-                        
                         <h3>How can you exercise these rights?</h3>
-                        <p>Contact us via email: info@control-point.eu or by mail: Dopravní 500/9, Uhříněves, 104 00 Prague 10.</p>
-                        <p>Supervisory authority:<br>Office for Personal Data Protection<br>Pplk. Sochora 27170 00 Prague 7<br>Phone: +420 234 665 111<br>Web: https://www.uoou.cz</p>
+                        [span_90](start_span)<p>Contact us via email: info@control-point.eu or by mail: Dopravní 500/9, Uhříněves, 104 00 Prague 10[span_90](end_span).</p>
+                        <p>Supervisory authority:<br>Office for Personal Data Protection<br>Pplk. [span_91](start_span)Sochora 27170 00 Prague 7<br>Phone: +420 234 665 111<br>Web: https://www.uoou.cz[span_91](end_span)</p>
                     </div>
                 </div>
 
                 <div class="lang-text de-text">
                     <h2>DATENSCHUTZRICHTLINIE</h2>
                     <div class="legal-text">
-                        <p>Dieses Dokument enthält Informationen für betroffene Personen über die Verarbeitung ihrer personenbezogenen Daten in der Organisation im Rahmen der Anforderungen, die an die Organisation als Verantwortlichen gemäß Art. 13 der VERORDNUNG (EU) 2016/679 (DSGVO) gestellt werden.</p>
-                        
+                        <p>Dieses Dokument enthält Informationen für betroffene Personen über die Verarbeitung ihrer personenbezogenen Daten in der Organisation im Rahmen der Anforderungen, die an die Organisation als Verantwortlichen gemäß Art. [span_92](start_span)13 der VERORDNUNG (EU) 2016/679 (DSGVO) gestellt werden[span_92](end_span).</p>
                         <h3>Wer verarbeitet Ihre Daten?</h3>
-                        <p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Prag 10<br>Eingetragen beim Stadtgericht Prag (C 202561)<br>Kontakt-E-Mail: info@control-point.eu<br>Im Folgenden „wir“, „Verantwortlicher“ oder „Organisation“</p>
-                        
+                        [span_93](start_span)<p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Prag 10<br>Eingetragen beim Stadtgericht Prag (C 202561)<br>Kontakt-E-Mail: info@control-point.eu<br>Im Folgenden „wir“, „Verantwortlicher“ oder „Organisation“[span_93](end_span)</p>
                         <h3>Was sind personenbezogene Daten?</h3>
-                        <p>Personenbezogene Daten sind alle Informationen, die eine natürliche Person direkt oder indirekt identifizieren können. Dazu gehören allgemeine Daten (Name, Alter, Telefonnummer, Adresse) und sensible Daten (Gesundheitsdaten, Religion, ethnische Herkunft usw.).</p>
-                        
+                        [span_94](start_span)<p>Personenbezogene Daten sind alle Informationen, die eine natürliche Person direkt oder indirekt identifizieren können[span_94](end_span). [span_95](start_span)Dazu gehören allgemeine Daten (Name, Alter, Telefonnummer, Adresse) und sensible Daten (Gesundheitsdaten, Religion, ethnische Herkunft usw.)[span_95](end_span).</p>
                         <h3>Was ist die Verarbeitung personenbezogener Daten?</h3>
-                        <p>Verarbeitung ist jede systematische Tätigkeit, die der Verantwortliche mit Daten für einen bestimmten Zweck durchführt (Erhebung, Speicherung, Anpassung, Übermittlung, Löschung usw.).</p>
-                        
+                        [span_96](start_span)<p>Verarbeitung ist jede systematische Tätigkeit, die der Verantwortliche mit Daten für einen bestimmten Zweck durchführt[span_96](end_span) (Erhebung, Speicherung, Anpassung, Übermittlung, Löschung usw.) [span_97](start_span).</p>
                         <h3>Quellen und Kategorien:</h3>
-                        <p>Der Verantwortliche verarbeitet Daten, die Sie bereitgestellt haben, oder Daten, die aufgrund der Vertragserfüllung erlangt wurden (Identifikations- und Kontaktdaten).</p>
-                        
+                        <p>Der Verantwortliche verarbeitet Daten, die Sie bereitgestellt haben, oder Daten, die aufgrund der Vertragserfüllung erlangt wurden (Identifikations- und Kontaktdaten)[span_97](end_span).</p>
                         <h3>Rechtsgrundlage und Zweck der Verarbeitung</h3>
-                        <p>Die Rechtsgrundlage für die Verarbeitung ist:<br>Ihre Einwilligung für Direktmarketing gemäß Art. 6 Abs. 1 lit. a DSGVO.<br>Zum Zwecke des Abschlusses und der Erfüllung eines Vertrages verarbeiten wir Daten gemäß Art. 6 Abs. 1 lit. b DSGVO.<br>Nach Vertragserfüllung archivieren wir Daten zur Erfüllung gesetzlicher Pflichten (Art. 6 Abs. 1 lit. c DSGVO).</p>
-                        
-                        <p>Zweck der Verarbeitung ist die Bearbeitung Ihrer Bestellung und die Erfüllung des Vertrages. Die Bereitstellung von Daten ist eine vertragliche Notwendigkeit.</p>
-                        
+                        <p>Die Rechtsgrundlage für die Verarbeitung ist:<br>Ihre Einwilligung für Direktmarketing gemäß Art. 6 Abs. [span_98](start_span)1 lit. a DSGVO[span_98](end_span).<br>Zum Zwecke des Abschlusses und der Erfüllung eines Vertrages verarbeiten wir Daten gemäß Art. 6 Abs. [span_99](start_span)1 lit. b DSGVO[span_99](end_span)[span_100](start_span).<br>Nach Vertragserfüllung archivieren wir Daten zur Erfüllung gesetzlicher Pflichten (Art. 6 Abs. 1 lit. c DSGVO)[span_100](end_span).</p>
+                        [span_101](start_span)<p>Zweck der Verarbeitung ist die Bearbeitung Ihrer Bestellung und die Erfüllung des Vertrages[span_101](end_span). [span_102](start_span)Die Bereitstellung von Daten ist eine vertragliche Notwendigkeit[span_102](end_span).</p>
                         <h3>Welche Daten verarbeiten wir?</h3>
-                        <p>Wir benötigen: Name, Wohnadresse, Lieferadresse, Telefonnummer und E-Mail.</p>
-                        
+                        [span_103](start_span)<p>Wir benötigen: Name, Wohnadresse, Lieferadresse, Telefonnummer und E-Mail[span_103](end_span).</p>
                         <h3>Wie lange speichern wir die Daten?</h3>
-                        <p>Wir speichern Daten für die Dauer der Vertragserfüllung und anschließend so lange, wie es die gesetzlichen Archivierungspflichten (z. B. Buchhaltungsgesetz, Mehrwertsteuergesetz) vorschreiben.</p>
-                        
+                        [span_104](start_span)<p>Wir speichern Daten für die Dauer der Vertragserfüllung und anschließend so lange, wie es die gesetzlichen Archivierungspflichten (z. B. Buchhaltungsgesetz, Mehrwertsteuergesetz) vorschreiben[span_104](end_span).</p>
                         <h3>An wen übermitteln wir Ihre Daten?</h3>
-                        <p>Ihre Daten können an Anbieter von Rechts-, Steuer- und Buchhaltungsdienstleistungen sowie technischen Lösungen übermittelt werden. Eine Übermittlung an Behörden erfolgt nur bei gesetzlicher Pflicht. Es findet keine Übermittlung in Drittländer statt.</p>
-                        
+                        [span_105](start_span)<p>Ihre Daten können an Anbieter von Rechts-, Steuer- und Buchhaltungsdienstleistungen sowie technischen Lösungen übermittelt werden[span_105](end_span). [span_106](start_span)Eine Übermittlung an Behörden erfolgt nur bei gesetzlicher Pflicht[span_106](end_span). [span_107](start_span)Es findet keine Übermittlung in Drittländer statt[span_107](end_span).</p>
                         <h3>Sicherheitsbedingungen</h3>
-                        <p>Der Verantwortliche hat geeignete technische und organisatorische Maßnahmen getroffen. Es findet keine automatisierte Entscheidungsfindung oder Profiling statt.</p>
-                        
+                        [span_108](start_span)<p>Der Verantwortliche hat geeignete technische und organisatorische Maßnahmen getroffen[span_108](end_span). [span_109](start_span)Es findet keine automatisierte Entscheidungsfindung oder Profiling statt[span_109](end_span).</p>
                         <h3>Was sind Ihre Rechte?</h3>
                         <ul>
-                            <li>Recht auf Auskunft (Art. 15 DSGVO)</li>
-                            <li>Recht auf Berichtigung (Art. 16 DSGVO)</li>
-                            <li>Recht auf Einschränkung der Verarbeitung</li>
-                            <li>Recht auf Löschung (Art. 17 DSGVO)</li>
-                            <li>Widerspruchsrecht (Art. 21 DSGVO)</li>
-                            <li>Recht auf Datenübertragbarkeit (Art. 21 DSGVO)</li>
-                            <li>Recht auf Widerruf der Einwilligung</li>
-                            <li>Recht auf Beschwerde bei der Datenschutzbehörde.</li>
+                            [span_110](start_span)<li>Recht auf Auskunft (Art. 15 DSGVO)[span_110](end_span)</li>
+                            [span_111](start_span)<li>Recht auf Berichtigung (Art. 16 DSGVO)[span_111](end_span)</li>
+                            [span_112](start_span)<li>Recht auf Einschränkung der Verarbeitung[span_112](end_span)</li>
+                            [span_113](start_span)<li>Recht auf Löschung (Art. 17 DSGVO)[span_113](end_span)</li>
+                            [span_114](start_span)<li>Widerspruchsrecht (Art. 21 DSGVO)[span_114](end_span)</li>
+                            [span_115](start_span)<li>Recht auf Datenübertragbarkeit (Art. 21 DSGVO)[span_115](end_span)</li>
+                            [span_116](start_span)<li>Recht auf Widerruf der Einwilligung[span_116](end_span)</li>
+                            [span_117](start_span)<li>Recht auf Beschwerde bei der Datenschutzbehörde[span_117](end_span).</li>
                         </ul>
-                        
                         <h3>Wie können Sie diese Rechte ausüben?</h3>
-                        <p>Kontaktieren Sie uns per E-Mail: info@control-point.eu oder per Post: Dopravní 500/9, Uhříněves, 104 00 Prag 10.</p>
-                        <p>Aufsichtsbehörde:<br>Amt für den Schutz personenbezogener Daten<br>Pplk. Sochora 27170 00 Prag 7<br>Telefon: +420 234 665 111<br>Web: https://www.uoou.cz</p>
+                        [span_118](start_span)<p>Kontaktieren Sie uns per E-Mail: info@control-point.eu oder per Post: Dopravní 500/9, Uhříněves, 104 00 Prag 10[span_118](end_span).</p>
+                        <p>Aufsichtsbehörde:<br>Amt für den Schutz personenbezogener Daten<br>Pplk. [span_119](start_span)Sochora 27170 00 Prag 7<br>Telefon: +420 234 665 111<br>Web: https://www.uoou.cz[span_119](end_span)</p>
+                    </div>
+                </div>
+
+                <div class="lang-text it-text">
+                    <h2>INFORMATIVA SULLA PRIVACY</h2>
+                    <div class="legal-text">
+                        [span_120](start_span)<p>Questo documento contiene informazioni per gli interessati in merito al trattamento dei loro dati personali all'interno dell'organizzazione, in conformità con i requisiti posti a carico dell'organizzazione in qualità di titolare del trattamento dei dati ai sensi dell'Articolo 13 del REGOLAMENTO (UE) 2016/679 (GDPR)[span_120](end_span).</p>
+                        <h3>Chi tratta i tuoi dati?</h3>
+                        [span_121](start_span)<p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Praga 10<br>E-mail di contatto: info@control-point.eu[span_121](end_span)</p>
+                        <h3>Quali sono i tuoi diritti?</h3>
+                        <ul>
+                            [span_122](start_span)<li>Diritto di accesso (Articolo 15 GDPR)[span_122](end_span)</li>
+                            [span_123](start_span)<li>Diritto di rettifica (Articolo 16 GDPR)[span_123](end_span)</li>
+                            [span_124](start_span)<li>Diritto alla cancellazione (Articolo 17 GDPR)[span_124](end_span)</li>
+                        </ul>
+                        [span_125](start_span)<p>Puoi contattarci via email: info@control-point.eu[span_125](end_span).</p>
+                    </div>
+                </div>
+
+                <div class="lang-text pl-text">
+                    <h2>POLITYKA PRYWATNOŚCI</h2>
+                    <div class="legal-text">
+                        <p>Ten dokument zawiera informacje dla osób, których dane dotyczą, na temat przetwarzania ich danych osobowych w organizacji, zgodnie z wymogami nałożonymi na organizację jako administratora danych na mocy art. [span_126](start_span)13 ROZPORZĄDZENIA (UE) 2016/679 (RODO)[span_126](end_span).</p>
+                        <h3>Kto przetwarza Twoje dane?</h3>
+                        [span_127](start_span)<p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Praga 10<br>E-mail kontaktowy: info@control-point.eu[span_127](end_span)</p>
+                        <h3>Jakie masz prawa?</h3>
+                        <ul>
+                            [span_128](start_span)<li>Prawo dostępu (art. 15 RODO)[span_128](end_span)</li>
+                            [span_129](start_span)<li>Prawo do sprostowania (art. 16 RODO)[span_129](end_span)</li>
+                            [span_130](start_span)<li>Prawo do usunięcia (art. 17 RODO)[span_130](end_span)</li>
+                        </ul>
+                        [span_131](start_span)<p>Możesz skontaktować się z nami mailowo: info@control-point.eu[span_131](end_span).</p>
+                    </div>
+                </div>
+
+                <div class="lang-text fr-text">
+                    <h2>POLITIQUE DE CONFIDENTIALITÉ</h2>
+                    <div class="legal-text">
+                        [span_132](start_span)<p>Ce document contient des informations pour les personnes concernées concernant le traitement de leurs données personnelles au sein de l'organisation, conformément aux exigences imposées à l'organisation en tant que responsable du traitement en vertu de l'article 13 du RÈGLEMENT (UE) 2016/679 (RGPD)[span_132](end_span).</p>
+                        <h3>Qui traite vos données ?</h3>
+                        [span_133](start_span)<p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Prague 10<br>E-mail de contact : info@control-point.eu[span_133](end_span)</p>
+                        <h3>Quels sont vos droits ?</h3>
+                        <ul>
+                            [span_134](start_span)<li>Droit d'accès (Article 15 RGPD)[span_134](end_span)</li>
+                            [span_135](start_span)<li>Droit de rectification (Article 16 RGPD)[span_135](end_span)</li>
+                            [span_136](start_span)<li>Droit à l'effacement (Article 17 RGPD)[span_136](end_span)</li>
+                        </ul>
+                        [span_137](start_span)<p>Vous pouvez nous contacter par email : info@control-point.eu[span_137](end_span).</p>
+                    </div>
+                </div>
+
+                <div class="lang-text nl-text">
+                    <h2>PRIVACYBELEID</h2>
+                    <div class="legal-text">
+                        [span_138](start_span)<p>Dit document bevat informatie voor betrokkenen met betrekking tot de verwerking van hun persoonsgegevens binnen de organisatie, in overeenstemming met de vereisten die aan de organisatie worden gesteld als verwerkingsverantwoordelijke onder artikel 13 van VERORDENING (EU) 2016/679 (AVG)[span_138](end_span).</p>
+                        <h3>Wie verwerkt uw gegevens?</h3>
+                        [span_139](start_span)<p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Praag 10<br>Contact e-mail: info@control-point.eu[span_139](end_span)</p>
+                        <h3>Wat zijn uw rechten?</h3>
+                        <ul>
+                            [span_140](start_span)<li>Recht op inzage (Artikel 15 AVG)[span_140](end_span)</li>
+                            [span_141](start_span)<li>Recht op rectificatie (Artikel 16 AVG)[span_141](end_span)</li>
+                            [span_142](start_span)<li>Recht op gegevenswissing (Artikel 17 AVG)[span_142](end_span)</li>
+                        </ul>
+                        [span_143](start_span)<p>U kunt contact met ons opnemen via e-mail: info@control-point.eu[span_143](end_span).</p>
+                    </div>
+                </div>
+
+                <div class="lang-text hu-text">
+                    <h2>ADATVÉDELMI IRÁNYELVEK</h2>
+                    <div class="legal-text">
+                        [span_144](start_span)<p>Ez a dokumentum tájékoztatást tartalmaz az érintettek számára a személyes adataik szervezeten belüli kezeléséről, a 2016/679 (EU) RENDELET (GDPR) 13. cikke alapján a szervezettel mint adatkezelővel szemben támasztott követelményeknek megfelelően[span_144](end_span).</p>
+                        <h3>Ki kezeli az Ön adatait?</h3>
+                        [span_145](start_span)<p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Prága 10<br>Kapcsolattartó e-mail: info@control-point.eu[span_145](end_span)</p>
+                        <h3>Milyen jogai vannak?</h3>
+                        <ul>
+                            [span_146](start_span)<li>Hozzáférési jog (GDPR 15. cikk)[span_146](end_span)</li>
+                            [span_147](start_span)<li>Helyesbítéshez való jog (GDPR 16. cikk)[span_147](end_span)</li>
+                            [span_148](start_span)<li>Törléshez való jog (GDPR 17. cikk)[span_148](end_span)</li>
+                        </ul>
+                        [span_149](start_span)<p>Felveheti velünk a kapcsolatot e-mailben: info@control-point.eu[span_149](end_span).</p>
+                    </div>
+                </div>
+
+                <div class="lang-text ro-text">
+                    <h2>POLITICA DE CONFIDENȚIALITATE</h2>
+                    <div class="legal-text">
+                        [span_150](start_span)<p>Acest document conține informații pentru persoanele vizate cu privire la prelucrarea datelor lor cu caracter personal în cadrul organizației, în conformitate cu cerințele impuse organizației în calitate de operator de date în temeiul articolului 13 din REGULAMENTUL (UE) 2016/679 (GDPR)[span_150](end_span).</p>
+                        <h3>Cine vă prelucrează datele?</h3>
+                        [span_151](start_span)<p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Praga 10<br>E-mail de contact: info@control-point.eu[span_151](end_span)</p>
+                        <h3>Care sunt drepturile dumneavoastră?</h3>
+                        <ul>
+                            [span_152](start_span)<li>Dreptul de acces (Articolul 15 GDPR)[span_152](end_span)</li>
+                            [span_153](start_span)<li>Dreptul la rectificare (Articolul 16 GDPR)[span_153](end_span)</li>
+                            [span_154](start_span)<li>Dreptul la ștergere (Articolul 17 GDPR)[span_154](end_span)</li>
+                        </ul>
+                        [span_155](start_span)<p>Ne puteți contacta prin e-mail: info@control-point.eu[span_155](end_span).</p>
                     </div>
                 </div>
 
@@ -704,39 +759,39 @@
                     <h2>ZÁSADY POUŽÍVÁNÍ SOUBORŮ COOKIES</h2>
                     <div class="legal-text">
                         <h3>Co jsou to soubory cookies?</h3>
-                        <p>Soubory cookies jsou krátké textové soubory, které internetová stránka odešle do Vašeho prohlížeče. Umožňuje internetové stránce zaznamenat informace o Vaší návštěvě, například zvolený jazyk a podobně. Následující návštěva stránek tak pro Vás může být snazší a příjemnější. Soubory cookies jsou důležité, neboť bez nich by procházení sítě Internet bylo mnohem složitější. Soubory cookies umožňují lepší využití naší internetové stránky a přizpůsobení jejího obsahu Vašim potřebám. Soubory cookies používá téměř každá internetová stránka na světě. Soubory cookies jsou užitečné, protože zvyšují uživatelskou přívětivost opakovaně navštívené internetové stránky.</p>
-                        <p>Na základě těchto souborů vás webová stránka může rozpoznat:</p>
+                        [span_156](start_span)<p>Soubory cookies jsou krátké textové soubory, které internetová stránka odešle do Vašeho prohlížeče[span_156](end_span). [span_157](start_span)Umožňuje internetové stránce zaznamenat informace o Vaší návštěvě, například zvolený jazyk a podobně[span_157](end_span). [span_158](start_span)Následující návštěva stránek tak pro Vás může být snazší a příjemnější[span_158](end_span). [span_159](start_span)Soubory cookies jsou důležité, neboť bez nich by procházení sítě Internet bylo mnohem složitější[span_159](end_span). [span_160](start_span)Soubory cookies umožňují lepší využití naší internetové stránky a přizpůsobení jejího obsahu Vašim potřebám[span_160](end_span). Soubory cookies používá téměř každá internetová stránka na světě. [span_161](start_span)Soubory cookies jsou užitečné, protože zvyšují uživatelskou přívětivost opakovaně navštívené internetové stránky[span_161](end_span).</p>
+                        [span_162](start_span)<p>Na základě těchto souborů vás webová stránka může rozpoznat[span_162](end_span):</p>
                         <ul>
-                            <li>pomocí tzv. „relačního cookies“ - během vaší návštěvy webu. Tyto tzv. dočasné cookies se po zavření prohlížeče automaticky odstraní. Prohlížeč můžete nastavit tak, aby vás informoval o používání cookies. Důležité: pokud zcela vyloučíte používání cookies, pravděpodobně nebudete moci používat určité funkcionality naší stránky.</li>
-                            <li>pomocí tzv. „trvalé cookies“ - pro opakované návštěvy webu. Tyto trvalé cookies mohou být kontrolovány při každé návštěvě Internetové stránky.</li>
+                            <li>pomocí tzv. „relačního cookies“ - během vaší návštěvy webu. Tyto tzv. dočasné cookies se po zavření prohlížeče automaticky odstraní. Prohlížeč můžete nastavit tak, aby vás informoval o používání cookies. [span_163](start_span)Důležité: pokud zcela vyloučíte používání cookies, pravděpodobně nebudete moci používat určité funkcionality naší stránky[span_163](end_span).</li>
+                            <li>pomocí tzv. „trvalé cookies“ - pro opakované návštěvy webu. [span_164](start_span)Tyto trvalé cookies mohou být kontrolovány při každé návštěvě Internetové stránky[span_164](end_span).</li>
                         </ul>
-                        <p>Informace, které shromažďujeme prostřednictvím Internetové stránky, zahrnují: typ prohlížeče, internetovou adresu, ze které se připojil, operační systém, IP adresa. Pro zobrazování relevantnějších reklam jsou některé cookies stanoveny reklamním systémem třetích stran, jako je Google Analytics. Toto lze vypnout v účtu Google.</p>
+                        [span_165](start_span)<p>Informace, které shromažďujeme prostřednictvím Internetové stránky, zahrnují: typ prohlížeče, internetovou adresu, ze které se připojil, operační systém, IP adresa[span_165](end_span). [span_166](start_span)Pro zobrazování relevantnějších reklam jsou některé cookies stanoveny reklamním systémem třetích stran, jako je Google Analytics[span_166](end_span). [span_167](start_span)Toto lze vypnout v účtu Google[span_167](end_span).</p>
                         
                         <h3>Tzv. naše cookies a cookies třetích stran</h3>
-                        <p>Tzv. „naše cookies“ jsou takové soubory cookies, které byly umístěny na tuto webovou stránku naší společností. Tzv. „cookies třetích stran“ jsou umístěny do vašeho zařízení jinou společností (např. Google Analytics). Třetí strany nemají přístup k datům v našich souborech cookies a také my nemůžeme získat přístup ke cookies třetích stran.</p>
+                        <p>Tzv. [span_168](start_span)„naše cookies“ jsou takové soubory cookies, které byly umístěny na tuto webovou stránku naší společností[span_168](end_span). Tzv. [span_169](start_span)„cookies třetích stran“ jsou umístěny do vašeho zařízení jinou společností (např. Google Analytics)[span_169](end_span). [span_170](start_span)Třetí strany nemají přístup k datům v našich souborech cookies a také my nemůžeme získat přístup ke cookies třetích stran[span_170](end_span).</p>
                         
                         <h3>Jaké soubory cookies používáme a za jakým účelem?</h3>
-                        <p>Na webové adrese www.control-point.cz používáme soubory cookies sloužící k měření návštěvnosti a zajištění fungování webu:</p>
+                        [span_171](start_span)<p>Na webové adrese www.control-point.cz používáme soubory cookies sloužící k měření návštěvnosti a zajištění fungování webu[span_171](end_span):</p>
                         <ul>
-                            <li><strong>cookies nezbytné pro fungování a výkonnostní cookies</strong> – umožňují, aby web správně fungoval a nesbírají o Vás zpravidla žádné osobní údaje, případně jsou tyto údaje anonymizovány. Používáme je na základě našeho oprávněného zájmu. Můžete je odmítnout v nastavení prohlížeče, ale některé funkce webu pak nemusí být plně funkční.</li>
-                            <li><strong>cílené, reklamní a funkční cookies (třetích stran)</strong> – slouží k personalizaci obsahu a zobrazování reklamy. K získávání osobních údajů dochází pouze pokud jste udělili předchozí souhlas nastavením prohlížeče.</li>
+                            <li><strong>cookies nezbytné pro fungování a výkonnostní cookies</strong> – umožňují, aby web správně fungoval a nesbírají o Vás zpravidla žádné osobní údaje, případně jsou tyto údaje anonymizovány. Používáme je na základě našeho oprávněného zájmu. [span_172](start_span)Můžete je odmítnout v nastavení prohlížeče, ale některé funkce webu pak nemusí být plně funkční[span_172](end_span).</li>
+                            [span_173](start_span)<li><strong>cílené, reklamní a funkční cookies (třetích stran)</strong> – slouží k personalizaci obsahu a zobrazování reklamy[span_173](end_span). [span_174](start_span)K získávání osobních údajů dochází pouze pokud jste udělili předchozí souhlas nastavením prohlížeče[span_174](end_span).</li>
                         </ul>
                         
                         <h3>NASTAVENÍ COOKIES: Jak zabránit používání cookies?</h3>
-                        <p>Při první návštěvě našich webových stránek se do vašeho zařízení ukládají pouze nezbytné soubory cookies. Abyste vypnuli příslušné soubory cookies (používané na základě souhlasu), můžete kdykoli odvolat svůj souhlas. S odvoláním souhlasu s volitelnými cookies je spojeno i odvolání souhlasu k použití osobních údajů, které shromažďujeme pomocí těchto cookies.</p>
+                        [span_175](start_span)<p>Při první návštěvě našich webových stránek se do vašeho zařízení ukládají pouze nezbytné soubory cookies[span_175](end_span). [span_176](start_span)Abyste vypnuli příslušné soubory cookies (používané na základě souhlasu), můžete kdykoli odvolat svůj souhlas[span_176](end_span). [span_177](start_span)S odvoláním souhlasu s volitelnými cookies je spojeno i odvolání souhlasu k použití osobních údajů, které shromažďujeme pomocí těchto cookies[span_177](end_span).</p>
                         
                         <h3>NAKLÁDÁNÍ S INFORMACEMI</h3>
-                        <p>Pro případ smluvního nebo zákonného důvodu pro nezbytné cookies můžeme údaje používat k plnění povinností. Pro případ oprávněného zájmu je používáme k provozování webu. Pokud jste poskytli souhlas s marketingovými/výkonnostními cookies, můžeme údaje použít k analýze, identifikaci a zlepšování služeb, k hodnocení využití webu a k zobrazování relevantních reklam.</p>
+                        [span_178](start_span)<p>Pro případ smluvního nebo zákonného důvodu pro nezbytné cookies můžeme údaje používat k plnění povinností[span_178](end_span). [span_179](start_span)Pro případ oprávněného zájmu je používáme k provozování webu[span_179](end_span). [span_180](start_span)Pokud jste poskytli souhlas s marketingovými/výkonnostními cookies, můžeme údaje použít k analýze, identifikaci a zlepšování služeb, k hodnocení využití webu a k zobrazování relevantních reklam[span_180](end_span).</p>
                         
                         <h3>KONTROLA A MAZÁNÍ COOKIES</h3>
-                        <p>K vypnutí nebo odhlášení slouží ikony na našem webu nebo vymazání přes prohlížeč. Jakákoli změna nastavení se vztahuje pouze na tento konkrétní prohlížeč. Pokud v zařízení používáte více prohlížečů, musíte změnit nastavení zvlášť. Pokud zakážete nezbytné cookies, nebude fungovat jedna nebo více základních funkcí webu.</p>
-                        <p>Pro odhlášení ze sledování Google Analytics na všech webech navštivte: http://tools.google.com/dlpage/gaoptout.</p>
+                        [span_181](start_span)[span_182](start_span)<p>K vypnutí nebo odhlášení slouží ikony na našem webu nebo vymazání přes prohlížeč[span_181](end_span)[span_182](end_span). [span_183](start_span)Jakákoli změna nastavení se vztahuje pouze na tento konkrétní prohlížeč[span_183](end_span). [span_184](start_span)Pokud v zařízení používáte více prohlížečů, musíte změnit nastavení zvlášť[span_184](end_span). [span_185](start_span)Pokud zakážete nezbytné cookies, nebude fungovat jedna nebo více základních funkcí webu[span_185](end_span).</p>
+                        [span_186](start_span)<p>Pro odhlášení ze sledování Google Analytics na všech webech navštivte: http://tools.google.com/dlpage/gaoptout[span_186](end_span).</p>
                         
                         <h3>SLEDOVÁNÍ E-MAILŮ</h3>
-                        <p>Některé naše e-maily mohou obsahovat pixelový štítek (webový maják), který nám umožňuje zjistit, kdy jste e-mail otevřeli a které odkazy jste navštívili. Pro odhlášení z našeho mailing listu můžete použít naši kontaktní adresu.</p>
+                        [span_187](start_span)<p>Některé naše e-maily mohou obsahovat pixelový štítek (webový maják), který nám umožňuje zjistit, kdy jste e-mail otevřeli a které odkazy jste navštívili[span_187](end_span). [span_188](start_span)Pro odhlášení z našeho mailing listu můžete použít naši kontaktní adresu[span_188](end_span).</p>
                         
                         <h3>ZMĚNY A KONTAKT</h3>
-                        <p>Kdykoli může dojít ke změně těchto zásad (zveřejněním na webu). Máte-li jakékoli dotazy, kontaktujte nás za pomoci kontaktních údajů uvedených v podmínkách používání.</p>
+                        [span_189](start_span)<p>Kdykoli může dojít ke změně těchto zásad (zveřejněním na webu)[span_189](end_span). [span_190](start_span)Máte-li jakékoli dotazy, kontaktujte nás za pomoci kontaktních údajů uvedených v podmínkách používání[span_190](end_span).</p>
                     </div>
                 </div>
 
@@ -744,37 +799,37 @@
                     <h2>COOKIES POLICY</h2>
                     <div class="legal-text">
                         <h3>What are cookies?</h3>
-                        <p>Cookies are short text files that a website sends to your browser. They allow the website to record information about your visit, making your next visit easier and more pleasant. Cookies are essential for modern web browsing and help adapt the content to your needs.</p>
-                        <p>Based on these files, the website can recognize you using:</p>
+                        [span_191](start_span)<p>Cookies are short text files that a website sends to your browser[span_191](end_span). [span_192](start_span)They allow the website to record information about your visit, making your next visit easier and more pleasant[span_192](end_span). [span_193](start_span)Cookies are essential for modern web browsing and help adapt the content to your needs[span_193](end_span).</p>
+                        [span_194](start_span)<p>Based on these files, the website can recognize you using[span_194](end_span):</p>
                         <ul>
-                            <li>"Session cookies" - temporary cookies deleted automatically after closing the browser. Important: if you completely disable cookies, you may not be able to use certain functionalities of our Website.</li>
-                            <li>"Persistent cookies" - for repeated website visits. These can be checked every time you visit the Website.</li>
+                            <li>"Session cookies" - temporary cookies deleted automatically after closing the browser. [span_195](start_span)Important: if you completely disable cookies, you may not be able to use certain functionalities of our Website[span_195](end_span).</li>
+                            <li>"Persistent cookies" - for repeated website visits. [span_196](start_span)These can be checked every time you visit the Website[span_196](end_span).</li>
                         </ul>
-                        <p>Information we collect includes: browser type, IP address, and operating system. Some cookies are set by third-party advertising systems like Google Analytics.</p>
+                        [span_197](start_span)<p>Information we collect includes: browser type, IP address, and operating system[span_197](end_span). [span_198](start_span)Some cookies are set by third-party advertising systems like Google Analytics[span_198](end_span).</p>
                         
                         <h3>Our cookies and third-party cookies</h3>
-                        <p>"Our cookies" are placed by our company. "Third-party cookies" are placed by other companies (e.g., Google Analytics). Third parties have no access to our cookies, and we cannot access theirs.</p>
+                        [span_199](start_span)<p>"Our cookies" are placed by our company[span_199](end_span). [span_200](start_span)"Third-party cookies" are placed by other companies (e.g., Google Analytics)[span_200](end_span). [span_201](start_span)Third parties have no access to our cookies, and we cannot access theirs[span_201](end_span).</p>
                         
                         <h3>What cookies do we use and for what purpose?</h3>
                         <ul>
-                            <li><strong>Strictly necessary and performance cookies</strong> – these allow the website to function properly and generally do not collect personal data. Used based on legitimate interest. If you disable them in your browser, some functions may not work.</li>
-                            <li><strong>Targeting, advertising, and functional cookies (third-party)</strong> – used to personalize content and display relevant ads. These are only used if you have given prior consent through your browser settings.</li>
+                            <li><strong>Strictly necessary and performance cookies</strong> – these allow the website to function properly and generally do not collect personal data. Used based on legitimate interest. [span_202](start_span)If you disable them in your browser, some functions may not work[span_202](end_span).</li>
+                            [span_203](start_span)<li><strong>Targeting, advertising, and functional cookies (third-party)</strong> – used to personalize content and display relevant ads[span_203](end_span). [span_204](start_span)These are only used if you have given prior consent through your browser settings[span_204](end_span).</li>
                         </ul>
                         
                         <h3>COOKIE SETTINGS: How to prevent the use of cookies?</h3>
-                        <p>Upon your first visit, only strictly necessary cookies are stored. You can withdraw your consent for optional cookies at any time. Withdrawing consent also applies to the personal data collected via these cookies.</p>
+                        [span_205](start_span)<p>Upon your first visit, only strictly necessary cookies are stored[span_205](end_span). [span_206](start_span)You can withdraw your consent for optional cookies at any time[span_206](end_span). [span_207](start_span)Withdrawing consent also applies to the personal data collected via these cookies[span_207](end_span).</p>
                         
                         <h3>HANDLING OF INFORMATION</h3>
-                        <p>For strictly necessary cookies, we use data to fulfill legal or contractual obligations and based on legitimate interest to operate the website. If you consented to performance or marketing cookies, we use data for analysis, service improvement, tracking, and relevant advertising.</p>
+                        [span_208](start_span)<p>For strictly necessary cookies, we use data to fulfill legal or contractual obligations and based on legitimate interest to operate the website[span_208](end_span). [span_209](start_span)If you consented to performance or marketing cookies, we use data for analysis, service improvement, tracking, and relevant advertising[span_209](end_span).</p>
                         
                         <h3>CONTROL AND DELETION OF COOKIES</h3>
-                        <p>You can manage cookies via your browser settings. Settings apply only to the specific browser used. Disabling necessary cookies will impact website functionality. To opt-out of Google Analytics across all websites, visit: http://tools.google.com/dlpage/gaoptout.</p>
+                        [span_210](start_span)[span_211](start_span)<p>You can manage cookies via your browser settings[span_210](end_span)[span_211](end_span). [span_212](start_span)Settings apply only to the specific browser used[span_212](end_span). [span_213](start_span)Disabling necessary cookies will impact website functionality[span_213](end_span). [span_214](start_span)To opt-out of Google Analytics across all websites, visit: http://tools.google.com/dlpage/gaoptout[span_214](end_span).</p>
                         
                         <h3>EMAIL TRACKING</h3>
-                        <p>Some of our emails may contain a pixel tag (web beacon) to track open rates and link clicks. You can opt-out of our mailing list using our contact details.</p>
+                        [span_215](start_span)<p>Some of our emails may contain a pixel tag (web beacon) to track open rates and link clicks[span_215](end_span). [span_216](start_span)You can opt-out of our mailing list using our contact details[span_216](end_span).</p>
                         
                         <h3>CHANGES AND CONTACT</h3>
-                        <p>These policies may be updated at any time. If you have any questions, please contact us using the details provided on our website.</p>
+                        [span_217](start_span)<p>These policies may be updated at any time[span_217](end_span). [span_218](start_span)If you have any questions, please contact us using the details provided on our website[span_218](end_span).</p>
                     </div>
                 </div>
 
@@ -782,37 +837,115 @@
                     <h2>COOKIES-RICHTLINIE</h2>
                     <div class="legal-text">
                         <h3>Was sind Cookies?</h3>
-                        <p>Cookies sind kurze Textdateien, die eine Website an Ihren Browser sendet. Sie ermöglichen es der Website, Informationen über Ihren Besuch aufzuzeichnen, wodurch Ihr nächster Besuch einfacher wird. Cookies sind wichtig, da das Surfen im Internet ohne sie viel schwieriger wäre.</p>
-                        <p>Auf Grundlage dieser Dateien kann die Website Sie erkennen durch:</p>
+                        [span_219](start_span)<p>Cookies sind kurze Textdateien, die eine Website an Ihren Browser sendet[span_219](end_span). [span_220](start_span)Sie ermöglichen es der Website, Informationen über Ihren Besuch aufzuzeichnen, wodurch Ihr nächster Besuch einfacher wird[span_220](end_span). [span_221](start_span)Cookies sind wichtig, da das Surfen im Internet ohne sie viel schwieriger wäre[span_221](end_span).</p>
+                        [span_222](start_span)<p>Auf Grundlage dieser Dateien kann die Website Sie erkennen durch[span_222](end_span):</p>
                         <ul>
-                            <li>„Sitzungscookies“ - temporäre Cookies, die nach dem Schließen des Browsers gelöscht werden. Wichtig: Wenn Sie Cookies vollständig deaktivieren, können Sie möglicherweise bestimmte Funktionen unserer Website nicht nutzen.</li>
-                            <li>„Permanente Cookies“ - für wiederholte Besuche. Diese können bei jedem Besuch überprüft werden.</li>
+                            <li>„Sitzungscookies“ - temporäre Cookies, die nach dem Schließen des Browsers gelöscht werden. [span_223](start_span)Wichtig: Wenn Sie Cookies vollständig deaktivieren, können Sie möglicherweise bestimmte Funktionen unserer Website nicht nutzen[span_223](end_span).</li>
+                            <li>„Permanente Cookies“ - für wiederholte Besuche. [span_224](start_span)Diese können bei jedem Besuch überprüft werden[span_224](end_span).</li>
                         </ul>
-                        <p>Die von uns erfassten Informationen umfassen: Browsertyp, IP-Adresse und Betriebssystem. Einige Cookies werden von Drittanbietern wie Google Analytics gesetzt.</p>
+                        [span_225](start_span)<p>Die von uns erfassten Informationen umfassen: Browsertyp, IP-Adresse und Betriebssystem[span_225](end_span). [span_226](start_span)Einige Cookies werden von Drittanbietern wie Google Analytics gesetzt[span_226](end_span).</p>
                         
                         <h3>Unsere Cookies und Drittanbieter-Cookies</h3>
-                        <p>„Unsere Cookies“ werden von unserem Unternehmen gesetzt. „Drittanbieter-Cookies“ werden von anderen Unternehmen (z. B. Google Analytics) gesetzt. Dritte haben keinen Zugriff auf unsere Cookies und umgekehrt.</p>
+                        [span_227](start_span)<p>„Unsere Cookies“ werden von unserem Unternehmen gesetzt[span_227](end_span). [span_228](start_span)„Drittanbieter-Cookies“ werden von anderen Unternehmen (z. B. Google Analytics) gesetzt[span_228](end_span). [span_229](start_span)Dritte haben keinen Zugriff auf unsere Cookies und umgekehrt[span_229](end_span).</p>
                         
                         <h3>Welche Cookies verwenden wir und zu welchem Zweck?</h3>
                         <ul>
-                            <li><strong>Notwendige und Performance-Cookies</strong> – ermöglichen das korrekte Funktionieren der Website und erfassen in der Regel keine personenbezogenen Daten. Sie werden aufgrund unseres berechtigten Interesses verwendet.</li>
-                            <li><strong>Zielgruppen-, Werbe- und funktionale Cookies (Drittanbieter)</strong> – dienen der Personalisierung von Inhalten und der Anzeige relevanter Werbung. Werden nur mit Ihrer vorherigen Zustimmung verwendet.</li>
+                            [span_230](start_span)<li><strong>Notwendige und Performance-Cookies</strong> – ermöglichen das korrekte Funktionieren der Website und erfassen in der Regel keine personenbezogenen Daten[span_230](end_span). [span_231](start_span)Sie werden aufgrund unseres berechtigten Interesses verwendet[span_231](end_span).</li>
+                            [span_232](start_span)<li><strong>Zielgruppen-, Werbe- und funktionale Cookies (Drittanbieter)</strong> – dienen der Personalisierung von Inhalten und der Anzeige relevanter Werbung[span_232](end_span). [span_233](start_span)Werden nur mit Ihrer vorherigen Zustimmung verwendet[span_233](end_span).</li>
                         </ul>
                         
                         <h3>COOKIE-EINSTELLUNGEN: Wie verhindere ich die Nutzung?</h3>
-                        <p>Bei Ihrem ersten Besuch werden nur unbedingt erforderliche Cookies gespeichert. Sie können Ihre Einwilligung für optionale Cookies jederzeit widerrufen. Der Widerruf gilt auch für die über diese Cookies erfassten personenbezogenen Daten.</p>
+                        [span_234](start_span)<p>Bei Ihrem ersten Besuch werden nur unbedingt erforderliche Cookies gespeichert[span_234](end_span). [span_235](start_span)Sie können Ihre Einwilligung für optionale Cookies jederzeit widerrufen[span_235](end_span). [span_236](start_span)Der Widerruf gilt auch für die über diese Cookies erfassten personenbezogenen Daten[span_236](end_span).</p>
                         
                         <h3>UMGANG MIT INFORMATIONEN</h3>
-                        <p>Bei notwendigen Cookies verwenden wir Daten zur Erfüllung vertraglicher oder gesetzlicher Pflichten sowie aufgrund eines berechtigten Interesses. Mit Ihrer Zustimmung zu Marketing-/Performance-Cookies verwenden wir Daten zur Analyse, Serviceverbesserung und zur Anzeige relevanter Anzeigen.</p>
+                        [span_237](start_span)<p>Bei notwendigen Cookies verwenden wir Daten zur Erfüllung vertraglicher oder gesetzlicher Pflichten sowie aufgrund eines berechtigten Interesses[span_237](end_span). [span_238](start_span)Mit Ihrer Zustimmung zu Marketing-/Performance-Cookies verwenden wir Daten zur Analyse, Serviceverbesserung und zur Anzeige relevanter Anzeigen[span_238](end_span).</p>
                         
                         <h3>KONTROLLE UND LÖSCHUNG VON COOKIES</h3>
-                        <p>Sie können Cookies über Ihre Browsereinstellungen verwalten. Die Einstellungen gelten nur für den jeweils verwendeten Browser. Das Deaktivieren notwendiger Cookies beeinträchtigt die Website-Funktionalität. Um Google Analytics auf allen Websites zu deaktivieren, besuchen Sie: http://tools.google.com/dlpage/gaoptout.</p>
+                        [span_239](start_span)[span_240](start_span)<p>Sie können Cookies über Ihre Browsereinstellungen verwalten[span_239](end_span)[span_240](end_span). [span_241](start_span)Die Einstellungen gelten nur für den jeweils verwendeten Browser[span_241](end_span). [span_242](start_span)Das Deaktivieren notwendiger Cookies beeinträchtigt die Website-Funktionalität[span_242](end_span). [span_243](start_span)Um Google Analytics auf allen Websites zu deaktivieren, besuchen Sie: http://tools.google.com/dlpage/gaoptout[span_243](end_span).</p>
                         
                         <h3>E-MAIL-TRACKING</h3>
-                        <p>Einige unserer E-Mails können ein Pixel-Tag enthalten, um Öffnungsraten und Klicks zu erfassen. Sie können sich über unsere Kontaktdaten von unserer Mailingliste abmelden.</p>
+                        [span_244](start_span)<p>Einige unserer E-Mails können ein Pixel-Tag enthalten, um Öffnungsraten und Klicks zu erfassen[span_244](end_span). [span_245](start_span)Sie können sich über unsere Kontaktdaten von unserer Mailingliste abmelden[span_245](end_span).</p>
                         
                         <h3>ÄNDERUNGEN UND KONTAKT</h3>
-                        <p>Diese Richtlinien können jederzeit aktualisiert werden. Bei Fragen kontaktieren Sie uns bitte über die angegebenen Kontaktdaten.</p>
+                        [span_246](start_span)<p>Diese Richtlinien können jederzeit aktualisiert werden[span_246](end_span). [span_247](start_span)Bei Fragen kontaktieren Sie uns bitte über die angegebenen Kontaktdaten[span_247](end_span).</p>
+                    </div>
+                </div>
+
+                <div class="lang-text it-text">
+                    <h2>POLITICA SUI COOKIE</h2>
+                    <div class="legal-text">
+                        <h3>Cosa sono i cookie?</h3>
+                        [span_248](start_span)<p>I cookie sono brevi file di testo che un sito web invia al tuo browser[span_248](end_span). [span_249](start_span)Consentono al sito di registrare informazioni sulla tua visita, rendendo la tua prossima visita più semplice e piacevole[span_249](end_span).</p>
+                        <h3>Quali cookie utilizziamo e a quale scopo?</h3>
+                        <ul>
+                            [span_250](start_span)<li><strong>Cookie strettamente necessari e di prestazione</strong> – consentono il corretto funzionamento del sito e generalmente non raccolgono dati personali[span_250](end_span).</li>
+                            [span_251](start_span)<li><strong>Cookie di targeting, pubblicitari e funzionali (di terze parti)</strong> – utilizzati per personalizzare i contenuti e mostrare annunci pertinenti[span_251](end_span).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="lang-text pl-text">
+                    <h2>POLITYKA COOKIES</h2>
+                    <div class="legal-text">
+                        <h3>Czym są pliki cookie?</h3>
+                        [span_252](start_span)<p>Pliki cookie to krótkie pliki tekstowe, które witryna wysyła do przeglądarki[span_252](end_span). [span_253](start_span)Pozwalają witrynie rejestrować informacje o Twojej wizycie, ułatwiając kolejną[span_253](end_span).</p>
+                        <h3>Jakich plików cookie używamy i w jakim celu?</h3>
+                        <ul>
+                            [span_254](start_span)<li><strong>Ściśle niezbędne i wydajnościowe pliki cookie</strong> – umożliwiają prawidłowe działanie witryny i na ogół nie zbierają danych osobowych[span_254](end_span).</li>
+                            [span_255](start_span)<li><strong>Pliki cookie służące do targetowania, reklamowe i funkcjonalne (stron trzecich)</strong> – używane do personalizacji treści i wyświetlania trafnych reklam[span_255](end_span).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="lang-text fr-text">
+                    <h2>POLITIQUE EN MATIÈRE DE COOKIES</h2>
+                    <div class="legal-text">
+                        <h3>Qu'est-ce que les cookies ?</h3>
+                        [span_256](start_span)<p>Les cookies sont de courts fichiers texte qu'un site web envoie à votre navigateur[span_256](end_span). [span_257](start_span)Ils permettent au site d'enregistrer des informations sur votre visite, facilitant ainsi votre prochaine visite[span_257](end_span).</p>
+                        <h3>Quels cookies utilisons-nous et dans quel but ?</h3>
+                        <ul>
+                            [span_258](start_span)<li><strong>Cookies strictement nécessaires et de performance</strong> – permettent au site de fonctionner correctement et ne collectent généralement pas de données personnelles[span_258](end_span).</li>
+                            [span_259](start_span)<li><strong>Cookies de ciblage, publicitaires et fonctionnels (tiers)</strong> – utilisés pour personnaliser le contenu et afficher des publicités pertinentes[span_259](end_span).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="lang-text nl-text">
+                    <h2>COOKIEBELEID</h2>
+                    <div class="legal-text">
+                        <h3>Wat zijn cookies?</h3>
+                        [span_260](start_span)<p>Cookies zijn korte tekstbestanden die een website naar uw browser stuurt[span_260](end_span). [span_261](start_span)Ze stellen de website in staat om informatie over uw bezoek vast te leggen, waardoor uw volgende bezoek makkelijker en aangenamer wordt[span_261](end_span).</p>
+                        <h3>Welke cookies gebruiken we en met welk doel?</h3>
+                        <ul>
+                            [span_262](start_span)<li><strong>Strikt noodzakelijke en prestatiecookies</strong> – zorgen ervoor dat de website goed functioneert en verzamelen over het algemeen geen persoonlijke gegevens[span_262](end_span).</li>
+                            [span_263](start_span)<li><strong>Targeting-, advertentie- en functionele cookies (van derden)</strong> – worden gebruikt om inhoud te personaliseren en relevante advertenties weer te geven[span_263](end_span).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="lang-text hu-text">
+                    <h2>SÜTIK (COOKIES) SZABÁLYZATA</h2>
+                    <div class="legal-text">
+                        <h3>Mik azok a sütik?</h3>
+                        [span_264](start_span)<p>A sütik rövid szöveges fájlok, amelyeket a weboldal küld a böngészőjébe[span_264](end_span). [span_265](start_span)Lehetővé teszik a weboldal számára, hogy információkat rögzítsen a látogatásáról, megkönnyítve és kellemesebbé téve a következő látogatást[span_265](end_span).</p>
+                        <h3>Milyen sütiket használunk és milyen célból?</h3>
+                        <ul>
+                            [span_266](start_span)<li><strong>Feltétlenül szükséges és teljesítmény sütik</strong> – lehetővé teszik a weboldal megfelelő működését, és általában nem gyűjtenek személyes adatokat[span_266](end_span).</li>
+                            [span_267](start_span)<li><strong>Célzott, hirdetési és funkcionális sütik (harmadik féltől származó)</strong> – tartalom személyre szabására és releváns hirdetések megjelenítésére szolgálnak[span_267](end_span).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="lang-text ro-text">
+                    <h2>POLITICA PRIVIND MODULELE COOKIE</h2>
+                    <div class="legal-text">
+                        <h3>Ce sunt modulele cookie?</h3>
+                        [span_268](start_span)<p>Modulele cookie sunt fișiere text scurte pe care un site web le trimite browserului dumneavoastră[span_268](end_span). [span_269](start_span)Acestea permit site-ului să înregistreze informații despre vizita dumneavoastră, făcând următoarea vizită mai ușoară și mai plăcută[span_269](end_span).</p>
+                        <h3>Ce module cookie folosim și în ce scop?</h3>
+                        <ul>
+                            [span_270](start_span)<li><strong>Module cookie strict necesare și de performanță</strong> – permit site-ului să funcționeze corect și, în general, nu colectează date cu caracter personal[span_270](end_span).</li>
+                            [span_271](start_span)<li><strong>Module cookie de direcționare, publicitate și funcționale (de la terți)</strong> – utilizate pentru a personaliza conținutul și pentru a afișa reclame relevante[span_271](end_span).</li>
+                        </ul>
                     </div>
                 </div>
 
@@ -1032,6 +1165,30 @@
                 document.getElementById('phName').placeholder = "Name / Firma";
                 document.getElementById('phMail').placeholder = "E-mail";
                 document.getElementById('phMsg').placeholder = "Wie können wir Ihnen helfen?";
+            } else if (lang === 'it') {
+                document.getElementById('phName').placeholder = "Nome / Azienda";
+                document.getElementById('phMail').placeholder = "E-mail";
+                document.getElementById('phMsg').placeholder = "Come possiamo aiutarti?";
+            } else if (lang === 'pl') {
+                document.getElementById('phName').placeholder = "Imię / Firma";
+                document.getElementById('phMail').placeholder = "E-mail";
+                document.getElementById('phMsg').placeholder = "Jak możemy pomóc?";
+            } else if (lang === 'fr') {
+                document.getElementById('phName').placeholder = "Nom / Entreprise";
+                document.getElementById('phMail').placeholder = "E-mail";
+                document.getElementById('phMsg').placeholder = "Comment pouvons-nous vous aider?";
+            } else if (lang === 'nl') {
+                document.getElementById('phName').placeholder = "Naam / Bedrijf";
+                document.getElementById('phMail').placeholder = "E-mail";
+                document.getElementById('phMsg').placeholder = "Hoe kunnen we u helpen?";
+            } else if (lang === 'hu') {
+                document.getElementById('phName').placeholder = "Név / Cég";
+                document.getElementById('phMail').placeholder = "E-mail";
+                document.getElementById('phMsg').placeholder = "Miben segíthetünk?";
+            } else if (lang === 'ro') {
+                document.getElementById('phName').placeholder = "Nume / Companie";
+                document.getElementById('phMail').placeholder = "E-mail";
+                document.getElementById('phMsg').placeholder = "Cum vă putem ajuta?";
             }
             
             setTimeout(equalizeCarouselCards, 100);
@@ -1044,7 +1201,7 @@
                 cs: {
                     nav_about: "O nás", nav_services: "Služby", nav_hvo: "HVO100", nav_hub: "E-Doprava & Hub", nav_contact: "Kontakt",
                     hero_badge: "PROFI LOGISTIKA VĚROVANY", hero_title: "VY OBJEDNÁTE.<br><span class='text-red'>MY DOVEZEME.</span>", hero_sub: "Průsečík spolehlivé kamionové dopravy a moderní infrastruktury. Každé vozidlo pod GPS kontrolou.",
-                    hero_btn1: "Naše služby", hero_btn2: "Eko HVO100",
+                    hero_btn1: "Naše služby", hero_btn2: "EKO HVO100", hero_btn3: "Elektrická přeprava ⚡",
                     stat_fleet: "Vozidel ve flotile", stat_km: "Projetých kilometrů", euro6_sub: "Euro 6", stat_modern: "Moderní flotila", stat_co2: "SNIŽUJEME CO2",
                     about_title: "LOGISTICKÝ UZEL <span class='text-red'>NOVÉ GENERACE</span>", about_desc: "Jsme stabilní partner pro vaše logistické výzvy. Budujeme moderní zázemí ve Věrovanech a zakládáme si na transparentnosti – díky telematice můžete sledovat své zboží v reálném čase.",
                     about_l1: "Celovozové i paletové zásilky pod GPS", about_l2: "Rychlá překládka (Cross-docking)", about_l3: "Odpovědný přístup k životnímu prostředí", about_img: "LOGISTICKÉ CENTRUM",
@@ -1073,7 +1230,7 @@
                 en: {
                     nav_about: "About Us", nav_services: "Services", nav_hvo: "HVO100", nav_hub: "E-Transport & Hub", nav_contact: "Contact",
                     hero_badge: "PRO LOGISTICS VĚROVANY", hero_title: "YOU ORDER.<br><span class='text-red'>WE DELIVER.</span>", hero_sub: "Intersection of reliable transport and modern infrastructure. Every vehicle under GPS control.",
-                    hero_btn1: "Our Services", hero_btn2: "Eco HVO100",
+                    hero_btn1: "Our Services", hero_btn2: "Eco HVO100", hero_btn3: "Electric Transport ⚡",
                     stat_fleet: "Vehicles in Fleet", stat_km: "Driven Kilometers", euro6_sub: "Euro 6", stat_modern: "Modern Fleet", stat_co2: "CO2 REDUCTION",
                     about_title: "NEXT GEN <span class='text-red'>LOGISTICS HUB</span>", about_desc: "We are a stable partner for your logistics challenges. We are building modern facilities in Věrovany and pride ourselves on transparency – thanks to telematics, you can track your goods in real-time.",
                     about_l1: "Full truckload and pallet shipments via GPS", about_l2: "Fast transshipment (Cross-docking)", about_l3: "Environmentally responsible approach", about_img: "LOGISTICS CENTER",
@@ -1102,7 +1259,7 @@
                 de: {
                     nav_about: "Über Uns", nav_services: "Dienste", nav_hvo: "HVO100", nav_hub: "E-Transport & Hub", nav_contact: "Kontakt",
                     hero_badge: "PROFI LOGISTIK VĚROVANY", hero_title: "SIE BESTELLEN.<br><span class='text-red'>WIR LIEFERN.</span>", hero_sub: "Die Schnittstelle zwischen zuverlässigem Transport und moderner Infrastruktur. Jedes Fahrzeug unter GPS-Kontrolle.",
-                    hero_btn1: "Unsere Leistungen", hero_btn2: "Öko HVO100",
+                    hero_btn1: "Unsere Leistungen", hero_btn2: "Öko HVO100", hero_btn3: "Elektrischer Transport ⚡",
                     stat_fleet: "Fahrzeuge in Flotte", stat_km: "Gefahrene Kilometer", euro6_sub: "Euro 6", stat_modern: "Moderne Flotte", stat_co2: "CO2 REDUZIERUNG",
                     about_title: "LOGISTIK-HUB <span class='text-red'>DER NÄCHSTEN GENERATION</span>", about_desc: "Wir sind ein stabiler Partner für Ihre logistischen Herausforderungen. Wir bauen moderne Einrichtungen in Věrovany und setzen auf Transparenz – dank Telematik können Sie Ihre Waren in Echtzeit verfolgen.",
                     about_l1: "Komplett- und Palettenladungen via GPS", about_l2: "Schneller Umschlag (Cross-Docking)", about_l3: "Umweltverantwortlicher Ansatz", about_img: "LOGISTIKZENTRUM",
@@ -1127,6 +1284,180 @@
                     nav_btn: "🧭 GPS-NAVIGATION STARTEN", form_title: "SCHNELLE ANFRAGE", form_btn: "Nachricht senden",
                     cookie_text: "Unsere Website verwendet Cookies, die für ihr Funktionieren und für Analysen erforderlich sind. Wir verwenden auch Zielgruppen- und Werbe-Cookies, denen Sie über Ihre Browsereinstellungen zustimmen. 🍪", cookie_more: "Mehr Informationen", cookie_btn: "Verstanden",
                     foot_gdpr: "Datenschutzrichtlinie", foot_cookies: "Cookie-Einstellungen"
+                },
+                it: {
+                    nav_about: "Chi Siamo", nav_services: "Servizi", nav_hvo: "HVO100", nav_hub: "E-Trasporto & Hub", nav_contact: "Contatto",
+                    hero_badge: "LOGISTICA PRO VĚROVANY", hero_title: "TU ORDINI.<br><span class='text-red'>NOI CONSEGNIAMO.</span>", hero_sub: "L'incrocio tra trasporto affidabile e infrastruttura moderna. Ogni veicolo sotto controllo GPS.",
+                    hero_btn1: "I Nostri Servizi", hero_btn2: "Eco HVO100", hero_btn3: "Trasporto Elettrico ⚡",
+                    stat_fleet: "Veicoli nella Flotta", stat_km: "Chilometri Percorsi", euro6_sub: "Euro 6", stat_modern: "Flotta Moderna", stat_co2: "RIDUZIONE CO2",
+                    about_title: "HUB LOGISTICO DI <span class='text-red'>PROSSIMA GENERAZIONE</span>", about_desc: "Siamo un partner stabile per le tue sfide logistiche. Stiamo costruendo strutture moderne a Věrovany e puntiamo sulla trasparenza: grazie alla telematica, puoi tracciare le tue merci in tempo reale.",
+                    about_l1: "Carichi completi e spedizioni su pallet via GPS", about_l2: "Trasbordo veloce (Cross-docking)", about_l3: "Approccio responsabile per l'ambiente", about_img: "CENTRO LOGISTICO",
+                    hvo_title: "HVO100 <span class='text-green'>SU RICHIESTA</span>", hvo_desc: "Attualmente non utilizziamo il diesel sintetico rinnovabile HVO100 di default. Tuttavia, se la tua catena di approvvigionamento richiede un'alternativa più ecologica, possiamo fornire il carburante per trasporti specifici senza problemi.",
+                    services_title: "SERVIZI <span class='text-red'>PRINCIPALI</span>", services_swipe: "← Scorri per altri servizi →",
+                    badge_avail: "DISPONIBILE ORA", badge_prep: "IN PREPARAZIONE (Q2 2027)", badge_test: "TEST & COSTRUZIONE",
+                    s1_title: "Trasporto Camion", s1_desc: "Trasporto sicuro e puntuale in tutta Europa. Gestiamo in modo affidabile carichi completi e spedizioni su pallet.",
+                    s2_title: "Cross-docking", s2_desc: "Possiamo fornire il trasbordo delle merci senza necessità di stoccaggio a lungo termine in modo molto rapido e flessibile già da ora.",
+                    s3_title: "Stoccaggio Merci", s3_desc: "Stiamo costruendo attivamente spazi di stoccaggio completi. L'apertura è prevista per il Q2 2027.",
+                    s4_title: "Trasporto Elettrico", s4_desc: "Stiamo testando trattori elettrici e preparando il nostro hub di ricarica per la logistica senza emissioni del futuro.",
+                    s5_title: "Smart Logistics & GPS", s5_desc: "Ogni veicolo è dotato di telematica. Hai la possibilità di tracciare le tue merci in tempo reale 24/7.",
+                    hub_badge: "STATO: PIANIFICAZIONE (LANCIO Q4)", hub_title: "E-MOBILITY & <br><span class='text-green'>HUB DI RICARICA</span>",
+                    hub_desc: "Non restiamo indietro. Stiamo testando attivamente trattori elettrici (inclusi modelli Mercedes, Scania e MAN) e abbiamo già percorso oltre 20.000 km in traffico reale. Metteremo in pratica questa esperienza e prevediamo di lanciare il nostro hub da 100-200 kW nel Q4.",
+                    partners_title: "I NOSTRI PARTNER", faq_title: "DOMANDE <span class='text-red'>FREQUENTI (FAQ)</span>", faq_sub: "Non hai trovato quello che cercavi? Non esitare a contattare il nostro centralino.",
+                    faq_q1: "Cos'è l'HVO100 e posso richiederlo per il mio trasporto?", faq_a1: "L'HVO100 è un diesel sintetico ottenuto da fonti rinnovabili (rifiuti, grassi) che riduce le emissioni di gas serra fino al 90%. Possiamo fornire facilmente il carburante per i tuoi ordini specifici.",
+                    faq_q2: "Potete fornire il trasbordo delle merci (Cross-docking)?", faq_a2: "Sì! Sebbene stiamo preparando lo stoccaggio completo per il Q2 2027, possiamo organizzare il trasbordo (cross-docking) in modo flessibile, rapido e affidabile già da ora.",
+                    faq_q3: "E l'elettromobilità? Guidate veicoli elettrici?", faq_a3: "Stiamo testando trattori elettrici nel traffico reale. Sulla base di questi dati, stiamo costruendo un hub di ricarica da 100-200 kW a Věrovany, il cui lancio è previsto per il Q4.",
+                    faq_q4: "È possibile tracciare le mie merci durante il trasporto in tempo reale?", faq_a4: "Assolutamente. Ogni nostro veicolo è dotato di telematica GPS avanzata di serie. Abbiamo una supervisione costante sul carico.",
+                    faq_q5: "Fornite trasporti nazionali e internazionali?", faq_a5: "Sì, i nostri veicoli coprono regolarmente sia trasporti nazionali in Repubblica Ceca che rotte internazionali in tutta Europa.",
+                    contact_title: "CENTRO <span class='text-red'>CONTATTI</span>", contact_desc: "Siamo pronti a prendere in carico il tuo carico. Contatta direttamente il nostro centralino o imposta la navigazione verso il nostro complesso.",
+                    c_addr: "📍 INDIRIZZO STRUTTURA", c_phone: "📞 CENTRALINO (NON-STOP)", c_mail: "✉️ E-MAIL",
+                    nav_btn: "🧭 AVVIA NAVIGAZIONE GPS", form_title: "RICHIESTA RAPIDA", form_btn: "Invia Messaggio",
+                    cookie_text: "Il nostro sito web utilizza i cookie necessari per il suo funzionamento e per l'analisi. Utilizziamo anche cookie di targeting e pubblicitari con il tuo consenso tramite le impostazioni del browser. 🍪", cookie_more: "Maggiori Informazioni", cookie_btn: "Ho Capito",
+                    foot_gdpr: "Informativa sulla Privacy", foot_cookies: "Impostazioni Cookie"
+                },
+                pl: {
+                    nav_about: "O nas", nav_services: "Usługi", nav_hvo: "HVO100", nav_hub: "E-Transport i Hub", nav_contact: "Kontakt",
+                    hero_badge: "LOGISTYKA PRO VĚROVANY", hero_title: "TY ZAMAWIASZ.<br><span class='text-red'>MY DOSTARCZAMY.</span>", hero_sub: "Skrzyżowanie niezawodnego transportu i nowoczesnej infrastruktury. Każdy pojazd pod kontrolą GPS.",
+                    hero_btn1: "Nasze usługi", hero_btn2: "Eko HVO100", hero_btn3: "Transport Elektryczny ⚡",
+                    stat_fleet: "Pojazdy we flocie", stat_km: "Przejechane kilometry", euro6_sub: "Euro 6", stat_modern: "Nowoczesna Flota", stat_co2: "REDUKCJA CO2",
+                    about_title: "WĘZEŁ LOGISTYCZNY <span class='text-red'>NOWEJ GENERACJI</span>", about_desc: "Jesteśmy stabilnym partnerem dla Twoich wyzwań logistycznych. Budujemy nowoczesne obiekty w Věrovany i stawiamy na przejrzystość – dzięki telematyce możesz śledzić swoje towary w czasie rzeczywistym.",
+                    about_l1: "Ładunki całopojazdowe i paletowe przez GPS", about_l2: "Szybki przeładunek (Cross-docking)", about_l3: "Odpowiedzialne podejście do środowiska", about_img: "CENTRUM LOGISTYCZNE",
+                    hvo_title: "HVO100 <span class='text-green'>NA ŻĄDANIE</span>", hvo_desc: "Obecnie nie jeździmy domyślnie na syntetycznym odnawialnym oleju napędowym HVO100. Jeśli jednak Twój łańcuch dostaw wymaga bardziej ekologicznej alternatywy, możemy bez problemu dostarczyć paliwo do konkretnych transportów.",
+                    services_title: "GŁÓWNE <span class='text-red'>USŁUGI</span>", services_swipe: "← Przesuń, aby zobaczyć więcej usług →",
+                    badge_avail: "DOSTĘPNE OD ZARAZ", badge_prep: "W PRZYGOTOWANIU (Q2 2027)", badge_test: "TESTY I BUDOWA",
+                    s1_title: "Transport Ciężarowy", s1_desc: "Bezpieczny i terminowy transport w całej Europie. Niezawodnie obsługujemy ładunki całopojazdowe i paletowe.",
+                    s2_title: "Cross-docking", s2_desc: "Możemy bardzo szybko i elastycznie zorganizować przeładunek towarów bez konieczności długoterminowego magazynowania już teraz.",
+                    s3_title: "Magazynowanie Towarów", s3_desc: "Aktywnie budujemy pełnoprawne powierzchnie magazynowe do długoterminowego przechowywania towarów. Otwarcie planowane jest na Q2 2027.",
+                    s4_title: "Transport Elektryczny", s4_desc: "Testujemy ciągniki elektryczne i przygotowujemy własny hub ładowania dla bezemisyjnej logistyki przyszłości.",
+                    s5_title: "Smart Logistics & GPS", s5_desc: "Każdy pojazd jest wyposażony w telematykę. Masz możliwość śledzenia swoich towarów w czasie rzeczywistym 24/7.",
+                    hub_badge: "STATUS: PLANOWANIE (START Q4)", hub_title: "E-MOBILNOŚĆ & <br><span class='text-green'>HUB ŁADOWANIA</span>",
+                    hub_desc: "Nie zostajemy w tyle. Aktywnie testujemy ciągniki elektryczne (w tym modele Mercedes, Scania i MAN) i przejechaliśmy już ponad 20 000 km w rzeczywistym ruchu. Zastosujemy to doświadczenie w praktyce i planujemy uruchomić własny hub 100-200 kW w Q4.",
+                    partners_title: "NASI PARTNERZY", faq_title: "CZĘSTO ZADAWANE <span class='text-red'>PYTANIA (FAQ)</span>", faq_sub: "Nie znalazłeś tego, czego szukałeś? Nie wahaj się skontaktować z naszą dyspozytornią.",
+                    faq_q1: "Czym jest HVO100 i czy mogę o to poprosić w moim transporcie?", faq_a1: "HVO100 to syntetyczny olej napędowy wyprodukowany ze źródeł odnawialnych, który redukuje emisję gazów cieplarnianych do 90%. Możemy łatwo dostarczyć paliwo do Twoich konkretnych zamówień.",
+                    faq_q2: "Czy możecie zapewnić przeładunek towarów (Cross-docking)?", faq_a2: "Tak! Chociaż przygotowujemy pełnoprawne magazynowanie na Q2 2027, już teraz możemy elastycznie, szybko i niezawodnie zorganizować przeładunek (cross-docking).",
+                    faq_q3: "A co z elektromobilnością? Jeździcie na prąd?", faq_a3: "Już testujemy różne marki ciągników elektrycznych w rzeczywistym ruchu drogowym. Na podstawie tych danych budujemy hub ładowania 100-200 kW w Věrovany, którego uruchomienie planowane jest na Q4.",
+                    faq_q4: "Czy możliwe jest śledzenie moich towarów podczas transportu w czasie rzeczywistym?", faq_a4: "Absolutnie. Każdy nasz pojazd jest standardowo wyposażony w zaawansowaną telematykę GPS. Mamy stały nadzór nad ładunkiem.",
+                    faq_q5: "Czy realizujecie transporty krajowe i międzynarodowe?", faq_a5: "Tak, nasze pojazdy rutynowo obsługują zarówno transport krajowy na terenie Czech, jak i trasy międzynarodowe w całej Europie.",
+                    contact_title: "CENTRUM <span class='text-red'>KONTAKTOWE</span>", contact_desc: "Jesteśmy gotowi przyjąć Twój ładunek. Skontaktuj się bezpośrednio z naszą dyspozytornią lub ustaw nawigację bezpośrednio do naszego obiektu.",
+                    c_addr: "📍 ADRES OBIEKTU", c_phone: "📞 DYSPOZYTORNIA (NON-STOP)", c_mail: "✉️ E-MAIL",
+                    nav_btn: "🧭 URUCHOM NAWIGACJĘ GPS", form_title: "SZYBKIE ZAPYTANIE", form_btn: "Wyślij Wiadomość",
+                    cookie_text: "Nasza strona internetowa używa plików cookie niezbędnych do jej funkcjonowania i analityki. Używamy również plików cookie służących do targetowania i reklam z Twoją zgodą poprzez ustawienia przeglądarki. 🍪", cookie_more: "Więcej Informacji", cookie_btn: "Rozumiem",
+                    foot_gdpr: "Polityka Prywatności", foot_cookies: "Ustawienia Cookies"
+                },
+                fr: {
+                    nav_about: "À Propos", nav_services: "Services", nav_hvo: "HVO100", nav_hub: "E-Transport & Hub", nav_contact: "Contact",
+                    hero_badge: "LOGISTIQUE PRO VĚROVANY", hero_title: "VOUS COMMANDEZ.<br><span class='text-red'>NOUS LIVRONS.</span>", hero_sub: "L'intersection d'un transport fiable et d'une infrastructure moderne. Chaque véhicule sous contrôle GPS.",
+                    hero_btn1: "Nos Services", hero_btn2: "Éco HVO100", hero_btn3: "Transport Électrique ⚡",
+                    stat_fleet: "Véhicules dans la Flotte", stat_km: "Kilomètres Parcourus", euro6_sub: "Euro 6", stat_modern: "Flotte Moderne", stat_co2: "RÉDUCTION DE CO2",
+                    about_title: "HUB LOGISTIQUE DE <span class='text-red'>NOUVELLE GÉNÉRATION</span>", about_desc: "Nous sommes un partenaire stable pour vos défis logistiques. Nous construisons des installations modernes à Věrovany et sommes fiers de notre transparence – grâce à la télématique, vous pouvez suivre vos marchandises en temps réel.",
+                    about_l1: "Chargements complets et palettes via GPS", about_l2: "Transbordement rapide (Cross-docking)", about_l3: "Approche éco-responsable", about_img: "CENTRE LOGISTIQUE",
+                    hvo_title: "HVO100 <span class='text-green'>SUR DEMANDE</span>", hvo_desc: "Nous n'utilisons pas actuellement le diesel renouvelable synthétique HVO100 par défaut. Toutefois, si votre chaîne d'approvisionnement exige une alternative plus verte, nous pouvons fournir le carburant pour des transports spécifiques sans problème.",
+                    services_title: "SERVICES <span class='text-red'>PRINCIPAUX</span>", services_swipe: "← Balayez pour plus de services →",
+                    badge_avail: "DISPONIBLE IMMÉDIATEMENT", badge_prep: "EN PRÉPARATION (T2 2027)", badge_test: "TESTS ET CONSTRUCTION",
+                    s1_title: "Transport par Camion", s1_desc: "Transport sûr et ponctuel dans toute l'Europe. Nous desservons de manière fiable les chargements complets et les palettes.",
+                    s2_title: "Cross-docking", s2_desc: "Nous pouvons assurer le transbordement des marchandises sans nécessité de stockage à long terme de manière très rapide et flexible dès maintenant.",
+                    s3_title: "Stockage de Marchandises", s3_desc: "Nous construisons activement des espaces de stockage à part entière pour le stockage à long terme. L'ouverture est prévue pour le T2 2027.",
+                    s4_title: "Transport Électrique", s4_desc: "Nous testons des tracteurs électriques et préparons notre propre hub de recharge pour la logistique sans émissions du futur.",
+                    s5_title: "Smart Logistics & GPS", s5_desc: "Chaque véhicule est équipé de la télématique. Vous avez la possibilité de suivre vos marchandises en temps réel 24/7.",
+                    hub_badge: "STATUT : PLANIFICATION (LANCEMENT T4)", hub_title: "E-MOBILITÉ & <br><span class='text-green'>HUB DE RECHARGE</span>",
+                    hub_desc: "Nous ne restons pas à la traîne. Nous testons activement des tracteurs électriques (y compris des modèles de Mercedes, Scania et MAN) et avons déjà parcouru plus de 20 000 km en trafic réel. Nous mettrons cette expérience en pratique et prévoyons de lancer notre propre hub de 100-200 kW au T4.",
+                    partners_title: "NOS PARTENAIRES", faq_title: "FOIRE AUX <span class='text-red'>QUESTIONS (FAQ)</span>", faq_sub: "Vous n'avez pas trouvé ce que vous cherchiez ? N'hésitez pas à contacter notre centre de répartition.",
+                    faq_q1: "Qu'est-ce que le HVO100 et puis-je le demander pour mon transport ?", faq_a1: "Le HVO100 est un diesel synthétique fabriqué à partir de sources renouvelables qui réduit les émissions de gaz à effet de serre jusqu'à 90 %. Nous pouvons facilement fournir ce carburant pour vos commandes spécifiques.",
+                    faq_q2: "Pouvez-vous assurer le transbordement des marchandises (Cross-docking) ?", faq_a2: "Oui ! Bien que nous préparions un entreposage complet pour le T2 2027, nous pouvons organiser le transbordement (cross-docking) de manière flexible, rapide et fiable dès maintenant.",
+                    faq_q3: "Qu'en est-il de l'électromobilité ? Conduisez-vous à l'électricité ?", faq_a3: "Nous testons déjà différentes marques de tracteurs électriques en trafic réel. Sur la base de ces données, nous construisons un hub de recharge de 100-200 kW à Věrovany, dont le lancement est prévu au T4.",
+                    faq_q4: "Est-il possible de suivre mes marchandises pendant le transport en temps réel ?", faq_a4: "Absolument. Chacun de nos véhicules est équipé en standard d'une télématique GPS avancée. Nous avons une supervision constante de la cargaison.",
+                    faq_q5: "Proposez-vous des transports nationaux et internationaux ?", faq_a5: "Oui, nos véhicules couvrent régulièrement les transports nationaux en République tchèque et les itinéraires internationaux dans toute l'Europe.",
+                    contact_title: "CENTRE DE <span class='text-red'>CONTACT</span>", contact_desc: "Nous sommes prêts à prendre en charge votre cargaison. Contactez directement notre centre de répartition ou définissez votre navigation directement vers notre site.",
+                    c_addr: "📍 ADRESSE DU SITE", c_phone: "📞 RÉPARTITION (NON-STOP)", c_mail: "✉️ E-MAIL",
+                    nav_btn: "🧭 DÉMARRER LA NAVIGATION GPS", form_title: "DEMANDE RAPIDE", form_btn: "Envoyer un message",
+                    cookie_text: "Notre site web utilise des cookies nécessaires à son fonctionnement et à l'analyse. Nous utilisons également des cookies de ciblage et publicitaires avec votre consentement via les paramètres de votre navigateur. 🍪", cookie_more: "Plus d'informations", cookie_btn: "J'ai compris",
+                    foot_gdpr: "Politique de Confidentialité", foot_cookies: "Paramètres des Cookies"
+                },
+                nl: {
+                    nav_about: "Over Ons", nav_services: "Diensten", nav_hvo: "HVO100", nav_hub: "E-Transport & Hub", nav_contact: "Contact",
+                    hero_badge: "PRO LOGISTIEK VĚROVANY", hero_title: "U BESTELT.<br><span class='text-red'>WIJ LEVEREN.</span>", hero_sub: "De kruising van betrouwbaar transport en moderne infrastructuur. Elk voertuig onder GPS-controle.",
+                    hero_btn1: "Onze Diensten", hero_btn2: "Eco HVO100", hero_btn3: "Elektrisch Transport ⚡",
+                    stat_fleet: "Voertuigen in het wagenpark", stat_km: "Gereden Kilometers", euro6_sub: "Euro 6", stat_modern: "Modern Wagenpark", stat_co2: "CO2-REDUCTIE",
+                    about_title: "LOGISTIEKE HUB VAN DE <span class='text-red'>VOLGENDE GENERATIE</span>", about_desc: "Wij zijn een stabiele partner voor uw logistieke uitdagingen. We bouwen moderne faciliteiten in Věrovany en zijn trots op onze transparantie – dankzij telematica kunt u uw goederen in realtime volgen.",
+                    about_l1: "Volle wagenladingen en pallets via GPS", about_l2: "Snelle overslag (Cross-docking)", about_l3: "Milieuverantwoorde aanpak", about_img: "LOGISTIEK CENTRUM",
+                    hvo_title: "HVO100 <span class='text-green'>OP AANVRAAG</span>", hvo_desc: "We rijden momenteel niet standaard op synthetische hernieuwbare HVO100-diesel. Echter, als uw supply chain een groener alternatief vereist, kunnen wij zonder problemen de brandstof leveren voor specifieke transporten.",
+                    services_title: "KERN <span class='text-red'>DIENSTEN</span>", services_swipe: "← Veeg voor meer diensten →",
+                    badge_avail: "NU BESCHIKBAAR", badge_prep: "IN VOORBEREIDING (Q2 2027)", badge_test: "TESTEN & BOUWEN",
+                    s1_title: "Vrachtvervoer", s1_desc: "Veilig en tijdig vervoer door heel Europa. Wij bedienen op betrouwbare wijze volle wagenladingen en pallets.",
+                    s2_title: "Cross-docking", s2_desc: "Wij kunnen de overslag van goederen zonder noodzaak tot langdurige opslag nu al zeer snel en flexibel verzorgen.",
+                    s3_title: "Goederenopslag", s3_desc: "We bouwen actief aan volwaardige opslagruimtes voor de langdurige opslag van goederen. De opening is gepland voor Q2 2027.",
+                    s4_title: "Elektrisch Transport", s4_desc: "We testen elektrische trekkers en bereiden onze eigen oplaadhub voor op de emissievrije logistiek van de toekomst.",
+                    s5_title: "Smart Logistics & GPS", s5_desc: "Elk voertuig is uitgerust met telematica. U heeft de mogelijkheid om uw goederen 24/7 in realtime te volgen.",
+                    hub_badge: "STATUS: PLANNING (LANCERING Q4)", hub_title: "E-MOBILITEIT & <br><span class='text-green'>OPLAADHUB</span>",
+                    hub_desc: "We blijven niet achter. We testen actief elektrische trekkers (inclusief modellen van Mercedes, Scania en MAN) en hebben al meer dan 20.000 km gereden in echt verkeer. We zullen deze operationele ervaring in de praktijk brengen en plannen om onze eigen 100-200 kW oplaadhub in Q4 te lanceren.",
+                    partners_title: "ONZE PARTNERS", faq_title: "VEELGESTELDE <span class='text-red'>VRAGEN (FAQ)</span>", faq_sub: "Niet gevonden wat u zocht? Aarzel niet om contact op te nemen met onze planning.",
+                    faq_q1: "Wat is HVO100 en kan ik het aanvragen voor mijn transport?", faq_a1: "HVO100 is synthetische diesel gemaakt van hernieuwbare bronnen die de uitstoot van broeikasgassen tot 90% vermindert. We kunnen de brandstof gemakkelijk leveren voor uw specifieke bestellingen.",
+                    faq_q2: "Kunt u goederenoverslag (Cross-docking) verzorgen?", faq_a2: "Ja! Hoewel we volledige opslag voorbereiden voor Q2 2027, kunnen we overslag (cross-docking) nu al flexibel, snel en betrouwbaar regelen.",
+                    faq_q3: "Hoe zit het met elektromobiliteit? Rijdt u op elektriciteit?", faq_a3: "We testen al verschillende merken elektrische trekkers in het echte verkeer. Op basis van deze gegevens bouwen we een oplaadhub van 100-200 kW in Věrovany, waarvan de lancering is gepland voor Q4.",
+                    faq_q4: "Is het mogelijk om mijn goederen tijdens het transport in realtime te volgen?", faq_a4: "Absoluut. Elk van onze voertuigen is standaard uitgerust met geavanceerde GPS-telematica. We houden constant toezicht op de lading.",
+                    faq_q5: "Biedt u nationaal en internationaal transport aan?", faq_a5: "Ja, onze voertuigen bestrijken routinematig zowel binnenlands transport binnen Tsjechië als internationale routes door heel Europa.",
+                    contact_title: "CONTACT <span class='text-red'>CENTRUM</span>", contact_desc: "We zijn klaar om uw lading aan te nemen. Neem direct contact op met onze planning of stel uw navigatie rechtstreeks in op ons terrein.",
+                    c_addr: "📍 ADRES FACILITEIT", c_phone: "📞 PLANNING (NON-STOP)", c_mail: "✉️ E-MAIL",
+                    nav_btn: "🧭 START GPS-NAVIGATIE", form_title: "SNELLE AANVRAAG", form_btn: "Bericht Verzenden",
+                    cookie_text: "Onze website gebruikt cookies die nodig zijn voor het functioneren en voor analyses. We gebruiken ook targeting- en advertentiecookies, waarvoor u toestemming geeft via uw browserinstellingen. 🍪", cookie_more: "Meer Informatie", cookie_btn: "Ik Begrijp Het",
+                    foot_gdpr: "Privacybeleid", foot_cookies: "Cookie-instellingen"
+                },
+                hu: {
+                    nav_about: "Rólunk", nav_services: "Szolgáltatások", nav_hvo: "HVO100", nav_hub: "E-Közlekedés & Hub", nav_contact: "Kapcsolat",
+                    hero_badge: "PROFI LOGISZTIKA VĚROVANY", hero_title: "ÖN RENDEL.<br><span class='text-red'>MI SZÁLLÍTUNK.</span>", hero_sub: "A megbízható szállítás és a modern infrastruktúra találkozása. Minden jármű GPS ellenőrzés alatt.",
+                    hero_btn1: "Szolgáltatásaink", hero_btn2: "Eco HVO100", hero_btn3: "Elektromos Szállítás ⚡",
+                    stat_fleet: "Járművek a flottában", stat_km: "Megtett kilométerek", euro6_sub: "Euro 6", stat_modern: "Modern Flotta", stat_co2: "CO2 CSÖKKENTÉS",
+                    about_title: "KÖVETKEZŐ GENERÁCIÓS <span class='text-red'>LOGISZTIKAI HUB</span>", about_desc: "Stabil partner vagyunk a logisztikai kihívásokban. Modern létesítményeket építünk Věrovanyban, és büszkék vagyunk az átláthatóságra – a telematikának köszönhetően valós időben nyomon követheti áruit.",
+                    about_l1: "Teljes rakományok és raklapok GPS-en keresztül", about_l2: "Gyors átrakodás (Cross-docking)", about_l3: "Környezettudatos megközelítés", about_img: "LOGISZTIKAI KÖZPONT",
+                    hvo_title: "HVO100 <span class='text-green'>KÉRÉSRE</span>", hvo_desc: "Jelenleg alapértelmezés szerint nem használunk HVO100 szintetikus megújuló dízelt. Ha azonban az Ön ellátási lánca zöldebb alternatívát kíván, problémamentesen tudjuk biztosítani az üzemanyagot konkrét szállításokhoz.",
+                    services_title: "FŐ <span class='text-red'>SZOLGÁLTATÁSOK</span>", services_swipe: "← Húzza a további szolgáltatásokért →",
+                    badge_avail: "AZONNAL ELÉRHETŐ", badge_prep: "ELŐKÉSZÜLETBEN (2027. 2. NÉGYEDÉV)", badge_test: "TESZTELÉS ÉS ÉPÍTÉS",
+                    s1_title: "Kamionos szállítás", s1_desc: "Biztonságos és időben történő szállítás egész Európában. Megbízhatóan kiszolgáljuk a teljes rakományokat és raklapos küldeményeket.",
+                    s2_title: "Cross-docking", s2_desc: "Már most nagyon gyorsan és rugalmasan tudjuk biztosítani az áruk átrakodását hosszú távú tárolás szükségessége nélkül.",
+                    s3_title: "Árutárolás", s3_desc: "Aktívan építünk teljes értékű tárolóterületeket az áruk hosszú távú tárolására. A megnyitást 2027 2. negyedévére tervezzük.",
+                    s4_title: "Elektromos szállítás", s4_desc: "Elektromos vontatókat tesztelünk, és saját töltőállomást készítünk elő a jövő emissziómentes logisztikájához.",
+                    s5_title: "Smart Logistics & GPS", s5_desc: "Minden jármű fel van szerelve telematikával. Lehetősége van áruit valós időben, a hét minden napján, 24 órában nyomon követni.",
+                    hub_badge: "ÁLLAPOT: TERVEZÉS (INDÍTÁS Q4)", hub_title: "E-MOBILITÁS ÉS <br><span class='text-green'>TÖLTŐ HUB</span>",
+                    hub_desc: "Nem maradunk le. Aktívan teszteljük az elektromos vontatókat (többek között Mercedes, Scania és MAN modelleket), és már több mint 20 000 km-t vezettünk valós forgalomban. Ezt az operatív tapasztalatot a gyakorlatba is átültetjük, és a 4. negyedévben tervezzük saját 100-200 kW-os hubunk elindítását.",
+                    partners_title: "PARTNEREINK", faq_title: "GYAKRAN ISMÉTELT <span class='text-red'>KÉRDÉSEK (GYIK)</span>", faq_sub: "Nem találta meg, amit keresett? Ne habozzon kapcsolatba lépni diszpécserközpontunkkal.",
+                    faq_q1: "Mi az a HVO100, és kérhetem-e a szállításomhoz?", faq_a1: "A HVO100 egy megújuló forrásokból (hulladékból, zsírokból) előállított szintetikus gázolaj, amely akár 90%-kal csökkenti az üvegházhatású gázok kibocsátását. Könnyedén biztosítani tudjuk az üzemanyagot az Ön egyedi megrendeléseihez.",
+                    faq_q2: "Tudnak biztosítani áruátrakodást (Cross-docking)?", faq_a2: "Igen! Bár 2027 második negyedévére készítünk elő teljes értékű raktározást, az átrakodást (cross-docking) már most rugalmasan, gyorsan és megbízhatóan meg tudjuk szervezni.",
+                    faq_q3: "Mi a helyzet az elektromobilitással? Elektromos árammal hajtanak?", faq_a3: "Valós forgalomban már teszteljük a különböző márkájú elektromos vontatókat. Ezen adatok alapján építünk egy 100-200 kW-os töltőállomást Věrovanyban, amelynek elindítását a negyedik negyedévre tervezzük.",
+                    faq_q4: "Lehetséges-e áruim nyomon követése szállítás közben valós időben?", faq_a4: "Abszolút. Minden járművünk alapfelszereltségként fejlett GPS telematikával van felszerelve. Folyamatosan felügyeljük a rakományt.",
+                    faq_q5: "Vállalnak belföldi és nemzetközi szállítást is?", faq_a5: "Igen, járműveink rutinszerűen végeznek belföldi szállításokat a Cseh Köztársaságon belül, valamint nemzetközi útvonalakat egész Európában.",
+                    contact_title: "KAPCSOLATFELVÉTELI <span class='text-red'>KÖZPONT</span>", contact_desc: "Készen állunk a rakomány átvételére. Vegye fel a kapcsolatot közvetlenül diszpécserszolgálatunkkal, vagy állítsa be a navigációt egyenesen a telephelyünkre.",
+                    c_addr: "📍 LÉTESÍTMÉNY CÍME", c_phone: "📞 DISZPÉCSER (NON-STOP)", c_mail: "✉️ E-MAIL",
+                    nav_btn: "🧭 GPS NAVIGÁCIÓ INDÍTÁSA", form_title: "GYORS KÉRDÉS", form_btn: "Üzenet küldése",
+                    cookie_text: "Weboldalunk a működéséhez és az analitikához szükséges sütiket használ. A böngésző beállításain keresztül az Ön hozzájárulásával célzási és hirdetési sütiket is használunk. 🍪", cookie_more: "További információ", cookie_btn: "Megértettem",
+                    foot_gdpr: "Adatvédelmi Szabályzat", foot_cookies: "Süti beállítások"
+                },
+                ro: {
+                    nav_about: "Despre Noi", nav_services: "Servicii", nav_hvo: "HVO100", nav_hub: "E-Transport & Hub", nav_contact: "Contact",
+                    hero_badge: "LOGISTICA PRO VĚROVANY", hero_title: "DUMNEAVOASTRĂ COMANDAȚI.<br><span class='text-red'>NOI LIVRĂM.</span>", hero_sub: "Intersecția dintre transportul fiabil și infrastructura modernă. Fiecare vehicul sub control GPS.",
+                    hero_btn1: "Serviciile Noastre", hero_btn2: "Eco HVO100", hero_btn3: "Transport Electric ⚡",
+                    stat_fleet: "Vehicule în Flotă", stat_km: "Kilometri Parcurși", euro6_sub: "Euro 6", stat_modern: "Flotă Modernă", stat_co2: "REDUCEREA CO2",
+                    about_title: "HUB LOGISTIC DE <span class='text-red'>GENERAȚIE URMĂTOARE</span>", about_desc: "Suntem un partener stabil pentru provocările dumneavoastră logistice. Construim facilități moderne în Věrovany și ne mândrim cu transparența – datorită telematicii, vă puteți urmări bunurile în timp real.",
+                    about_l1: "Camioane complete și paleți prin GPS", about_l2: "Transbordare rapidă (Cross-docking)", about_l3: "Abordare ecologică responsabilă", about_img: "CENTRU LOGISTIC",
+                    hvo_title: "HVO100 <span class='text-green'>LA CERERE</span>", hvo_desc: "În prezent, nu folosim implicit motorină regenerabilă sintetică HVO100. Totuși, dacă lanțul dumneavoastră de aprovizionare necesită o alternativă mai ecologică, putem oferi combustibilul pentru transporturi specifice fără probleme.",
+                    services_title: "SERVICII <span class='text-red'>DE BAZĂ</span>", services_swipe: "← Glisați pentru mai multe servicii →",
+                    badge_avail: "DISPONIBIL ACUM", badge_prep: "ÎN PREGĂTIRE (T2 2027)", badge_test: "TESTARE ȘI CONSTRUIRE",
+                    s1_title: "Transport cu Camionul", s1_desc: "Transport sigur și la timp în toată Europa. Deservim în mod fiabil camioane complete și transporturi de paleți.",
+                    s2_title: "Cross-docking", s2_desc: "Putem asigura transbordarea bunurilor fără necesitatea unei depozitări pe termen lung foarte rapid și flexibil chiar acum.",
+                    s3_title: "Depozitare Bunuri", s3_desc: "Construim activ spații de depozitare complete pentru depozitarea pe termen lung. Deschiderea este planificată pentru T2 2027.",
+                    s4_title: "Transport Electric", s4_desc: "Testăm tractoare electrice și ne pregătim propriul hub de încărcare pentru logistica fără emisii a viitorului.",
+                    s5_title: "Smart Logistics & GPS", s5_desc: "Fiecare vehicul este echipat cu telematică. Aveți posibilitatea de a vă urmări bunurile în timp real 24/7.",
+                    hub_badge: "STATUS: PLANIFICARE (LANSARE T4)", hub_title: "E-MOBILITATE & <br><span class='text-green'>HUB DE ÎNCĂRCARE</span>",
+                    hub_desc: "Nu rămânem în urmă. Testăm activ tractoare electrice (inclusiv modele de la Mercedes, Scania și MAN) și am parcurs deja peste 20.000 km în trafic real. Vom pune în practică această experiență și intenționăm să lansăm propriul nostru hub de 100-200 kW în T4.",
+                    partners_title: "PARTENERII NOȘTRI", faq_title: "ÎNTREBĂRI <span class='text-red'>FRECVENTE (FAQ)</span>", faq_sub: "Nu ați găsit ce căutați? Nu ezitați să contactați dispeceratul nostru.",
+                    faq_q1: "Ce este HVO100 și îl pot solicita pentru transportul meu?", faq_a1: "HVO100 este o motorină sintetică obținută din surse regenerabile (deșeuri, grăsimi) care reduce emisiile de gaze cu efect de seră cu până la 90%. Putem furniza cu ușurință combustibilul pentru comenzile dumneavoastră specifice.",
+                    faq_q2: "Puteți asigura transbordarea mărfurilor (Cross-docking)?", faq_a2: "Da! Deși pregătim un depozit complet pentru T2 2027, putem organiza transbordarea (cross-docking) în mod flexibil, rapid și fiabil chiar acum.",
+                    faq_q3: "Cum rămâne cu electromobilitatea? Conduceți cu energie electrică?", faq_a3: "Testăm deja diverse mărci de tractoare electrice în trafic real. Pe baza acestor date, construim un hub de încărcare de 100-200kW în Věrovany, a cărui lansare este planificată pentru T4.",
+                    faq_q4: "Este posibil să îmi urmăresc bunurile în timpul transportului în timp real?", faq_a4: "Absolut. Fiecare dintre vehiculele noastre este echipat standard cu telematică GPS avansată. Avem supraveghere constantă asupra mărfii.",
+                    faq_q5: "Oferiți transport intern și internațional?", faq_a5: "Da, vehiculele noastre acoperă în mod regulat atât transportul intern în Republica Cehă, cât și rutele internaționale în toată Europa.",
+                    contact_title: "CENTRU DE <span class='text-red'>CONTACT</span>", contact_desc: "Suntem gata să preluăm încărcătura dumneavoastră. Contactați direct dispeceratul nostru sau setați navigarea direct către complexul nostru.",
+                    c_addr: "📍 ADRESA FACILITĂȚII", c_phone: "📞 DISPECERAT (NON-STOP)", c_mail: "✉️ E-MAIL",
+                    nav_btn: "🧭 PORNIRE NAVIGARE GPS", form_title: "SOLICITARE RAPIDĂ", form_btn: "Trimite Mesaj",
+                    cookie_text: "Site-ul nostru utilizează cookie-uri necesare pentru funcționarea și analiza acestuia. De asemenea, folosim cookie-uri de direcționare și publicitate cu consimțământul dumneavoastră prin setările browserului. 🍪", cookie_more: "Mai Multe Informații", cookie_btn: "Am Înțeles",
+                    foot_gdpr: "Politica de Confidențialitate", foot_cookies: "Setări Cookie"
                 }
             };
             
