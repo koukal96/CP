@@ -234,14 +234,16 @@
             .modal-content { padding: 30px 20px; margin: 10% auto;}
         }
     </style>
-</head>
-<body>
 <header id="navbar">
-    <div class="nav-container">
-        <a href="#home" class="logo-link" style="display: flex; align-items: center; gap: 0px;">
-            <img src="hlava.gif" alt="Animace" style="height: 50px; width: auto; display: block;">
-            <img src="IMG_9547.png" alt="CONTROLPOINT s.r.o." class="nav-logo" style="height: 50px; max-height: none; width: auto; display: block;">
+    <div class="nav-container" style="display: flex; justify-content: space-between; align-items: center; padding: 0 15px; width: 100%; box-sizing: border-box;">
+        <a href="#home" class="logo-link" style="display: flex; align-items: center;">
+            <img src="hlava.gif" alt="Animace" style="height: 55px; width: auto; display: block; margin-right: -5px;">
+            
+            <div style="height: 50px; width: 220px; overflow: hidden; display: flex; align-items: center;">
+                <img src="IMG_9547.png" alt="CONTROLPOINT s.r.o." class="nav-logo" style="width: 115%; height: 115%; object-fit: cover; object-position: center; display: block; max-height: none;">
+            </div>
         </a>
+
             <button class="mobile-menu-btn" id="menuBtn">☰</button>
             <nav class="nav-menu" id="navMenu">
                 <a href="#o-nas" data-i18n="nav_about">O nás</a>
