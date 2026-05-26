@@ -6,59 +6,74 @@
     <title>CONTROLPOINT s.r.o. | Kamionová doprava & Logistika</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
     <style>
-        /* ================= PROMĚNNÉ A ZÁKLAD ================= */
+        /* ZÁKLADNÍ PROMĚNNÉ */
         :root {
-            --red: #e30613; --red-dark: #b3000b;
-            --green: #00e676; --green-dark: #00b259;
-            --dark: #111111; --gray: #f9f9f9;
-            --white: #ffffff; --text: #333333;
+            --red: #e30613;
+            --red-dark: #b3000b;
+            --green: #00e676;
+            --green-dark: #00b259;
+            --dark: #111111;
+            --gray: #f9f9f9;
+            --white: #ffffff;
+            --text: #333333;
             --font-main: 'Inter', sans-serif;
             --font-heading: 'Montserrat', sans-serif;
         }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         body { font-family: var(--font-main); color: var(--text); background: var(--white); line-height: 1.6; overflow-x: hidden; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .text-red { color: var(--red); } .text-green { color: var(--green); }
-        .bg-light { background: var(--gray); } .bg-white { background: var(--white); }
-        .text-center { text-align: center; } .w-100 { width: 100%; }
 
-        /* TYPOGRAFIE A TLAČÍTKA */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .text-red { color: var(--red); }
+        .text-green { color: var(--green); }
+        .bg-light { background: var(--gray); }
+        .bg-white { background: var(--white); }
+        .text-center { text-align: center; }
+        .w-100 { width: 100%; }
+
+        /* TYPOGRAFIE */
         h1, h2, h3 { font-family: var(--font-heading); text-transform: uppercase; color: var(--dark); }
         .section-title { font-size: 2.2rem; margin-bottom: 30px; border-left: 5px solid var(--red); padding-left: 15px; }
-        .btn-primary { display: inline-block; background: var(--red); color: var(--white); padding: 12px 28px; text-decoration: none; font-weight: 700; border: none; cursor: pointer; transition: 0.3s; border-radius: 30px; }
+
+        /* TLAČÍTKA - ZAOBLENÁ */
+        .btn-primary { display: inline-block; background: var(--red); color: var(--white); padding: 12px 28px; text-decoration: none; font-weight: 700; border: none; cursor: pointer; transition: 0.3s; border-radius: 30px; font-family: var(--font-main); }
         .btn-primary:hover { background: var(--red-dark); transform: translateY(-2px); box-shadow: 0 5px 15px rgba(227,6,19,0.3); }
+        .btn-outline-green { display: inline-block; background: transparent; color: var(--green); border: 2px solid var(--green); padding: 10px 26px; text-decoration: none; font-weight: 700; border-radius: 30px; transition: 0.3s; }
+        .btn-outline-green:hover { background: var(--green); color: var(--dark); box-shadow: 0 5px 15px rgba(0,230,118,0.3); }
         .btn-large { padding: 15px 35px; font-size: 1.1rem; text-align: center; }
 
-        /* ================= HLAVIČKA A NAVIGACE ================= */
+        /* STICKY NAVBAR */
         header { position: fixed; top: 0; width: 100%; height: 85px; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid #eee; transition: 0.3s; display: flex; align-items: center; }
-        header.scrolled { height: 70px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1400px; margin: 0 auto; padding: 0 20px; }
+        header.scrolled { height: 70px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); background: rgba(255, 255, 255, 0.9); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1400px; margin: 0 auto; padding: 0 20px; position: relative; }
         .nav-logo-text { font-family: var(--font-heading); font-size: 1.5rem; color: var(--dark); text-decoration: none; }
-        .nav-menu { display: flex; gap: 20px; align-items: center; }
+        .nav-menu { display: flex; gap: 30px; align-items: center; }
         .nav-menu a { text-decoration: none; color: var(--dark); font-weight: 700; font-size: 0.9rem; text-transform: uppercase; transition: 0.2s; cursor: pointer; }
         .nav-menu a:hover { color: var(--red); }
+        .nav-green { color: var(--green-dark) !important; }
         .nav-btn { background: var(--red); color: var(--white) !important; padding: 10px 20px; border-radius: 30px; }
-        
-        .lang-switcher { display: flex; gap: 10px; margin-left: 20px; border-left: 2px solid #eee; padding-left: 20px; }
-        .lang-btn { background: none; border: none; font-weight: 700; cursor: pointer; color: #999; transition: 0.3s; }
-        .lang-btn.active { color: var(--red); }
+        .nav-btn:hover { background: var(--red-dark); color: white !important; }
         .mobile-menu-btn { display: none; font-size: 1.8rem; background: none; border: none; cursor: pointer; color: var(--dark); z-index: 1001; }
 
-        /* ================= HERO (VIDEO + DLAŽDICE) ================= */
-        .hero { position: relative; padding: 180px 0 120px; background: var(--dark); overflow: hidden; min-height: 85vh; display: flex; align-items: center; }
+        .lang-switcher { display: flex; gap: 10px; margin-left: 20px; border-left: 2px solid #eee; padding-left: 20px; }
+        .lang-btn { background: none; border: none; font-weight: 700; cursor: pointer; color: #999; transition: 0.3s; font-family: var(--font-main); }
+        .lang-btn.active { color: var(--red); }
+
+        /* HERO SEKCE S VIDEEM A DLAŽDICEMI */
+        .hero { position: relative; padding: 160px 0 100px; background: var(--dark); overflow: hidden; min-height: 80vh; display: flex; align-items: center; }
         .video-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
         .video-overlay-grid { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: grid; grid-template-columns: repeat(12, 1fr); grid-template-rows: repeat(8, 1fr); z-index: 1; }
-        .grid-tile { background: rgba(255, 255, 255, 0.93); transition: opacity 0.4s ease; }
+        .grid-tile { background: rgba(255, 255, 255, 0.95); transition: opacity 0.5s ease; }
         .grid-tile:hover { opacity: 0; transition-duration: 0.1s; }
-        
+
         .hero-content { position: relative; z-index: 2; max-width: 800px; background: rgba(255,255,255,0.85); padding: 40px; border-radius: 15px; backdrop-filter: blur(5px); }
-        .badge-red { display: inline-block; background: rgba(227, 6, 19, 0.1); color: var(--red); padding: 6px 18px; font-weight: 700; font-size: 0.8rem; border-radius: 30px; margin-bottom: 20px; border: 1px solid rgba(227, 6, 19, 0.2); }
-        .hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.1; margin-bottom: 20px; letter-spacing: -1px; }
-        .hero-sub { font-size: 1.1rem; color: #444; margin-bottom: 30px; font-weight: 500; }
+        .badge-red { display: inline-block; background: rgba(227, 6, 19, 0.1); color: var(--red); padding: 6px 18px; font-weight: 700; font-size: 0.8rem; border-radius: 30px; margin-bottom: 25px; border: 1px solid rgba(227, 6, 19, 0.2); }
+        .hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; margin-bottom: 25px; letter-spacing: -1px; }
+        .hero-sub { font-size: 1.2rem; color: #444; margin-bottom: 40px; max-width: 600px; font-weight: 500;}
         .hero-actions { display: flex; gap: 15px; flex-wrap: wrap; }
 
-        /* ================= STATISTIKY ================= */
+        /* STATISTIKY */
         .stats-section { background: var(--dark); color: var(--white); padding: 60px 0; position: relative; z-index: 2; border-bottom: 4px solid var(--red); }
         .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; text-align: center; }
         .stat-icon { font-size: 2.5rem; margin-bottom: 10px; display: block; filter: drop-shadow(0 0 5px rgba(255,255,255,0.1)); }
@@ -66,81 +81,114 @@
         .stat-number.stat-green { color: var(--green) !important; text-shadow: 0 0 15px rgba(0, 230, 118, 0.3); }
         .stat-label { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; color: #aaa; font-weight: 700; }
 
-        /* ================= SEKCE OBECNĚ ================= */
+        /* SEKCE OBECNĚ */
         .section { padding: 100px 0; }
         .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
         .check-list { list-style: none; margin-top: 20px; }
         .check-list li { position: relative; padding-left: 30px; margin-bottom: 15px; font-weight: 500; }
         .check-list li::before { content: '✓'; position: absolute; left: 0; color: var(--red); font-weight: 900; font-size: 1.2rem; }
 
-        /* ================= SLUŽBY KARTY ================= */
+        /* PLACEHOLDER IMG (TECH-BOXES) */
+        .tech-box { background: var(--white); border: 2px solid #eee; height: 400px; position: relative; border-radius: 15px; overflow: hidden; display: flex; align-items: center; justify-content: center; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .tech-overlay { position: absolute; top: 15px; left: 15px; background: var(--red); color: white; padding: 5px 10px; font-size: 0.7rem; font-weight: bold; border-radius: 20px; animation: pulse-green 2s infinite; }
+        .placeholder-img { color: #ccc; font-weight: bold; letter-spacing: 2px; }
+
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(227, 6, 19, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(227, 6, 19, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(227, 6, 19, 0); }
+        }
+
+        /* SLUŽBY KARTY */
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
         .service-card { background: var(--white); padding: 40px; border-radius: 15px; border: 1px solid #eee; border-top: 4px solid var(--red); transition: 0.3s; box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
         .service-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
         .s-icon { font-size: 3rem; margin-bottom: 20px; }
+        .service-card h3 { margin-bottom: 15px; font-size: 1.3rem; }
 
-        /* ================= ELEKTRO HUB ================= */
+        /* ELEKTRO HUB */
         .bg-dark-green { background: #0b1a12; color: var(--white); }
         .bg-dark-green .section-title { color: var(--white); border-color: var(--green); }
         .electro-card { display: grid; grid-template-columns: 1.5fr 1fr; gap: 50px; align-items: center; }
-        .clean-energy-circle { width: 220px; height: 220px; border-radius: 50%; background: radial-gradient(circle, rgba(0, 230, 118, 0.1) 0%, transparent 70%); border: 2px solid rgba(0, 230, 118, 0.5); display: flex; align-items: center; justify-content: center; box-shadow: 0 0 40px rgba(0, 230, 118, 0.2); animation: eco-breathe 4s ease-in-out infinite; margin: 0 auto; }
-        .gauge-bolt { font-size: 6rem; color: var(--green); filter: drop-shadow(0 0 15px var(--green)); line-height: 1; }
+        
+        /* CLEAN ENERGY EFEKT */
+        .electro-visual { display: flex; justify-content: center; align-items: center; }
+        .clean-energy-circle { width: 220px; height: 220px; border-radius: 50%; background: radial-gradient(circle, rgba(0, 230, 118, 0.1) 0%, transparent 70%); border: 2px solid rgba(0, 230, 118, 0.5); display: flex; align-items: center; justify-content: center; box-shadow: 0 0 40px rgba(0, 230, 118, 0.2); animation: eco-breathe 4s ease-in-out infinite; position: relative; }
+        .gauge-inner { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; }
+        .gauge-bolt { font-size: 6rem; color: var(--green); filter: drop-shadow(0 0 15px var(--green)); display: block; line-height: 1; }
         @keyframes eco-breathe { 0%, 100% { transform: scale(1); box-shadow: 0 0 30px rgba(0, 230, 118, 0.2); } 50% { transform: scale(1.05); box-shadow: 0 0 60px rgba(0, 230, 118, 0.5); border-color: var(--green); } }
 
-        /* ================= PARTNEŘI ================= */
+        /* PARTNEŘI MARQUEE */
         .partners-section { background: var(--white); padding: 50px 0; border-bottom: 1px solid #eee; overflow: hidden; }
         .partners-title { text-align: center; font-size: 1rem; color: #999; margin-bottom: 30px; letter-spacing: 3px; }
         .marquee { width: 100%; overflow: hidden; white-space: nowrap; position: relative; }
+        .marquee::before, .marquee::after { content: ''; position: absolute; top: 0; width: 100px; height: 100%; z-index: 2; }
+        .marquee::before { left: 0; background: linear-gradient(to right, white, transparent); }
+        .marquee::after { right: 0; background: linear-gradient(to left, white, transparent); }
         .marquee-content { display: inline-block; animation: scrollMarquee 20s linear infinite; }
         .marquee-content span { font-family: var(--font-heading); font-size: 1.8rem; color: #ddd; margin: 0 50px; font-weight: 800; }
         @keyframes scrollMarquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-        /* ================= FAQ ================= */
+        /* FAQ AKORDEON */
+        .faq-subtitle { margin-bottom: 40px; color: #666; font-size: 1.1rem; }
         .faq-container { max-width: 800px; margin: 0 auto; }
-        .faq-item { margin-bottom: 15px; border: 1px solid #eee; border-radius: 15px; overflow: hidden; background: var(--white); }
-        .faq-question { width: 100%; text-align: left; padding: 20px 25px; background: none; border: none; font-size: 1.05rem; font-weight: 700; font-family: var(--font-main); color: var(--dark); cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-item { margin-bottom: 15px; border: 1px solid #eee; border-radius: 15px; overflow: hidden; background: var(--white); box-shadow: 0 5px 15px rgba(0,0,0,0.02); transition: 0.3s; }
+        .faq-question { width: 100%; text-align: left; padding: 20px 25px; background: none; border: none; font-size: 1.05rem; font-weight: 700; font-family: var(--font-main); color: var(--dark); cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: 0.3s; }
         .faq-question:hover { color: var(--red); background: #fafafa; }
-        .faq-icon { font-size: 1.5rem; color: var(--red); transition: transform 0.3s ease; }
-        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; }
-        .faq-answer p { padding: 0 25px 20px; color: #555; }
+        .faq-icon { font-size: 1.5rem; color: var(--red); transition: transform 0.3s ease; font-weight: 400; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; background: var(--white); -webkit-transform: translateZ(0); will-change: max-height;}
+        .faq-answer p { padding: 0 25px 20px; color: #555; border-top: 1px solid transparent; }
         .faq-item.active .faq-icon { transform: rotate(45deg); color: var(--dark); }
+        .faq-item.active { border-color: #ddd; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
 
-        /* ================= KONTAKT A FOOTER ================= */
+        /* KONTAKT */
         .contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
         .contact-details { margin: 30px 0; background: var(--white); padding: 30px; border-radius: 15px; border-left: 5px solid var(--red); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
         .c-item { margin-bottom: 20px; display: flex; flex-direction: column; }
         .c-item strong { color: var(--red); margin-bottom: 5px; font-size: 0.9rem; letter-spacing: 1px; }
         .c-item span { font-size: 1.2rem; font-weight: 500; color: var(--dark); }
+
         .btn-gps-nav { background: #34a853; color: white !important; box-shadow: 0 4px 15px rgba(52, 168, 83, 0.3); }
-        .btn-gps-nav:hover { background: #2d9249; transform: translateY(-2px); }
+        .btn-gps-nav:hover { background: #2d9249; box-shadow: 0 6px 20px rgba(52, 168, 83, 0.5); transform: translateY(-2px); }
 
         .contact-form-box { background: var(--dark); padding: 40px; border-radius: 15px; color: var(--white); box-shadow: 0 20px 40px rgba(227, 6, 19, 0.15); }
         .contact-form-box h3 { color: var(--white); margin-bottom: 20px; }
         .contact-form-box input, .contact-form-box textarea { width: 100%; padding: 15px; margin-bottom: 15px; border: none; border-radius: 8px; background: rgba(255,255,255,0.1); color: var(--white); font-family: var(--font-main); }
         .contact-form-box input:focus, .contact-form-box textarea:focus { outline: 2px solid var(--red); background: rgba(255,255,255,0.2); }
 
+        /* FOOTER & COOKIE LIŠTA */
         footer { background: var(--dark); color: #888; padding: 40px 0; font-size: 0.9rem; }
         .footer-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
-        .f-links button { background: none; border: none; color: #888; text-decoration: underline; cursor: pointer; margin-left: 20px; transition: 0.2s; font-family: var(--font-main); }
+        .f-links button { background: none; border: none; font-family: var(--font-main); color: #888; text-decoration: underline; cursor: pointer; margin-left: 20px; transition: 0.2s; font-size: 0.9rem;}
         .f-links button:hover { color: var(--white); }
 
-        /* ================= MODÁLNÍ OKNA (GDPR & COOKIES) ================= */
-        .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.8); backdrop-filter: blur(5px); }
-        .modal-content { background-color: var(--white); margin: 5% auto; padding: 40px; border-radius: 15px; width: 90%; max-width: 800px; position: relative; color: var(--text); }
+        .cookie-banner { position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(17, 17, 17, 0.98); box-shadow: 0 -5px 20px rgba(0,0,0,0.2); color: var(--white); padding: 20px 0; z-index: 99999; border-top: 3px solid var(--red); }
+        .cookie-flex { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
+
+        /* MODÁLNÍ OKNA PRÁVNÍ DOKUMENTY */
+        .modal { display: none; position: fixed; z-index: 100000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.8); backdrop-filter: blur(5px); }
+        .modal-content { background-color: var(--white); margin: 5% auto; padding: 40px; border-radius: 15px; width: 90%; max-width: 900px; position: relative; color: var(--text); }
         .close-modal { color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
         .close-modal:hover { color: var(--red); }
-        .legal-text { max-height: 60vh; overflow-y: auto; padding-right: 15px; font-size: 0.9rem; margin-top: 20px; }
-        .legal-text h3 { margin: 20px 0 10px; font-size: 1.1rem; }
+        .legal-text { max-height: 65vh; overflow-y: auto; padding-right: 20px; font-size: 0.9rem; margin-top: 20px; text-align: justify; }
+        .legal-text h3 { margin: 20px 0 10px; font-size: 1.1rem; color: var(--dark); text-transform: none;}
+        .legal-text p { margin-bottom: 10px; }
+        .legal-text ul { padding-left: 20px; margin-bottom: 15px; }
 
-        /* ================= RESPONSIVE ================= */
+        /* RESPONSIVE (MOBILE FIXES) */
         @media (max-width: 900px) {
             .two-col, .contact-wrapper, .electro-card { grid-template-columns: 1fr; gap: 40px; }
             .nav-container { justify-content: center; }
             .nav-logo-text { margin: 0 auto; }
-            .mobile-menu-btn { display: block; position: absolute; right: 20px; }
-            .nav-menu { position: absolute; top: 70px; left: 0; width: 100%; background: var(--white); flex-direction: column; gap: 0; box-shadow: 0 10px 20px rgba(0,0,0,0.1); display: none; border-top: 1px solid #eee; }
-            .nav-menu.active { display: flex; }
+            .mobile-menu-btn { position: absolute; right: 20px; display: block; }
+            .nav-menu { position: absolute; top: 85px; left: 0; width: 100%; height: calc(100vh - 85px); overflow-y: auto; -webkit-overflow-scrolling: touch; background: var(--white); flex-direction: column; gap: 0; box-shadow: 0 10px 20px rgba(0,0,0,0.1); display: none; border-top: 1px solid #eee; }
+            .nav-menu.active { display: flex !important; opacity: 1; }
             .nav-menu a { padding: 20px; border-bottom: 1px solid #eee; width: 100%; text-align: center; }
+            .nav-btn { border-radius: 0; width: 100%; }
+            .hero { padding: 130px 0 60px; text-align: center; }
+            .hero-actions { justify-content: center; }
+            .stat-number { font-size: 2.8rem; }
+            .cookie-flex { flex-direction: column; text-align: center; }
             .lang-switcher { border-left: none; padding-left: 0; margin-left: 0; padding: 20px; justify-content: center; width: 100%; }
         }
     </style>
@@ -155,7 +203,7 @@
                 <a href="#o-nas" data-i18n="nav_about">O nás</a>
                 <a href="#sluzby" data-i18n="nav_services">Služby</a>
                 <a href="#hvo100" data-i18n="nav_hvo">HVO100</a>
-                <a href="#elektro" data-i18n="nav_hub">200kW Hub</a>
+                <a href="#elektro" class="nav-green" data-i18n="nav_hub">200kW Hub</a>
                 <a href="#faq">FAQ</a>
                 <a href="#kontakt" class="nav-btn" data-i18n="nav_contact">Kontakt</a>
                 
@@ -174,14 +222,13 @@
         </video>
         <div class="video-overlay-grid" id="tileGrid"></div>
 
-        <div class="container">
-            <div class="hero-content">
-                <div class="badge-red" data-i18n="hero_badge">PROFI LOGISTIKA VĚROVANY</div>
-                <h1 data-i18n="hero_title">VY OBJEDNÁTE.<br><span class="text-red">MY DOVEZEME.</span></h1>
-                <p class="hero-sub" data-i18n="hero_sub">Průsečík spolehlivé dopravy a moderní infrastruktury. Rychlost, efektivita a maximální nasazení.</p>
-                <div class="hero-actions">
-                    <a href="#sluzby" class="btn-primary" data-i18n="hero_btn1">Naše služby</a>
-                </div>
+        <div class="container hero-content">
+            <div class="badge-red" data-i18n="hero_badge">PROFI LOGISTIKA VĚROVANY</div>
+            <h1 data-i18n="hero_title">VY OBJEDNÁTE.<br><span class="text-red">MY DOVEZEME.</span></h1>
+            <p class="hero-sub" data-i18n="hero_sub">Průsečík spolehlivé kamionové dopravy a moderní infrastruktury. Rychlost, efektivita a maximální nasazení pro vaše zásilky.</p>
+            <div class="hero-actions">
+                <a href="#sluzby" class="btn-primary" data-i18n="hero_btn1">Naše služby</a>
+                <a href="#hvo100" class="btn-outline-green" data-i18n="hero_btn2">Eko doprava HVO100</a>
             </div>
         </div>
     </section>
@@ -215,21 +262,34 @@
         <div class="container two-col">
             <div class="text-content">
                 <h2 class="section-title" data-i18n="about_title">LOGISTICKÝ UZEL <span class="text-red">NOVÉ GENERACE</span></h2>
-                <p data-i18n="about_desc">Jsme stabilní partner pro vaše logistické výzvy. Specializujeme se na kamionovou dopravu a moderní energetická řešení. Naše flotila a zázemí ve Věrovanech tvoří strategický bod pro spolehlivou přepravu.</p>
+                <p data-i18n="about_desc">Jsme stabilní partner pro vaše logistické výzvy. Specializujeme se na kamionovou dopravu, skladování a moderní energetická řešení. Naše flotila a zázemí ve Věrovanech tvoří strategický bod pro spolehlivou přepravu.</p>
                 <ul class="check-list">
                     <li data-i18n="about_l1">Celovozové i paletové zásilky</li>
                     <li data-i18n="about_l2">Digitální správa a sledování zásilek</li>
                     <li data-i18n="about_l3">Odpovědný přístup k životnímu prostředí</li>
                 </ul>
             </div>
+            <div class="image-content tech-box">
+                <div class="tech-overlay" style="background: var(--red);">SYSTEM ACTIVE</div>
+                <div class="placeholder-img" data-i18n="about_img">LOGISTICKÉ CENTRUM</div>
+            </div>
         </div>
     </section>
 
     <section id="hvo100" class="section">
         <div class="container two-col">
+            <div class="image-content tech-box" style="border-color: #2ecc71;">
+                <div class="tech-overlay" style="background: #2ecc71;">ECO MODE</div>
+                <div class="placeholder-img" style="color: #2ecc71;">HVO100 COMPLIANT</div>
+            </div>
             <div class="text-content">
                 <h2 class="section-title" data-i18n="hvo_title">HVO100 <span class="text-green">NA VYŽÁDÁNÍ</span></h2>
-                <p data-i18n="hvo_desc">Zatím na syntetickou naftu HVO100 standardně nejezdíme. Pokud však váš dodavatelský řetězec a firemní ESG reporting vyžaduje ekologičtější alternativu, není to problém – palivo na vyžádání zajistíme pro konkrétní přepravy.</p>
+                <p data-i18n="hvo_desc">Zatím na syntetickou naftu z obnovitelných zdrojů HVO100 standardně nejezdíme. Pokud však váš dodavatelský řetězec a firemní ESG reporting vyžaduje ekologičtější alternativu, není to problém – palivo na vyžádání bez problému zajistíme.</p>
+                <ul class="check-list">
+                    <li data-i18n="hvo_l1">Snížení emisí skleníkových plynů až o 90 %</li>
+                    <li data-i18n="hvo_l2">Plně kompatibilní s motory Euro 6</li>
+                    <li data-i18n="hvo_l3">Vhodné pro ESG reporting vašich firem</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -241,12 +301,12 @@
                 <div class="service-card">
                     <div class="s-icon">📦</div>
                     <h3 data-i18n="s1_title">Kamionová přeprava</h3>
-                    <p data-i18n="s1_desc">Bezpečná a včasná přeprava vašeho zboží. Obsloužíme celovozové náklady i paletové zásilky.</p>
+                    <p data-i18n="s1_desc">Bezpečná a včasná přeprava vašeho zboží. Obsloužíme celovozové náklady i paletové zásilky spolehlivě a na čas.</p>
                 </div>
                 <div class="service-card">
                     <div class="s-icon">🏭</div>
                     <h3 data-i18n="s2_title">Skladování (Připravujeme)</h3>
-                    <p data-i18n="s2_desc">Zatím nemáme vlastní skladovací prostory, ale aktivně je připravujeme. Brzy nabídneme moderní zázemí pro vaše zboží.</p>
+                    <p data-i18n="s2_desc">Zatím nemáme vlastní skladovací prostory, ale aktivně je připravujeme. Brzy vám nabídneme moderní zázemí pro uskladnění i překládku.</p>
                 </div>
                 <div class="service-card">
                     <div class="s-icon">💻</div>
@@ -258,16 +318,21 @@
     </section>
 
     <section id="elektro" class="section bg-dark-green">
-        <div class="container electro-card">
-            <div class="electro-info">
-                <h2 class="section-title" style="border-color:var(--green);" data-i18n="hub_title">PLÁNUJEME <span class="text-green">100-200kW HUB</span></h2>
-                <p data-i18n="hub_desc">Zatím nemáme nabíjecí stanici pro elektro vozidla, ale infrastrukturu pro budoucnost již plánujeme. Připravujeme výstavbu hubu o výkonu 100-200 kW, který dodá čistou energii tahačům i osobním autům.</p>
-            </div>
-            <div class="electro-visual">
-                <div class="clean-energy-circle">
-                    <span class="gauge-bolt">⚡</span>
+        <div class="container">
+            <div class="electro-card">
+                <div class="electro-info">
+                    <div class="badge-green" style="display: inline-block; background: rgba(0, 230, 118, 0.1); color: var(--green); padding: 6px 18px; font-weight: 700; font-size: 0.8rem; border-radius: 30px; margin-bottom: 20px; border: 1px solid var(--green);" data-i18n="hub_badge">STATUS: VE VÝSTAVBĚ</div>
+                    <h2 class="section-title" style="border-color:var(--green);" data-i18n="hub_title">PLÁNUJEME <span class="text-green">100-200kW HUB</span></h2>
+                    <p data-i18n="hub_desc">Zatím nemáme nabíjecí stanici pro elektro vozidla, ale infrastrukturu pro budoucnost e-mobility již plánujeme. Připravujeme výstavbu vysokovýkonné nabíjecí stanice o výkonu 100-200 kW, která dodá čistou energii elektrickým tahačům i osobním vozidlům.</p>
                 </div>
-            </div>
+                <div class="electro-visual">
+                    <div class="clean-energy-circle">
+                        <div class="gauge-inner">
+                            <span class="gauge-bolt">⚡</span>
+                        </div>
+                    </div>
+                </div>
+            </div>               
         </div>
     </section>
 
@@ -287,18 +352,25 @@
     <section id="faq" class="section bg-white">
         <div class="container">
             <h2 class="section-title text-center" data-i18n="faq_title">ČASTÉ <span class="text-red">DOTAZY</span></h2>
+            <p class="text-center faq-subtitle" data-i18n="faq_sub">Nenašli jste, co hledáte? Žádný dotaz není zbytečný. Nebojte se nás kontaktovat, rádi vše vysvětlíme.</p>
             
             <div class="faq-container">
                 <div class="faq-item">
-                    <button class="faq-question">Co přesně je palivo HVO100? <span class="faq-icon">+</span></button>
+                    <button class="faq-question"><span data-i18n="faq_q1">Co přesně je palivo HVO100?</span> <span class="faq-icon">+</span></button>
                     <div class="faq-answer">
-                        <p>HVO100 je obnovitelná nafta vyrobená ze zbytků olejů a tuků. Snižuje emise CO2 o 90 %.</p>
+                        <p data-i18n="faq_a1">HVO100 je obnovitelná nafta vyrobená ze zbytků olejů a tuků. Snižuje emise CO2 o 90 % a je plně zaměnitelná s běžnou naftou, aniž by poškozovala motory.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">Zajišťujete mezinárodní přepravu? <span class="faq-icon">+</span></button>
+                    <button class="faq-question"><span data-i18n="faq_q2">Zajišťujete vnitrostátní i mezinárodní přepravu?</span> <span class="faq-icon">+</span></button>
                     <div class="faq-answer">
-                        <p>Ano, naše vozidla běžně pokrývají jak vnitrostátní přepravu, tak mezinárodní trasy napříč Evropou.</p>
+                        <p data-i18n="faq_a2">Ano, naše vozidla běžně pokrývají jak vnitrostátní přepravu v rámci ČR, tak i mezinárodní trasy napříč celou Evropou.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"><span data-i18n="faq_q3">Kdy bude spuštěno skladování zboží?</span> <span class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_a3">Skladovací prostory pro flexibilní překládku i dlouhodobé uložení zboží aktuálně aktivně připravujeme. O spuštění budeme informovat.</p>
                     </div>
                 </div>
             </div>
@@ -306,25 +378,41 @@
     </section>
 
     <section id="kontakt" class="section bg-light">
-        <div class="container contact-wrapper">
-            <div class="contact-info">
-                <h2 class="section-title" data-i18n="contact_title">KONTAKTNÍ <span class="text-red">CENTRUM</span></h2>
-                <div class="contact-details">
-                    <div class="c-item"><strong>📍 ADRESA</strong><span>Věrovany 94, 783 75</span></div>
-                    <div class="c-item"><strong>📞 DISPEČINK</strong><span>+420 601 371 211</span></div>
-                    <div class="c-item"><strong>✉️ EMAIL</strong><span>info@control-point.eu</span></div>
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2 class="section-title" data-i18n="contact_title">KONTAKTNÍ <span class="text-red">CENTRUM</span></h2>
+                    <p data-i18n="contact_desc">Jsme připraveni převzít váš náklad. Ozvěte se nám nebo rovnou nastavte navigaci do našeho hubu.</p>
+                    
+                    <div class="contact-details">
+                        <div class="c-item">
+                            <strong data-i18n="c_addr">📍 ADRESA</strong>
+                            <span>Věrovany 94, 783 75</span>
+                        </div>
+                        <div class="c-item">
+                            <strong data-i18n="c_phone">📞 DISPEČINK</strong>
+                            <span>+420 601 371 211</span>
+                        </div>
+                        <div class="c-item">
+                            <strong data-i18n="c_mail">✉️ EMAIL</strong>
+                            <span>info@control-point.eu</span>
+                        </div>
+                    </div>
+
+                    <a href="https://maps.google.com/?q=Věrovany+94" target="_blank" class="btn-primary btn-large btn-gps-nav" style="text-decoration:none;" data-i18n="nav_btn">
+                        🧭 SPUSTIT NAVIGACI (GPS)
+                    </a>
                 </div>
-                <a href="https://maps.google.com/?q=Věrovany+94" target="_blank" class="btn-primary btn-large btn-gps-nav" style="text-decoration:none;" data-i18n="nav_btn">🧭 SPUSTIT NAVIGACI (GPS)</a>
-            </div>
-            
-            <div class="contact-form-box">
-                <h3 data-i18n="form_title">RYCHLÝ DOTAZ</h3>
-                <form id="contactForm">
-                    <input type="text" placeholder="Jméno / Firma" required>
-                    <input type="email" placeholder="E-mail" required>
-                    <textarea placeholder="Jak vám můžeme pomoci?" rows="4" required></textarea>
-                    <button type="submit" class="btn-primary w-100" data-i18n="form_btn">Odeslat zprávu</button>
-                </form>
+                
+                <div class="contact-form-box">
+                    <h3 data-i18n="form_title">RYCHLÝ DOTAZ</h3>
+                    <form id="contactForm">
+                        <input type="text" id="phName" placeholder="Jméno / Firma" required>
+                        <input type="email" id="phMail" placeholder="E-mail" required>
+                        <textarea id="phMsg" placeholder="Jak vám můžeme pomoci?" rows="4" required></textarea>
+                        <button type="submit" class="btn-primary w-100" data-i18n="form_btn">Odeslat zprávu</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -340,59 +428,124 @@
         </div>
     </footer>
 
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="container cookie-flex">
+            <p data-i18n="cookie_text">Náš web využívá soubory cookies potřebné pro jeho fungování a analytiku. Také používáme cílené a reklamní cookies, k čemuž udělujete souhlas prostřednictvím nastavení svého prohlížeče. 🍪</p>
+            <div style="display:flex; gap: 10px; align-items:center;">
+                <button onclick="openModal('cookiesModal')" style="background:transparent; border:none; color:var(--white); text-decoration:underline; cursor:pointer;" data-i18n="cookie_more">Více informací</button>
+                <button class="btn-primary" id="acceptCookiesBtn" data-i18n="cookie_btn">Beru na vědomí</button>
+            </div>
+        </div>
+    </div>
+
     <div id="gdprModal" class="modal">
         <div class="modal-content">
-            <span class="close-modal" onclick="closeModal('gdprModal')">&times;</span>
+            <span class="close-modal" onclick="closeModal('gdprModal')">×</span>
             <h2>ZÁSADY OCHRANY OSOBNÍCH ÚDAJŮ</h2>
             <div class="legal-text">
-                <p>Tento dokument obsahuje informace pro subjekty údajů stran zpracování jejich osobních údajů v organizaci, a to v rámci požadavků, které jsou na organizaci, jakožto správce osobních údajů, kladeny ust. čl. [span_3](start_span)13 NAŘÍZENÍ EVROPSKÉHO PARLAMENTU A RADY (EU) 2016/679 ze dne 27. dubna 2016 o ochraně fyzických osob v souvislosti se zpracováním osobních údajů a o volném pohybu těchto údajů a o zrušení směrnice 95/46/ES (dále jen GDPR)[span_3](end_span).</p>
+                <p>Tento dokument obsahuje informace pro subjekty údajů stran zpracování jejich osobních údajů v organizaci, a to v rámci požadavků, které jsou na organizaci, jakožto správce osobních údajů, kladeny ust. čl. 13 NAŘÍZENÍ EVROPSKÉHO PARLAMENTU A RADY (EU) 2016/679 ze dne 27. dubna 2016 o ochraně fyzických osob v souvislosti se zpracováním osobních údajů a o volném pohybu těchto údajů a o zrušení směrnice 95/46/ES (dále jen GDPR).</p>
+                
                 <h3>Kdo zpracovává Vaše údaje?</h3>
-                [span_4](start_span)<p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Praha 10<br>C 202561 vedená u Městského soudu v Praze<br>kontaktní e-mail: info@control-point.eu[span_4](end_span)</p>
+                <p>Control Point s.r.o.<br>Dopravní 500/9, Uhříněves, 104 00 Praha 10<br>C 202561 vedená u Městského soudu v Praze<br>kontaktní e-mail: info@control-point.eu<br>dále jako „my“ nebo „správce“ nebo „organizace“</p>
+                
                 <h3>Co je to osobní údaj?</h3>
-                <p>Osobním údajem je prakticky jakákoli informace, která dokáže žijící fyzickou osobu identifikovat přímo nebo jejím účelem je dosažení takové osoby. [span_5](start_span)Osobní údaje lze dělit na obecné a citlivé[span_5](end_span). [span_6](start_span)Zpracováním osobních údajů se rozumí systematická činnost, kterou správce provádí s osobními údaji za určitým účelem[span_6](end_span).</p>
+                <p>Osobním údajem je prakticky jakákoli informace, která dokáže žijící fyzickou osobu identifikovat přímo nebo jejím účelem je dosažení takové osoby. Osobní údaje lze dělit na obecné (např. jméno a příjmení, věk, telefonní číslo, místo narození, osobní stav apod.) a citlivé (dnes jsou označovány jako zvláštní kategorie osobních údajů, přičemž se jedná pouze o tyto osobní údaje – biometrické údaje, členství v odborové organizaci/politické straně, etnický původ, filozofické vyznání, genetické údaje, informace o odsouzení a trestní delikty, náboženské vyznání, politické názory, rasový původ sexuální orientace/život, zdravotní stav).</p>
+                
+                <h3>Co je zpracování osobních údajů?</h3>
+                <p>Zpracováním osobních údajů se rozumí systematická činnost, kterou správce provádí s osobními údaji za určitým účelem. Činností dle předchozí věty je zejména: shromáždění, zaznamenání, uspořádání, strukturování, uložení, přizpůsobení nebo pozměnění, vyhledání, nahlédnutí, použití, zpřístupnění přenosem, šíření nebo jakékoliv jiné zpřístupnění, seřazení či zkombinování, omezení, výmaz nebo zničení.</p>
+                
+                <h3>Zdroje a kategorie osobních údajů:</h3>
+                <p>Správce zpracovává osobní údaje (přímo od vás) které jste mu poskytli, nebo osobní údaje, které získal na základě plnění Vaší objednávky. Vaše identifikační a kontaktní údaje a údaje nezbytné k plnění smlouvy.</p>
+                
                 <h3>Zákonný důvod a účel zpracování</h3>
-                <p>Zákonným důvodem zpracování je Váš souhlas se zpracováním osobních údajů za účelem poskytování přímého marketingu podle čl. 6 odst. 1 písm. a) GDPR. Pro účel uzavření a plnění smlouvy zpracováváme Vaše osobní údaje dle ustanovení čl. 6 odst. [span_7](start_span)1 písm. b) GDPR[span_7](end_span).</p>
+                <p>Zákonným důvodem zpracování je:<br>Váš souhlas se zpracováním osobních údajů za účelem poskytování přímého marketingu podle čl. 6 odst. 1 písm. a) GDPR.<br>Pro účel uzavření a plnění smlouvy (tj. v souladu s poskytováním našich služeb) zpracováváme Vaše osobní údaje dle ustanovení čl. 6 odst. 1 písm. b) GDPR. Právním základem zpracování Vašich obecných osobních údajů je tedy smlouva.</p>
+                <p>Jakmile bude smlouva splněna, musíme Vaše osobní údaje archivovat po dobu, kterou předvídají příslušné právní předpisy. Zde je právním důvodem zpracování Vašich obecných osobních údajů splnění právní povinnosti, což stanoví čl. 6 odst. 1 písm. c) GDPR.</p>
+                
+                <p>Účelem zpracování osobních údajů je:<br>Vyřízení Vaší objednávky a výkon práv a povinností vyplývajících ze smluvního vztahu mezi Vámi a Správcem. Při objednávce jsou vyžadovány osobní údaje nezbytné pro úspěšné vyřízení objednávky podle čl. Čl. 1 písm. b) Nařízení (s tím souvisí i následné uskutečnění platby, dodání služeb, vyřizování reklamace apod.); Vaše osobní údaje, které nám poskytnete, využíváme k tomu, abychom s Vámi mohli smlouvu uzavřít a je-li mezi námi smlouva již uzavřena, pak je využíváme, abychom ji mohli splnit.</p>
+                <p>Zpracování osobních údajů zákazníka probíhá bez souhlasu zákazníka, jelikož právním základem zpracování jeho osobních údajů pro účely plnění smlouvy je konkrétní smlouva mezi zákazníkem a provozovatelem. Poskytnutí osobních údajů je nezbytný požadavek na uzavření a plnění smlouvy, bez poskytnutí osobních údajů není možné uzavřít smlouvu či ze strany správce plnit její podmínky.</p>
+                
                 <h3>Jaké osobní údaje a v jakém rozsahu budeme zpracovávat?</h3>
-                [span_8](start_span)<p>Abychom Vám mohli poskytovat naše služby, potřebujeme k tomu znát následující osobní údaje: Obecné osobní údaje: jméno a příjmení, adresu trvalého pobytu, adresu dodání služeb, Vaše telefonní číslo a e-mail[span_8](end_span).</p>
+                <p>Abychom Vám mohli poskytovat naše služby, potřebujeme k tomu znát následující osobní údaje: Obecné osobní údaje: jméno a příjmení, adresu trvalého pobytu, adresu dodání služeb nebo tovar, Vaše telefonní číslo a e-mail.</p>
+                
+                <h3>Jak dlouho budeme údaje uchovávat?</h3>
+                <p>Vaše osobní údaje budeme uchovávat po celou dobu, co budeme plnit naši vzájemnou smlouvu. Po skončení smluvního vztahu budeme Vaše osobní údaje uchovávat tak dlouho, abychom splnili nezbytnou archivační povinnost podle právních předpisů, které archivaci předpokládají (těmito předpisy jsou např. zákon o účetnictví, zákon o dani z přidané hodnoty, zákon o archivnictví a evidenci).</p>
+                
+                <h3>Komu dále předáváme Vaše osobní údaje?</h3>
+                <p>Vaše osobní údaje mohou být předávány tomuto okruhu osob: poskytovatelé právních, daňových a účetních služeb, poskytovatelé technických řešení. Vaše osobní údaje mohou být rovněž předávány orgánům veřejné správy a soudům, to však pouze za předpokladu, že tak stanoví zvláštní právní předpis, nebo k tomu dáte výslovný souhlas. Našim zpracovatelům jsou Vaše osobní údaje předávány vždy na základě zpracovatelské smlouvy a v souladu s minimálním požadovaným standardem ochrany osobních údajů, které GDPR požaduje. Správce neposkytuje, nezveřejňuje a nezpřístupňuje osobní údaje do třetích zemí.</p>
+                
+                <h3>Podmínky zabezpečení osobních údajů</h3>
+                <p>Správce prohlašuje, že přijal vhodná personální, technická a organizační opatření k zajištění ochrany osobních údajů. Správce přijal technická opatření k zabezpečení datových úložišť a úložišť osobních údajů ve spisové podobě. Správce prohlašuje, že k osobním údajům mají přístup výlučně jím pověřené osoby. V rámci činností zpracování osobních údajů, které při naší činnosti provádíme, nedochází k automatickému rozhodování ani k profilování.</p>
+                
                 <h3>Jaká jsou Vaše práva v souvislosti se zpracováním Vašich osobních údajů?</h3>
+                <p>Za podmínek stanovených v GDPR máte:</p>
                 <ul>
-                    <li>Právo na přístup ke svým osobním údajům podle čl. [span_9](start_span)15 GDPR[span_9](end_span)</li>
-                    [span_10](start_span)<li>Právo na opravu osobních údajů dle čl.16 GDPR[span_10](end_span)</li>
-                    [span_11](start_span)<li>Právo na omezení zpracování[span_11](end_span)</li>
-                    [span_12](start_span)<li>Právo na výmaz dle čl.17 GDPR[span_12](end_span)</li>
-                    [span_13](start_span)<li>Právo namítat podle článku 21 GDPR[span_13](end_span)</li>
-                    [span_14](start_span)<li>Právo na přenesení osobních údajů podle článku 21 GDPR[span_14](end_span)</li>
-                    [span_15](start_span)<li>Právo odvolat souhlas (elektronicky, nebo na korespondenční adresu)[span_15](end_span)</li>
-                    [span_16](start_span)<li>Právo podat stížnost úřadu na ochranu osobních údajů[span_16](end_span)</li>
+                    <li>Právo na přístup ke svým osobním údajům podle čl. 15 GDPR</li>
+                    <li>Právo na opravu osobních údajů dle čl.16 GDPR</li>
+                    <li>Právo na omezení zpracování</li>
+                    <li>Právo na výmaz dle čl.17 GDPR</li>
+                    <li>Právo namítat podle článku 21 GDPR</li>
+                    <li>Právo na přenesení osobních údajů podle článku 21 GDPR</li>
+                    <li>Právo odvolat souhlas (elektronicky, nebo na korespondenční adresu)</li>
+                    <li>Právo podat stížnost úřadu na ochranu osobních údajů v případě, že se domníváte, že došlo k porušení vašich práv na ochranu osobních údajů.</li>
                 </ul>
+                
+                <h3>Jak můžete naplnit svá práva?</h3>
+                <p><strong>Právo na přístup:</strong> Na základě Vaší žádosti Vám musíme sdělit, zda zpracováváme, nebo nezpracováváme Vaše osobní údaje. V případě, že je zpracováváme, pak máte právo na to, abychom Vám sdělili: za jakým účelem Vaše údaje zpracováváme, v jakém rozsahu jsou tyto údaje zpracovávány, jak dlouho budou uchovávány, komu budou zpřístupněny, zda můžete podat stížnost Úřadu pro ochranu osobních údajů.</p>
+                <p><strong>Právo na opravu:</strong> Pokud se domníváte, že zpracováváme Vaše nesprávné (nepřesné) osobní údaje, pak máte právo na jejich opravu.</p>
+                <p><strong>Právo na vymazání:</strong> Za určitých okolností máte právo, abychom Vaše osobní údaje vymazali (např. pokud je již nepotřebujeme, odvoláte souhlas, namítáte vůči zpracování atd.).</p>
+                <p><strong>Právo na omezení zpracování:</strong> Můžete nás požádat, abychom omezili zpracování vašich osobních údajů.</p>
+                <p><strong>Právo na přenosnost dat:</strong> Máte právo žádat, abychom Vám poskytli Vaše osobní údaje v elektronické formě.</p>
+                <p><strong>Právo namítat:</strong> Máte právo namítat, že zpracováváme Vaše osobní údaje.</p>
+                
+                <h3>Jak můžete tato práva vykonávat?</h3>
+                <p>S Vaší žádostí se můžete na nás obrátit emailem: info@control-point.eu nebo poštou na adresu: Dopravní 500/9, Uhříněves, 104 00 Praha 10.</p>
+                <p>Úřad pro ochranu osobních údajů<br>Pplk. Sochora 27170 00 Praha 7<br>Telefon: ústředna: +420 234 665 111<br>WWW: https://www.uoou.cz<br>aktualizace dne 29.03.2023</p>
             </div>
         </div>
     </div>
 
     <div id="cookiesModal" class="modal">
         <div class="modal-content">
-            <span class="close-modal" onclick="closeModal('cookiesModal')">&times;</span>
+            <span class="close-modal" onclick="closeModal('cookiesModal')">×</span>
             <h2>ZÁSADY POUŽÍVÁNÍ SOUBORŮ COOKIES</h2>
             <div class="legal-text">
                 <h3>Co jsou to soubory cookies?</h3>
-                [span_17](start_span)<p>Soubory cookies jsou krátké textové soubory, které internetová stránka odešle do Vašeho prohlížeče[span_17](end_span). [span_18](start_span)Umožňuje internetové stránce zaznamenat informace o Vaší návštěvě, například zvolený jazyk a podobně[span_18](end_span). [span_19](start_span)Soubory cookies umožňují lepší využití naší internetové stránky a přizpůsobení jejího obsahu Vašim potřebám[span_19](end_span).</p>
-                <h3>Jaké soubory cookies používáme a za jakým účelem?</h3>
-                [span_20](start_span)<p>Na webové adrese www.control-point.cz používáme soubory cookies sloužící k měření návštěvnosti webových stránek a zajištění fungování webu[span_20](end_span). Používáme tedy tyto soubory cookies:</p>
+                <p>Soubory cookies jsou krátké textové soubory, které internetová stránka odešle do Vašeho prohlížeče. Umožňuje internetové stránce zaznamenat informace o Vaší návštěvě, například zvolený jazyk a podobně. Následující návštěva stránek tak pro Vás může být snazší a příjemnější. Soubory cookies jsou důležité, neboť bez nich by procházení sítě Internet bylo mnohem složitější. Soubory cookies umožňují lepší využití naší internetové stránky a přizpůsobení jejího obsahu Vašim potřebám.</p>
+                <p>Soubory cookies používá téměř každá internetová stránka na světě. Soubory cookies jsou užitečné, protože zvyšují uživatelskou přívětivost opakovaně navštívené internetové stránky. Na základě těchto souborů vás webová stránka může rozpoznat:</p>
                 <ul>
-                    <li><strong>cookies nezbytné pro fungování našeho webu a výkonnostní cookies</strong> – tyto cookies nám umožňují, aby web správně fungoval a nesbírají o Vás zpravidla žádné osobní údaje, případně jsou tyto údaje anonymizovány. [span_21](start_span)Používáme je na základě našeho oprávněného zájmu[span_21](end_span).</li>
-                    <li><strong>cílené, reklamní a funkční cookies (cookies třetích stran)</strong> – tyto cookies slouží k personalizaci obsahu webu a zobrazování reklamy, která je pro Vás relevantní. [span_22](start_span)Pomocí těchto cookies dochází k získávání osobních údajů a náš web je používá pouze pokud jste k jejich sběru udělili svůj předchozí souhlas nastavením svého prohlížeče[span_22](end_span).</li>
+                    <li>pomocí tzv. „relačního cookies“ - během vaší návštěvy webu. Tyto tzv. dočasné cookies, které se po zavření prohlížeče automaticky odstraní.</li>
+                    <li>pomocí tzv. „trvalé cookies“ - pro opakované návštěvy webu. Tyto trvalé cookies mohou být kontrolovány při každé návštěvě Internetové stránky.</li>
                 </ul>
-                <h3>Kontrola a mazání cookies</h3>
-                [span_23](start_span)<p>K vypnutí nebo odhlášení příslušných souborů cookies slouží ikony cookies v rohu vašeho zařízení, kde můžete kdykoli změnit nastavení cookies[span_23](end_span). [span_24](start_span)Tyto můžete odstranit vymazáním souborů cookies a mezipaměti prohlížeče pomocí nastavení webového prohlížeče[span_24](end_span).</p>
+                <p>Tzv. „naše cookies“ jsou takové soubory cookies, které byly umístěny na tuto webovou stránku naší společností. Tzv. „cookies třetích stran“ jsou takové soubory cookies, které jsou umístěny do vašeho zařízení jinou společností (například Google Analytics). Třetí strany nemají přístup k datům v našich souborech cookies a také my nemůžeme získat přístup ke cookies třetích stran.</p>
+                
+                <h3>Jaké soubory cookies používáme a za jakým účelem?</h3>
+                <p>Na webové adrese www.control-point.cz používáme soubory cookies sloužící k měření návštěvnosti webových stránek a zajištění fungování webu. Používáme tedy tyto soubory cookies:</p>
+                <ul>
+                    <li><strong>cookies nezbytné pro fungování našeho webu a výkonnostní cookies</strong> – tyto cookies nám umožňují, aby web správně fungoval a nesbírají o Vás zpravidla žádné osobní údaje, případně jsou tyto údaje anonymizovány. Používáme je na základě našeho oprávněného zájmu. Používání těchto cookies můžete v nastavení svého webového prohlížeče odmítnout. V tomto případě však upozorňujeme, že některé funkce našeho webu nemusejí být plně funkční.</li>
+                    <li><strong>cílené, reklamní a funkční cookies (cookies třetích stran)</strong> – tyto cookies slouží k personalizaci obsahu webu a zobrazování reklamy, která je pro Vás relevantní. Pomocí těchto cookies dochází k získávání osobních údajů a náš web je používá pouze pokud jste k jejich sběru udělili svůj předchozí souhlas nastavením svého prohlížeče.</li>
+                </ul>
+                
+                <h3>NASTAVENÍ COOKIES: Jak nastavit prohlížeč, abyste zabránili používání cookies?</h3>
+                <p>Při první návštěvě našich webových stránek se do vašeho zařízení ukládají pouze naprosto nezbytné soubory cookies. Pokud nepřijmete/nepovolíte všechny soubory cookies nebo nevyberete vaše individuální preference pro soubory cookies, toto nastavení se nezmění. Klepnutím na příslušné tlačítko ve vyskakovacím okně souhlasíte s naším používáním cookies. Abyste vypnuli příslušné soubory cookies, které se používají na základě souhlasu, můžete kdykoli odvolat svůj souhlas s používáním cookies.</p>
+                
+                <h3>NAKLÁDÁNÍ S INFORMACEMI</h3>
+                <p>Pro případ smluvního nebo zákonného důvodu pro nezbytné soubory cookies můžeme vaše osobní údaje používat k plnění našich povinností. Pro případ oprávněného zájmu pro nezbytné soubory cookies, můžeme vaše osobní údaje používat k provozování webových stránek. Pro případ, že jste nám poskytli svůj souhlas s výkonnostními, funkčními nebo marketingovými cookies, můžeme údaje použít k analýze, identifikaci a zlepšování služeb a zobrazení relevantních reklam.</p>
+                
+                <h3>KONTROLA A MAZÁNÍ COOKIES</h3>
+                <p>K vypnutí nebo odhlášení příslušných souborů cookies slouží ikony cookies nebo smazání přes webový prohlížeč. Jakákoli změna nastavení vašeho webového prohlížeče se vztahuje pouze na tento konkrétní webový prohlížeč. Pokud v zařízení používáte více než jeden webový prohlížeč, musíte změnit nastavení zvlášť.</p>
+                <p>Dovolujeme si vás upozornit, že v případě, že pomocí nastavení webového prohlížeče zakážete nezbytné soubory cookies, nebude fungovat jedna nebo více základních funkcí těchto webových stránek. Soubory cookies můžete ve svém zařízení smazat a rovněž nastavit pravidla pro jejich ukládání ve svém prohlížeči (Chrome, Firefox, Internet Explorer, Android, iOS).</p>
+                
+                <h3>ZMĚNY A KONTAKT</h3>
+                <p>Kdykoli může dojít ke změně těchto základních zásad používání cookies. Máte-li jakékoli dotazy, kontaktujte nás za pomoci kontaktních údajů.</p>
             </div>
         </div>
     </div>
 
     <script>
-        // --- 1. DYNAMICKÁ MŘÍŽKA PŘES VIDEO ---
+        // --- 1. DYNAMICKÁ MŘÍŽKA PŘES VIDEO (PROBLIKÁVÁNÍ) ---
         const gridContainer = document.getElementById('tileGrid');
-        const totalTiles = 12 * 8; 
-        for(let i=0; i<totalTiles; i++) {
+        const totalTiles = 12 * 8; // celkem 96 dlaždic
+        for(let i = 0; i < totalTiles; i++) {
             let tile = document.createElement('div');
             tile.className = 'grid-tile';
             gridContainer.appendChild(tile);
@@ -404,26 +557,29 @@
             setTimeout(() => { randomTile.style.opacity = '1'; }, 2000);
         }, 300);
 
-        // --- 2. STICKY NAVBAR A MOBILNÍ MENU ---
+        // --- 2. STICKY NAVBAR EFEKT A MOBILNÍ MENU ---
         window.addEventListener('scroll', () => {
             const header = document.getElementById('navbar');
-            window.scrollY > 50 ? header.classList.add('scrolled') : header.classList.remove('scrolled');
+            if (header) {
+                window.scrollY > 50 ? header.classList.add('scrolled') : header.classList.remove('scrolled');
+            }
         });
         const menuBtn = document.getElementById('menuBtn');
         const navMenu = document.getElementById('navMenu');
-        menuBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            menuBtn.innerText = navMenu.classList.contains('active') ? '✕' : '☰';
-        });
-
-        // --- 3. MODÁLNÍ OKNA ---
-        function openModal(id) { document.getElementById(id).style.display = 'block'; }
-        function closeModal(id) { document.getElementById(id).style.display = 'none'; }
-        window.onclick = function(event) {
-            if (event.target.className === 'modal') { event.target.style.display = "none"; }
+        if (menuBtn && navMenu) {
+            menuBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                menuBtn.innerText = navMenu.classList.contains('active') ? '✕' : '☰';
+            });
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    menuBtn.innerText = '☰';
+                });
+            });
         }
 
-        // --- 4. POČÍTADLA STATISTIK ---
+        // --- 3. INTERAKTIVNÍ POČÍTADLA STATISTIK ---
         const counters = document.querySelectorAll('.counter');
         let hasAnimated = false;
         const animateCounters = () => {
@@ -438,12 +594,18 @@
                     const progress = frame / totalFrames;
                     const currentValue = Math.round(target * progress);
                     if (frame < totalFrames) {
-                        if (target === 100 || target === 90) counter.innerText = currentValue + " %";
-                        else counter.innerText = currentValue.toLocaleString('cs-CZ');
+                        if (target === 100 || target === 90) {
+                            counter.innerText = currentValue + " %";
+                        } else {
+                            counter.innerText = currentValue.toLocaleString('cs-CZ');
+                        }
                         requestAnimationFrame(updateCounter);
                     } else {
-                        if (target === 100 || target === 90) counter.innerText = target.toLocaleString('cs-CZ') + " %";
-                        else counter.innerText = target.toLocaleString('cs-CZ');
+                        if (target === 100 || target === 90) {
+                            counter.innerText = target.toLocaleString('cs-CZ') + " %";
+                        } else {
+                            counter.innerText = target.toLocaleString('cs-CZ');
+                        }
                     }
                 };
                 updateCounter();
@@ -460,7 +622,37 @@
             observer.observe(statsSection);
         }
 
-        // --- 5. FAQ AKORDEON ---
+        // --- 4. COOKIE LIŠTA (ZAVÍRÁNÍ) ---
+        const acceptBtn = document.getElementById('acceptCookiesBtn');
+        if (acceptBtn) {
+            acceptBtn.addEventListener('click', () => {
+                const banner = document.getElementById('cookieBanner');
+                if (banner) banner.style.display = 'none';
+            });
+        }
+
+        // --- 5. ODESLÁNÍ FORMULÁŘE ---
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const btn = e.target.querySelector('button');
+                if (!btn) return;
+                const originalText = btn.innerText;
+                btn.innerText = "Odesíláme...";
+                btn.style.background = "#00e676";
+                setTimeout(() => {
+                    btn.innerText = "Zpráva odeslána ✓";
+                    e.target.reset();
+                    setTimeout(() => {
+                        btn.innerText = originalText;
+                        btn.style.background = "";
+                    }, 3000);
+                }, 1500);
+            });
+        }
+
+        // --- 6. FAQ AKORDEON (Safari-friendly) ---
         document.querySelectorAll('.faq-question').forEach(question => {
             question.addEventListener('click', () => {
                 const item = question.parentElement;
@@ -468,74 +660,172 @@
                 document.querySelectorAll('.faq-item').forEach(otherItem => {
                     if(otherItem !== item) {
                         otherItem.classList.remove('active');
-                        if (otherItem.querySelector('.faq-answer')) otherItem.querySelector('.faq-answer').style.maxHeight = null;
+                        const otherAnswer = otherItem.querySelector('.faq-answer');
+                        if (otherAnswer) {
+                            otherAnswer.style.maxHeight = null;
+                        }
                     }
                 });
                 item.classList.toggle('active');
-                if (item.classList.contains('active')) answer.style.maxHeight = answer.scrollHeight + "px";
-                else answer.style.maxHeight = null;
+                if (item.classList.contains('active')) {
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                } else {
+                    answer.style.maxHeight = null;
+                }
             });
         });
 
-        // --- 6. ODESLÁNÍ FORMULÁŘE ---
-        document.getElementById('contactForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = e.target.querySelector('button');
-            const originalText = btn.innerText;
-            btn.innerText = "Odesíláme...";
-            setTimeout(() => {
-                btn.innerText = "Zpráva odeslána ✓";
-                e.target.reset();
-                setTimeout(() => { btn.innerText = originalText; }, 3000);
-            }, 1000);
-        });
+        // --- 7. MODÁLNÍ OKNA (OTVÍRÁNÍ/ZAVÍRÁNÍ) ---
+        function openModal(id) { document.getElementById(id).style.display = 'block'; }
+        function closeModal(id) { document.getElementById(id).style.display = 'none'; }
+        window.onclick = function(event) {
+            if (event.target.className === 'modal') {
+                event.target.style.display = "none";
+            }
+        }
 
-        // --- 7. PŘEKLADY (SLOVNÍK) ---
+        // --- 8. JAZYKOVÝ SLOVNÍK A PŘEPÍNAČ ---
         const translations = {
             cs: {
                 nav_about: "O nás", nav_services: "Služby", nav_hvo: "HVO100", nav_hub: "200kW Hub", nav_contact: "Kontakt",
-                hero_badge: "PROFI LOGISTIKA VĚROVANY", hero_title: "VY OBJEDNÁTE.<br><span class='text-red'>MY DOVEZEME.</span>", hero_sub: "Průsečík spolehlivé dopravy a moderní infrastruktury.", hero_btn1: "Naše služby",
+                hero_badge: "PROFI LOGISTIKA VĚROVANY",
+                hero_title: "VY OBJEDNÁTE.<br><span class='text-red'>MY DOVEZEME.</span>",
+                hero_sub: "Průsečík spolehlivé kamionové dopravy a moderní infrastruktury. Rychlost, efektivita a maximální nasazení pro vaše zásilky.",
+                hero_btn1: "Naše služby", hero_btn2: "Eko doprava HVO100",
                 stat_fleet: "Vozidel ve flotile", stat_km: "Projetých kilometrů", stat_hvo: "JEZDÍME NA HVO100", stat_co2: "SNIŽUJEME CO2",
-                about_title: "LOGISTICKÝ UZEL <span class='text-red'>NOVÉ GENERACE</span>", about_desc: "Jsme stabilní partner pro vaše logistické výzvy. Specializujeme se na kamionovou dopravu a moderní energetická řešení.", about_l1: "Celovozové i paletové zásilky", about_l2: "Digitální správa a sledování", about_l3: "Odpovědný přístup",
-                services_title: "HLAVNÍ <span class='text-red'>SLUŽBY</span>", s1_title: "Kamionová přeprava", s1_desc: "Bezpečná a včasná přeprava vašeho zboží.", s2_title: "Skladování (Připravujeme)", s2_desc: "Zatím nemáme vlastní skladovací prostory, ale aktivně je připravujeme.", s3_title: "Smart Logistics", s3_desc: "Kompletní dispečink a optimalizace tras.",
-                hvo_title: "HVO100 <span class='text-green'>NA VYŽÁDÁNÍ</span>", hvo_desc: "Zatím na syntetickou naftu HVO100 standardně nejezdíme. Pokud to ale váš reporting vyžaduje, palivo na vyžádání zajistíme.",
-                hub_title: "PLÁNUJEME <span class='text-green'>100-200kW HUB</span>", hub_desc: "Zatím nemáme nabíjecí stanici, ale připravujeme výstavbu hubu o výkonu 100-200 kW.",
-                partners_title: "NAŠI PARTNEŘI", faq_title: "ČASTÉ <span class='text-red'>DOTAZY</span>",
-                contact_title: "KONTAKTNÍ <span class='text-red'>CENTRUM</span>", nav_btn: "🧭 SPUSTIT NAVIGACI", form_title: "RYCHLÝ DOTAZ", form_btn: "Odeslat zprávu",
+                about_title: "LOGISTICKÝ UZEL <span class='text-red'>NOVÉ GENERACE</span>",
+                about_desc: "Jsme stabilní partner pro vaše logistické výzvy. Specializujeme se na kamionovou dopravu, skladování a moderní energetická řešení. Naše flotila a zázemí ve Věrovanech tvoří strategický bod pro spolehlivou přepravu.",
+                about_l1: "Celovozové i paletové zásilky", about_l2: "Digitální správa a sledování zásilek", about_l3: "Odpovědný přístup k životnímu prostředí",
+                about_img: "LOGISTICKÉ CENTRUM",
+                hvo_title: "HVO100 <span class='text-green'>NA VYŽÁDÁNÍ</span>",
+                hvo_desc: "Zatím na syntetickou naftu z obnovitelných zdrojů HVO100 standardně nejezdíme. Pokud však váš dodavatelský řetězec a firemní ESG reporting vyžaduje ekologičtější alternativu, není to problém – palivo na vyžádání bez problému zajistíme.",
+                hvo_l1: "Snížení emisí skleníkových plynů až o 90 %", hvo_l2: "Plně kompatibilní s motory Euro 6", hvo_l3: "Vhodné pro ESG reporting vašich firem",
+                services_title: "HLAVNÍ <span class='text-red'>SLUŽBY</span>",
+                s1_title: "Kamionová přeprava", s1_desc: "Bezpečná a včasná přeprava vašeho zboží. Obsloužíme celovozové náklady i paletové zásilky spolehlivě a na čas.",
+                s2_title: "Skladování (Připravujeme)", s2_desc: "Zatím nemáme vlastní skladovací prostory, ale aktivně je připravujeme. Brzy vám nabídneme moderní zázemí pro uskladnění i překládku.",
+                s3_title: "Smart Logistics", s3_desc: "Kompletní dispečink, optimalizace tras v reálném čase a transparentní komunikace s klienty.",
+                hub_badge: "STATUS: VE VÝSTAVBĚ",
+                hub_title: "PLÁNUJEME <span class='text-green'>100-200kW HUB</span>",
+                hub_desc: "Zatím nemáme nabíjecí stanici pro elektro vozidla, ale infrastrukturu pro budoucnost e-mobility již plánujeme. Připravujeme výstavbu vysokovýkonné nabíjecí stanice o výkonu 100-200 kW, která dodá čistou energii elektrickým tahačům i osobním vozidlům.",
+                partners_title: "NAŠI PARTNEŘI",
+                faq_title: "ČASTÉ <span class='text-red'>DOTAZY</span>",
+                faq_sub: "Nenašli jste, co hledáte? Žádný dotaz není zbytečný. Nebojte se nás kontaktovat, rádi vše vysvětlíme.",
+                faq_q1: "Co přesně je palivo HVO100?", faq_a1: "HVO100 je obnovitelná nafta vyrobená ze zbytků olejů a tuků. Snižuje emise CO2 o 90 % a je plně zaměnitelná s běžnou naftou, aniž by poškozovala motory.",
+                faq_q2: "Zajišťujete vnitrostátní i mezinárodní přepravu?", faq_a2: "Ano, naše vozidla běžně pokrývají jak vnitrostátní přepravu v rámci ČR, tak i mezinárodní trasy napříč celou Evropou.",
+                faq_q3: "Kdy bude spuštěno skladování zboží?", faq_a3: "Skladovací prostory pro flexibilní překládku i dlouhodobé uložení zboží aktuálně aktivně připravujeme. O spuštění budeme informovat.",
+                contact_title: "KONTAKTNÍ <span class='text-red'>CENTRUM</span>",
+                contact_desc: "Jsme připraveni převzít váš náklad. Ozvěte se nám nebo rovnou nastavte navigaci do našeho hubu.",
+                c_addr: "📍 ADRESA", c_phone: "📞 DISPEČINK", c_mail: "✉️ EMAIL",
+                nav_btn: "🧭 SPUSTIT NAVIGACI (GPS)",
+                form_title: "RYCHLÝ DOTAZ", form_btn: "Odeslat zprávu",
+                cookie_text: "Náš web využívá soubory cookies potřebné pro jeho fungování a analytiku. Také používáme cílené a reklamní cookies, k čemuž udělujete souhlas prostřednictvím nastavení svého prohlížeče. 🍪",
+                cookie_more: "Více informací", cookie_btn: "Beru na vědomí",
                 foot_gdpr: "Ochrana osobních údajů", foot_cookies: "Cookies"
             },
             en: {
-                nav_about: "About", nav_services: "Services", nav_hvo: "HVO100", nav_hub: "200kW Hub", nav_contact: "Contact",
-                hero_badge: "PRO LOGISTICS VĚROVANY", hero_title: "YOU ORDER.<br><span class='text-red'>WE DELIVER.</span>", hero_sub: "Intersection of reliable transport and modern infrastructure.", hero_btn1: "Our Services",
+                nav_about: "About Us", nav_services: "Services", nav_hvo: "HVO100", nav_hub: "200kW Hub", nav_contact: "Contact",
+                hero_badge: "PRO LOGISTICS VĚROVANY",
+                hero_title: "YOU ORDER.<br><span class='text-red'>WE DELIVER.</span>",
+                hero_sub: "The intersection of reliable truck transport and modern infrastructure. Speed, efficiency, and maximum commitment to your shipments.",
+                hero_btn1: "Our Services", hero_btn2: "Eco Transport HVO100",
                 stat_fleet: "Vehicles in fleet", stat_km: "Kilometers driven", stat_hvo: "HVO100 COMPLIANT", stat_co2: "CO2 REDUCTION",
-                about_title: "NEXT GEN <span class='text-red'>LOGISTICS HUB</span>", about_desc: "We are a stable partner for your logistics challenges. Specializing in trucking and energy solutions.", about_l1: "Full truckload & pallets", about_l2: "Digital tracking", about_l3: "Environmental responsibility",
-                services_title: "CORE <span class='text-red'>SERVICES</span>", s1_title: "Truck Transport", s1_desc: "Safe and timely transport of your goods.", s2_title: "Storage (In Prep)", s2_desc: "We are currently preparing our own storage facilities.", s3_title: "Smart Logistics", s3_desc: "Complete dispatch and route optimization.",
-                hvo_title: "HVO100 <span class='text-green'>ON DEMAND</span>", hvo_desc: "We don't run on HVO100 by default, but we can provide it upon request for specific transports.",
-                hub_title: "PLANNING <span class='text-green'>100-200kW HUB</span>", hub_desc: "We are planning to build a 100-200 kW charging hub for the future of transport.",
-                partners_title: "OUR PARTNERS", faq_title: "FREQUENTLY <span class='text-red'>ASKED</span>",
-                contact_title: "CONTACT <span class='text-red'>CENTER</span>", nav_btn: "🧭 START NAVIGATION", form_title: "QUICK INQUIRY", form_btn: "Send Message",
+                about_title: "NEXT GEN <span class='text-red'>LOGISTICS HUB</span>",
+                about_desc: "We are a stable partner for your logistics challenges. We specialize in truck transport, warehousing, and modern energy solutions. Our fleet and facilities in Věrovany form a strategic point for reliable transport.",
+                about_l1: "Full truckload and pallet shipments", about_l2: "Digital management and shipment tracking", about_l3: "Responsible approach to the environment",
+                about_img: "LOGISTICS CENTER",
+                hvo_title: "HVO100 <span class='text-green'>ON DEMAND</span>",
+                hvo_desc: "We do not currently run on synthetic HVO100 renewable diesel by default. However, if your supply chain and corporate ESG reporting require a greener alternative, it's no problem - we will provide the fuel upon request.",
+                hvo_l1: "Reduction of greenhouse gas emissions by up to 90%", hvo_l2: "Fully compatible with Euro 6 engines", hvo_l3: "Suitable for your company's ESG reporting",
+                services_title: "CORE <span class='text-red'>SERVICES</span>",
+                s1_title: "Truck Transport", s1_desc: "Safe and timely transport of your goods. We serve full truckloads and pallet shipments reliably and on time.",
+                s2_title: "Storage (In Preparation)", s2_desc: "We do not have our own storage facilities yet, but we are actively preparing them. We will soon offer you modern facilities for storage and transshipment.",
+                s3_title: "Smart Logistics", s3_desc: "Complete dispatching, real-time route optimization, and transparent communication with clients.",
+                hub_badge: "STATUS: UNDER CONSTRUCTION",
+                hub_title: "PLANNING <span class='text-green'>100-200kW HUB</span>",
+                hub_desc: "We don't have a charging station for electric vehicles yet, but we are already planning the infrastructure for the future of e-mobility. We are preparing the construction of a high-performance 100-200 kW charging station that will supply clean energy to electric tractors and passenger vehicles.",
+                partners_title: "OUR PARTNERS",
+                faq_title: "FREQUENTLY <span class='text-red'>ASKED QUESTIONS</span>",
+                faq_sub: "Didn't find what you were looking for? No question is useless. Don't hesitate to contact us, we will be happy to explain everything.",
+                faq_q1: "What exactly is HVO100 fuel?", faq_a1: "HVO100 is renewable diesel made from waste oils and fats. It reduces CO2 emissions by 90% and is fully interchangeable with conventional diesel without damaging engines.",
+                faq_q2: "Do you provide domestic and international transport?", faq_a2: "Yes, our vehicles routinely cover both domestic transport within the Czech Republic and international routes across Europe.",
+                faq_q3: "When will goods storage be launched?", faq_a3: "We are currently actively preparing storage spaces for flexible transshipment and long-term storage of goods. We will inform you about the launch.",
+                contact_title: "CONTACT <span class='text-red'>CENTER</span>",
+                contact_desc: "We are ready to take your cargo. Get in touch with us or set your navigation directly to our hub.",
+                c_addr: "📍 ADDRESS", c_phone: "📞 DISPATCH", c_mail: "✉️ EMAIL",
+                nav_btn: "🧭 START NAVIGATION (GPS)",
+                form_title: "QUICK INQUIRY", form_btn: "Send Message",
+                cookie_text: "Our website uses cookies necessary for its functioning and analytics. We also use targeting and advertising cookies, to which you consent through your browser settings. 🍪",
+                cookie_more: "More Information", cookie_btn: "Understood",
                 foot_gdpr: "Privacy Policy", foot_cookies: "Cookies"
             },
             de: {
-                nav_about: "Über uns", nav_services: "Dienste", nav_hvo: "HVO100", nav_hub: "200kW Hub", nav_contact: "Kontakt",
-                hero_badge: "PROFI LOGISTIK VĚROVANY", hero_title: "SIE BESTELLEN.<br><span class='text-red'>WIR LIEFERN.</span>", hero_sub: "Die Schnittstelle zwischen zuverlässigem Transport und Infrastruktur.", hero_btn1: "Unsere Leistungen",
+                nav_about: "Über Uns", nav_services: "Dienste", nav_hvo: "HVO100", nav_hub: "200kW Hub", nav_contact: "Kontakt",
+                hero_badge: "PROFI LOGISTIK VĚROVANY",
+                hero_title: "SIE BESTELLEN.<br><span class='text-red'>WIR LIEFERN.</span>",
+                hero_sub: "Die Schnittstelle zwischen zuverlässigem LKW-Transport und moderner Infrastruktur. Geschwindigkeit, Effizienz und maximaler Einsatz für Ihre Sendungen.",
+                hero_btn1: "Unsere Leistungen", hero_btn2: "Öko-Transport HVO100",
                 stat_fleet: "Fahrzeuge in Flotte", stat_km: "Gefahrene Kilometer", stat_hvo: "HVO100 KOMPATIBEL", stat_co2: "CO2 REDUZIERUNG",
-                about_title: "NEXT GEN <span class='text-red'>LOGISTIK-HUB</span>", about_desc: "Wir sind ein stabiler Partner für Ihre logistischen Herausforderungen.", about_l1: "Komplett- und Teilladungen", about_l2: "Digitale Verfolgung", about_l3: "Umweltverantwortung",
-                services_title: "HAUPT <span class='text-red'>DIENSTE</span>", s1_title: "LKW-Transport", s1_desc: "Sicherer und pünktlicher Transport.", s2_title: "Lagerung (In Vorbereitung)", s2_desc: "Wir bereiten derzeit unsere eigenen Lagereinrichtungen vor.", s3_title: "Smart Logistics", s3_desc: "Komplette Disposition und Routenoptimierung.",
-                hvo_title: "HVO100 <span class='text-green'>AUF ANFRAGE</span>", hvo_desc: "Wir fahren nicht standardmäßig mit HVO100, können es aber auf Anfrage bereitstellen.",
-                hub_title: "PLANUNG <span class='text-green'>100-200kW HUB</span>", hub_desc: "Wir planen den Bau eines 100-200 kW Ladehubs für die Zukunft des Transports.",
-                partners_title: "UNSERE PARTNER", faq_title: "HÄUFIGE <span class='text-red'>FRAGEN</span>",
-                contact_title: "KONTAKT <span class='text-red'>ZENTRUM</span>", nav_btn: "🧭 NAVIGATION STARTEN", form_title: "SCHNELLE ANFRAGE", form_btn: "Nachricht Senden",
+                about_title: "LOGISTIK-HUB <span class='text-red'>DER NÄCHSTEN GENERATION</span>",
+                about_desc: "Wir sind ein stabiler Partner für Ihre logistischen Herausforderungen. Wir sind spezialisiert auf LKW-Transport, Lagerung und moderne Energielösungen. Unser Fuhrpark und unsere Anlagen in Věrovany bilden einen strategischen Punkt für zuverlässige Transporte.",
+                about_l1: "Komplett- und Palettenladungen", about_l2: "Digitale Verwaltung und Sendungsverfolgung", about_l3: "Verantwortungsvoller Umgang mit der Umwelt",
+                about_img: "LOGISTIKZENTRUM",
+                hvo_title: "HVO100 <span class='text-green'>AUF ANFRAGE</span>",
+                hvo_desc: "Wir fahren derzeit nicht standardmäßig mit synthetischem HVO100-Diesel. Wenn jedoch Ihre Lieferkette und das ESG-Reporting Ihres Unternehmens eine umweltfreundlichere Alternative erfordern, ist das kein Problem - wir stellen den Kraftstoff auf Anfrage zur Verfügung.",
+                hvo_l1: "Reduzierung der Treibhausgasemissionen um bis zu 90%", hvo_l2: "Vollständig kompatibel mit Euro-6-Motoren", hvo_l3: "Geeignet für das ESG-Reporting Ihres Unternehmens",
+                services_title: "HAUPT <span class='text-red'>DIENSTLEISTUNGEN</span>",
+                s1_title: "LKW-Transport", s1_desc: "Sicherer und pünktlicher Transport Ihrer Waren. Wir bedienen Komplett- und Palettenladungen zuverlässig und termingerecht.",
+                s2_title: "Lagerung (In Vorbereitung)", s2_desc: "Wir haben noch keine eigenen Lagerräume, bereiten diese aber aktiv vor. In Kürze bieten wir Ihnen moderne Räumlichkeiten für Lagerung und Umschlag.",
+                s3_title: "Smart Logistics", s3_desc: "Komplette Disposition, Routenoptimierung in Echtzeit und transparente Kommunikation mit den Kunden.",
+                hub_badge: "STATUS: IM BAU",
+                hub_title: "PLANUNG <span class='text-green'>100-200kW HUB</span>",
+                hub_desc: "Wir haben noch keine Ladestation für Elektrofahrzeuge, planen aber bereits die Infrastruktur für die Zukunft der E-Mobilität. Wir bereiten den Bau einer 100-200 kW Hochleistungsladestation vor, die Elektrotraktoren und PKWs mit sauberer Energie versorgen wird.",
+                partners_title: "UNSERE PARTNER",
+                faq_title: "HÄUFIGE <span class='text-red'>FRAGEN</span>",
+                faq_sub: "Haben Sie nicht gefunden, was Sie suchen? Keine Frage ist nutzlos. Zögern Sie nicht, uns zu kontaktieren, wir erklären Ihnen gerne alles.",
+                faq_q1: "Was genau ist HVO100-Kraftstoff?", faq_a1: "HVO100 ist ein erneuerbarer Diesel, der aus Altölen und Fetten hergestellt wird. Er reduziert die CO2-Emissionen um 90 % und ist vollständig mit herkömmlichem Diesel austauschbar, ohne die Motoren zu beschädigen.",
+                faq_q2: "Bieten Sie nationale und internationale Transporte an?", faq_a2: "Ja, unsere Fahrzeuge bedienen routinemäßig sowohl nationale Transporte innerhalb der Tschechischen Republik als auch internationale Strecken quer durch Europa.",
+                faq_q3: "Wann wird die Warenlagerung gestartet?", faq_a3: "Derzeit bereiten wir aktiv Lagerräume für flexiblen Umschlag und langfristige Lagerung von Waren vor. Wir werden Sie über den Start informieren.",
+                contact_title: "KONTAKT <span class='text-red'>ZENTRUM</span>",
+                contact_desc: "Wir sind bereit, Ihre Fracht zu übernehmen. Nehmen Sie Kontakt mit uns auf oder stellen Sie Ihre Navigation direkt auf unseren Hub ein.",
+                c_addr: "📍 ADRESSE", c_phone: "📞 DISPOSITION", c_mail: "✉️ EMAIL",
+                nav_btn: "🧭 NAVIGATION STARTEN",
+                form_title: "SCHNELLE ANFRAGE", form_btn: "Nachricht senden",
+                cookie_text: "Unsere Website verwendet Cookies, die für ihr Funktionieren und für Analysen erforderlich sind. Wir verwenden auch Zielgruppen- und Werbe-Cookies, denen Sie über Ihre Browsereinstellungen zustimmen. 🍪",
+                cookie_more: "Mehr Informationen", cookie_btn: "Verstanden",
                 foot_gdpr: "Datenschutzrichtlinie", foot_cookies: "Cookies"
             }
         };
+
         function setLang(lang) {
             document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
+            
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
-                if(translations[lang][key]) el.innerHTML = translations[lang][key];
+                if(translations[lang][key]) {
+                    // Mění placeholder nebo HTML podle typu elementu
+                    if(el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                        el.setAttribute('placeholder', translations[lang][key]);
+                    } else {
+                        el.innerHTML = translations[lang][key];
+                    }
+                }
             });
+
+            // Překlad placeholderů ve formuláři, které nemají data-i18n přímo v tagu (kvůli bezpečnosti)
+            if (lang === 'cs') {
+                document.getElementById('phName').placeholder = "Jméno / Firma";
+                document.getElementById('phMail').placeholder = "E-mail";
+                document.getElementById('phMsg').placeholder = "Jak vám můžeme pomoci?";
+            } else if (lang === 'en') {
+                document.getElementById('phName').placeholder = "Name / Company";
+                document.getElementById('phMail').placeholder = "E-mail";
+                document.getElementById('phMsg').placeholder = "How can we help you?";
+            } else if (lang === 'de') {
+                document.getElementById('phName').placeholder = "Name / Firma";
+                document.getElementById('phMail').placeholder = "E-mail";
+                document.getElementById('phMsg').placeholder = "Wie können wir Ihnen helfen?";
+            }
         }
     </script>
 </body>
