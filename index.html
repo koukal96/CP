@@ -337,6 +337,10 @@
             </div>
            <div class="image-content tech-box">
     <div class="tech-overlay">SYSTEM ACTIVE</div>
+               <script>
+  self.ModelViewerElement = self.ModelViewerElement || {};
+  self.ModelViewerElement.meshoptDecoderLocation = 'https://cdn.jsdelivr.net/npm/meshoptimizer/meshopt_decoder.js';
+</script>
    <model-viewer
   src="Model_v.glb"
   alt="3D model logistického centra"
@@ -1500,7 +1504,11 @@
             }
         }
     </style>
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+    <script>
+  self.ModelViewerElement = self.ModelViewerElement || {};
+  self.ModelViewerElement.meshoptDecoderLocation = 'https://cdn.jsdelivr.net/npm/meshoptimizer/meshopt_decoder.js';
+</script>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
 </body>
 </html>
  
